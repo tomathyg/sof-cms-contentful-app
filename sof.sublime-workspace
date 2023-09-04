@@ -1,0 +1,699 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"Decent",
+				"DecentAudioPlayer"
+			],
+			[
+				"w",
+				"widget_id"
+			],
+			[
+				"print",
+				"print_r()"
+			],
+			[
+				"padd",
+				"padding-right"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"dr",
+				"drinks_count"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"align",
+				"align-items"
+			],
+			[
+				"flex",
+				"flex-direction"
+			],
+			[
+				"alig",
+				"align-content"
+			],
+			[
+				"alin",
+				"align-self"
+			],
+			[
+				"flex-",
+				"flex-direction"
+			],
+			[
+				"array_key",
+				"array_key_exists()"
+			],
+			[
+				"attrib",
+				"attributes"
+			],
+			[
+				"att",
+				"attributesTable"
+			],
+			[
+				"Apo",
+				"ApolloApp"
+			],
+			[
+				"event",
+				"eventInfo"
+			],
+			[
+				"error",
+				"error_log"
+			],
+			[
+				"exp",
+				"expirationDate"
+			],
+			[
+				"hours",
+				"is24HoursLeft"
+			],
+			[
+				"va",
+				"var_dump"
+			],
+			[
+				"location_address",
+				"location_address_1"
+			],
+			[
+				"JSON",
+				"JSONArray"
+			],
+			[
+				"product",
+				"productList"
+			],
+			[
+				"visib",
+				"visibility\tproperty"
+			],
+			[
+				"cart",
+				"cart_item"
+			],
+			[
+				"found_in",
+				"found_in_cart"
+			],
+			[
+				"paddi",
+				"padding-top\tproperty"
+			],
+			[
+				"bac",
+				"background-position\tproperty"
+			],
+			[
+				"backgr",
+				"background-size\tproperty"
+			],
+			[
+				"background",
+				"background-position\tproperty"
+			],
+			[
+				"back",
+				"background-position\tproperty"
+			],
+			[
+				"paddion",
+				"padding-bottom\tproperty"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"import",
+				"@import\t@import url(${0});"
+			],
+			[
+				"tabl",
+				"table-cell"
+			],
+			[
+				"ba",
+				"background\tproperty"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"media",
+				"@media\t@media ${1:screen} {\n\t${0}\n}"
+			],
+			[
+				"var",
+				"var"
+			],
+			[
+				"vagrant",
+				"vagrantShell"
+			],
+			[
+				"theme",
+				"themeFolder"
+			],
+			[
+				"public",
+				"public_html"
+			],
+			[
+				"studio",
+				"studio"
+			],
+			[
+				"mysql",
+				"mysqldump_options"
+			],
+			[
+				"get_class",
+				"get_class_methods"
+			],
+			[
+				"article",
+				"article-col"
+			],
+			[
+				"category",
+				"category_id"
+			],
+			[
+				"cat",
+				"category_id"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"transp",
+				"transparent"
+			],
+			[
+				"backgrou",
+				"background-color"
+			],
+			[
+				"tran",
+				"transparent"
+			],
+			[
+				"ligh",
+				"light-grey"
+			],
+			[
+				"border-r",
+				"border-right-width"
+			],
+			[
+				"impor",
+				"important"
+			],
+			[
+				"fon",
+				"font-family"
+			],
+			[
+				"border",
+				"border-style"
+			],
+			[
+				"impo",
+				"important"
+			],
+			[
+				"imo",
+				"important"
+			],
+			[
+				"list-s",
+				"list-style"
+			],
+			[
+				"cer",
+				"certificates"
+			],
+			[
+				"browser",
+				"browserSync"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": ".env.local.example",
+			"settings":
+			{
+				"buffer_size": 135,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 269.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"packa",
+				"Package Control: Remove Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"tye",
+				"Set Syntax: TypeScript"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"typescript",
+				"Set Syntax: AppleScript"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: bo",
+				"Snippet: boxes-slider"
+			],
+			[
+				"Snippet: ",
+				"SnippetMaker: Make Snippet"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
+			],
+			[
+				" install",
+				"Package Control: Install Package"
+			],
+			[
+				"upgrade",
+				"Package Control: Upgrade Package"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"pack",
+				"Package Control: Satisfy Dependencies"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Add Repository"
+			],
+			[
+				"packages",
+				"Preferences: Package Control Settings – Default"
+			],
+			[
+				"Package Control: inst",
+				"Package Control: Install Package"
+			],
+			[
+				"Snippet: media",
+				"Snippet: @media"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"Install",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 130.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/components/CheckoutWithCard.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/components/PaperCheckout.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/components/Box.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/components/PersistentPlayer.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/components/AudioPlayer.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/node_modules/decent-audio-player/dist/persistent-player/PersistentPlayer.js",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/node_modules/decent-audio-player/dist/images/ShuffleIcon.js",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/pages/index.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/pages/_app.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/node_modules/decent-audio-player/dist/images/NextIcon.js",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/lib/audioPlayer.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/components/PayWithCard.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/components/Navbar/Navbar.tsx",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/node_modules/@decent.xyz/the-box/dist/lib/helpers/reactHooks.d.ts",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/styles/Home.module.css",
+		"/Users/tomgreenwell/vagrant-dev/www/decent/Minting-Page/.env",
+		"/Users/tomgreenwell/vagrant-dev/www/craft/hfoster/serverpilot/h-foster.zip",
+		"/Users/tomgreenwell/vagrant-dev/www/craft/hfoster/production/public_html/config/general.php",
+		"/Users/tomgreenwell/vagrant-dev/www/craft/hfoster/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/1875/staging/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/1875/staging/1875.zip",
+		"/Users/tomgreenwell/vagrant-dev/www/1875/staging/sftp-config-NEW.json",
+		"/Users/tomgreenwell/vagrant-dev/www/1875/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/1875/production/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/1875/staging/public/sftp-config-OLD.json",
+		"/Users/tomgreenwell/vagrant-dev/www/1875/staging/public/sftp-config.json",
+		"/Users/tomgreenwell/Library/Application Support/Sublime Text 3/Packages/User/SFTP.errors.log",
+		"/Users/tomgreenwell/Library/Application Support/Sublime Text 3/Packages/User/TypeScript.sublime-build",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/public_html/wp-content/themes/soundoffractures/tsconfig.json",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/public_html/wp-content/themes/soundoffractures/app.ts",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/sftp-config.json",
+		"/Users/tomgreenwell/Library/Application Support/Sublime Text 3/Packages/User/ts.sublime-build",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/public_html/wp-content/themes/soundoffractures/footer.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/public_html/wp-content/themes/soundoffractures/page-manifold.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/public_html/wp-content/themes/soundoffractures/page.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/public_html/wp-config.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/soundoffractures/public_html/wp-content/themes/index.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/production/wp-content/themes/Divi-2021/functions.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/production/wp-content/themes/Divi-2021/menus-style.css",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/functions.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/single-menu-main.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/single-menu-pdf.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/custom.js",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/menus-style.css",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/single.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/single-menu.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/single-feasting-menu.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/staging/wp-content/themes/Divi-2021/single-menu-main-BAK.php",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/public_html/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/brackenwood/untitled",
+		"/Users/tomgreenwell/vagrant-dev/www/wordpress/lahpet/untitled",
+		"/Users/tomgreenwell/vagrant-dev/www/ltdeditions/ltd-editions-turbo-theme/layout/theme.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/ltdeditions/ltd-editions-turbo-theme/assets/auctions-chart-calcs.js.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/ltdeditions/ltd-editions-turbo-theme/assets/auctions-chart.js.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/ltdeditions/ltd-editions-turbo-theme/assets/auctions-chart-other-js.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/ltdeditions/ltd-editions-turbo-theme/config.yml",
+		"/Users/tomgreenwell/vagrant-dev/www/ltdeditions/untitled",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/config.yml",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/calconic-calculator.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/sections/product-template.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/assets/index-style.css.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/assets/product-style.css",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/assets/custom.css.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/assets/custom.js.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/layout/theme.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/sections/header.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/sections/footer.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/pdf-embed-metafield.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/assets/pdf-embed-metafield.js.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/easol/easol-cart.json",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/data-sheet-tab.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/sections/featured-products.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/assets/nav-menu.css.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/sections/announcement-slider.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/grid-view-item.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/sections/collection-template.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/assets/collection-filters.css.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/collection-faceted-filter.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/header-banner.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/templates/page.personalise_panels.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/templates/page.landing9.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/config/settings_schema.json",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/sections/header-banner.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/icon.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/icon_outline.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-flow-theme/snippets/icon_solid.liquid",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/that-sounds-better-theme/config.yml",
+		"/Users/tomgreenwell/vagrant-dev/www/thatsoundsbetter/untitled",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/smart/js/buybutton.umd.js",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/smart/buy/button4.html",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/smart/buy/button3.html",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/smart/buy/button2.html",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/smart/buy/index2.html",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/index.php",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/includes/aes.php",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/api/index.php",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/smart/buy-button-js-line-item-properties/package.json",
+		"/Users/tomgreenwell/vagrant-dev/www/apps/public_html/api/app.php",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/pages/components/order.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/pages/components/valuation.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/pages/components/order-old.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/.env",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/Unused/index-old.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/pages/components/submission.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/.env-BE",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/pages/components/submission-old.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/pages/index.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/server/handlers/index.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/server/handlers/mutations/get-submission.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/server/handlers/client.js",
+		"/Users/tomgreenwell/vagrant-dev/www/banksyeditions/editions/untitled",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/sftp-config-alt.json",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/sftp-config.json",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/bluecubetravel/wp-content/themes/theboltway/footer.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/firstaidbristol/wp-content/plugins/first-aid/email-helper.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Staging/firstaidbristol/wp-content/plugins/first-aid/email/instructor-course-details.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/firstaidbristol/wp-content/plugins/first-aid/email/instructor-course-details.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/firstaidbristol/wp-content/themes/salient-ids-child/functions.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Staging/firstaidbristol/wp-content/themes/salient-ids-child/functions.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/firstaidbristol/wp-content/themes/salient-ids-child/email-helper.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Staging/firstaidbristol/wp-content/themes/salient-ids-child/email-helper.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Staging/firstaidbristol/wp-content/plugins/first-aid-api/pages/events.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Staging/firstaidbristol/wp-content/themes/salient-ids-child/woocommerce/emails/customer-invoice.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/firstaidbristol/wp-content/plugins/first-aid-api/pages/events.php",
+		"/Users/tomgreenwell/vagrant-dev/sublime/Production/firstaidbristol/wp-content/plugins/first-aid/email/is24HoursLeft.php"
+	],
+	"find":
+	{
+		"height": 38.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"scrollbar_highlights": true,
+		"show_context": true,
+		"use_buffer2": true,
+		"use_gitignore": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": ".env.local.example",
+					"selected": true,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 135,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"lsp_uri": "file:///Users/tomgreenwell/vagrant-dev/www/sof/cms-contentful-app/cms-contentful-app/.env.local.example",
+							"remote_loading": false,
+							"synced": false,
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"stack_multiselect": false,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 36.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.LSP Log Panel":
+	{
+		"height": 0.0
+	},
+	"output.SFTP":
+	{
+		"height": 231.0
+	},
+	"output.diagnostics":
+	{
+		"height": 0.0
+	},
+	"output.exec":
+	{
+		"height": 327.0
+	},
+	"output.find_results":
+	{
+		"height": 96.0
+	},
+	"output.nodejs":
+	{
+		"height": 96.0
+	},
+	"output.project_environment_log":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 136.0
+	},
+	"output.xdebug":
+	{
+		"height": 108.0
+	},
+	"pinned_build_system": "Packages/User/TypeScript.sublime-build",
+	"project": "sof.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
