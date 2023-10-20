@@ -9,6 +9,11 @@ import NavList from './components/NavList'
 export const metadata = {
   title: `Sound of Fractures`,
   description: `Sound of Fractures - built with Next.js and ${CMS_NAME}.`,
+  robots: {
+    index: false,
+    follow: false,
+    nocache: true,
+  },
 }
 
 const inter = Inter({
