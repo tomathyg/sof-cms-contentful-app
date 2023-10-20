@@ -7,7 +7,7 @@ function Intro() {
       <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
         Sound of Fractures
       </h1>
-      <p class="text-3xl">Coming soon</p>
+      <p className="text-3xl">Coming soon</p>
     </section>
   )
 }
