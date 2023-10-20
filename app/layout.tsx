@@ -2,8 +2,9 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import { EXAMPLE_PATH, CMS_NAME } from '@/lib/constants'
 
-import Link from 'next/link'
 import { getAllScenes } from '@/lib/api-2'
+
+import NavList from './components/NavList'
 
 export const metadata = {
   title: `Sound of Fractures`,
@@ -15,18 +16,6 @@ const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
 })
-
-function NavList({ posts, base }: { posts: Array<Record<string, any>>; base: string }) {
-  return (
-    <ul>
-      {posts.map((post) => (
-        <li key={post.id}>
-          <Link href={`/${base}/${post.slug}`}>{post.title}</Link>
-        </li>
-      ))}
-    </ul>
-  )
-}
 
 async function Header() {
   const allScenes = await getAllScenes(false);
@@ -40,7 +29,7 @@ async function Header() {
             <h1>Sound of Fractures</h1>
           </a>
           <NavList
-            posts={allScenes}
+            items={allScenes}
             base='scenes'
           />
         </div>
