@@ -1,20 +1,32 @@
-import React, { Fragment } from 'react';
+import React, { FC, Fragment } from 'react';
 
-function SubmissionsGallery(submissions:Object) {
-    //console.log("ARRAY:", Object.values(submissions));
-    //console.log("TYPE OF:", typeof(Object.values(submissions[0])));
+interface SubmissionImage {
+  url: string;
+}
+
+interface Submission {
+  name: string;
+  text: string;
+  submissionImage: SubmissionImage;
+}
+
+interface SubmissionsGalleryProps {
+  submissions: Submission[];
+}
+
+const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions }) => {
   return (
     <div>
-      {/*{Object.values(submissions)[0].map((item, index) => (
+      {submissions.map((item, index) => (
         <Fragment key={index}>
-            <img 
-                src={item.submissionImage.url} 
-                alt={item.name} 
-                style={{ margin: '10px' }} 
-            />
-            <p>{item.text}</p>
+          <img 
+            src={item.submissionImage.url} 
+            alt={item.name} 
+            style={{ margin: '10px' }} 
+          />
+          <p>{item.text}</p>
         </Fragment>
-      ))}*/}
+      ))}
     </div>
   );
 }
