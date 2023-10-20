@@ -27,7 +27,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
         }`,
       },
       body: JSON.stringify({ query }),
-      //next: { tags: ['posts'] },
+      next: { tags: ['scenes'] },
     }
   ).then((response) => response.json())
   .catch(error => {
@@ -36,6 +36,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
 }
 
 function extractScene(fetchResponse: any): any {
+    //console.log("SCENE RESPONSE:", fetchResponse);
   return fetchResponse?.data?.sceneCollection?.items?.[0]
 }
 
@@ -70,7 +71,7 @@ export async function getAllScenes(isDraftMode: boolean): Promise<any[]> {
     }`,
     isDraftMode
   )
-  //console.log("ENTRIES:", entries.data.sceneCollection.items);
+  //console.log("ENTRIES:", entries);
   return extractSceneEntries(entries)
 }
 

@@ -21,7 +21,7 @@ import { type } from 'os'
 export async function generateStaticParams() {
   const allScenes = await getAllScenes(false);
 
-  //console.log("ALL SCENES:", allScenes);
+  console.log("ALL SCENE ENTRIES:", allScenes);
 
   return allScenes.map((scene) => ({
     slug: scene.slug,
@@ -37,8 +37,8 @@ export default async function ScenePage({
   const { scene, moreScenes } = await getSceneAndMoreScenes(params.slug, isEnabled);
   //console.log("COLLECTION:", scene.submissionsCollection.items);
   const allSubmissions = scene.submissionsCollection.items;
-  console.log("SCENE SUBMISSIONS:", allSubmissions);
-  //console.log("TYPE:", typeof(allSubmissions[0]));
+  console.log("ALL SUBMISSIONS:", allSubmissions);
+  console.log("ALL SUBMISSIONS TYPE:", typeof(allSubmissions));
   return (
     <div className="container mx-auto my-10 px-5">
       <article>
@@ -51,9 +51,9 @@ export default async function ScenePage({
         <NFTPaperCheckout
           contractId={scene.nftContractId}
         />
-        <SubmissionsGallery
+        {/*<SubmissionsGallery
           submissions={allSubmissions}
-        />
+  />*/}
       </article>
     </div>
   )

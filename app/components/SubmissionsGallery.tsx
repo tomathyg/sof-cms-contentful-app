@@ -1,11 +1,11 @@
 import React, { Fragment } from 'react';
 
-function SubmissionsGallery(submissions) {
+function SubmissionsGallery(submissions:Object) {
     //console.log("ARRAY:", Object.values(submissions));
     //console.log("TYPE OF:", typeof(Object.values(submissions[0])));
   return (
     <div>
-      {Object.values(submissions)[0].map((item, index) => (
+      {/*{Object.values(submissions)[0].map((item, index) => (
         <Fragment key={index}>
             <img 
                 src={item.submissionImage.url} 
@@ -14,7 +14,7 @@ function SubmissionsGallery(submissions) {
             />
             <p>{item.text}</p>
         </Fragment>
-      ))}
+      ))}*/}
     </div>
   );
 }

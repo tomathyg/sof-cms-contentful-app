@@ -16,7 +16,7 @@ const inter = Inter({
   display: 'swap',
 })
 
-function NavList({ posts, base }) {
+function NavList({ posts, base }: { posts: Array<Record<string, any>>; base: string }) {
   return (
     <ul>
       {posts.map((post) => (
@@ -30,7 +30,8 @@ function NavList({ posts, base }) {
 
 async function Header() {
   const allScenes = await getAllScenes(false);
-  console.log("SCENES:", allScenes);
+  console.log("ALL SCENES:", allScenes);
+  console.log("ALL SCENES TYPE:", typeof(allScenes));
   return (
     <header className="bg-accent-1 border-b border-accent-2">
       <div className="container mx-auto px-5">
