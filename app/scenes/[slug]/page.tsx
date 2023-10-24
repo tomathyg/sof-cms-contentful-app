@@ -7,7 +7,9 @@ import { Markdown } from '@/lib/markdown'
 import { getAllScenes, getSceneAndMoreScenes } from '@/lib/api-2'
 
 import SubmissionsGallery from '../../components/SubmissionsGallery'
-import NFTPaperCheckout from '../../components/PaperCheckout';
+import NFTPaperCheckout from '../../components/PaperCheckout'
+import Player from '../../components/AudioPlayer'
+
 import { type } from 'os'
 
 export async function generateStaticParams() {
@@ -35,6 +37,7 @@ export default async function ScenePage({
         <p>
           {scene.nftContractId}
         </p>
+        <Player />
         <NFTPaperCheckout
           contractId={scene.nftContractId}
         />
