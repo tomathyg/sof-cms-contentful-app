@@ -37,6 +37,11 @@ export default async function ScenePage({
         <p>
           {scene.nftContractId}
         </p>
+          {/*
+          <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
+            <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
+          </audio>
+          */}
         <Player />
         <NFTPaperCheckout
           contractId={scene.nftContractId}
