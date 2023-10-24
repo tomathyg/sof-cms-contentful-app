@@ -8,7 +8,9 @@ import { getAllScenes, getSceneAndMoreScenes } from '@/lib/api-2'
 
 import SubmissionsGallery from '../../components/SubmissionsGallery'
 import NFTPaperCheckout from '../../components/PaperCheckout'
-import Player from '../../components/AudioPlayer'
+//import Player from '../../components/AudioPlayer'
+//import DecentAudioPlayer from '../../components/DecentAudioPLayer'
+import H5Player from '../../components/H5AudioPlayer'
 
 import { type } from 'os'
 
@@ -42,7 +44,9 @@ export default async function ScenePage({
             <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
           </audio>
           */}
-        <Player />
+        {/*<Player />*/}
+        {/*<DecentAudioPlayer />*/}
+        <H5Player />
         <NFTPaperCheckout
           contractId={scene.nftContractId}
         />

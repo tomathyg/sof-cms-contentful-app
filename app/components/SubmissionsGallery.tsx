@@ -49,7 +49,7 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions }) => {
                 loader={imageLoader} 
                 src={item.submissionImage.url} 
                 alt={item.name} 
-                layout='fill' 
+                fill={true}
                 objectFit='contain' 
                 objectPosition='left' 
               />
