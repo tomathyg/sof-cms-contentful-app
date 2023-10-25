@@ -39,14 +39,16 @@ export default async function ScenePage({
         <p>
           {scene.nftContractId}
         </p>
-          {/*
-          <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
-            <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
-          </audio>
-          */}
+        {/*
+        <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
+          <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
+        </audio>
+        */}
         {/*<Player />*/}
         {/*<DecentAudioPlayer />*/}
-        <H5Player />
+        <H5Player
+          src='https://nftstorage.link/ipfs/bafybeicnigbsdd6duwjjjompu5slw3iohdksf5p5ip2rcny2pn2jealkg4/moths 2 - beat demo 135 (interlude).mp3?id=0'
+        />
         <NFTPaperCheckout
           contractId={scene.nftContractId}
         />

@@ -50,8 +50,7 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions }) => {
                 src={item.submissionImage.url} 
                 alt={item.name} 
                 fill={true}
-                objectFit='contain' 
-                objectPosition='left' 
+                className='submission-image'
               />
             </div>
             <p>{item.text}</p>
