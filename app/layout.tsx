@@ -1,5 +1,6 @@
 import './globals.css'
 import './styles.css'
+import { Analytics } from '@vercel/analytics/react';
 import { Inter } from 'next/font/google'
 import { EXAMPLE_PATH, CMS_NAME } from '@/lib/constants'
 
