@@ -27,7 +27,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
         }`,
       },
       body: JSON.stringify({ query }),
-      next: { tags: ['scenes'] },
+      //next: { tags: ['scenes'] },
     }
   ).then((response) => response.json())
   .catch(error => {
@@ -36,12 +36,16 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
 }
 
 function extractScene(fetchResponse: any): any {
-    //console.log("SCENE RESPONSE:", fetchResponse);
+  //console.log("SCENE RESPONSE:", fetchResponse);
   return fetchResponse?.data?.sceneCollection?.items?.[0]
 }
 
 function extractSceneEntries(fetchResponse: any): any[] {
   return fetchResponse?.data?.sceneCollection?.items
+}
+
+function extractHoldingPageData(fetchResponse: any): any {
+  return fetchResponse?.data?.holdingPage
 }
 
 export async function getPreviewSceneBySlug(slug: string | null): Promise<any> {
@@ -107,4 +111,24 @@ export async function getSceneAndMoreScenes(
     scene: extractScene(entry),
     moreScenes: extractSceneEntries(entries),
   }
+}
+
+const HOLDING_PAGE_GRAPHQL_FIELDS = `
+  heading
+  text
+  formUrl
+`
+export async function getHoldingPageData(isDraftMode: boolean): Promise<any> {
+  const data = await fetchGraphQL(
+    `query HoldingPage {
+      holdingPage(id: "GRADdRhSuruda6CxtBOfs", preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+          ${HOLDING_PAGE_GRAPHQL_FIELDS}
+      }
+    }`,
+    isDraftMode
+  )
+  //console.log("HOLDING PAGE DATA:", data);
+  return extractHoldingPageData(data)
 }
