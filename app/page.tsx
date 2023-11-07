@@ -20,11 +20,15 @@ function Header({heading, text}: IntroProps) {
   )
 }
 
-function Footer() {
+interface FooterProps {
+  email: string;
+}
+
+function Footer({email}: FooterProps) {
   return (
     <section>
       <footer className="text-center">
-        <a href="mailto:hello@soundoffractures.com">hello@soundoffractures.com</a>
+        <a href="mailto:{email}">{email}</a>
       </footer>
     </section>
   )
@@ -48,7 +52,9 @@ export default async function Page() {
           src={content.formUrl}
         />
       </div>
-      <Footer />
+      <Footer
+        email={content.email}
+      />
     </section>
   )
 }
