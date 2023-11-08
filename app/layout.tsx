@@ -1,12 +1,9 @@
 import './globals.css'
 import './styles.css'
-import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
-import { EXAMPLE_PATH, CMS_NAME } from '@/lib/constants'
+import { Analytics } from '@vercel/analytics/react';
 
-import { getAllScenes } from '@/lib/api-2'
-
-import NavList from './components/NavList'
+import { CMS_NAME } from '@/lib/constants'
 
 export const metadata = {
   title: `Sound of Fractures`,
@@ -24,51 +21,25 @@ const dm_mono = DM_Mono({
   display: 'swap'
 })
 
-async function Header() {
-  const allScenes = await getAllScenes(false);
-  console.log("ALL SCENES:", allScenes);
-  console.log("ALL SCENES TYPE:", typeof(allScenes));
-  return (
-    <header className="bg-accent-1 border-b border-accent-2">
-      <div className="container mx-auto px-5">
-        <div className="py-8 flex lg:flex-row items-center justify-between">
-          <a href="/">
-            <h1>Sound of Fractures</h1>
-          </a>
-          <NavList
-            items={allScenes}
-            base='scenes'
-          />
-        </div>
-      </div>
-    </header>
-  )
-}
-
-function Footer() {
-  return (
-    <footer className="bg-accent-1 border-t border-accent-2">
-      <div className="container mx-auto px-5">
-        <div className="py-16 flex flex-col lg:flex-row items-center">
-          &#9426; Sound of Fractures
-        </div>
-      </div>
-    </footer>
-  )
-}
-
 export default function RootLayout({
   children,
+  modal
 }: {
   children: React.ReactNode
+  modal: React.ReactNode
 }) {
+
   return (
-    <html lang="en" className={dm_mono.className}>
+    <html lang="en" className={`${dm_mono.className} bg-black`}>
+      <head>
+        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></link>
+      </head>
       <body>
-        <section className="min-h-screen">
-          {/*<Header />*/}
-          <main>{children}</main>
-          {/*<Footer />*/}
+        <section className="min-h-screen text-white">
+          <main>
+            {children}
+            {modal}
+          </main>
         </section>
         <Analytics />
       </body>

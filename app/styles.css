@@ -1,7 +1,75 @@
 html {
-    background-color: black;
+    min-width: 300px;
 }
 
-* {
-    color: white;
+#sib-container input:-ms-input-placeholder {
+    text-align: left;
 }
+
+#sib-container input::placeholder {
+    text-align: left;
+}
+
+#sib-container textarea::placeholder {
+    text-align: left;
+}
+
+iframe {
+    min-width: 300px;
+}
+
+/*iframe {
+    width: 100%;
+    height: 50vh !important;
+    min-height: 700px;
+  }
+  
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 100%;
+    height: 0;
+}
+
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}*/
+
+#close-x {
+    height: 30px;
+    width: 30px;
+    pointer-events: none;
+}
+
+.rotate-on-hover {
+    transition: transform 0.3s ease;
+}
+  
+button:hover .rotate-on-hover {
+    transform: rotate(90deg);   
+}
+
+.no-select {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
+.loading-spinner-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 40px;
+}
+  
+.spinner_V8m1{transform-origin:center;animation:spinner_zKoa 1.5s linear infinite}
+.spinner_V8m1 circle{stroke-linecap:round;animation:spinner_YpZS 1.5s ease-in-out infinite}
+@keyframes spinner_zKoa{100%{transform:rotate(360deg)}}
+@keyframes spinner_YpZS{0%{stroke-dasharray:0 150;stroke-dashoffset:0}47.5%{stroke-dasharray:42 150;stroke-dashoffset:-16}95%,100%{stroke-dasharray:42 150;stroke-dashoffset:-59}}
