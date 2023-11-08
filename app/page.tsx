@@ -45,7 +45,7 @@ export default async function Page() {
     <section>
       <div className="container mx-auto px-5">
         <Header 
-          heading={content.heading}
+          heading='SCENES'
           text={content.text}
         />
       </div>
