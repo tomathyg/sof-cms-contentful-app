@@ -39,7 +39,7 @@ function Footer({email}: FooterProps) {
 export default async function Page() {
   const { isEnabled } = draftMode()
   const content = await getHoldingPageData(isEnabled);
-  //console.log("CONTENT:", content);
+  console.log("CONTENT:", content);
 
   return (
     <section>
