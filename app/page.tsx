@@ -43,17 +43,12 @@ export default async function Page() {
 
   return (
     <section>
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-5 test">
         <Header 
           heading={content.heading}
           text={content.text}
         />
       </div>
-      {/*<div className="mt-16">
-        <BrevoSignupForm
-          src={content.formUrl}
-        />
-      </div>*/}
       <div className="text-center flex justify-center my-10">
         <Link href="/join" className="bg-transparent border border-solid hover:bg-white hover:text-black active:bg-white-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
           JOIN THE COMMUNITY
