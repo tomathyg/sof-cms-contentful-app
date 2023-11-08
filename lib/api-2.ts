@@ -1,16 +1,16 @@
 const SCENE_GRAPHQL_FIELDS = `
-    title
-    slug
-    nftContractId
-    submissionsCollection(limit: 20) {
-        items {
-            name
-            text
-            submissionImage {
-                url
-            }
-        }
-    }
+  title
+  slug
+  nftContractId
+  submissionsCollection(limit: 20) {
+      items {
+          name
+          text
+          submissionImage {
+              url
+          }
+      }
+  }
 `
 
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
@@ -36,7 +36,6 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
 }
 
 function extractScene(fetchResponse: any): any {
-  //console.log("SCENE RESPONSE:", fetchResponse);
   return fetchResponse?.data?.sceneCollection?.items?.[0]
 }
 

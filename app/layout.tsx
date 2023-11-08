@@ -1,7 +1,7 @@
 import './globals.css'
 import './styles.css'
 import { Analytics } from '@vercel/analytics/react';
-import { Inter } from 'next/font/google'
+import { DM_Mono } from 'next/font/google'
 import { EXAMPLE_PATH, CMS_NAME } from '@/lib/constants'
 
 import { getAllScenes } from '@/lib/api-2'
@@ -18,10 +18,10 @@ export const metadata = {
   },
 }
 
-const inter = Inter({
-  variable: '--font-inter',
+const dm_mono = DM_Mono({
+  weight: '300',
   subsets: ['latin'],
-  display: 'swap',
+  display: 'swap'
 })
 
 async function Header() {
@@ -63,7 +63,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={dm_mono.className}>
       <body>
         <section className="min-h-screen">
           {/*<Header />*/}
