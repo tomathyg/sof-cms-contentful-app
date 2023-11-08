@@ -15,10 +15,10 @@ interface HeaderProps {
 function Header({heading, text}: HeaderProps) {
   return (
     <section className="text-center flex-col md:flex-col flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl md:text-8xl font-bold tracking-normal leading-tight md:pr-8 mt-10 mb-10">
+      <h1 className="text-6xl font-bold tracking-normal leading-tight mt-10 mb-10">
         {heading}
       </h1>
-      <p className="text-3xl">{text}</p>
+      <p className="text-2xl">{text}</p>
     </section>
   )
 }
@@ -45,7 +45,7 @@ export default async function Page() {
     <section>
       <div className="container mx-auto px-5">
         <Header 
-          heading='SCENES'
+          heading={content.heading}
           text={content.text}
         />
       </div>

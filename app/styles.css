@@ -1,5 +1,6 @@
 html {
     min-width: 300px;
+    font-size: 18px;
 }
 
 #sib-container input:-ms-input-placeholder {
