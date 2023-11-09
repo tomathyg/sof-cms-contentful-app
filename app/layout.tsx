@@ -35,7 +35,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></link>
       </head>
       <body>
-        <section className="min-h-screen text-white">
+        <section className="text-white">
           <main>
             {children}
             {modal}
