@@ -33,6 +33,12 @@ export default function RootLayout({
     <html lang="en" className={`${dm_mono.className} bg-black`}>
       <head>
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></link>
+        {/*<link
+          rel="icon"
+          href="/favicon.ico"
+          type="image/svg"
+          sizes="any"
+        />*/}
       </head>
       <body>
         <section className="text-white">
