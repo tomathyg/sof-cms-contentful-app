@@ -28,7 +28,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
       },
       body: JSON.stringify({ query }),
       next: { tags: ['holding'] },
-      cache: 'no-store',
+      //cache: 'no-store',
     }
   ).then((response) => response.json())
   .catch(error => {
