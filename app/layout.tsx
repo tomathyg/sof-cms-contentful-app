@@ -6,8 +6,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { CMS_NAME } from '@/lib/constants'
 
 export const metadata = {
-  title: `Sound of Fractures`,
-  description: `Sound of Fractures - built with Next.js and ${CMS_NAME}.`,
+  title: `Scenes - Sound of Fractures`,
+  description: `Sound of Fractures`,
   robots: {
     index: false,
     follow: false,
