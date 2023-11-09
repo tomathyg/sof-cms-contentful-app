@@ -27,7 +27,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
         }`,
       },
       body: JSON.stringify({ query }),
-      //next: { tags: ['scenes'] },
+      next: { tags: ['holding'] },
     }
   ).then((response) => response.json())
   .catch(error => {

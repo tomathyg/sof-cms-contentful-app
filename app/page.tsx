@@ -43,7 +43,7 @@ export default async function Page() {
 
   return (
     <section>
-      <div className="container mx-auto px-5 test">
+      <div className="container mx-auto px-5">
         <Header 
           heading={content.heading}
           text={content.text}
