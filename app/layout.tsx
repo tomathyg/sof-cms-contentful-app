@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   icons: {
     shortcut: { url: 'favicon.ico?v=2', type: 'image/x-icon' },
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },
+      { url: '/icon.svg', type: 'image/svg+xml', sizes: 'any' },
       //new URL('/icon.svg', 'https://scenes.soundoffractures.com'),
       { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
       { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
