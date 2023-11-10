@@ -16,9 +16,10 @@ export const metadata: Metadata = {
     nocache: true,
   },
   icons: {
-    shortcut: { url: '/favicon.ico', type: 'image/x-icon' },
+    shortcut: { url: '/favicon.ico?v=2', type: 'image/x-icon' },
     icon: [
-      { url: '/icon.svg', type: 'image/svg+xml' },/*, new URL('/icon.svg', 'https://scenes.soundoffractures.com')*/
+      { url: '/icon.svg', type: 'image/svg+xml' },
+      new URL('/icon.svg', 'https://scenes.soundoffractures.com'),
       { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
       { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
