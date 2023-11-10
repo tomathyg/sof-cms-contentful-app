@@ -9,7 +9,7 @@ import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
-  description: `Sound of Fractures`,
+  description: `Scenes: Where music meets memory – An interactive album by Sound of Fractures. Join to participate.`,
   robots: {
     index: false,
     follow: false,
