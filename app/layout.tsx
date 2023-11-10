@@ -18,6 +18,7 @@ export const metadata: Metadata = {
   icons: {
     //shortcut: { url: 'favicon.ico?v=2', type: 'image/x-icon' },
     icon: [
+      { url: '/favicon.ico?v=4', sizes: 'any', type: 'image/x-icon' },
       { url: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },
       { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon-16.png', sizes: '16x16', type: 'image/png' },
