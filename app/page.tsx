@@ -31,7 +31,7 @@ function Header({heading, text}: HeaderProps) {
         <ScenesLogoWhite />
       </h1>
       </div>
-      <p className="text-2xl mt-4">{/*{text}*/}29/11/23</p>
+      <p className="text-2xl mt-4 leading-9">{/*{text}*/}STARTING<br />29/11/23</p>
     </section>
   )
 }
