@@ -16,9 +16,9 @@ export const metadata: Metadata = {
     nocache: true,
   },
   icons: {
-    //shortcut: { url: 'favicon.ico?v=2', type: 'image/x-icon' },
+    shortcut: { url: 'favicon.ico?v=5', sizes: 'any', type: 'image/x-icon' },
     icon: [
-      { url: '/favicon.ico?v=4', sizes: 'any', type: 'image/x-icon' },
+      //{ url: '/favicon.ico?v=4', sizes: 'any', type: 'image/x-icon' },
       { url: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },
       { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
       { url: '/icon-16.png', sizes: '16x16', type: 'image/png' },
@@ -57,9 +57,9 @@ export default function RootLayout({
     <html lang="en" className={`${dm_mono.className} bg-black`}>
       <head>
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></link>
-        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"></meta>
+        {/*<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"></meta>
         <meta http-equiv="Pragma" content="no-cache"></meta>
-        <meta http-equiv="Expires" content="0"></meta>
+        <meta http-equiv="Expires" content="0"></meta>*/}
         {/*<link
           rel="icon"
           href="/favicon.ico"

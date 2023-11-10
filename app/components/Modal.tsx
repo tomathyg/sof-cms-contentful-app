@@ -54,7 +54,7 @@ export default function Modal({ children }: { children: React.ReactNode }) {
           className="absolute right-0 z-10 text-4xl p-6" onClick={onClick}>
             <svg id="close-x" className="rotate-on-hover" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460.32 460.32">
               <g>
-                <path id="times" d="m230.16,194.38L424.54,0l35.79,35.79-194.37,194.38,194.37,194.37-35.79,35.79-194.37-194.37L35.79,460.32,0,424.54l194.38-194.37L0,35.79,35.79,0l194.37,194.38h0Z" fill="#fff" fill-rule="evenodd"/><path d="m230.16,194.38L424.54,0l35.79,35.79-194.37,194.38,194.37,194.37-35.79,35.79-194.37-194.37L35.79,460.32,0,424.54l194.38-194.37L0,35.79,35.79,0l194.37,194.38h0Z" fill="#fff" fill-rule="evenodd"/>
+                <path id="times" d="m230.16,194.38L424.54,0l35.79,35.79-194.37,194.38,194.37,194.37-35.79,35.79-194.37-194.37L35.79,460.32,0,424.54l194.38-194.37L0,35.79,35.79,0l194.37,194.38h0Z" fill="#fff" fillRule="evenodd"/><path d="m230.16,194.38L424.54,0l35.79,35.79-194.37,194.38,194.37,194.37-35.79,35.79-194.37-194.37L35.79,460.32,0,424.54l194.38-194.37L0,35.79,35.79,0l194.37,194.38h0Z" fill="#fff" fillRule="evenodd"/>
               </g>
             </svg>
           </button>
