@@ -1,5 +1,4 @@
 html {
-    min-width: 300px;
     font-size: 18px;
 }
 
@@ -13,6 +12,18 @@ html {
 
 #sib-container textarea::placeholder {
     text-align: left;
+}
+
+.main-container {
+    max-width: 95%;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+#scenes-logo {
+    height: auto;
+    width: 400px;
+    max-width: 100%;
 }
 
 iframe {

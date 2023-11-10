@@ -3,15 +3,36 @@ import './styles.css'
 import { DM_Mono } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/react';
 
-import { CMS_NAME } from '@/lib/constants'
+//import { CMS_NAME } from '@/lib/constants'
 
-export const metadata = {
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
   description: `Sound of Fractures`,
   robots: {
     index: false,
     follow: false,
     nocache: true,
+  },
+  icons: {
+    shortcut: { url: '/favicon.ico', type: 'image/x-icon' },
+    icon: [
+      { url: '/icon.svg', type: 'image/svg+xml' },/*, new URL('/icon.svg', 'https://scenes.soundoffractures.com')*/
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png' },
+      { url: '/apple-icon-x2.png', sizes: '120x120', type: 'image/png' },
+      { url: '/apple-icon-x3.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/apple-touch-icon-precomposed.png',
+      },
+    ],
   },
 }
 
@@ -41,7 +62,7 @@ export default function RootLayout({
         />*/}
       </head>
       <body>
-        <section className="text-white">
+        <section className="text-white main-container">
           <main>
             {children}
             {modal}

@@ -2,10 +2,20 @@ import { draftMode } from 'next/headers'
 
 import { getHoldingPageData } from '@/lib/api-2'
 
+//import Image from 'next/image'
+
+import ScenesLogoWhite from './components/ScenesLogoWhite'
+
 //import ServerJoinButton from './components/ServerJoinButton'
 //import ClientJoinButton from './components/ClientJoinButton'
 
 import Link from 'next/link'
+import localFont from 'next/font/local'
+
+const drukWideHeavy = localFont({
+  src: './fonts/Druk-Wide-Heavy-Web.woff2',
+  display: 'swap',
+})
 
 interface HeaderProps {
   heading: string;
@@ -14,11 +24,14 @@ interface HeaderProps {
 
 function Header({heading, text}: HeaderProps) {
   return (
-    <section className="text-center flex-col md:flex-col flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className="text-6xl font-bold tracking-normal leading-tight mt-10 mb-10">
-        {heading}
+    <section className="text-center flex-col md:flex-col flex items-center md:justify-between mt-16 mb-16">
+      <div>
+      <h1 className={`flex justify-center text-6xl font-bold tracking-wide leading-tight mt-10 mb-10 ${drukWideHeavy.className}`}>
+        {/*{heading}*/}
+        <ScenesLogoWhite />
       </h1>
-      <p className="text-2xl">{text}</p>
+      </div>
+      <p className="text-2xl mt-4">{text}</p>
     </section>
   )
 }
@@ -43,7 +56,7 @@ export default async function Page() {
 
   return (
     <section>
-      <div className="container mx-auto px-5">
+      <div className="container mx-auto px-2">
         <Header 
           heading={content.heading}
           text={content.text}
