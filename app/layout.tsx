@@ -24,7 +24,7 @@ export const metadata: Metadata = {
       { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
     ],
     apple: [
-      { url: '/apple-icon.png' },
+      { url: '/apple-icon.png', sizes: '60x60', type: 'image/png' },
       { url: '/apple-icon-x2.png', sizes: '120x120', type: 'image/png' },
       { url: '/apple-icon-x3.png', sizes: '180x180', type: 'image/png' },
     ],
@@ -54,6 +54,9 @@ export default function RootLayout({
     <html lang="en" className={`${dm_mono.className} bg-black`}>
       <head>
         <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></link>
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+        <meta http-equiv="Pragma" content="no-cache">
+        <meta http-equiv="Expires" content="0"></meta>
         {/*<link
           rel="icon"
           href="/favicon.ico"
