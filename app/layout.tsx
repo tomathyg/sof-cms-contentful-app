@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     nocache: true,
   },
   icons: {
-    shortcut: { url: '/favicon.ico?v=2', type: 'image/x-icon' },
+    shortcut: [{ url: '/favicon.ico?v=2', type: 'image/x-icon' }, new URL('/favicon.ico', 'https://scenes.soundoffractures.com')],
     icon: [
       { url: '/icon.svg', type: 'image/svg+xml' },
       new URL('/icon.svg', 'https://scenes.soundoffractures.com'),
