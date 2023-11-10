@@ -36,7 +36,6 @@ export const metadata: Metadata = {
     ],
   },
 }
-
 const dm_mono = DM_Mono({
   weight: '300',
   subsets: ['latin'],
