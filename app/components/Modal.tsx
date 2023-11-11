@@ -1,5 +1,6 @@
 'use client'
 import { useCallback, useRef, useState, useEffect, MouseEventHandler } from 'react'
+import Spinner from '../loading'
 //import { useRouter } from 'next/navigation'
 
 interface ModalProps {
@@ -56,7 +57,7 @@ export default function Modal({ isOpen, children, onClose }: ModalProps) {
   return (
     <div
       ref={overlay}
-      className="fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto bg-black"
+      className="fixed z-10 left-0 right-0 top-0 bottom-0 mx-auto bg-black modal-overlay"
       onClick={onClick}
     >
       <div className="button-container relative">
@@ -72,8 +73,11 @@ export default function Modal({ isOpen, children, onClose }: ModalProps) {
       </div>
       <div
         ref={wrapper}
-        className="absolute top-10 left-1/2 -translate-x-1/2 w-full sm:w-10/12 md:w-8/12 lg:w-1/2"
+        className="absolute top-10 left-1/2 -translate-x-1/2 w-full sm:w-10/12 md:w-8/12 lg:w-1/2 modal-wrapper"
       >
+        <div className="absolute flex align-center spinner-wrapper w-full h-full pt-[40px] -z-[1]">
+          <Spinner />
+        </div>
         {children}
       </div>
     </div>
