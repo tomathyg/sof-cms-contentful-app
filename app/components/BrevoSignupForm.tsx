@@ -2,6 +2,7 @@ export default function BrevoSignupForm (props:any) {
     return (
         <div className="iframe-wrapper">
             <iframe
+            loading="eager"
             className="no-select"
             width="540"
             height="800"

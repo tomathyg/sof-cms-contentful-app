@@ -119,6 +119,7 @@ const HOLDING_PAGE_GRAPHQL_FIELDS = `
   formUrl
   email
 `
+
 export async function getHoldingPageData(isDraftMode: boolean): Promise<any> {
   const data = await fetchGraphQL(
     `query HoldingPage {
