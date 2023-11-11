@@ -37,3 +37,6 @@ next-env.d.ts
 # sublime text
 *.sublime-project
 *.sublime-workspace
+
+# vscode
+*.code-workspace

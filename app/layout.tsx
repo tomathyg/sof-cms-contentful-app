@@ -38,6 +38,7 @@ export const metadata: Metadata = {
       },
     ],
   },
+  metadataBase: new URL('https://scenes.soundoffractures.com'),
   openGraph: {
     title: 'Scenes - Where music meets memory',
     description: 'An interactive album by Sound of Fractures',
@@ -45,7 +46,7 @@ export const metadata: Metadata = {
     //siteName: 'Scenes - Where music meets memory',
     images: [
       {
-        url: 'https://scenes.soundoffractures.com/social/scenes-logo-og-fb-white-on-black.jpg',
+        url: '/social-images/scenes-logo-og-fb-white-on-black.jpg',
         width: 1200,
         height: 630,
         alt: 'Scenes',
