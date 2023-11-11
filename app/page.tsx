@@ -76,11 +76,11 @@ export default async function Page() {
       </div>
       {/*<ServerJoinButton />
       <ClientJoinButton />*/}
-      <div className="text-center">
+      {/*<div className="text-center">
         <Footer
           email={content.email}
         />
-      </div>
+    </div>*/}
     </section>
   )
 }
