@@ -56,7 +56,7 @@ export default async function Page() {
   //console.log("CONTENT:", content);
 
   return (
-    <section>
+    <section className="text-white">
       <div className="container mx-auto px-2">
         <Header 
           heading={content.heading}

@@ -68,7 +68,7 @@ export default function RootLayout({
         />*/}
       </head>
       <body>
-        <section className="text-white main-container">
+        <section className="main-container">
           <main>
             {children}
             {modal}
