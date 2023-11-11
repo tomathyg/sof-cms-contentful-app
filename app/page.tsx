@@ -32,7 +32,7 @@ function Header({heading, text}: HeaderProps) {
         <ScenesLogoWhite />
       </h1>
       </div>
-      <p className="text-2xl mt-4 leading-10">{/*{text}*/}BEGINNING<br />01/12/23</p>
+      <p className="text-2xl mt-4 leading-10">{/*{text}*/}BEGINNING<br />1/12/23</p>
     </section>
   )
 }
