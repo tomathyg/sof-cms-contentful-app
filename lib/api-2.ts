@@ -130,6 +130,6 @@ export async function getHoldingPageData(isDraftMode: boolean): Promise<any> {
     }`,
     isDraftMode
   )
-  console.log("HOLDING PAGE DATA:", data);
+  //console.log("HOLDING PAGE DATA:", data);
   return extractHoldingPageData(data)
 }

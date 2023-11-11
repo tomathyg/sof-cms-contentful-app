@@ -1,6 +1,10 @@
 import { draftMode } from 'next/headers'
+//import Link from 'next/link'
+import localFont from 'next/font/local'
 
 import { getHoldingPageData } from '@/lib/api-2'
+
+import ModalTrigger from './components/ModalTrigger'
 
 //import Image from 'next/image'
 
@@ -8,9 +12,6 @@ import ScenesLogoWhite from './components/ScenesLogoWhite'
 
 //import ServerJoinButton from './components/ServerJoinButton'
 //import ClientJoinButton from './components/ClientJoinButton'
-
-import Link from 'next/link'
-import localFont from 'next/font/local'
 
 const drukWideHeavy = localFont({
   src: './fonts/Druk-Wide-Heavy-Web.woff2',
@@ -31,7 +32,7 @@ function Header({heading, text}: HeaderProps) {
         <ScenesLogoWhite />
       </h1>
       </div>
-      <p className="text-2xl mt-4 leading-9">{/*{text}*/}STARTING<br />29/11/23</p>
+      <p className="text-2xl mt-4 leading-10">{/*{text}*/}STARTING<br />29/11/23</p>
     </section>
   )
 }
@@ -52,7 +53,7 @@ function Footer({email}: FooterProps) {
 export default async function Page() {
   const { isEnabled } = draftMode()
   const content = await getHoldingPageData(isEnabled);
-  console.log("CONTENT:", content);
+  //console.log("CONTENT:", content);
 
   return (
     <section>
@@ -63,9 +64,15 @@ export default async function Page() {
         />
       </div>
       <div className="text-center flex justify-center my-10">
-        <Link href="/join" className="bg-transparent border border-solid hover:bg-white hover:text-black active:bg-white-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+        {/*<Link href="/join" className="bg-transparent border border-solid hover:bg-white hover:text-black active:bg-white-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
           JOIN THE COMMUNITY
-        </Link>
+        </Link>*/}
+        {/*<button onClick={() => setIsModalOpen(true)}>Open Modal</button>*/}
+
+        <ModalTrigger
+          iframeSrc={content.formUrl}
+          //iframeSrc='https://83dff8dc.sibforms.com/serve/MUIFAKItigAmup9ec85QGNo38yZrZZDVzS3lGRCeDrfurfERVHN6ctMsCE9dpZXnuJNvkhFfda9fz2HRXUrGN0zFgpQOyZbtlONEwXgJ-HbwMBeNQAZGc8EM2XW0bII2JXZc42p_iFA3cyW_85GMcbnL5KI1XUNbezWD8qW8fghLAqPwlL1f83EFoXs9k6b9kteXma7q5Ss84fu6'
+        />
       </div>
       {/*<ServerJoinButton />
       <ClientJoinButton />*/}

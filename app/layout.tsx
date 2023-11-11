@@ -56,7 +56,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${dm_mono.className} bg-black`}>
       <head>
-        <link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></link>
+        {/*<link rel="stylesheet" href="https://sibforms.com/forms/end-form/build/sib-styles.css"></link>*/}
         {/*<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"></meta>
         <meta http-equiv="Pragma" content="no-cache"></meta>
         <meta http-equiv="Expires" content="0"></meta>*/}

@@ -1,18 +1,27 @@
 'use client'
-import { useCallback, useRef, useEffect, MouseEventHandler } from 'react'
-import { useRouter } from 'next/navigation'
+import { useCallback, useRef, useState, useEffect, MouseEventHandler } from 'react'
+//import { useRouter } from 'next/navigation'
 
-export default function Modal({ children }: { children: React.ReactNode }) {
+interface ModalProps {
+  isOpen: boolean;
+  children: React.ReactNode;
+  onClose: () => void;  // Callback to inform parent component when modal closes
+}
+
+export default function Modal({ isOpen, children, onClose }: ModalProps) {
+  const [modalOpen, setModalOpen] = useState(isOpen);
+
+  //console.log("IS OPEN:", isOpen);
+
   const overlay = useRef(null)
   const wrapper = useRef(null)
   const close = useRef(null)
-  const router = useRouter()
+  //const router = useRouter()
 
   const onDismiss = useCallback(() => {
-    //router.back()
-    //router.push('/')
-    window.location.href = "/"
-  }, [router])
+    setModalOpen(false);
+    onClose(); // Inform parent component that modal has closed
+  }, [onClose]);
 
   const onClick: MouseEventHandler = useCallback(
     (e) => {
@@ -22,13 +31,6 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     },
     [onDismiss, close]
   )
-
-  /*const onClose: MouseEventHandler = useCallback(
-    (e) => {
-        if (onDismiss) onDismiss()
-    },
-    [onDismiss, close]
-  )*/
 
   const onKeyDown = useCallback(
     (e: KeyboardEvent) => {
@@ -41,6 +43,15 @@ export default function Modal({ children }: { children: React.ReactNode }) {
     document.addEventListener('keydown', onKeyDown)
     return () => document.removeEventListener('keydown', onKeyDown)
   }, [onKeyDown])
+
+
+  useEffect(() => {
+    setModalOpen(isOpen);
+  }, [isOpen]);
+
+  if (!modalOpen) {
+    return null;
+  }
 
   return (
     <div

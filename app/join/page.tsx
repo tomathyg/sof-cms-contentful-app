@@ -1,7 +1,5 @@
 //'use client'
 
-//import BrevoSignupForm from '../components/BrevoSignupForm'
-
 //import { usePathname, useRouter } from "next/navigation.js";
 import { draftMode } from 'next/headers'
 import { getHoldingPageData } from '@/lib/api-2'
