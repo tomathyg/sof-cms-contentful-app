@@ -38,6 +38,22 @@ export const metadata: Metadata = {
       },
     ],
   },
+  openGraph: {
+    title: 'Scenes - Where music meets memory',
+    description: 'An interactive album by Sound of Fractures',
+    url: 'https://scenes.soundoffractures.com/',
+    siteName: 'Scenes - Where music meets memory',
+    images: [
+      {
+        url: 'https://scenes.soundoffractures.com/social/scenes-logo-og-fb-white-on-black.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Scenes',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
+  },
 }
 const dm_mono = DM_Mono({
   weight: '300',
