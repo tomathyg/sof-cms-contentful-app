@@ -42,7 +42,7 @@ export const metadata: Metadata = {
     title: 'Scenes - Where music meets memory',
     description: 'An interactive album by Sound of Fractures',
     url: 'https://scenes.soundoffractures.com/',
-    siteName: 'Scenes - Where music meets memory',
+    //siteName: 'Scenes - Where music meets memory',
     images: [
       {
         url: 'https://scenes.soundoffractures.com/social/scenes-logo-og-fb-white-on-black.jpg',
