@@ -11,6 +11,7 @@ import SocialFollowIcons from './components/SocialFollowLinks'
 //import Image from 'next/image'
 
 import ScenesLogoWhite from './components/ScenesLogoWhite'
+import React from 'react'
 
 //import ServerJoinButton from './components/ServerJoinButton'
 //import ClientJoinButton from './components/ClientJoinButton'
@@ -35,7 +36,7 @@ function Header({heading, text, date}: HeaderProps) {
         <ScenesLogoWhite />
       </h1>
       </div>
-      <p className="text-2xl mt-4 leading-10">{/*{text}*/}{text}<br />{date}</p>
+      <p className="text-2xl mt-4 leading-10">{/*{text}*/}BEGINS<br />{date}</p>
     </section>
   )
 }
