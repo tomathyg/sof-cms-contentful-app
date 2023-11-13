@@ -8,15 +8,63 @@ import { getAllScenes } from '@/lib/api-2'
 
 import NavList from './components/NavList'
 
-export const metadata = {
-  title: `Sound of Fractures`,
-  description: `Sound of Fractures - built with Next.js and ${CMS_NAME}.`,
+// Metadata
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: `Scenes - Sound of Fractures`,
+  description: `Scenes: Where music meets memory – An interactive album by Sound of Fractures. Join to participate.`,
   robots: {
-    index: false,
-    follow: false,
-    nocache: true,
+    //index: false,
+    //follow: false,
+    noarchive: true,
+  },
+  icons: {
+    shortcut: { url: 'favicon.ico?v=5', sizes: 'any', type: 'image/x-icon' },
+    icon: [
+      //{ url: '/favicon.ico?v=4', sizes: 'any', type: 'image/x-icon' },
+      { url: '/icon.svg', sizes: 'any', type: 'image/svg+xml' },
+      { url: '/icon-32.png', sizes: '32x32', type: 'image/png' },
+      { url: '/icon-16.png', sizes: '16x16', type: 'image/png' },
+      //new URL('/icon.svg', 'https://scenes.soundoffractures.com'),
+      { url: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' },
+      { url: '/android-chrome-512x512.png', sizes: '512x512', type: 'image/png' },
+    ],
+    apple: [
+      { url: '/apple-icon.png', sizes: '60x60', type: 'image/png' },
+      { url: '/apple-icon-x2.png', sizes: '120x120', type: 'image/png' },
+      { url: '/apple-icon-x3.png', sizes: '180x180', type: 'image/png' },
+    ],
+    other: [
+      {
+        rel: 'apple-touch-icon-precomposed',
+        url: '/apple-touch-icon-precomposed.png',
+      },
+    ],
+  },
+  metadataBase: new URL('https://scenes.soundoffractures.com'),
+  openGraph: {
+    title: 'Scenes - Where music meets memory',
+    description: 'An interactive album by Sound of Fractures',
+    url: 'https://scenes.soundoffractures.com/',
+    //siteName: 'Scenes - Where music meets memory',
+    images: [
+      {
+        url: '/social-images/scenes-logo-og-fb-white-on-black.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Scenes',
+      },
+    ],
+    locale: 'en_GB',
+    type: 'website',
   },
 }
+const dm_mono = DM_Mono({
+  weight: '300',
+  subsets: ['latin'],
+  display: 'swap'
+})
 
 const inter = Inter({
   variable: '--font-inter',
