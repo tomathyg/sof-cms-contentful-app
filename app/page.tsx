@@ -6,6 +6,8 @@ import { getHoldingPageData } from '@/lib/api-2'
 
 import ModalTrigger from './components/ModalTrigger'
 
+import SocialFollowIcons from './components/SocialFollowLinks'
+
 //import Image from 'next/image'
 
 import ScenesLogoWhite from './components/ScenesLogoWhite'
@@ -36,17 +38,26 @@ function Header({heading, text}: HeaderProps) {
     </section>
   )
 }
-interface FooterProps {
-  email: string;
+
+interface SocialMediaItem {
+  title: string;
+  url: string;
 }
 
-function Footer({email}: FooterProps) {
+interface FooterProps {
+  email: string;
+  socialItems: SocialMediaItem[];
+}
+
+function Footer({email, socialItems}: FooterProps) {
+  console.log("SOCIAL ITEMS:", socialItems)
   return (
-    <section>
-      <footer className="text-center">
-        <a href={`mailto:${email}`}>{email}</a>
-      </footer>
-    </section>
+    <footer className="text-center">
+      {Array.isArray(socialItems) && socialItems.length > 0 && (
+        <SocialFollowIcons items={socialItems}/>
+      )}
+      {/*<a href={`mailto:${email}`}>{email}</a>*/}
+    </footer>
   )
 }
 
@@ -54,6 +65,8 @@ export default async function Page() {
   const { isEnabled } = draftMode()
   const content = await getHoldingPageData(isEnabled);
   console.log("CONTENT:", content);
+
+  const socialItems = content.socialNetworksCollection.items;
 
   return (
     <section className="text-white">
@@ -63,24 +76,18 @@ export default async function Page() {
           text={content.text}
         />
       </div>
-      <div className="text-center flex justify-center my-10">
-        {/*<Link href="/join" className="bg-transparent border border-solid hover:bg-white hover:text-black active:bg-white-600 font-bold uppercase px-8 py-3 rounded outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
-          JOIN THE COMMUNITY
-        </Link>*/}
-        {/*<button onClick={() => setIsModalOpen(true)}>Open Modal</button>*/}
-
+      <div className="text-center flex justify-center my-8">
         <ModalTrigger
           iframeSrc={content.formUrl}
           //iframeSrc='https://83dff8dc.sibforms.com/serve/MUIFAKItigAmup9ec85QGNo38yZrZZDVzS3lGRCeDrfurfERVHN6ctMsCE9dpZXnuJNvkhFfda9fz2HRXUrGN0zFgpQOyZbtlONEwXgJ-HbwMBeNQAZGc8EM2XW0bII2JXZc42p_iFA3cyW_85GMcbnL5KI1XUNbezWD8qW8fghLAqPwlL1f83EFoXs9k6b9kteXma7q5Ss84fu6'
         />
       </div>
-      {/*<ServerJoinButton />
-      <ClientJoinButton />*/}
-      {/*<div className="text-center">
+      <div className="text-center">
         <Footer
           email={content.email}
+          socialItems={socialItems}
         />
-    </div>*/}
+      </div>
     </section>
   )
 }

@@ -51,6 +51,11 @@ iframe {
     height: 100%;
 }*/
 
+.social-icon {
+    height: 40px !important;
+    width: 40px !important;
+}
+
 #close-x {
     height: 30px;
     width: 30px;

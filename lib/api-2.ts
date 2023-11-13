@@ -28,7 +28,7 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
       },
       body: JSON.stringify({ query }),
       next: { tags: ['holding'] },
-      //cache: 'no-store', // DISABLE FOR PRODUCTION!!!
+      cache: 'no-store', // DISABLE FOR PRODUCTION!!!
     }
   ).then((response) => response.json())
   .catch(error => {
@@ -45,6 +45,7 @@ function extractSceneEntries(fetchResponse: any): any[] {
 }
 
 function extractHoldingPageData(fetchResponse: any): any {
+  console.log("FETCH RESPONSE:", fetchResponse);
   return fetchResponse?.data?.holdingPage
 }
 
@@ -118,6 +119,12 @@ const HOLDING_PAGE_GRAPHQL_FIELDS = `
   text
   formUrl
   email
+  socialNetworksCollection {
+    items {
+        title
+        url
+    }
+  }
 `
 
 export async function getHoldingPageData(isDraftMode: boolean): Promise<any> {
@@ -131,6 +138,6 @@ export async function getHoldingPageData(isDraftMode: boolean): Promise<any> {
     }`,
     isDraftMode
   )
-  //console.log("HOLDING PAGE DATA:", data);
+  console.log("HOLDING PAGE DATA:", data);
   return extractHoldingPageData(data)
 }
