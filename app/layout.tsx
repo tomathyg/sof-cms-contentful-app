@@ -106,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={dm_mono.variable}>
+    <html lang="en" className={dm_mono.className}>
       <body>
         <section className="min-h-screen">
           <Header />
