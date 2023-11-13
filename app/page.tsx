@@ -23,9 +23,10 @@ const drukWideHeavy = localFont({
 interface HeaderProps {
   heading: string;
   text: string;
+  date: string;
 }
 
-function Header({heading, text}: HeaderProps) {
+function Header({heading, text, date}: HeaderProps) {
   return (
     <section className="text-center flex-col md:flex-col flex items-center md:justify-between mt-16 mb-16">
       <div>
@@ -34,7 +35,7 @@ function Header({heading, text}: HeaderProps) {
         <ScenesLogoWhite />
       </h1>
       </div>
-      <p className="text-2xl mt-4 leading-10">{/*{text}*/}{text}<br />1/12/23</p>
+      <p className="text-2xl mt-4 leading-10">{/*{text}*/}{text}<br />{date}</p>
     </section>
   )
 }
@@ -74,6 +75,7 @@ export default async function Page() {
         <Header 
           heading={content.heading}
           text={content.text}
+          date={content.date}
         />
       </div>
       <div className="text-center flex justify-center my-8">

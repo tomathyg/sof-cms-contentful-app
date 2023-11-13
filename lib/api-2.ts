@@ -117,6 +117,7 @@ export async function getSceneAndMoreScenes(
 const HOLDING_PAGE_GRAPHQL_FIELDS = `
   heading
   text
+  date
   formUrl
   email
   socialNetworksCollection {
