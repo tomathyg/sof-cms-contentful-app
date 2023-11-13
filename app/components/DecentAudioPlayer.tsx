@@ -2,6 +2,8 @@
 
 import { useReducer } from "react";
 import type { AppProps } from 'next/app';
+import { AudioPlayer } from "decent-audio-player";
+import React from "react";
 
 import {
   DispatchPlayerContext,
@@ -20,8 +22,6 @@ const App = ({ Component, pageProps }: AppProps) => {
     </PlayerContext.Provider>
   );
 };
-
-import { AudioPlayer } from "decent-audio-player";
 
 const DecentAudioPlayer = () => (
   <AudioPlayer
