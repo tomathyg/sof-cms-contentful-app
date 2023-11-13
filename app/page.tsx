@@ -2,6 +2,7 @@ import Link from 'next/link'
 import { draftMode } from 'next/headers'
 
 import BrevoSignupForm from './components/BrevoSignupForm'
+import React from 'react'
 
 function Intro() {
   return (

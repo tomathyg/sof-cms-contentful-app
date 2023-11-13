@@ -1,15 +1,16 @@
 import './globals.css'
 import './styles.css'
 import { Analytics } from '@vercel/analytics/react';
-import { Inter } from 'next/font/google'
-import { EXAMPLE_PATH, CMS_NAME } from '@/lib/constants'
+import { DM_Mono } from 'next/font/google'
+import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
 
-import { getAllScenes } from '@/lib/api-2'
+import { getAllScenes } from '../lib/api-2'
 
 import NavList from './components/NavList'
 
 // Metadata
 import type { Metadata } from 'next'
+import React from 'react';
 
 export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
@@ -66,12 +67,6 @@ const dm_mono = DM_Mono({
   display: 'swap'
 })
 
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-  display: 'swap',
-})
-
 async function Header() {
   const allScenes = await getAllScenes(false);
   console.log("ALL SCENES:", allScenes);
@@ -111,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={inter.variable}>
+    <html lang="en" className={dm_mono.variable}>
       <body>
         <section className="min-h-screen">
           <Header />
