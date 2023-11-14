@@ -118,6 +118,7 @@ export async function getSceneAndMoreScenes(
 
 const HOME_PAGE_GRAPHQL_FIELDS = `
   heading
+  typeFormId
 `
 export async function getHomePageData(isDraftMode: boolean): Promise<any> {
   const data = await fetchGraphQL(

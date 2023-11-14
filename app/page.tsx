@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { draftMode } from 'next/headers'
 import React from 'react'
+import TypeForm from './components/TypeForm'
+import { getHomePageData } from '../lib/api-2'
 
 function Intro() {
   return (
@@ -14,9 +16,15 @@ function Intro() {
 
 export default async function Page() {
 
+  const content = await getHomePageData(false);
+  console.log("HOME PAGE CONTENT:", content);
+
   return (
     <div className="container mx-auto px-5">
       <Intro />
+      <TypeForm
+        id={content.typeFormId}
+      />
     </div>
   )
 }
