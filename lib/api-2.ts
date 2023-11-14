@@ -48,6 +48,7 @@ function extractSceneEntries(fetchResponse: any): any[] {
 }
 
 function extractHomePageData(fetchResponse: any): any {
+  console.log("HOME PAGE RESPONSE:", fetchResponse);
   return fetchResponse?.data?.homePage
 }
 
@@ -119,6 +120,15 @@ export async function getSceneAndMoreScenes(
 const HOME_PAGE_GRAPHQL_FIELDS = `
   heading
   typeFormId
+  socialFollowLinksCollection(limit: 10) {
+    total
+    skip
+    limit
+    items {
+        title
+        url
+    }
+  }
 `
 export async function getHomePageData(isDraftMode: boolean): Promise<any> {
   const data = await fetchGraphQL(

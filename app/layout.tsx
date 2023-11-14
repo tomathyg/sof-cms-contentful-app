@@ -4,7 +4,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
 import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
 
-import { getAllScenes } from '../lib/api-2'
+import { getAllScenes, getHomePageData } from '../lib/api-2'
+import SocialFollow from './components/SocialFollowLinks'
 
 import NavList from './components/NavList'
 
@@ -71,11 +72,19 @@ async function Header() {
   const allScenes = await getAllScenes(false);
   console.log("ALL SCENES:", allScenes);
   console.log("ALL SCENES TYPE:", typeof(allScenes));
+
+  const content = await getHomePageData(false);
+  console.log("HOME PAGE CONTENT:", content);
+  const socialNetworks = content.socialFollowLinksCollection.items;
+
   return (
     <header className="border-b">
       <div className="container mx-auto px-5">
-        <div className={`${dm_mono.className} py-8 flex lg:flex-row items-center justify-between`}>
+        <div className={`${dm_mono.className} py-8 flex items-center justify-between`}>
           <a href="/">SCENES</a>
+          <SocialFollow
+            items={socialNetworks}
+          />
           <NavList
             items={allScenes}
             base='scenes'
