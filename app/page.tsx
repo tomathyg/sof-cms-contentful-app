@@ -1,6 +1,11 @@
 import Link from 'next/link'
 import { draftMode } from 'next/headers'
 import React from 'react'
+import localFont from 'next/font/local'
+const drukWideHeavy = localFont({
+  src: './fonts/Druk-Wide-Heavy-Web.woff2',
+  display: 'swap',
+})
 import TypeForm from './components/TypeForm'
 import { getHomePageData } from '../lib/api-2'
 
