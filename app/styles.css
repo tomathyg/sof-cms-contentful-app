@@ -13,3 +13,18 @@ h2 span {
     display: inline-block;
     /*white-space: nowrap;*/
 }
+
+#scenes-logo {
+    width: 800px;
+    height: auto;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+.home-container {
+    width: calc(100% - 2.5rem);
+}
+
+a {
+    text-transform: uppercase;
+}

@@ -74,10 +74,8 @@ async function Header() {
   return (
     <header className="border-b">
       <div className="container mx-auto px-5">
-        <div className="py-8 flex lg:flex-row items-center justify-between">
-          <a href="/">
-            <h1>Sound of Fractures</h1>
-          </a>
+        <div className={`${dm_mono.className} py-8 flex lg:flex-row items-center justify-between`}>
+          <a href="/">SCENES</a>
           <NavList
             items={allScenes}
             base='scenes'

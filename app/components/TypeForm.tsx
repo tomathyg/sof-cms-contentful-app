@@ -10,7 +10,7 @@ interface TypeFormProps {
 const TypeForm: React.FC<TypeFormProps> = ({ id }) => {
 
   return (
-    <PopupButton id={id} style={{ fontSize: 20 }} className="typeform-button">
+    <PopupButton id={id} style={{ fontSize: 20 }} size={100} className="typeform-button">
       CREATE
     </PopupButton>
   )

@@ -12,19 +12,16 @@ const drukWideHeavy = localFont({
 })
 
 import TypeForm from './components/TypeForm'
-
-
-interface IntroProps {
-  heading: string;
-}
+import ScenesLogo from './components/ScenesLogo'
 
 function Intro(heading:string) {
   return (
-    <section className="flex-col flex items-center md:justify-between mt-16 mb-16 md:mb-12">
-      <h1 className={`text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8 ${drukWideHeavy.className}`}>
-        {heading}
+    <section className="flex-col flex items-center md:justify-between">
+      <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight ${drukWideHeavy.className}`}>
+        {/*{heading}*/}
+        <ScenesLogo />
       </h1>
-      <h2 className={`text-center text-6xl ${drukWideHeavy.className}`}><span>AN INTERACTIVE JOURNEY</span><br /><span>THROUGH PERSONAL MOMENTS</span></h2>
+      <h2 className={`mb-8 text-center text-4xl ${drukWideHeavy.className}`}><span>AN INTERACTIVE JOURNEY</span><br /><span>THROUGH PERSONAL MOMENTS</span></h2>
     </section>
   )
 }
@@ -35,13 +32,15 @@ export default async function Page() {
   console.log("HOME PAGE CONTENT:", content);
 
   return (
-    <div className="container mx-auto px-5">
-      {Intro(content.heading)}
-      <section className={`flex justify-center ${drukWideHeavy.className}`}>
-        <TypeForm
-          id={content.typeFormId}
-        />
-      </section>
+    <div className="home-container p-5 m-5 border">
+      <div className="p-10 m-1 border">
+        {Intro(content.heading)}
+        <section className={`flex justify-center ${drukWideHeavy.className}`}>
+          <TypeForm
+            id={content.typeFormId}
+          />
+        </section>
+      </div>
     </div>
   )
 }
