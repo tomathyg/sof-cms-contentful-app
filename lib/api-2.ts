@@ -108,3 +108,20 @@ export async function getSceneAndMoreScenes(
     moreScenes: extractSceneEntries(entries),
   }
 }
+
+const HOME_PAGE_GRAPHQL_FIELDS = `
+  heading
+`
+export async function getHomePageData(isDraftMode: boolean): Promise<any> {
+  const data = await fetchGraphQL(
+    `query HomePage {
+      homePage(id: "rc7u3RuVbou2HcxxPynN5", preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+          ${HOME_PAGE_GRAPHQL_FIELDS}
+      }
+    }`,
+    isDraftMode
+  )
+  return extractHomePageData(data)
+}
