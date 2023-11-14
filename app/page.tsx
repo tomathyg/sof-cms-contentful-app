@@ -2,7 +2,7 @@ import { draftMode } from 'next/headers'
 //import Link from 'next/link'
 import localFont from 'next/font/local'
 
-import { getHoldingPageData } from '@/lib/api-2'
+import { getHoldingPageData } from '../lib/api-2'
 
 import ModalTrigger from './components/ModalTrigger'
 
