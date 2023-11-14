@@ -4,11 +4,15 @@ import React from 'react'
 import TypeForm from './components/TypeForm'
 import { getHomePageData } from '../lib/api-2'
 
-function Intro() {
+interface IntroProps {
+  heading: string;
+}
+
+function Intro(heading:string) {
   return (
     <section className="flex-col flex items-center md:justify-between mt-16 mb-16 md:mb-12">
       <h1 className="text-6xl md:text-8xl font-bold tracking-tighter leading-tight md:pr-8">
-        Sound of Fractures
+        {heading}
       </h1>
     </section>
   )
@@ -21,7 +25,7 @@ export default async function Page() {
 
   return (
     <div className="container mx-auto px-5">
-      <Intro />
+      {Intro(content.heading)}
       <TypeForm
         id={content.typeFormId}
       />
