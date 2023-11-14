@@ -26,9 +26,11 @@ export default async function Page() {
   return (
     <div className="container mx-auto px-5">
       {Intro(content.heading)}
-      <TypeForm
-        id={content.typeFormId}
-      />
+      <section className='flex justify-center'>
+        <TypeForm
+          id={content.typeFormId}
+        />
+      </section>
     </div>
   )
 }

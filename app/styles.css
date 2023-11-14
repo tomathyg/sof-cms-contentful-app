@@ -2,3 +2,9 @@
     object-fit: contain;
     object-position: left;
 }
+
+.typeform-button {
+    background-color: #d6301a;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+}
