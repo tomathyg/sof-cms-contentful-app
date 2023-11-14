@@ -28,3 +28,16 @@ h2 span {
 a {
     text-transform: uppercase;
 }
+
+/*.tf-v1-iframe-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.tf-v1-popup .tf-v1-close {
+    z-index: 10;
+}*/
+
+.tf-v1-popup {
+    background-color: black !important;
+}
