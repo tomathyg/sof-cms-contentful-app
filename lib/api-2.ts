@@ -44,6 +44,10 @@ function extractSceneEntries(fetchResponse: any): any[] {
   return fetchResponse?.data?.sceneCollection?.items
 }
 
+function extractHomePageData(fetchResponse: any): any {
+  return fetchResponse?.data?.homePage
+}
+
 export async function getPreviewSceneBySlug(slug: string | null): Promise<any> {
   const entry = await fetchGraphQL(
     `query {
