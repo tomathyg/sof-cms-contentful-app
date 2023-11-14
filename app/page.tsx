@@ -36,7 +36,7 @@ function Header({heading, text, date}: HeaderProps) {
         <ScenesLogoWhite />
       </h1>
       </div>
-      <p className="text-2xl mt-4 leading-10">{text}<br />{date}</p>
+      <p className="text-2xl mt-4 leading-10">BEGINS<br />DECEMBER 1ST</p>
     </section>
   )
 }
@@ -62,6 +62,19 @@ function Footer({email, socialItems}: FooterProps) {
     </footer>
   )
 }
+/*
+export async function getStaticProps() {
+  const { isDraftMode } = draftMode()
+  const content = await getHoldingPageData(isDraftMode);
+
+  return {
+    props: {
+      content,
+    },
+    revalidate: 60, // Revalidate every 60 seconds, adjust as needed
+  };
+}*/
+
 
 export default async function Page() {
   const { isEnabled } = draftMode()

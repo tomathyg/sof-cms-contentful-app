@@ -6,6 +6,7 @@ import { Analytics } from '@vercel/analytics/react';
 //import { CMS_NAME } from '@/lib/constants'
 
 import type { Metadata } from 'next'
+import React from 'react';
 
 export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
