@@ -72,7 +72,7 @@ async function Header() {
   console.log("ALL SCENES:", allScenes);
   console.log("ALL SCENES TYPE:", typeof(allScenes));
   return (
-    <header className="bg-accent-1 border-b border-accent-2">
+    <header className="border-b">
       <div className="container mx-auto px-5">
         <div className="py-8 flex lg:flex-row items-center justify-between">
           <a href="/">
@@ -90,10 +90,10 @@ async function Header() {
 
 function Footer() {
   return (
-    <footer className="bg-accent-1 border-t border-accent-2">
+    <footer className="bg-accent-1">
       <div className="container mx-auto px-5">
-        <div className="py-16 flex flex-col lg:flex-row items-center">
-          &#9426; Sound of Fractures
+        <div className="py-16 flex flex-col lg:flex-row items-center justify-center">
+          {/*&#9426; Sound of Fractures*/}
         </div>
       </div>
     </footer>
@@ -106,7 +106,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={dm_mono.className}>
+    <html lang="en" className={`{dm_mono.className} bg-black text-white`}>
       <body>
         <section className="min-h-screen">
           <Header />
