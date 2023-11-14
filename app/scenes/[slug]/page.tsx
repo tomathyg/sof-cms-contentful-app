@@ -13,6 +13,7 @@ import NFTPaperCheckout from '../../components/PaperCheckout'
 import H5Player from '../../components/H5AudioPlayer'
 
 import { type } from 'os'
+import React from 'react';
 
 export async function generateStaticParams() {
   const allScenes = await getAllScenes(false);
@@ -27,7 +28,9 @@ export default async function ScenePage({
   params: { slug: string }
 }) {
   const { isEnabled } = draftMode()
+  console.log("SLUG:", params.slug);
   const { scene, moreScenes } = await getSceneAndMoreScenes(params.slug, isEnabled);
+  console.log("SCENE:", scene);
   const allSubmissions = scene.submissionsCollection.items;
   console.log("SCENE SUBMISSIONS:", allSubmissions);
   return (

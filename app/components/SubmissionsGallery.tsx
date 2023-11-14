@@ -31,31 +31,34 @@ const imageHeight = '400px';
 const imageMargin = '20px 0';
 
 const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions }) => {
+  console.log("SUBMISSIONS:", submissions);
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
       {submissions.map((item, index) => {
-        return (
-          <Fragment key={index}>
-            <div 
-              className="gallery-image" 
-              style={{ 
-                position: 'relative', 
-                width: '100%', 
-                margin: imageMargin, 
-                height: imageHeight 
-              }}
-            >
-              <Image 
-                loader={imageLoader} 
-                src={item.submissionImage.url} 
-                alt={item.name} 
-                fill={true}
-                className='submission-image'
-              />
-            </div>
-            <p>{item.text}</p>
-          </Fragment>
-        );
+        if (item.submissionImage && item.submissionImage.url && item.name) {
+          return (
+            <Fragment key={index}>
+              <div 
+                className="gallery-image" 
+                style={{ 
+                  position: 'relative', 
+                  width: '100%', 
+                  margin: imageMargin, 
+                  height: imageHeight 
+                }}
+              >
+                <Image 
+                  loader={imageLoader} 
+                  src={item.submissionImage.url} 
+                  alt={item.name} 
+                  fill={true}
+                  className='submission-image'
+                />
+              </div>
+              <p>{item.text}</p>
+            </Fragment>
+          );
+        }
       })}
     </div>
   );

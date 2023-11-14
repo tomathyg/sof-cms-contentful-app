@@ -2,7 +2,7 @@ const SCENE_GRAPHQL_FIELDS = `
     title
     slug
     nftContractId
-    submissionsCollection(limit: 20) {
+    submissionsCollection(limit: 50) {
         items {
             name
             text

@@ -13,7 +13,6 @@ interface H5PlayerProps {
 
 const H5Player: FC<H5PlayerProps> = ({ src }) => (
   <AudioPlayer
-    autoPlay
     src={src}
     onPlay={e => console.log("onPlay")}
     showSkipControls={false}
