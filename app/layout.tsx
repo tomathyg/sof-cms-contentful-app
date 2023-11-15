@@ -73,18 +73,11 @@ async function Header() {
   console.log("ALL SCENES:", allScenes);
   console.log("ALL SCENES TYPE:", typeof(allScenes));
 
-  const content = await getHomePageData(false);
-  console.log("HOME PAGE CONTENT:", content);
-  const socialNetworks = content.socialFollowLinksCollection.items;
-
   return (
     <header className="border-b">
       <div className="container mx-auto px-5">
         <div className={`${dm_mono.className} py-4 flex items-center justify-between`}>
           <a href="/">SCENES</a>
-          <SocialFollow
-            items={socialNetworks}
-          />
           <NavList
             items={allScenes}
             base='scenes'
@@ -95,12 +88,19 @@ async function Header() {
   )
 }
 
-function Footer() {
+async function Footer() {
+  const content = await getHomePageData(false);
+  console.log("HOME PAGE CONTENT:", content);
+  const socialNetworks = content.socialFollowLinksCollection.items;
+
   return (
     <footer className="bg-accent-1">
-      <div className="container mx-auto px-5">
-        <div className="py-16 flex flex-col lg:flex-row items-center justify-center">
+      <div className="container mx-auto">
+        <div className="py-4 flex flex-col lg:flex-row items-center justify-center">
           {/*&#9426; Sound of Fractures*/}
+          <SocialFollow
+            items={socialNetworks}
+          />
         </div>
       </div>
     </footer>

@@ -1,7 +1,7 @@
-/*.nav-list {
+.nav-list {
     display: flex;
     gap: 20px;
-}*/
+}
 
 .social-icon {
     height: 45px !important;
