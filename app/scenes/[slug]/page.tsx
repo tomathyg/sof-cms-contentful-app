@@ -3,8 +3,8 @@ import { draftMode } from 'next/headers'
 
 import { useRef, useEffect, useState } from 'react';
 
-import { Markdown } from '@/lib/markdown'
-import { getAllScenes, getSceneAndMoreScenes } from '@/lib/api-2'
+import { Markdown } from '../../../lib/markdown'
+import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
 import SubmissionsGallery from '../../components/SubmissionsGallery'
 import NFTPaperCheckout from '../../components/PaperCheckout'
