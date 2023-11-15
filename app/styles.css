@@ -1,3 +1,8 @@
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
+
 .submission-image {
     object-fit: contain;
     object-position: left;

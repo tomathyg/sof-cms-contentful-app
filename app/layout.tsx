@@ -80,7 +80,7 @@ async function Header() {
   return (
     <header className="border-b">
       <div className="container mx-auto px-5">
-        <div className={`${dm_mono.className} py-8 flex items-center justify-between`}>
+        <div className={`${dm_mono.className} py-4 flex items-center justify-between`}>
           <a href="/">SCENES</a>
           <SocialFollow
             items={socialNetworks}

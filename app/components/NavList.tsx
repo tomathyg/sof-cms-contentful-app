@@ -14,7 +14,7 @@ interface NavListProps {
   
 const NavList: React.FC<NavListProps> = ({ items, base }) => {
     return (
-      <ul>
+      <ul className='nav-list'>
         {items.map((item, index) => (
           <li key={index}>
             <Link href={`/${base}/${item.slug}`}>{item.title}</Link>
