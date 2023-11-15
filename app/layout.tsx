@@ -113,9 +113,9 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`{dm_mono.className} bg-black text-white`}>
-      <body>
-        <section className="min-h-screen">
+    <html lang="en">
+      <body className={`{dm_mono.className} bg-black text-white`}>
+        <section className="">
           <Header />
           <main>{children}</main>
           <Footer />
