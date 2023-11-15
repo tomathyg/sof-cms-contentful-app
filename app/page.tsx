@@ -21,7 +21,7 @@ function Intro(heading:string) {
         {/*{heading}*/}
         <ScenesLogo />
       </h1>
-      <h2 className={`mb-8 text-center text-4xl ${drukWideHeavy.className}`}><span>AN INTERACTIVE JOURNEY</span><br /><span>THROUGH PERSONAL MOMENTS</span></h2>
+      <h2 className={`mb-8 text-center text-base sm:text-lg md:text-2xl ${drukWideHeavy.className}`}><span>AN INTERACTIVE JOURNEY</span><br /><span>THROUGH PERSONAL MOMENTS</span></h2>
     </section>
   )
 }

@@ -25,10 +25,11 @@ h2 span {
 }
 
 #scenes-logo {
-    width: 800px;
-    height: auto;
-    max-width: 90%;
     margin: 0 auto;
+    height: auto;
+    width: 700px;
+    max-width: 100%;
+    min-width: 200px;
 }
 
 .home-container {
