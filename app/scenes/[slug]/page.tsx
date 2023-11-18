@@ -42,17 +42,21 @@ export default async function ScenePage({
   return (
     <div className="container mx-auto my-10 px-5">
       <article>
-        <h1 className="uppercase text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+        <h1 className="uppercase font-semibold text-8xl md:text-10xl lg:text-8xl tracking-tighter leading-tight md:leading-none mb-12 text-center">
           {scene.title}
         </h1>
         {scene.image && scene.image.url && scene.image.title && (
-          <section className="mb-8">
+          <section className="mb-8 flex justify-center">
             <ClientImage
               src={scene.image.url}
               name={scene.image.title}
             />
           </section>
         )}
+
+        <h2 className="uppercase font-semibold text-8xl md:text-10xl lg:text-8xl tracking-tighter leading-tight md:leading-none mb-12 text-center">
+          GALLERY
+        </h2>
         {/*<p>
           {scene.nftContractId}
         </p>*/}

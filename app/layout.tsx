@@ -85,7 +85,7 @@ async function Header() {
   //console.log("ALL SCENES TYPE:", typeof(allScenes));
 
   return (
-    <header className="border-b">
+    <header className="">
       <div className="container mx-auto px-5">
         <div className={`${dm_mono.className} py-4 flex items-center justify-between`}>
           <HeaderLogo />

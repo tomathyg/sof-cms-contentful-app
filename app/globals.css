@@ -10,6 +10,16 @@ h1, h2, button {
     font-family: 'DM Mono', sans-serif;
 }
 
+#scenes-home-link {
+    height: 45px;
+    width: 45px;
+}
+
+#scenes-home-link svg {
+    fill: white;
+}
+
+
 .nav-list {
     display: flex;
     gap: 20px;
