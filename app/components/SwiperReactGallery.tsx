@@ -68,7 +68,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
   return (
     <>
     {/* Invisible image loader */}
-   {/*<div style={{ display: 'none' }}>
+   <div style={{ display: 'none' }}>
         {submissions.slice(0, slidesPerViewCount).map((item, index) => (
           <img
             key={index}
@@ -78,7 +78,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
           />
         ))}
     </div>
-        {loadedImages.length >= slidesPerViewCount && (*/}
+        {loadedImages.length >= slidesPerViewCount && (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={20}
@@ -129,7 +129,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
             }
         })}
     </Swiper>
-    {/*})}*/}
+    )}
 
     {lightboxOpen && (
         <Lightbox
