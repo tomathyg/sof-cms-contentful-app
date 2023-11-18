@@ -1,7 +1,7 @@
 'use client'
 
 import Image from 'next/image';
-import { useState } from 'react'
+import React, { useState } from 'react'
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -25,6 +25,7 @@ interface Submission {
 
 interface SwiperGalleryProps {
     submissions: Submission[];
+    slidesPerViewCount: number;
 }
 
 type ImageLoaderParams = {
@@ -40,9 +41,14 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 const imageHeight = '400px';
 const imageMargin = '20px 0';
 
-const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
+const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerViewCount }) => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [loadedImages, setLoadedImages] = useState<string[]>([]);
+
+    const handleImageLoad = (url:string) => {
+        setLoadedImages(prev => [...prev, url]);
+    };
 
     const openLightbox = (index:any) => {
         setCurrentIndex(index);
@@ -55,19 +61,46 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
 
     const lightboxSrcs = submissions
         .filter(item => item.submissionImage && item.submissionImage.url && item.name && item.text)
-        .map(item => ({ src: item.submissionImage.url + '?w=800&q=75' }));
+        .map(item => ({ src: item.submissionImage.url + '?w=1080&q=75' }));
 
     //console.log("SRCS:", lightboxSrcs);
 
   return (
     <>
+    {/* Invisible image loader */}
+   {/*<div style={{ display: 'none' }}>
+        {submissions.slice(0, slidesPerViewCount).map((item, index) => (
+          <img
+            key={index}
+            src={item.submissionImage.url}
+            alt={`Preload ${item.name}`}
+            onLoad={() => handleImageLoad(item.submissionImage.url)}
+          />
+        ))}
+    </div>
+        {loadedImages.length >= slidesPerViewCount && (*/}
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
-      slidesPerView={3}
+      spaceBetween={20}
+      slidesPerView={slidesPerViewCount}
       navigation
       onSlideChange={() => console.log('slide change')}
       onSwiper={(swiper) => console.log(swiper)}
+      className={''}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20,
+        },
+        768: {
+          slidesPerView: 3,
+          spaceBetween: 40,
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 50,
+        },
+      }}
     >
         {submissions.map((item, index) => {
             if (item.submissionImage && item.submissionImage.url && item.name && item.text) {
@@ -77,19 +110,26 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
                     <SwiperSlide key={index}>
                         <Image 
                             loader={imageLoader} 
+                            unoptimized={false}
+                            loading="lazy"
                             src={item.submissionImage.url} 
                             alt={item.name} 
-                            width={300}
-                            height={300}
+                            width={600}
+                            height={600}
                             onClick={() => openLightbox(index)}
+                            //onLoad={() => handleImageLoad(item.submissionImage.url)}
+                            onLoad={(e) => console.log("image loaded")}
+                            onError={(e) => console.error("image load error")}
                             //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className='swiper-image'
                         />
+                        <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                     </SwiperSlide>
                 )
             }
         })}
     </Swiper>
+    {/*})}*/}
 
     {lightboxOpen && (
         <Lightbox

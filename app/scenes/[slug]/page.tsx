@@ -42,12 +42,12 @@ export default async function ScenePage({
   return (
     <div className="container mx-auto my-10 px-5">
       <article>
-        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
+        <h1 className="uppercase text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
           {scene.title}
         </h1>
-        <p>
+        {/*<p>
           {scene.nftContractId}
-        </p>
+  </p>*/}
         {/*
         <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
           <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
@@ -55,8 +55,19 @@ export default async function ScenePage({
         */}
         {/*<Player />*/}
         {/*<DecentAudioPlayer />*/}
+        <section className="mb-8">
+          <NFTPaperCheckout
+            contractId={scene.nftContractId}
+          />
+        </section>
+        <section className="mb-8">
+          <H5Player
+            src={scene.audioUrl}
+          />
+        </section>
         <SwiperReactGallery
           submissions={allSubmissions}
+          slidesPerViewCount={1}
         />
         {/*<SwiperGallery
           submissions={allSubmissions}
@@ -65,12 +76,6 @@ export default async function ScenePage({
           submissions={allSubmissions}
         />*/}
         {/*<YetCarousel />*/}
-        <H5Player
-          src={scene.audioUrl}
-        />
-        <NFTPaperCheckout
-          contractId={scene.nftContractId}
-        />
         {/*<SubmissionsGallery
           submissions={allSubmissions}
       />*/}
