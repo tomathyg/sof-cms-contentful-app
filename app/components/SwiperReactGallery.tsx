@@ -68,7 +68,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
   return (
     <>
         {/* Invisible image loader */}
-        <div style={{ display: 'none' }}>
+        {/*<div style={{ display: 'none' }}>
             {submissions.slice(0, slidesPerViewCount).map((item, index) => {
                 const imageUrlWithCacheBust = `${item.submissionImage.url}`;
                 return (
@@ -83,7 +83,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
                     />
                 );
             })}
-        </div>
+        </div>*/}
 
         {/*{loadedImages.length >= slidesPerViewCount && (*/}
             <Swiper
