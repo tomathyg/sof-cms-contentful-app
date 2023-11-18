@@ -69,17 +69,23 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
     <>
         {/* Invisible image loader */}
         <div style={{ display: 'none' }}>
-            {submissions.slice(0, slidesPerViewCount).map((item, index) => (
-            <img
-                key={index}
-                src={item.submissionImage.url}
-                alt={`Preload ${item.name}`}
-                onLoad={() => handleImageLoad(item.submissionImage.url)}
-            />
-            ))}
+            {submissions.slice(0, slidesPerViewCount).map((item, index) => {
+                const imageUrlWithCacheBust = `${item.submissionImage.url}`;
+                return (
+                    <Image
+                        loader={imageLoader}
+                        key={index}
+                        width={600}
+                        height={600}
+                        src={imageUrlWithCacheBust}
+                        alt={`Preload ${item.name}`}
+                        onLoad={() => handleImageLoad(item.submissionImage.url)}
+                    />
+                );
+            })}
         </div>
 
-        {loadedImages.length >= slidesPerViewCount && (
+        {/*{loadedImages.length >= slidesPerViewCount && (*/}
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={20}
@@ -90,16 +96,16 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
                 className={''}
                 breakpoints={{
                     640: {
-                    slidesPerView: 2,
-                    spaceBetween: 20,
+                        slidesPerView: 2,
+                        spaceBetween: 20,
                     },
                     768: {
-                    slidesPerView: 3,
-                    spaceBetween: 40,
+                        slidesPerView: 3,
+                        spaceBetween: 40,
                     },
                     1024: {
-                    slidesPerView: 4,
-                    spaceBetween: 50,
+                        slidesPerView: 4,
+                        spaceBetween: 50,
                     },
                 }}
             >
@@ -129,8 +135,8 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
                     )
                 }
             })}
-        </Swiper>
-        )}
+            </Swiper>
+        {/*})}*/}
 
         {lightboxOpen && (
             <Lightbox

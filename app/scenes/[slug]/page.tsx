@@ -49,7 +49,7 @@ export default async function ScenePage({
           <section className="mb-8">
             <ClientImage
               src={scene.image.url}
-              name={scene.name}
+              name={scene.image.title}
             />
           </section>
         )}
@@ -88,7 +88,7 @@ export default async function ScenePage({
             />
           </section>
         )}
-        
+
         {/*<SwiperGallery
           submissions={allSubmissions}
         />*/}
