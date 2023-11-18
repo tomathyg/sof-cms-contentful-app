@@ -1,10 +1,10 @@
 import Link from 'next/link'
 import { draftMode } from 'next/headers'
 
-import { type } from 'os'
-import React, { useRef, useEffect, useState } from 'react';
+//import { type } from 'os'
+import React from 'react';
 
-import { Markdown } from '../../../lib/markdown'
+//import { Markdown } from '../../../lib/markdown'
 import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
 import NFTPaperCheckout from '../../components/PaperCheckout'
@@ -21,12 +21,12 @@ import ClientImage from '../../components/ClientImage'
 //import LightGallery from '../../components/LightGallery'
 import SwiperReactGallery from '../../components/SwiperReactGallery';
 
-export async function generateStaticParams() {
+/*export async function generateStaticParams() {
   const allScenes = await getAllScenes(false);
   return allScenes.map((scene) => ({
     slug: scene.slug,
   }))
-}
+}*/
 
 export default async function ScenePage({
   params,
