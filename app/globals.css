@@ -9,3 +9,76 @@ h1, h2, button {
 .rhap_time {
     font-family: 'DM Mono', sans-serif;
 }
+
+.nav-list {
+    display: flex;
+    gap: 20px;
+}
+
+.social-icon {
+    height: 45px !important;
+    width: 45px !important;
+}
+
+.submission-image {
+    object-fit: contain;
+    object-position: left;
+}
+
+/*.swiper {
+    height: 300px;
+}*/
+
+.swiper-button-next, .swiper-button-prev {
+    color: #FFFFFF !important;
+}
+
+.swiper-image {
+    cursor: pointer;
+}
+
+.typeform-button {
+    background-color: #d6301a;
+    padding: 0.5em 1em;
+    border-radius: 25px;
+}
+
+h2 span {
+    display: inline-block;
+    /*white-space: nowrap;*/
+}
+
+#scenes-logo {
+    margin: 0 auto;
+    height: auto;
+    width: 700px;
+    max-width: 100%;
+    min-width: 200px;
+}
+
+.home-container {
+    width: calc(100% - 2.5rem);
+}
+
+a {
+    text-transform: uppercase;
+}
+
+/*.tf-v1-iframe-wrapper {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.tf-v1-popup .tf-v1-close {
+    z-index: 10;
+}*/
+
+.tf-v1-popup {
+    background-color: black !important;
+}
+
+.paper-checkout-section a button {
+    background-color: #1C96B6 !important;
+    text-transform: uppercase;
+    padding-top: 11px !important;
+}
