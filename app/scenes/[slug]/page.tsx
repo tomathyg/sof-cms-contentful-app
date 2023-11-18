@@ -1,25 +1,25 @@
 import Link from 'next/link'
 import { draftMode } from 'next/headers'
 
-import { useRef, useEffect, useState } from 'react';
+import { type } from 'os'
+import React, { useRef, useEffect, useState } from 'react';
 
 import { Markdown } from '../../../lib/markdown'
 import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
 import NFTPaperCheckout from '../../components/PaperCheckout'
+
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
 import H5Player from '../../components/H5AudioPlayer'
 
-import { type } from 'os'
-import React from 'react';
+import ClientImage from '../../components/ClientImage'
 
-import SubmissionsGallery from '../../components/SubmissionsGallery'
+//import SubmissionsGallery from '../../components/SubmissionsGallery'
 //import SwiperGallery from '../../components/SwiperGalleryWebComponent';
-import SwiperReactGallery from '../../components/SwiperReactGallery';
-import YetCarousel from '../../components/YetGallery'
-
+//import YetCarousel from '../../components/YetGallery'
 //import LightGallery from '../../components/LightGallery'
+import SwiperReactGallery from '../../components/SwiperReactGallery';
 
 export async function generateStaticParams() {
   const allScenes = await getAllScenes(false);
@@ -45,9 +45,17 @@ export default async function ScenePage({
         <h1 className="uppercase text-6xl md:text-7xl lg:text-8xl font-bold tracking-tighter leading-tight md:leading-none mb-12 text-center md:text-left">
           {scene.title}
         </h1>
+        {scene.image && scene.image.url && scene.image.title && (
+          <section className="mb-8">
+            <ClientImage
+              src={scene.image.url}
+              name={scene.name}
+            />
+          </section>
+        )}
         {/*<p>
           {scene.nftContractId}
-  </p>*/}
+        </p>*/}
         {/*
         <audio controls src="/media/cc0-audio/t-rex-roar.mp3">
           <a href="/media/cc0-audio/t-rex-roar.mp3"> Download audio </a>
@@ -55,20 +63,32 @@ export default async function ScenePage({
         */}
         {/*<Player />*/}
         {/*<DecentAudioPlayer />*/}
-        <section className="mb-8">
-          <NFTPaperCheckout
-            contractId={scene.nftContractId}
-          />
-        </section>
-        <section className="mb-8">
-          <H5Player
-            src={scene.audioUrl}
-          />
-        </section>
-        <SwiperReactGallery
-          submissions={allSubmissions}
-          slidesPerViewCount={1}
-        />
+
+        {scene.nftContractId && (
+          <section className="mb-8 paper-checkout-section">
+            <NFTPaperCheckout
+              contractId={scene.nftContractId}
+            />
+          </section>
+        )}
+
+        {scene.audioUrl && (
+          <section className="mb-8">
+            <H5Player
+              src={scene.audioUrl}
+            />
+          </section>
+        )}
+
+        {allSubmissions && (
+          <section>
+            <SwiperReactGallery
+              submissions={allSubmissions}
+              slidesPerViewCount={1}
+            />
+          </section>
+        )}
+        
         {/*<SwiperGallery
           submissions={allSubmissions}
         />*/}

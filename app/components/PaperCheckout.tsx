@@ -20,6 +20,7 @@ export default function NFTPaperCheckout(props:any) {
   //const [contractId, setContractId] = useState('b80e3ade-fb37-4163-b8db-db566057af2c');
 
   return (
+    <>
     <PaperCheckout
           checkoutId={props.contractId}
     			// Note that you should use POPUP if you're doing a solana checkout due to phantom wallet limitations
@@ -59,5 +60,6 @@ export default function NFTPaperCheckout(props:any) {
           onTransferSuccess={() => { console.log("TRANSFER SUCCESS"); }}
 
     />
+    </>
   )
 }

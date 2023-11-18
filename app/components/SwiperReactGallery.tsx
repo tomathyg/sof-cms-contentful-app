@@ -67,78 +67,79 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
 
   return (
     <>
-    {/* Invisible image loader */}
-   <div style={{ display: 'none' }}>
-        {submissions.slice(0, slidesPerViewCount).map((item, index) => (
-          <img
-            key={index}
-            src={item.submissionImage.url}
-            alt={`Preload ${item.name}`}
-            onLoad={() => handleImageLoad(item.submissionImage.url)}
-          />
-        ))}
-    </div>
-        {loadedImages.length >= slidesPerViewCount && (
-    <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={20}
-      slidesPerView={slidesPerViewCount}
-      navigation
-      onSlideChange={() => console.log('slide change')}
-      onSwiper={(swiper) => console.log(swiper)}
-      className={''}
-      breakpoints={{
-        640: {
-          slidesPerView: 2,
-          spaceBetween: 20,
-        },
-        768: {
-          slidesPerView: 3,
-          spaceBetween: 40,
-        },
-        1024: {
-          slidesPerView: 4,
-          spaceBetween: 50,
-        },
-      }}
-    >
-        {submissions.map((item, index) => {
-            if (item.submissionImage && item.submissionImage.url && item.name && item.text) {
-                //console.log(item);
-                //console.log(index);
-                return (
-                    <SwiperSlide key={index}>
-                        <Image 
-                            loader={imageLoader} 
-                            unoptimized={false}
-                            loading="lazy"
-                            src={item.submissionImage.url} 
-                            alt={item.name} 
-                            width={600}
-                            height={600}
-                            onClick={() => openLightbox(index)}
-                            //onLoad={() => handleImageLoad(item.submissionImage.url)}
-                            onLoad={(e) => console.log("image loaded")}
-                            onError={(e) => console.error("image load error")}
-                            //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            className='swiper-image'
-                        />
-                        <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
-                    </SwiperSlide>
-                )
-            }
-        })}
-    </Swiper>
-    )}
+        {/* Invisible image loader */}
+        <div style={{ display: 'none' }}>
+            {submissions.slice(0, slidesPerViewCount).map((item, index) => (
+            <img
+                key={index}
+                src={item.submissionImage.url}
+                alt={`Preload ${item.name}`}
+                onLoad={() => handleImageLoad(item.submissionImage.url)}
+            />
+            ))}
+        </div>
 
-    {lightboxOpen && (
-        <Lightbox
-            open={lightboxOpen}
-            close={() => setLightboxOpen(false)}
-            index={currentIndex}
-            slides={lightboxSrcs}
-        />
-    )}
+        {loadedImages.length >= slidesPerViewCount && (
+            <Swiper
+                modules={[Navigation, Pagination, Scrollbar, A11y]}
+                spaceBetween={20}
+                slidesPerView={slidesPerViewCount}
+                navigation
+                onSlideChange={() => console.log('slide change')}
+                onSwiper={(swiper) => console.log(swiper)}
+                className={''}
+                breakpoints={{
+                    640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    },
+                    768: {
+                    slidesPerView: 3,
+                    spaceBetween: 40,
+                    },
+                    1024: {
+                    slidesPerView: 4,
+                    spaceBetween: 50,
+                    },
+                }}
+            >
+            {submissions.map((item, index) => {
+                if (item.submissionImage && item.submissionImage.url && item.name && item.text) {
+                    //console.log(item);
+                    //console.log(index);
+                    return (
+                        <SwiperSlide key={index}>
+                            <Image 
+                                loader={imageLoader} 
+                                unoptimized={false}
+                                loading="lazy"
+                                src={item.submissionImage.url} 
+                                alt={item.name} 
+                                width={600}
+                                height={600}
+                                onClick={() => openLightbox(index)}
+                                //onLoad={() => handleImageLoad(item.submissionImage.url)}
+                                onLoad={(e) => console.log("image loaded")}
+                                onError={(e) => console.error("image load error")}
+                                //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                className='swiper-image'
+                            />
+                            <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
+                        </SwiperSlide>
+                    )
+                }
+            })}
+        </Swiper>
+        )}
+
+        {lightboxOpen && (
+            <Lightbox
+                open={lightboxOpen}
+                close={() => setLightboxOpen(false)}
+                index={currentIndex}
+                slides={lightboxSrcs}
+            />
+        )}
     </>
   );
 };

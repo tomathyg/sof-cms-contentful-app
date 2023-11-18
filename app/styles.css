@@ -64,3 +64,9 @@ a {
 .tf-v1-popup {
     background-color: black !important;
 }
+
+.paper-checkout-section a button {
+    background-color: #1C96B6 !important;
+    text-transform: uppercase;
+    padding-top: 11px !important;
+}
