@@ -15,6 +15,9 @@ import H5Player from '../../components/H5AudioPlayer'
 import { type } from 'os'
 import React from 'react';
 
+//import SwiperGallery from '../../components/SwiperGalleryWebComponent';
+import SwiperReactGallery from '../../components/SwiperReactGallery';
+
 export async function generateStaticParams() {
   const allScenes = await getAllScenes(false);
   return allScenes.map((scene) => ({
@@ -28,11 +31,11 @@ export default async function ScenePage({
   params: { slug: string }
 }) {
   const { isEnabled } = draftMode()
-  console.log("SLUG:", params.slug);
+  //console.log("SLUG:", params.slug);
   const { scene, moreScenes } = await getSceneAndMoreScenes(params.slug, isEnabled);
-  console.log("SCENE:", scene);
+  //console.log("SCENE:", scene);
   const allSubmissions = scene.submissionsCollection.items;
-  console.log("SCENE SUBMISSIONS:", allSubmissions);
+  //console.log("SCENE SUBMISSIONS:", allSubmissions);
   return (
     <div className="container mx-auto my-10 px-5">
       <article>
@@ -49,15 +52,21 @@ export default async function ScenePage({
         */}
         {/*<Player />*/}
         {/*<DecentAudioPlayer />*/}
+        <SwiperReactGallery
+          submissions={allSubmissions}
+        />
+        {/*<SwiperGallery
+          submissions={allSubmissions}
+        />*/}
         <H5Player
           src='https://nftstorage.link/ipfs/bafybeicnigbsdd6duwjjjompu5slw3iohdksf5p5ip2rcny2pn2jealkg4/moths 2 - beat demo 135 (interlude).mp3?id=0'
         />
         <NFTPaperCheckout
           contractId={scene.nftContractId}
         />
-        <SubmissionsGallery
+        {/*<SubmissionsGallery
           submissions={allSubmissions}
-        />
+      />*/}
       </article>
     </div>
   )

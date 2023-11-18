@@ -70,8 +70,8 @@ const dm_mono = DM_Mono({
 
 async function Header() {
   const allScenes = await getAllScenes(false);
-  console.log("ALL SCENES:", allScenes);
-  console.log("ALL SCENES TYPE:", typeof(allScenes));
+  //console.log("ALL SCENES:", allScenes);
+  //console.log("ALL SCENES TYPE:", typeof(allScenes));
 
   return (
     <header className="border-b">
@@ -90,7 +90,7 @@ async function Header() {
 
 async function Footer() {
   const content = await getHomePageData(false);
-  console.log("HOME PAGE CONTENT:", content);
+  //console.log("HOME PAGE CONTENT:", content);
   const socialNetworks = content.socialFollowLinksCollection.items;
 
   return (
