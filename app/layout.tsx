@@ -1,6 +1,6 @@
 import './globals.css'
 //import './styles.css'
-import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
+//import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
 
 import { Analytics } from '@vercel/analytics/react';
 
@@ -15,7 +15,10 @@ const drukWideHeavy = localFont({
 import { getAllScenes, getHomePageData } from '../lib/api-2'
 import SocialFollow from './components/SocialFollowLinks'
 
-import NavList from './components/NavList'
+import HeaderLogo from './components/HeaderLogo'
+
+//import NavList from './components/NavList'
+import Navigation from './components/Navigation'
 
 // Metadata
 import type { Metadata } from 'next'
@@ -85,8 +88,8 @@ async function Header() {
     <header className="border-b">
       <div className="container mx-auto px-5">
         <div className={`${dm_mono.className} py-4 flex items-center justify-between`}>
-          <a href="/">SCENES</a>
-          <NavList
+          <HeaderLogo />
+          <Navigation
             items={allScenes}
             base='scenes'
           />
