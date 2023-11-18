@@ -55,7 +55,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
 
     const lightboxSrcs = submissions
         .filter(item => item.submissionImage && item.submissionImage.url && item.name && item.text)
-        .map(item => ({ src: item.submissionImage.url }));
+        .map(item => ({ src: item.submissionImage.url + '?w=800&q=75' }));
 
     //console.log("SRCS:", lightboxSrcs);
 
@@ -79,8 +79,8 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
                             loader={imageLoader} 
                             src={item.submissionImage.url} 
                             alt={item.name} 
-                            width={500}
-                            height={500}
+                            width={300}
+                            height={300}
                             onClick={() => openLightbox(index)}
                             //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             className='swiper-image'
@@ -89,10 +89,6 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
                 )
             }
         })}
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      <SwiperSlide>Slide 4</SwiperSlide>
     </Swiper>
 
     {lightboxOpen && (

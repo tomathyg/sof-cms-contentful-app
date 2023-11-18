@@ -1,8 +1,16 @@
 import './globals.css'
 import './styles.css'
-import { Analytics } from '@vercel/analytics/react';
-import { DM_Mono } from 'next/font/google'
 import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
+
+import { Analytics } from '@vercel/analytics/react';
+
+import { DM_Mono } from 'next/font/google'
+import localFont from 'next/font/local'
+
+const drukWideHeavy = localFont({
+  src: './fonts/Druk-Wide-Heavy-Web.woff2',
+  display: 'swap',
+})
 
 import { getAllScenes, getHomePageData } from '../lib/api-2'
 import SocialFollow from './components/SocialFollowLinks'
