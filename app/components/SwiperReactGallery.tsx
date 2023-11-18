@@ -1,5 +1,8 @@
 'use client'
 
+import Image from 'next/image';
+import { useState } from 'react'
+
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
@@ -7,7 +10,8 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
-import Image from 'next/image';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
 
 interface SubmissionImage {
     url: string;
@@ -37,7 +41,26 @@ const imageHeight = '400px';
 const imageMargin = '20px 0';
 
 const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const openLightbox = (index:any) => {
+        setCurrentIndex(index);
+        setLightboxOpen(true);
+    };
+
+    //console.log("SUBMISSIONS:", submissions);
+
+    //const lightboxSrcs = submissions.map(item => ({ src: item.submissionImage.url }));
+
+    const lightboxSrcs = submissions
+        .filter(item => item.submissionImage && item.submissionImage.url && item.name && item.text)
+        .map(item => ({ src: item.submissionImage.url }));
+
+    //console.log("SRCS:", lightboxSrcs);
+
   return (
+    <>
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
       spaceBetween={50}
@@ -47,7 +70,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
       onSwiper={(swiper) => console.log(swiper)}
     >
         {submissions.map((item, index) => {
-            if (item.submissionImage && item.name) {
+            if (item.submissionImage && item.submissionImage.url && item.name && item.text) {
                 //console.log(item);
                 //console.log(index);
                 return (
@@ -58,8 +81,9 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
                             alt={item.name} 
                             width={500}
                             height={500}
+                            onClick={() => openLightbox(index)}
                             //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                            //className='submission-image'
+                            className='swiper-image'
                         />
                     </SwiperSlide>
                 )
@@ -70,6 +94,16 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions }) => {
       <SwiperSlide>Slide 3</SwiperSlide>
       <SwiperSlide>Slide 4</SwiperSlide>
     </Swiper>
+
+    {lightboxOpen && (
+        <Lightbox
+            open={lightboxOpen}
+            close={() => setLightboxOpen(false)}
+            index={currentIndex}
+            slides={lightboxSrcs}
+        />
+    )}
+    </>
   );
 };
 

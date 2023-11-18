@@ -13,6 +13,10 @@
     object-position: left;
 }
 
+.swiper-image {
+    cursor: pointer;
+}
+
 .typeform-button {
     background-color: #d6301a;
     padding: 0.5em 1em;
