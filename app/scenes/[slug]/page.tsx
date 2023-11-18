@@ -42,7 +42,7 @@ export default async function ScenePage({
   return (
     <div className="container mx-auto my-10 px-5">
       <article>
-        <h1 className="uppercase font-semibold text-8xl md:text-10xl lg:text-8xl tracking-tighter leading-tight md:leading-none mb-12 text-center">
+        <h1 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl tracking-tighter leading-tight md:leading-none mb-12 text-center">
           {scene.title}
         </h1>
         {scene.image && scene.image.url && scene.image.title && (
@@ -54,7 +54,7 @@ export default async function ScenePage({
           </section>
         )}
 
-        <h2 className="uppercase font-semibold text-8xl md:text-10xl lg:text-8xl tracking-tighter leading-tight md:leading-none mb-12 text-center">
+        <h2 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl  tracking-tighter leading-tight md:leading-none mb-12 text-center">
           GALLERY
         </h2>
         {/*<p>
@@ -69,7 +69,7 @@ export default async function ScenePage({
         {/*<DecentAudioPlayer />*/}
 
         {scene.nftContractId && (
-          <section className="mb-8 paper-checkout-section">
+          <section className="mb-8 flex justify-center paper-checkout-section">
             <NFTPaperCheckout
               contractId={scene.nftContractId}
             />
