@@ -14,10 +14,21 @@ import { PaperCheckout, PaperCheckoutDisplay } from '@paperxyz/react-client-sdk'
  *
  */
 
+
+interface ThemeColours {
+  primary: string;
+  secondary: string;
+  background: string;
+  text: string;
+}
+
 interface NFTPaperCheckoutProps {
   checkoutId: string;
   //clientId: string;
+  //theme: ThemeColours;
 }
+
+
 
 const NFTPaperCheckout: React.FC<NFTPaperCheckoutProps> = ({ checkoutId }) => {
 //export default function NFTPaperCheckout(props:any) {
@@ -25,6 +36,15 @@ const NFTPaperCheckout: React.FC<NFTPaperCheckoutProps> = ({ checkoutId }) => {
   //console.log("PROPS:", props);
 
   //const [contractId, setContractId] = useState('b80e3ade-fb37-4163-b8db-db566057af2c');
+
+  const PaperCheckoutTheme = {
+    colors: {
+      primary: 'blue',
+      secondary: 'red',
+      background: '#e8e0c5',
+      text: 'black',
+    },
+  };
 
   return (
     <>

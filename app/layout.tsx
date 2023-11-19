@@ -107,7 +107,7 @@ async function Footer() {
   return (
     <footer className="bg-accent-1">
       <div className="container mx-auto">
-        <div className="py-4 flex flex-col lg:flex-row items-center justify-center">
+        <div className="mt-4 mb-12 flex flex-col lg:flex-row items-center justify-center">
           {/*&#9426; Sound of Fractures*/}
           <SocialFollow
             items={socialNetworks}
