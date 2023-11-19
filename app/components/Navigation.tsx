@@ -22,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
     <ul className='nav-list'>
       {items.map((item, index) => (
         <li key={index}>
-            <button className="uppercase font-normal tracking-wide" type="button" onClick={() => router.push(`/${base}/${item.slug}`)}>
+            <button className="uppercase font-normal" type="button" onClick={() => router.push(`/${base}/${item.slug}`)}>
             {item.title}
             </button>
         </li>

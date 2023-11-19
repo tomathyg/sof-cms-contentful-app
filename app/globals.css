@@ -22,6 +22,10 @@ h1, h2, button {
 }
 /* END OF FONTS */
 
+a {
+    text-transform: uppercase;
+}
+
 /* H5 AUDIO PLAYER */
 .rhap_time {
     font-family: 'DM Mono', sans-serif;
@@ -40,6 +44,10 @@ h1, h2, button {
     width: 45px;
 }
 
+#scenes-logo path, #scenes-logo rect, #scenes-logo polygon {
+    fill: var(--off-white);
+}
+
 .nav-list {
     display: flex;
     gap: 20px;
@@ -56,6 +64,7 @@ h1, h2, button {
     height: 300px;
 }*/
 
+/* SWIPER JS */
 .swiper-button-next, .swiper-button-prev {
     color: #FFFFFF !important;
 }
@@ -63,12 +72,15 @@ h1, h2, button {
 .swiper-image {
     cursor: pointer;
 }
+/* END OF SWIPER JS */
 
+/* TYPEFORM */
 .typeform-button {
     background-color: #d6301a;
     padding: 0.5em 1em;
     border-radius: 25px;
 }
+/* END OF TYPEFORM */
 
 h2 span {
     display: inline-block;
@@ -85,10 +97,6 @@ h2 span {
 
 .home-container {
     width: calc(100% - 2.5rem);
-}
-
-a {
-    text-transform: uppercase;
 }
 
 /*.tf-v1-iframe-wrapper {
