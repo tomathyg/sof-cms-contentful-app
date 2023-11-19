@@ -2,33 +2,50 @@
 @tailwind components;
 @tailwind utilities;
 
+/* styles/globals.css */
+
+/* COLOURS */
+:root {
+    --off-white: '#e8e0c5'
+}
+/* END OF COLOURS */
+
+/* FONTS */
+@font-face {
+    font-family: 'Druk Wide Heavy';
+    src: url('./fonts/Druk-Wide-Heavy-Web.woff2') format('woff2');
+    font-display: swap;
+}
+
 h1, h2, button {
   font-family: 'Druk Wide Heavy', sans-serif;
 }
+/* END OF FONTS */
 
+/* H5 AUDIO PLAYER */
 .rhap_time {
     font-family: 'DM Mono', sans-serif;
 }
+/* END OF H5 AUDIO PLAYER */
+
+/* SOCIAL FOLLOW ICONS */
+.social-icon {
+    height: 45px !important;
+    width: 45px !important;
+}
+/* END OF SOCIAL FOLLOW ICONS */
 
 #scenes-home-link {
     height: 45px;
     width: 45px;
 }
 
-#scenes-home-link svg {
-    fill: white;
-}
-
-
 .nav-list {
     display: flex;
     gap: 20px;
 }
 
-.social-icon {
-    height: 45px !important;
-    width: 45px !important;
-}
+
 
 .submission-image {
     object-fit: contain;

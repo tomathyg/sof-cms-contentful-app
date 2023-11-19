@@ -8,6 +8,7 @@ import React from 'react';
 import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
 import NFTPaperCheckout from '../../components/PaperCheckout'
+import CrossMint from '../../components/CrossMint'
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
@@ -42,7 +43,7 @@ export default async function ScenePage({
   return (
     <div className="container mx-auto my-10 px-5">
       <article>
-        <h1 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl tracking-tighter leading-tight md:leading-none mb-12 text-center">
+        <h1 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none mb-12 text-center">
           {scene.title}
         </h1>
         {scene.image && scene.image.url && scene.image.title && (
@@ -54,7 +55,7 @@ export default async function ScenePage({
           </section>
         )}
 
-        <h2 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl  tracking-tighter leading-tight md:leading-none mb-12 text-center">
+        <h2 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none mb-12 text-center">
           GALLERY
         </h2>
         {/*<p>
@@ -71,7 +72,16 @@ export default async function ScenePage({
         {scene.nftContractId && (
           <section className="mb-8 flex justify-center paper-checkout-section">
             <NFTPaperCheckout
-              contractId={scene.nftContractId}
+              checkoutId={scene.nftContractId}
+            />
+            {/*<CrossMint
+              projectId='455c1c0c-2b36-4972-b492-77d8ba1560e1'
+              collectionId='30d5e8d7-233c-4c65-87d4-36942bbeb0ac'
+            />*/}
+            <CrossMint
+              projectId='ace7d495-5dca-436b-abcf-2c7e3e3831e9'
+              collectionId='59c0a75b-59bf-479d-a55c-e30aa2d0436d'
+              environment='staging'
             />
           </section>
         )}

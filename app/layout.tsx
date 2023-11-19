@@ -125,7 +125,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`{dm_mono.className} bg-black text-white`}>
+      <body className={`{dm_mono.className} bg-black text-[#e8e0c5]`}>
         <section className="">
           <Header />
           <main>{children}</main>

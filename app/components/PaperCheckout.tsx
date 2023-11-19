@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+//import { useState } from 'react'
 
 import { PaperCheckout, PaperCheckoutDisplay } from '@paperxyz/react-client-sdk'
 
@@ -13,7 +13,14 @@ import { PaperCheckout, PaperCheckoutDisplay } from '@paperxyz/react-client-sdk'
  * it will resolve themselves as expected.
  *
  */
-export default function NFTPaperCheckout(props:any) {
+
+interface NFTPaperCheckoutProps {
+  checkoutId: string;
+  //clientId: string;
+}
+
+const NFTPaperCheckout: React.FC<NFTPaperCheckoutProps> = ({ checkoutId }) => {
+//export default function NFTPaperCheckout(props:any) {
 
   //console.log("PROPS:", props);
 
@@ -22,7 +29,8 @@ export default function NFTPaperCheckout(props:any) {
   return (
     <>
     <PaperCheckout
-          checkoutId={props.contractId}
+          checkoutId={checkoutId}
+          //clientId={clientId}
     			// Note that you should use POPUP if you're doing a solana checkout due to phantom wallet limitations
     			display={PaperCheckoutDisplay.MODAL}
     			//recipientWalletAddress={""}
@@ -37,7 +45,7 @@ export default function NFTPaperCheckout(props:any) {
               currency: "ETH",
               // This number value should be the price for a single quantity.
               // In this example, if the user chose 2 NFT, they'll be paying 8MATIC
-              value: "0.0001 * $QUANTITY"
+              value: "0.001 * $QUANTITY"
             },
             // optional, these are the deafult options
             callOptions: {
@@ -63,3 +71,5 @@ export default function NFTPaperCheckout(props:any) {
     </>
   )
 }
+
+export default NFTPaperCheckout;

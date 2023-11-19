@@ -22,7 +22,7 @@ const SocialIconsList: React.FC<SocialIconsListProps> = ({ items }) => {
           target='_blank'
           //className='social-icon'
           bgColor='black'
-          fgColor='white'
+          fgColor='#e8e0c5'
         />
       ))}
     </div>
