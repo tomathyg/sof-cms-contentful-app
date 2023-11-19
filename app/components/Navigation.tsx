@@ -19,14 +19,20 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
   //const searchParams = useSearchParams()
  
   return (
-    <ul className='nav-list'>
-      {items.map((item, index) => (
-        <li key={index}>
-            <button className="uppercase font-normal" type="button" onClick={() => router.push(`/${base}/${item.slug}`)}>
-            {item.title}
-            </button>
+    <ul className="flex w-full justify-around uppercase text-base">
+        <li>
+            <button type="button" onClick={() => router.push('/about')}>ABOUT</button>
         </li>
-      ))}
+        <li>
+            <button type="button" onClick={() => router.push('/credits')}>CREDITS</button>
+        </li>
+        {items.map((item, index) => (
+            <li key={index}>
+                <button className="uppercase" type="button" onClick={() => router.push(`/${base}/${item.slug}`)}>
+                {item.title}
+                </button>
+            </li>
+        ))}
     </ul>
   )
   // ...
