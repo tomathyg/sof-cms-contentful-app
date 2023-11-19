@@ -86,8 +86,8 @@ async function Header() {
 
   return (
     <header className="">
-      <div className="container mx-auto px-5">
-        <div className={`${dm_mono.className} py-4 flex items-center justify-between`}>
+      <div className="w-full mx-auto px-5">
+        <div className={`${dm_mono.className} w-full py-4 flex items-center justify-between`}>
           <HeaderLogo />
           <Navigation
             items={allScenes}
