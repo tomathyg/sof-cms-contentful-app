@@ -26,7 +26,7 @@ export default async function Page() {
 
   return (
     <div className="home-container p-5 m-5 mt-0 border">
-      <div className="p-10 m-1 border">
+      <div className="home-inner p-10 m-1 border">
         {Intro(content.heading)}
         <section className={`flex justify-center`}>
           <TypeForm

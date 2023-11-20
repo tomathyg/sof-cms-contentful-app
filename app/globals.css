@@ -103,6 +103,11 @@ h2 span {
 
 .home-container {
     width: calc(100% - 2.5rem);
+    border-color: var(--off-white);
+}
+
+.home-inner {
+    border-color: var(--off-white);
 }
 
 /*.tf-v1-iframe-wrapper {
