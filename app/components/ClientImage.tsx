@@ -26,8 +26,8 @@ const ClientImage: React.FC<ClientImageProps> = ({ src, name }) => {
             loading="lazy"
             src={src} 
             alt={name || 'Scene image'} 
-            width={600}
-            height={600}
+            width={400}
+            height={400}
             //onClick={() => console.log("image clicked")}
             //onLoad={() => handleImageLoad(item.submissionImage.url)}
             //onLoad={(e) => console.log("image loaded")}
