@@ -38,10 +38,10 @@ const CrossMint: React.FC<CrossmintProps> = ({ collectionId, projectId, environm
             }}*/
             locale="en-US"
             currency="GBP"
-            /*className="xmint-btn"
+            className="xmint-btn"
             getButtonText={(connecting, paymentMethod) =>
                 connecting ? "Connecting" : `Pay with ${paymentMethod}`
-            }*/
+            }
         />
     )
 }
