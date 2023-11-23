@@ -21,6 +21,7 @@ const CrossMint: React.FC<CrossmintProps> = ({ projectId, collectionId, environm
                 numberOfTokens:"1"
             }}
             mintTo="_WALLET_ADDRESS_"
+            emailTo="_EMAIL_"
             locale="en-US"
             currency="GBP"
         />

@@ -25,9 +25,23 @@ const CrossMint: React.FC<CrossmintProps> = ({ collectionId, projectId, environm
                 "mintIndices":"1",
                 "merkleProofs":"0x891905fc2c389ee01682e06b68c5871332d65a3b4d5b83b7b0f529734624d97c",
             }}*/
-            //mintTo="<YOUR_USER_WALLET_ADDRESS>"
+            /*mintConfig={{
+                "type": "candy-machine"
+            }}*/
+            //mintTo="_WALLET_ADDRESS_"
+            //emailTo="_TO_"
+            /*mintConfig={{
+                type: "erc-721",
+                quantity: "_NUMBER_OF_NFTS_",
+                totalPrice: "_PRICE_IN_NATIVE_TOKEN_"
+                // your custom minting arguments...
+            }}*/
             locale="en-US"
             currency="GBP"
+            /*className="xmint-btn"
+            getButtonText={(connecting, paymentMethod) =>
+                connecting ? "Connecting" : `Pay with ${paymentMethod}`
+            }*/
         />
     )
 }
