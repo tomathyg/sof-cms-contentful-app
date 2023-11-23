@@ -70,21 +70,21 @@ export default async function ScenePage({
         {/*<Player />*/}
         {/*<DecentAudioPlayer />*/}
 
-        {scene.nftContractId && (
+        {/*{scene.nftContractId && (*/}
           <section className="mb-8 flex justify-center paper-checkout-section">
             <NFTPaperCheckout
               checkoutId={scene.nftContractId}
             />
-            {/*<CrossMint
+            <CrossMintPayButtonProduction
               projectId={scene.crossmintProjectIdProduction}
-              collectionId={scene.crossmintCollectiondProduction}
-            />*/}
+              collectionId={scene.crossmintCollectiondIdProduction}
+            />
             <CrossMintPayButtonStaging
               projectId={scene.crossmintProjectIdStaging}
-              collectionId={scene.crossmintCollectiondStaging}
+              collectionId={scene.crossmintCollectionIdStaging}
             />
           </section>
-        )}
+        {/*})}*/}
 
         {scene.audioUrl && (
           <section className="mb-8">
