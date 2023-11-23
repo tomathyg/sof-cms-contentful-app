@@ -7,7 +7,14 @@ const SCENE_GRAPHQL_FIELDS = `
       url
     }
     nftContractId
-    audioUrl
+    crossmintProjectIdStaging
+    crossmintCollectionIdStaging
+    crossmintProjectIdProduction
+    crossmintCollectionIdProduction
+    audioMp3 {
+      title
+      url
+    }
     submissionsCollection(limit: 50) {
         items {
             name

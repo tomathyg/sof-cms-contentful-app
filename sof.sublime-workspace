@@ -373,10 +373,7 @@
 	"expanded_folders":
 	[
 		"/Users/tomgreenwell/vagrant-dev/www/sof/sof-cms-contentful-app",
-		"/Users/tomgreenwell/vagrant-dev/www/sof/sof-cms-contentful-app/app",
-		"/Users/tomgreenwell/vagrant-dev/www/sof/sof-cms-contentful-app/app/posts",
-		"/Users/tomgreenwell/vagrant-dev/www/sof/sof-cms-contentful-app/app/posts/[slug]",
-		"/Users/tomgreenwell/vagrant-dev/www/sof/sof-cms-contentful-app/app/scenes"
+		"/Users/tomgreenwell/vagrant-dev/www/sof/sof-cms-contentful-app/app"
 	],
 	"file_history":
 	[

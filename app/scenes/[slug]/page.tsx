@@ -8,7 +8,8 @@ import React from 'react';
 import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
 import NFTPaperCheckout from '../../components/PaperCheckout'
-import CrossMint from '../../components/CrossMint'
+import CrossMintPayButtonStaging from '../../components/CrossMintPayButtonStaging'
+import CrossMintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
@@ -75,13 +76,12 @@ export default async function ScenePage({
               checkoutId={scene.nftContractId}
             />
             {/*<CrossMint
-              projectId='455c1c0c-2b36-4972-b492-77d8ba1560e1'
-              collectionId='30d5e8d7-233c-4c65-87d4-36942bbeb0ac'
+              projectId={scene.crossmintProjectIdProduction}
+              collectionId={scene.crossmintCollectiondProduction}
             />*/}
-            <CrossMint
-              projectId='ace7d495-5dca-436b-abcf-2c7e3e3831e9'
-              collectionId='59c0a75b-59bf-479d-a55c-e30aa2d0436d'
-              environment='staging'
+            <CrossMintPayButtonStaging
+              projectId={scene.crossmintProjectIdStaging}
+              collectionId={scene.crossmintCollectiondStaging}
             />
           </section>
         )}

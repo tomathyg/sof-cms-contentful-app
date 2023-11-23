@@ -8,7 +8,7 @@ interface CrossmintProps {
     environment?: string;
 }
   
-const CrossMint: React.FC<CrossmintProps> = ({ collectionId, projectId, environment='production' }) => {
+const CrossMint: React.FC<CrossmintProps> = ({ projectId, collectionId, environment='production' }) => {
     return (
         <CrossmintPayButton
             projectId={projectId}
