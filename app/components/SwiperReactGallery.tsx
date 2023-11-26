@@ -86,26 +86,29 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
         </div>*/}
 
         {/*{loadedImages.length >= slidesPerViewCount && (*/}
+            <h2 className="gallery-title uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none text-center">
+                GALLERY
+            </h2>
             <Swiper
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
-                spaceBetween={20}
+                spaceBetween={25}
                 slidesPerView={slidesPerViewCount}
                 navigation
                 onSlideChange={() => console.log('slide change')}
                 onSwiper={(swiper) => console.log(swiper)}
-                className={''}
+                className={'swiper-gallery'}
                 breakpoints={{
-                    640: {
+                    480: {
                         slidesPerView: 2,
-                        spaceBetween: 20,
+                        //spaceBetween: 20,
                     },
                     768: {
                         slidesPerView: 3,
-                        spaceBetween: 40,
+                        //spaceBetween: 10,
                     },
                     1024: {
-                        slidesPerView: 4,
-                        spaceBetween: 50,
+                        slidesPerView: 5,
+                        //spaceBetween: 10,
                     },
                 }}
             >
@@ -121,8 +124,8 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
                                 loading="lazy"
                                 src={item.submissionImage.url} 
                                 alt={item.name} 
-                                width={600}
-                                height={600}
+                                width={300}
+                                height={300}
                                 onClick={() => openLightbox(index)}
                                 //onLoad={() => handleImageLoad(item.submissionImage.url)}
                                 onLoad={(e) => console.log("image loaded")}

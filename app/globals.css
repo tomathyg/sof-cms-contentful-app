@@ -77,6 +77,14 @@ a {
 
 .swiper-image {
     cursor: pointer;
+    width: 100%;
+}
+
+@media screen and (max-width: 479px) {
+    .swiper-image {
+        width: 90%;
+        margin: 0 auto;
+    }
 }
 /* END OF SWIPER JS */
 
@@ -123,7 +131,18 @@ h2 span {
     background-color: black !important;
 }
 
-.paper-checkout-section a button {
+.checkout-section {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-top: auto;
+    margin-bottom: 10%;
+    position: absolute;
+    right: 0;
+    top: 25%;
+}
+
+.checkout-section a button {
     background-color: #1C96B6 !important;
     text-transform: uppercase;
     padding-top: 11px !important;
@@ -135,4 +154,152 @@ h2 span {
 
 :root {
     --yarl__carousel_slides_count: 3;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*background-color: black;*/
+}
+
+footer {
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+main.main-content {
+    padding-top: 77px;
+    height: calc(100vh - 93px);
+    margin: 0 auto;
+}
+
+.scene-article {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /*overflow: hidden;*/
+}
+
+@media screen and (max-width: 1773px) {
+    .scene-article {
+        /*overflow: hidden;*/
+    }
+}
+
+.swiper {
+    /*background-color: black;*/
+}
+
+.background-image-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    overflow: hidden;
+    background-image: url('https://images.ctfassets.net/57idppycthif/4INV6AGCzs4529xwzORd96/593296fb9609c2e9b416fcde36b29971/Acutek___Flick_records.jpg?w=1080&q=75');
+    background-size: cover;
+    background-position: center;
+    background-color: black;
+    filter: brightness(40%) blur(7px); /* Adjust percentage to control darkness */
+}
+
+.background-image-container img {
+    width: 100%; /* Makes the image responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Remove any extra space below the image */
+    object-fit: cover;
+    
+}
+
+.scene-header {
+    font-size: clamp(18px, 16vw, 165px) !important;
+}
+
+.scene-title {
+    font-size: inherit !important;
+    text-wrap: nowrap;
+    display: block;
+}
+
+/*.scene-image {
+    position: absolute;
+    top: 5vh;
+}*/
+
+.scene-image {
+    display: block; /* Removes bottom space under the image */
+    /*width: 100%;
+    height: auto;*/
+}
+
+@media screen and (min-width: 640px) {
+    .scene-image-container {
+        position: absolute;
+        top: 100px;
+        top: calc(1em * 1.55 / 2); /* Assuming a line-height of 1.5, adjust if different */
+        /*transform: translateY(-50%);*/
+        width: 100%;
+        height: auto;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .scene-header {
+        flex-wrap: wrap;
+    }
+    .scene-image-container {
+        width: 92%;
+    }
+}
+
+.page-subheading-container {
+    margin-top: auto;
+}
+
+.page-subheading-container h2 {
+    font-size: clamp(18px, 15vw, 200px) !important;
+}
+
+.scene-gallery-section {
+    margin-top: auto;
+    text-align: center;
+    position: relative;
+}
+
+.scene-gallery-section::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 2vw;
+    left: 0;
+    /*background-color: black;*/
+    z-index: -1;
+    /*background: linear-gradient(to bottom, transparent 0%, black 100%);*/
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 1) 100%);
+}
+
+.gallery-title {
+    font-size: clamp(18px, 15vw, 240px) !important;
+    text-align: center;
+    position: absolute;
+    top: clamp(-180px, -11.2vw, -85px);
+    /*top: -60%;*/
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}
+
+.swiper-gallery {
+    /*background-color: black;*/
+    max-width: 1400px;
 }

@@ -5,6 +5,7 @@ import Image from 'next/image';
 interface ClientImageProps {
     src: string;
     name: string;
+    className: string;
 }
 
 type ImageLoaderParams = {
@@ -17,7 +18,7 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
     return `${src}?w=${width}&q=${quality || 75}`;
 }
 
-const ClientImage: React.FC<ClientImageProps> = ({ src, name }) => {
+const ClientImage: React.FC<ClientImageProps> = ({ src, name, className }) => {
 
     return (
         <Image 
@@ -26,8 +27,9 @@ const ClientImage: React.FC<ClientImageProps> = ({ src, name }) => {
             loading="lazy"
             src={src} 
             alt={name || 'Scene image'} 
-            width={400}
-            height={400}
+            width={450}
+            height={450}
+            className={className}
             //onClick={() => console.log("image clicked")}
             //onLoad={() => handleImageLoad(item.submissionImage.url)}
             //onLoad={(e) => console.log("image loaded")}

@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { draftMode } from 'next/headers'
 
 //import { type } from 'os'
-import React from 'react';
+import React, { useState, useContext, createContext } from 'react';
 
 //import { Markdown } from '../../../lib/markdown'
 import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
@@ -24,6 +24,8 @@ import YetCarousel from '../../components/YetGallery'
 import SwiperReactGallery from '../../components/SwiperReactGallery';
 import YetGallery from '../../components/YetGallery';
 
+import BackgroundImageStyle from '../../components/BackgroundImageStyle';
+
 /*export async function generateStaticParams() {
   const allScenes = await getAllScenes(false);
   return allScenes.map((scene) => ({
@@ -43,23 +45,33 @@ export default async function ScenePage({
   const allSubmissions = scene.submissionsCollection.items;
   //console.log("SCENE SUBMISSIONS:", allSubmissions);
   return (
-    <div className="container mx-auto my-10 px-5">
-      <article>
-        <h1 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none mb-12 text-center">
-          {scene.title}
-        </h1>
+    <>
+    <div className="background-image-container">
+      {/*<img src="https://images.ctfassets.net/57idppycthif/4INV6AGCzs4529xwzORd96/593296fb9609c2e9b416fcde36b29971/Acutek___Flick_records.jpg?w=1080&q=75" alt="" />*/}
+    </div>
+    <div className="mx-auto h-full">
+      <article className="scene-article">
+        
         {scene.image && scene.image.url && scene.image.title && (
-          <section className="mb-8 flex justify-center">
-            <ClientImage
-              src={scene.image.url}
-              name={scene.image.title}
-            />
+          <section className="scene-header mb-8 flex justify-center relative">
+            <h1 className="scene-title uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none mb-4 text-center">
+              {scene.title}
+            </h1>
+            <div className='scene-image-container'>
+              <ClientImage
+                src={scene.image.url}
+                name={scene.image.title}
+                className='scene-image'
+              />
+            </div>
           </section>
         )}
 
-        <h2 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none mb-12 text-center">
-          GALLERY
-        </h2>
+        {/*<section className="page-subheading-container">
+          <h2 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none text-center">
+            GALLERY
+          </h2>
+        </section>*/}
         {/*<p>
           {scene.nftContractId}
         </p>*/}
@@ -72,10 +84,10 @@ export default async function ScenePage({
         {/*<DecentAudioPlayer />*/}
 
         {/*{scene.nftContractId && (*/}
-          <section className="mb-8 flex justify-center paper-checkout-section">
-            {/*<NFTPaperCheckout
+          <section className="mb-8 flex justify-center checkout-section">
+            <NFTPaperCheckout
               checkoutId={scene.nftContractId}
-            />*/}
+            />
             <CrossmintPayButtonProduction
               projectId={scene.crossmintProjectIdProduction}
               collectionId='3709b2d1-dd26-49a5-b5e6-8acd55f59bd7'
@@ -109,7 +121,7 @@ export default async function ScenePage({
         )}
 
         {allSubmissions && (
-          <section>
+          <section className="scene-gallery-section">
             <SwiperReactGallery
               submissions={allSubmissions}
               slidesPerViewCount={1}
@@ -131,5 +143,9 @@ export default async function ScenePage({
       />*/}
       </article>
     </div>
+    {/*<BackgroundImageStyle
+      url={scene.image.url}
+    />*/}
+    </>
   )
 }
