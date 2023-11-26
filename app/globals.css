@@ -128,3 +128,11 @@ h2 span {
     text-transform: uppercase;
     padding-top: 11px !important;
 }
+
+/*.yarl__slide {
+    width: 20%;
+}*/
+
+:root {
+    --yarl__carousel_slides_count: 3;
+}

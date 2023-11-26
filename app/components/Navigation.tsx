@@ -20,9 +20,9 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
  
   return (
     <ul className="px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base">
-        <li>
+        {/*<li>
             <button type="button" onClick={() => router.push('/scenes')}>ALL SCENES</button>
-        </li>
+        </li>*/}
         <li>
             <button type="button" onClick={() => router.push('/about')}>ABOUT</button>
         </li>

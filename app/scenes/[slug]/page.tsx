@@ -8,8 +8,8 @@ import React from 'react';
 import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
 import NFTPaperCheckout from '../../components/PaperCheckout'
-import CrossMintPayButtonStaging from '../../components/CrossMintPayButtonStaging'
-import CrossMintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
+import CrossmintPayButtonManifold from '../../components/CrossmintPayButtonManifold'
+import CrossmintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
@@ -19,9 +19,10 @@ import ClientImage from '../../components/ClientImage'
 
 //import SubmissionsGallery from '../../components/SubmissionsGallery'
 //import SwiperGallery from '../../components/SwiperGalleryWebComponent';
-//import YetCarousel from '../../components/YetGallery'
+import YetCarousel from '../../components/YetGallery'
 //import LightGallery from '../../components/LightGallery'
 import SwiperReactGallery from '../../components/SwiperReactGallery';
+import YetGallery from '../../components/YetGallery';
 
 /*export async function generateStaticParams() {
   const allScenes = await getAllScenes(false);
@@ -72,16 +73,29 @@ export default async function ScenePage({
 
         {/*{scene.nftContractId && (*/}
           <section className="mb-8 flex justify-center paper-checkout-section">
-            <NFTPaperCheckout
+            {/*<NFTPaperCheckout
               checkoutId={scene.nftContractId}
-            />
-            <CrossMintPayButtonProduction
+            />*/}
+            <CrossmintPayButtonProduction
               projectId={scene.crossmintProjectIdProduction}
-              collectionId={scene.crossmintCollectiondIdProduction}
+              collectionId='3709b2d1-dd26-49a5-b5e6-8acd55f59bd7'
+              environment='production'
             />
-            <CrossMintPayButtonStaging
+            <CrossmintPayButtonManifold
               projectId={scene.crossmintProjectIdStaging}
               collectionId={scene.crossmintCollectionIdStaging}
+              creatorContractAddress={scene.manifoldCreatorContractAddressTestnet}
+              contractAddress={scene.testnetContractAddress}
+              instanceId={scene.testnetContractInstanceId}
+              environment='staging'
+            />
+            <CrossmintPayButtonManifold
+              projectId={scene.crossmintProjectIdProduction}
+              collectionId={scene.crossmintCollectionIdProduction}
+              creatorContractAddress={scene.manifoldCreatorContractAddressMainnet}
+              contractAddress={scene.mainnetContractAddress}
+              instanceId={scene.mainnetContractInstanceId}
+              environment='production'
             />
           </section>
         {/*})}*/}
@@ -100,6 +114,9 @@ export default async function ScenePage({
               submissions={allSubmissions}
               slidesPerViewCount={1}
             />
+            {/*<YetGallery
+              submissions={allSubmissions}
+            />*/}
           </section>
         )}
 
@@ -109,7 +126,6 @@ export default async function ScenePage({
         {/*<LightGallery
           submissions={allSubmissions}
         />*/}
-        {/*<YetCarousel />*/}
         {/*<SubmissionsGallery
           submissions={allSubmissions}
       />*/}

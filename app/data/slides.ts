@@ -6,23 +6,23 @@ const unsplashLink = (id: string, width: number, height: number) =>
 const unsplashPhotos = [
   {
     id: "ts1zXzsD7xc",
-    width: 1080,
-    height: 1620,
+    width: 300,
+    height: 300,
   },
   {
     id: "F_r83HEzsXI",
-    width: 1080,
-    height: 1426,
+    width: 300,
+    height: 300,
   },
   {
     id: "m82uh_vamhg",
-    width: 1080,
-    height: 1440,
+    width: 300,
+    height: 300,
   },
   {
     id: "br-Xdb9KE0Q",
-    width: 1080,
-    height: 716,
+    width: 300,
+    height: 300,
   },
   {
     id: "6mze64HRU2Q",
