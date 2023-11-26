@@ -257,6 +257,8 @@ main.main-content {
     }
     .scene-image-container {
         width: 92%;
+        display: flex;
+        justify-content: center;
     }
 }
 
