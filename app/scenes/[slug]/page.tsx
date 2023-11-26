@@ -49,7 +49,7 @@ export default async function ScenePage({
     <div className="background-image-container">
       {/*<img src="https://images.ctfassets.net/57idppycthif/4INV6AGCzs4529xwzORd96/593296fb9609c2e9b416fcde36b29971/Acutek___Flick_records.jpg?w=1080&q=75" alt="" />*/}
     </div>
-    <div className="mx-auto h-full">
+    <div className="scene-article-container mx-auto h-full">
       <article className="scene-article">
         
         {scene.image && scene.image.url && scene.image.title && (

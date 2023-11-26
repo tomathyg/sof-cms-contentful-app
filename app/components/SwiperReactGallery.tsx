@@ -98,7 +98,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
                 onSwiper={(swiper) => console.log(swiper)}
                 className={'swiper-gallery'}
                 breakpoints={{
-                    480: {
+                    380: {
                         slidesPerView: 2,
                         //spaceBetween: 20,
                     },
