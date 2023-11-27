@@ -76,14 +76,14 @@ export default async function ScenePage({
                   projectId={scene.crossmintProjectIdProduction}
                   collectionId={scene.crossmintCollectionIdProduction}
                 />
-                <CrossmintPayButtonManifold
+                {/*<CrossmintPayButtonManifold
                   projectId={scene.crossmintProjectIdProduction}
                   collectionId={scene.crossmintCollectionIdProduction}
                   creatorContractAddress={scene.manifoldCreatorContractAddressMainnet}
                   contractAddress={scene.mainnetContractAddress}
                   instanceId={scene.mainnetContractInstanceId}
                   environment='production'
-                />
+                />*/}
               </div>
             </div>
           </section>
