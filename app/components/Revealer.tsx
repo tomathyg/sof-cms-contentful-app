@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
 import { gsap } from 'gsap';
-import { randomFloat } from '../js/utils';
+//import { randomFloat } from '../js/utils';
 
 // ImageLayer is now a function that initializes the DOM references.
 function useImageLayer(el: Element) {
@@ -21,6 +21,8 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
   const timeline = useRef<GSAPTimeline | null>(null);
   const layerRefs = useRef<Array<ReturnType<typeof useImageLayer>>>([]);
   const gridItemRefs = useRef<HTMLElement[]>([]);
+
+  const randomFloat = (min:number,max:number) => parseFloat(Math.min(min + (Math.random() * (max - min)), max).toFixed(2));
 
   // Use useEffect to replicate the constructor's functionality and side effects.
   useEffect(() => {

@@ -1,7 +1,7 @@
 'use client'
 
 import { gsap } from 'gsap';
-import { randomFloat } from './utils';
+//import { randomFloat } from './utils';
 
 class ImageLayer {
     constructor(el) {
@@ -23,6 +23,7 @@ export default class Revealer {
         };
         this.createTimeline();
     }
+    randomFloat(min,max) { parseFloat(Math.min(min + (Math.random() * (max - min)), max).toFixed(2)) }
     createTimeline() {
         this.tl = gsap.timeline({paused: true});
         
@@ -51,7 +52,7 @@ export default class Revealer {
             y: (index) => index ? '101%' : '-101%'
         }, 'halfway')
         // show grid items
-        .fromTo(this.gridItems, {y: () => randomFloat(100,500)}, {
+        .fromTo(this.gridItems, {y: () => this.randomFloat(100,500)}, {
             duration: this.options.duration*2,
             ease: 'Expo.easeOut',
             y: 0,

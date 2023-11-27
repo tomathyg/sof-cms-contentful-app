@@ -4,9 +4,9 @@ import '../styles.css'
 
 import React, { useEffect, useRef } from 'react';
 
-import Cursor from '../js/cursor';
+//import Cursor from '../../unused/js/cursor';
 //import Revealer from '../js/revealer';
-import { preloadImages } from '../js/utils';
+//import { preloadImages } from '../../unused/js/utils';
 
 import Revealer from './Revealer';
 
