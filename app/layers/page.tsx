@@ -30,7 +30,6 @@ export default async function Page() {
         <div>
             <RapidLayers />
         </div>
-        
     )
     
     /*return (

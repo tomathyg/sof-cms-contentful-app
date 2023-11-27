@@ -75,18 +75,18 @@ export default function RapidLayers() {
                     <div className="grid__item grid__item--f" style={{ backgroundImage: `url(images/6.jpg)`}}></div>
 				</div>
 				<nav className="menu">
-					<a className="menu__item">
+					{/*<a className="menu__item">
 						<h2 className="menu__item-title">Underground</h2>
 						<p className="menu__item-subtitle">Hey, dreamypie, wake up!</p>
-					</a>
+                    </a>*/}
 					<a className="menu__item menu__item--current" onClick={handleReveal}>
-						<h2 className="menu__item-title">Commotion</h2>
-						<p className="menu__item-subtitle">Yo, sleepyhead! What's up?</p>
+						<h2 className="menu__item-title">CREATE</h2>
+						{/*<p className="menu__item-subtitle">Yo, sleepyhead! What's up?</p>*/}
 					</a>
-					<a className="menu__item">
+					{/*<a className="menu__item">
 						<h2 className="menu__item-title">Interrogation</h2>
 						<p className="menu__item-subtitle">Ho ho, honey! What's the matter?</p>
-					</a>
+                    </a>*/}
 				</nav>
 			</div>
 			<div className="layers">
