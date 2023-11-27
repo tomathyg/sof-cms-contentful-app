@@ -67,12 +67,12 @@ export default function RapidLayers() {
             </div>*/}
 			<div className="content">
 				<div className="grid">
-					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(images/3.jpg)`}}></div>
-					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(images/2.jpg)`}}></div>
-					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(images/10.jpg)`}}></div>
-					<div className="grid__item grid__item--d" style={{ backgroundImage: `url(images/5.jpg)`}}></div>
-					<div className="grid__item grid__item--e" style={{ backgroundImage: `url(images/8.jpg)`}}></div>
-                    <div className="grid__item grid__item--f" style={{ backgroundImage: `url(images/6.jpg)`}}></div>
+					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/images/3.jpg)`}}></div>
+					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(/images/2.jpg)`}}></div>
+					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
+					<div className="grid__item grid__item--d" style={{ backgroundImage: `url(/images/5.jpg)`}}></div>
+					<div className="grid__item grid__item--e" style={{ backgroundImage: `url(/images/8.jpg)`}}></div>
+                    <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/images/6.jpg)`}}></div>
 				</div>
 				<nav className="menu">
 					{/*<a className="menu__item">
@@ -91,34 +91,34 @@ export default function RapidLayers() {
 			</div>
 			<div className="layers">
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/1.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/1.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/2.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/2.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/3.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/3.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/4.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/4.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/9.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/9.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/6.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/6.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/7.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/7.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/8.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/8.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/5.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/5.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(images/10.jpg)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
 				</div>
 			</div>
 		</main>
