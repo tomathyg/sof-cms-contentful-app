@@ -6,7 +6,7 @@
 
 /* COLOURS */
 :root {
-    --off-white: '#e8e0c5'
+    --off-white: #e8e0c5;
 }
 /* END OF COLOURS */
 
@@ -27,8 +27,43 @@ a {
 }
 
 /* H5 AUDIO PLAYER */
-.rhap_time {
+.rhap_container {
+    margin-top: 15px;
+    background-color: transparent !important;
+    box-shadow: none !important;
+}
+
+.rhap_time, .audio-player-track-title, .rhap_header {
     font-family: 'DM Mono', sans-serif;
+}
+
+.rhap_time {
+    display: none;
+}
+
+.rhap_additional-controls {
+    flex: none !important;
+}
+
+.rhap_header {
+    color: var(--off-white);
+    font-family: 'Druk Wide Heavy', sans-serif;
+}
+
+.song-title {
+    display: inline-block;
+}
+
+.rhap_main-controls-button, .rhap_repeat-button, .rhap_volume-button {
+    color: #1C96B6 !important;
+}
+
+.rhap_progress-indicator, .rhap_volume-indicator {
+    background: #1C96B6 !important;
+}
+
+.rhap_volume-bar, .rhap_progress-bar {
+    background-color: var(--off-white) !important;
 }
 /* END OF H5 AUDIO PLAYER */
 
@@ -172,9 +207,9 @@ footer {
 
 main.main-content {
     padding-top: 77px;
-    height: calc(100vh - 93px);
+    /*height: calc(100vh - 93px);*/
     margin: 0 auto;
-    min-height: 1000px;
+    /*min-height: 1000px;*/
 }
 
 @media screen and (max-width: 640px) {
@@ -230,6 +265,7 @@ main.main-content {
 
 .scene-header {
     font-size: clamp(18px, 16vw, 165px) !important;
+    margin-bottom: 2rem;
 }
 
 .scene-title {
@@ -249,8 +285,19 @@ main.main-content {
     height: auto;*/
 }
 
+.audio-player-wrapper {
+    width: 100%;
+}
+
+.scene-image-container {
+    width: 450px;
+    /*margin-top: calc(-1em * 0.6 / 2);*/
+    margin-top: -0.22em;
+    font-size: inherit;
+}
+
 @media screen and (min-width: 640px) {
-    .scene-image-container {
+    .scene-image-containe-2 {
         position: absolute;
         top: 100px;
         top: calc(1em * 1.55 / 2); /* Assuming a line-height of 1.5, adjust if different */
@@ -282,11 +329,27 @@ main.main-content {
     font-size: clamp(18px, 15vw, 200px) !important;
 }
 
+.audio-player-section {
+    margin-top: auto;
+    margin-bottom: 12%;
+}
+
+/*.audio-player-track-title {
+    background-color: white;
+    color: black;
+    padding: 4px 6px;
+    text-align: center;
+}*/
+
 .scene-gallery-section {
     margin-top: auto;
     text-align: center;
     position: relative;
     /*overflow-x: hidden;*/
+}
+
+.audio-player-wrapper {
+    /*width: 300px;*/
 }
 
 .background-image-container::after {
@@ -304,16 +367,17 @@ main.main-content {
 }
 
 .gallery-title {
-    font-size: clamp(18px, 15vw, 210px) !important;
+    font-size: clamp(18px, 15vw, 165px) !important;
     /*font-size: clamp(18px, 13vw, 200px) !important;*/
+    /*font-size: clamp(-128px, 6vw, -140px) !important;*/
     text-align: center;
-    position: absolute;
+    /*position: absolute;
     top: clamp(-160px, -11.3vw, -70px);
-    /*top: -60%;*/
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-50%);*/
     z-index: -1;
     /*transform: scale(1.3);*/
+    margin-bottom: -0.22em;
 }
 
 .swiper-gallery {

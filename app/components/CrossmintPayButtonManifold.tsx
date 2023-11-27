@@ -37,8 +37,8 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "totalPrice":"0.001",
         "instanceId":`${instanceId}`,
         "mintCount":"1",
-        "mintIndices":[],
-        "merkleProofs":[]
+        "mintIndices":"",
+        "merkleProofs":""
     }
     console.log("MINT CONFIG:", mintConfig);
 
@@ -72,22 +72,37 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
             //mintTo="_TO_"
             //emailTo="_EMAIL_"
             //recipient="_WALLET_ADDRESS_"
-            mintConfig={{
+            /*mintConfig={{
                 "contractAddress": `${contractAddress}`,
                 "creatorContractAddress": `${creatorContractAddress}`,
                 "instanceId": `${instanceId}`,
-                "mintCount": mintAmount,
+                "mintCount": "mintAmount.toString()",
                 "mintIndices": [],
                 "merkleProofs": [],
-                type: "manifold-erc-721",
-                totalPrice: (nftCost * mintAmount).toString(),
+                "totalPrice": "0.001"
+                //type: "erc-721",
+                //totalPrice: (nftCost * mintAmount).toString(),
                 //_quantity: mintAmount
                 //"mintFor": ""
+            }}*/
+            // 0x95d452fc85869a7834189f41ec6bb0915f943aa3
+            //"type": "erc-721"
+            //"type": "manifold-erc-721"
+            mintConfig={{
+                "contractAddress": "0x583DCB86146bc2Dc41602794355616ddcA405e1E",
+                "creatorContractAddress": "0x5133522ea5A0494EcB83F26311A095DDD7a9D4b6",
+		        "instanceId": "60715248",
+                "mintCount": "1",
+                "mintIndices": "",
+                "merkleProofs": "",
+                "totalPrice": "0.0054",
+                "type": "manifold-erc-721"
             }}
             locale="en-US"
             currency="GBP"
             className="xmint-btn"
-            getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `${environment} Manifold NFT`} />
+            getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `${environment} Manifold NFT`}
+        />
         </>
     )
 }

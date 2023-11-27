@@ -86,7 +86,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
         </div>*/}
 
         {/*{loadedImages.length >= slidesPerViewCount && (*/}
-            <h2 className="gallery-title uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none text-center">
+            <h2 className="gallery-title uppercase font-semibold leading-none text-center">
                 GALLERY
             </h2>
             <Swiper

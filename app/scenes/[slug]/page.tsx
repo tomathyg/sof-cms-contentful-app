@@ -53,16 +53,34 @@ export default async function ScenePage({
       <article className="scene-article">
         
         {scene.image && scene.image.url && scene.image.title && (
-          <section className="scene-header mb-8 flex justify-center relative">
-            <h1 className="scene-title uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none mb-4 text-center">
-              {scene.title}
-            </h1>
-            <div className='scene-image-container'>
+          <section className="scene-header mb-28 flex flex-col items-center relative">
+            <div className="w-full">
+              <h1 className="scene-title uppercase font-semibold leading-none text-center">
+                {scene.title}
+              </h1>
+            </div>
+            <div className='scene-image-container flex flex-col items-center'>
               <ClientImage
                 src={scene.image.url}
                 name={scene.image.title}
                 className='scene-image'
               />
+              <div className="audio-player-wrapper section-wrapper w-full text-sm">
+                <H5Player
+                    src={scene.audioMp3.url}
+                    title={scene.audioMp3.title}
+                />
+              </div>
+              <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center mt-3">
+                <CrossmintPayButtonManifold
+                  projectId={scene.crossmintProjectIdProduction}
+                  collectionId={scene.crossmintCollectionIdProduction}
+                  creatorContractAddress={scene.manifoldCreatorContractAddressMainnet}
+                  contractAddress={scene.mainnetContractAddress}
+                  instanceId={scene.mainnetContractInstanceId}
+                  environment='production'
+                />
+              </div>
             </div>
           </section>
         )}
@@ -84,7 +102,7 @@ export default async function ScenePage({
         {/*<DecentAudioPlayer />*/}
 
         {/*{scene.nftContractId && (*/}
-          <section className="mb-8 flex justify-center checkout-section">
+          {/*<section className="mb-8 flex justify-center checkout-section">
             <NFTPaperCheckout
               checkoutId={scene.nftContractId}
             />
@@ -109,16 +127,14 @@ export default async function ScenePage({
               instanceId={scene.mainnetContractInstanceId}
               environment='production'
             />
-          </section>
+          </section>*/}
         {/*})}*/}
 
-        {scene.audioUrl && (
-          <section className="mb-8">
-            <H5Player
-              src={scene.audioUrl}
-            />
+        {/*{scene.audioMp3 && scene.audioMp3.url && scene.audioMp3.title && (
+          <section className="audio-player-section mb-8 flex justify-center w-full">
+            
           </section>
-        )}
+        )}*/}
 
         {allSubmissions && (
           <section className="scene-gallery-section">
