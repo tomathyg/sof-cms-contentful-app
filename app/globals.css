@@ -178,6 +178,7 @@ main.main-content {
 
 .scene-article-container {
     overflow-x: hidden;
+    overflow-y: hidden;
 }
 
 .scene-article {
