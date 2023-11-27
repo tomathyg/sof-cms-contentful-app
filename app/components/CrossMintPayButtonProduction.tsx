@@ -16,16 +16,9 @@ const CrossMint: React.FC<CrossmintProps> = ({ projectId, collectionId, environm
             projectId={projectId}
             collectionId={collectionId}
             environment={environment}
-            /*mintConfig={{
-                type: "erc-721",
-                totalPrice:"0.001",
-                to:"_TO_",
-                numberOfTokens:"1"
-            }}*/
             mintConfig={{
                 "totalPrice":"0.001",
                 "numberOfTokens":"1",
-                //"to": "_WALLET_ADDRESS_"
             }}
             //mintTo="_WALLET_ADDRESS_"
             //emailTo="_EMAIL_TO_"
@@ -33,7 +26,7 @@ const CrossMint: React.FC<CrossmintProps> = ({ projectId, collectionId, environm
             currency="GBP"
             className="xmint-btn"
             getButtonText={(connecting, paymentMethod) =>
-                connecting ? "Connecting" : `Crossmint NFT`
+                connecting ? "Connecting" : `PAY WITH ETH OR CARD`
             }
         />
     )

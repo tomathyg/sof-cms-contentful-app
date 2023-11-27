@@ -29,6 +29,9 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
         <li>
             <button type="button" onClick={() => router.push('/credits')}>CREDITS</button>
         </li>
+        <li>
+            <button type="button" onClick={() => router.push('/layers')}>LAYERS</button>
+        </li>
         {items.map((item, index) => (
             <li key={index}>
                 <button className="uppercase" type="button" onClick={() => router.push(`/${base}/${item.slug}`)}>
