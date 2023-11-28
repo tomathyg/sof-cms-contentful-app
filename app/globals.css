@@ -130,7 +130,7 @@ a {
 /* END OF SWIPER JS */
 
 /* TYPEFORM */
-.typeform-button {
+.typeform-button, .button-primary {
     background-color: #d6301a;
     padding: 0.5em 1em;
     border-radius: 25px;
@@ -138,7 +138,7 @@ a {
 /* END OF TYPEFORM */
 
 h2 span {
-    display: inline-block;
+    /*display: inline-block;*/
     /*white-space: nowrap;*/
 }
 
@@ -231,12 +231,35 @@ main.main-content {
     z-index: 11;
 }
 
-.revealer-grid-container.intro .content {
-    height: 100%;
+.revealer-grid-container.intro .revealer-grid-inner {
+    border: solid 1px var(--off-white);
 }
 
+.revealer-grid-container.intro .revealer-grid-inner .content {
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+    margin: 2rem;
+}
+
+.revealer-grid-container.intro .content {
+    height: 100%;
+    border: solid 1px var(--off-white);
+    padding: 1rem;
+}
+
+.revealer-grid {
+   width: calc(100vw) !important;
+   z-index: -1;
+}
+
+.intro-header-section {
+    width: calc(100% - 4rem);
+}
+
+
+
 .revealer-grid-container .content {
-    min-height: calc(100vh - 170px);
+    /*min-height: calc(100vh - 170px);*/
 }
 
 .reveal-page-content {

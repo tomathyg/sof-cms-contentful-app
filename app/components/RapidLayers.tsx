@@ -14,6 +14,8 @@ import StepsContent from './StepsContent';
 
 import Image from 'next/image';
 
+import ScenesLogo from '../components/ScenesLogo'
+
 // Define an interface for the methods you want to call on Revealer.
 interface RevealerMethods {
     reveal: () => void;
@@ -73,26 +75,39 @@ export default function RapidLayers() {
   return (
     <>
     <Revealer ref={revealerRef} />
-    <section className="loading">
-		<div className="revealer-grid-container intro">
-			<div className="content">
-				<div className="revealer-grid">
-					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=${quality})`}}></div>
-					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=${quality})`}}></div>
-					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=${quality})`}}></div>
-					<div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=${quality})`}}></div>
-					<div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=${quality})`}}></div>
-                    <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=${quality})`}}></div>
-				</div>
-				<nav className="menu">
-					<a className="menu__item menu__item--current" onClick={handleReveal}>
-						<h2 className="menu__item-title">CREATE</h2>
-					</a>
-				</nav>
-                <div className='reveal-page-content hidden'>
-                    <StepsContent />
+    <section className="revealer-section">
+        <div className='reveal-page-content hidden'>
+            <StepsContent />
+        </div>
+		<div className="revealer-grid-container intro p-2">
+            <div className='w-full h-full revealer-grid-inner'>
+                <div className="content border border-black">
+                    <div className="revealer-grid">
+                        <div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=${quality})`}}></div>
+                    </div>
+                    <section className="intro-header-section flex-col flex items-center justify-center absolute h-full pb-16">
+                        <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight`}>
+                            {/*{heading}*/}
+                            <ScenesLogo />
+                        </h1>
+                        <h2 className={`intro-subheading mb-8 text-center text-base text-xl sm:text-2xl md:text-3xl font-sans`}>
+                            <span>AN <span className='font-serif'>INTERACTIVE</span> JOURNEY</span><br />
+                            <span>THROUGH <span className='font-serif'>PERSONAL</span> MOMENTS</span>
+                        </h2>
+                        <button className='font-sans button-primary' onClick={handleReveal}>CREATE</button>
+                    </section>
+                    {/*<nav className="menu">
+                        <a className="menu__item menu__item--current" onClick={handleReveal}>
+                            <h2 className="menu__item-title">CREATE</h2>
+                        </a>
+                    </nav>*/}
                 </div>
-			</div>
+            </div>
 			<div className="layers">
 				{/*<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/images/1.jpg)`}}></div>
@@ -247,6 +262,7 @@ export default function RapidLayers() {
                     />
                 </div>*/}
 			</div>
+            
 		</div>
 	</section>
     </>

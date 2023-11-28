@@ -220,7 +220,7 @@ a:focus {
 }
 
 .menu__item--current {
-	--color-title: #fff;
+	--color-title: #e8e0c5;
     --color-subtitle: #644B47;
     --title-font-style: italic;
     --title-font-weight: 900;
@@ -324,7 +324,7 @@ a:focus {
         pointer-events: auto;
     }
     .content {
-        min-height: calc(100vh - 93px);
+        /*min-height: calc(100vh - 93px);*/
     }
     .revealer-grid {
         width: 80vw;

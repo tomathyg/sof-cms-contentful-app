@@ -132,8 +132,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable}`}>
-      <body className={`font-mono bg-black text-[#e8e0c5]`}>
+    <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
+      <body className={`font-mono bg-black text-off-white`}>
         <section className="">
           <Header />
           <main className='main-content'>{children}</main>

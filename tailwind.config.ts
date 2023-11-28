@@ -14,6 +14,9 @@ export default {
         mono: ['var(--font-dm-mono)'],
         serif: ['var(--font-gambarino)'],
       },
+      colors: {
+        'off-white': '#e8e0c5',
+      }
     },
   },
   future: {

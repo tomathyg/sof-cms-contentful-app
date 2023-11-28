@@ -24,7 +24,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
   const layerRefs = useRef<Array<ReturnType<typeof useImageLayer>>>([]);
   const gridItemRefs = useRef<HTMLElement[]>([]);
 
-  const gridRef = useRef<HTMLElement | null>(null);
+  const gridInnerRef = useRef<HTMLElement | null>(null);
   const menuRef = useRef<HTMLElement | null>(null);
   const newMainRef = useRef<HTMLElement | null>(null);
 
@@ -39,7 +39,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     layerRefs.current = [...document.querySelectorAll('.layers__item')].map(item => useImageLayer(item));
     gridItemRefs.current = Array.from(document.querySelectorAll('.grid__item') as NodeListOf<HTMLElement>);
     
-    gridRef.current = document.querySelector('.revealer-grid');
+    gridInnerRef.current = document.querySelector('.revealer-grid-inner');
     menuRef.current = document.querySelector('.menu');
     newMainRef.current = document.querySelector('.reveal-page-content');
 
@@ -87,9 +87,8 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
         // This will execute right before hiding the last image layer
         //router.push('/');
         //router.replace('/', { shallow: true });
-        if (gridRef.current && menuRef.current) {
-            gridRef.current.classList.add('hidden');
-            menuRef.current.classList.add('hidden');
+        if (gridInnerRef.current) {
+            gridInnerRef.current.classList.add('hidden');
         }
         if (newMainRef.current) {
             newMainRef.current.classList.remove('hidden');
