@@ -19,7 +19,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
   //const searchParams = useSearchParams()
  
   return (
-    <ul className="px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base">
+    <ul className="px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
         {/*<li>
             <button type="button" onClick={() => router.push('/scenes')}>ALL SCENES</button>
         </li>*/}

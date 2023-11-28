@@ -9,7 +9,7 @@ import localFont from 'next/font/local'
 const druk_wide_heavy = localFont({
   src: './fonts/Druk-Wide-Heavy-Web.woff2',
   display: 'swap',
-  variable: '--font-druk-heavy-wide',
+  variable: '--font-druk-wide-heavy',
 })
 
 const dm_mono = DM_Mono({
