@@ -242,6 +242,10 @@ main.main-content {
     /*overflow: hidden;*/
 }
 
+.layers__item img {
+    object-fit: cover;
+}
+
 @media screen and (max-width: 1773px) {
     .scene-article {
         /*overflow: hidden;*/

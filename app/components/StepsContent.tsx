@@ -17,9 +17,9 @@ export default function Content() {
         <section className="header-section flex justify-center text-center">
             <h1 className="text-8xl">THE PROCESS</h1>
         </section>
-        <section className="main-section relative grid grid-cols-3 gap-x-12">
-            <div className="w-full flex flex-col bg-white relative">
-                <div className='column-image-contaner aspect-video'>
+        <section className="main-section relative grid grid-cols-3 gap-x-12 px-4">
+            <div className="w-full flex flex-col">
+                <div className='column-image-container aspect-video relative'>
                     <Image
                         loader={imageLoader}
                         /*width='300'
@@ -31,10 +31,12 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <h2 className='mt-8'>01 - LISTEND & READ</h2>
+                <div className='column-text-container text-center'>
+                    <h2 className='mt-8'>01 - LISTEND & READ</h2>
+                </div>
             </div>
-            <div className="w-full flex flex-col bg-white relative">
-                <div className='column-image-contaner aspect-video'>
+            <div className="w-full flex flex-col">
+                <div className='column-image-container aspect-video relative'>
                     <Image
                         loader={imageLoader}
                         /*width='300'
@@ -46,10 +48,13 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <h2 className='mt-8'>01 - LISTEND & READ</h2>
+                <div className='column-text-container text-center'>
+                    <h2 className='mt-8'>02 - UPLOAD</h2>
+                    <p>LISTEN TO THE SONG AND READ THE PROMPT</p>
+                </div>
             </div>
-            <div className="w-full flex flex-col bg-white relative">
-                <div className='column-image-contaner aspect-video'>
+            <div className="w-full flex flex-col">
+                <div className='column-image-container aspect-video relative'>
                     <Image
                         loader={imageLoader}
                         /*width='300'
@@ -61,7 +66,9 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <h2 className='mt-8'>01 - LISTEND & READ</h2>
+                <div className='column-text-container text-center'>
+                    <h2 className='mt-8'>03 - FINAL SCENE</h2>
+                </div>
             </div>
         </section>
         </>
