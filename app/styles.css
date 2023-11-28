@@ -112,7 +112,7 @@ a:focus {
     height: 400px;
     display: grid;
     justify-content: center;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .revealer-grid {
@@ -324,7 +324,7 @@ a:focus {
         pointer-events: auto;
     }
     .content {
-        height: calc(100vh - 93px);
+        min-height: calc(100vh - 93px);
     }
     .revealer-grid {
         width: 80vw;

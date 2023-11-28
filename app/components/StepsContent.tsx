@@ -15,7 +15,7 @@ export default function Content() {
     return (
         <>
         <section className="header-section flex justify-center text-center px-4">
-            <h1 className="text-4xl sm:text-6xl md:text-8xl mt-8">THE PROCESS</h1>
+            <h1 className="text-4xl sm:text-6xl md:text-8xl mt-4">THE PROCESS</h1>
         </section>
         <section className="mt-4 px-8 overlap-above content-section relative grid grid-cols-1 sm:grid-cols-3 gap-x-12 px-4">
             <div className="w-full flex flex-col mb-8">

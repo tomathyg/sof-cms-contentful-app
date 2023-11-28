@@ -207,27 +207,28 @@ header {
 
 footer {
     background-color: black;
-    /*position: absolute;
-    bottom: 0;*/
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    /*z-index: 20000000;*/
+    z-index: 10;
 }
 
 main.main-content {
-    height: calc(100vh - 170px);
+    min-height: calc(100vh - 170px);
     /*min-height: 1000px;*/
     margin: 0 auto;
     margin-top: 77px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 .revealer-grid-container .content {
-    height: calc(100vh - 170px);
+    min-height: calc(100vh - 170px);
 }
 
 .reveal-page-content {
     height: 100%;
     width: 100%;
+    padding-bottom: 93px;
 }
 
 @media screen and (max-width: 640px) {

@@ -68,7 +68,7 @@ export default function RapidLayers() {
         el.addEventListener('mouseleave', () => cursor.emit('leave'));
     });*/
 
-    const quality = 60;
+    const quality = 75;
 
   return (
     <>
@@ -77,12 +77,12 @@ export default function RapidLayers() {
 		<div className="revealer-grid-container intro">
 			<div className="content">
 				<div className="revealer-grid">
-					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=60)`}}></div>
-					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=60)`}}></div>
-					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=60)`}}></div>
-					<div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=60)`}}></div>
-					<div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=60)`}}></div>
-                    <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=${quality})`}}></div>
+					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=${quality})`}}></div>
+					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=${quality})`}}></div>
+					<div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=${quality})`}}></div>
+					<div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=${quality})`}}></div>
+                    <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<nav className="menu">
 					<a className="menu__item menu__item--current" onClick={handleReveal}>
@@ -126,34 +126,34 @@ export default function RapidLayers() {
                 </div>*/}
 
                 <div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Falyss-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Falyss-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fcxy-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fcxy-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Flucy-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Flucy-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fomo-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fomo-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
-					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=${quality})`}}></div>
                 </div>
 
                 {/*<div className="layers__item">
