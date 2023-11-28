@@ -247,6 +247,7 @@ main.main-content {
     display: flex;
     flex-direction: column;
     /*overflow: hidden;*/
+    padding-bottom: 93px;
 }
 
 .layer-image {

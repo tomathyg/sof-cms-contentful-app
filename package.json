@@ -23,7 +23,7 @@
     "date-fns": "2.30.0",
     "decent-audio-player": "^1.0.6",
     "ethers": "^5.7.2",
-    "gsap": "^3.2.6",
+    "gsap": "^3.12.2",
     "imagesloaded": "^5.0.0",
     "lightgallery": "^2.7.2",
     "next": "latest",
