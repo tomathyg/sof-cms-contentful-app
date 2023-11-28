@@ -221,6 +221,20 @@ main.main-content {
     /*overflow: hidden;*/
 }
 
+/* REVEALER */
+.revealer-grid-container.intro {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    background: black;
+    z-index: 11;
+}
+
+.revealer-grid-container.intro .content {
+    height: 100%;
+}
+
 .revealer-grid-container .content {
     min-height: calc(100vh - 170px);
 }
