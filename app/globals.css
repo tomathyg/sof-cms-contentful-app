@@ -22,6 +22,10 @@ h1, h2, button {
 }
 /* END OF FONTS */
 
+.overlap-above {
+    margin-top: -1.3em;
+}
+
 a {
     text-transform: uppercase;
 }

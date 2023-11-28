@@ -15,11 +15,11 @@ export default function Content() {
     return (
         <>
         <section className="header-section flex justify-center text-center">
-            <h1 className="text-8xl">THE PROCESS</h1>
+            <h1 className="text-8xl mt-8">THE PROCESS</h1>
         </section>
-        <section className="main-section relative grid grid-cols-3 gap-x-12 px-4">
+        <section className="overlap-above content-section relative grid grid-cols-3 gap-x-12 px-4">
             <div className="w-full flex flex-col">
-                <div className='column-image-container aspect-video relative'>
+                <div className='column-image-container aspect-video relative overflow-hidden rounded-xl'>
                     <Image
                         //loader={imageLoader}
                         /*width='300'
@@ -37,7 +37,7 @@ export default function Content() {
                 </div>
             </div>
             <div className="w-full flex flex-col">
-                <div className='column-image-container aspect-video relative'>
+                <div className='column-image-container aspect-video relative overflow-hidden rounded-xl'>
                     <Image
                         //loader={imageLoader}
                         /*width='300'
@@ -55,7 +55,7 @@ export default function Content() {
                 </div>
             </div>
             <div className="w-full flex flex-col">
-                <div className='column-image-container aspect-video relative'>
+                <div className='column-image-container aspect-video relative overflow-hidden rounded-xl'>
                     <Image
                         //loader={imageLoader}
                         /*width='300'
