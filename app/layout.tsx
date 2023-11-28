@@ -6,9 +6,23 @@ import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
-const drukWideHeavy = localFont({
+const druk_wide_heavy = localFont({
   src: './fonts/Druk-Wide-Heavy-Web.woff2',
   display: 'swap',
+  variable: '--font-druk-heavy-wide',
+})
+
+const dm_mono = DM_Mono({
+  weight: '300',
+  subsets: ['latin'],
+  display: 'swap',
+  variable: '--font-dm-mono',
+})
+
+const gambarino = localFont({
+    src: './fonts/Gambarino-Regular.woff2',
+    display: 'swap',
+    variable: '--font-gambarino'
 })
 
 import { getAllScenes, getHomePageData } from '../lib/api-2'
@@ -72,11 +86,6 @@ export const metadata: Metadata = {
     type: 'website',
   },
 }
-const dm_mono = DM_Mono({
-  weight: '300',
-  subsets: ['latin'],
-  display: 'swap'
-})
 
 async function Header() {
   const allScenes = await getAllScenes(false);
@@ -123,8 +132,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={`{dm_mono.className} bg-black text-[#e8e0c5]`}>
+    <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable}`}>
+      <body className={`font-mono bg-black text-[#e8e0c5]`}>
         <section className="">
           <Header />
           <main className='main-content'>{children}</main>

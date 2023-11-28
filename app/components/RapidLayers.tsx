@@ -68,7 +68,7 @@ export default function RapidLayers() {
         el.addEventListener('mouseleave', () => cursor.emit('leave'));
     });*/
 
-    const quality = 75;
+    const quality = 60;
 
   return (
     <>
@@ -133,7 +133,7 @@ export default function RapidLayers() {
                         src="/scene-images/alyss-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -144,7 +144,7 @@ export default function RapidLayers() {
                         src="/scene-images/ben-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -155,7 +155,7 @@ export default function RapidLayers() {
                         src="/scene-images/chef-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -166,7 +166,7 @@ export default function RapidLayers() {
                         src="/scene-images/cxy-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -177,7 +177,7 @@ export default function RapidLayers() {
                         src="/scene-images/dutcy-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -188,7 +188,7 @@ export default function RapidLayers() {
                         src="/scene-images/fede-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -199,7 +199,7 @@ export default function RapidLayers() {
                         src="/scene-images/lucy-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -210,7 +210,7 @@ export default function RapidLayers() {
                         src="/scene-images/maz-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -221,7 +221,7 @@ export default function RapidLayers() {
                         src="/scene-images/omo-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 				<div className="layers__item">
@@ -232,7 +232,7 @@ export default function RapidLayers() {
                         src="/scene-images/pete-no-text.jpg"
                         alt=""
                         quality={quality}
-                        objectFit='cover'
+                        className='layer-image'
                     />
 				</div>
 			</div>

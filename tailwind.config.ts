@@ -10,7 +10,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ['var(--font-inter)'],
+        sans: ['var(--font-druk-wide-heavy)'],
+        mono: ['var(--font-dm-mono)'],
+        serif: ['var(--font-gambarino)'],
       },
     },
   },
