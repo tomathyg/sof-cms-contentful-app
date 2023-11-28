@@ -90,7 +90,7 @@ export default function RapidLayers() {
                         <div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=${quality})`}}></div>
                         <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=${quality})`}}></div>
                     </div>
-                    <section className="intro-header-section flex-col flex items-center justify-center absolute h-full pb-16">
+                    <section className="intro-header-section flex-col flex items-center justify-center absolute left-0 w-full h-full pb-16 px-12">
                         <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight`}>
                             {/*{heading}*/}
                             <ScenesLogo />
