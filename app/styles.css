@@ -127,6 +127,8 @@ a:focus {
     position: relative;
 }
 
+.grid.hidden, .menu.hidden { display: none !important; }
+
 .grid::after {
 	content: '';
 	height: 6rem;
@@ -147,6 +149,10 @@ a:focus {
     opacity: 0;
     -webkit-filter: brightness(0.7);
     filter: brightness(0.7);
+}
+.grid__item {
+    transform: translate(0px, 0px) !important;
+    opacity: 1;
 }
 
 .grid__item--a {
@@ -251,7 +257,7 @@ a:focus {
 .layers {
     top: 0;
     width: 100vw;
-    height: calc(100vh - 93px);
+    height: 100%;
     position: absolute;
     overflow: hidden;
     z-index: 2000;

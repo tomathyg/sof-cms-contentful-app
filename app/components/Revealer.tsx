@@ -1,5 +1,7 @@
 'use client'
 
+import { useRouter } from 'next/navigation'
+
 import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
 import { gsap } from 'gsap';
 //import { randomFloat } from '../js/utils';
@@ -22,27 +24,48 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
   const layerRefs = useRef<Array<ReturnType<typeof useImageLayer>>>([]);
   const gridItemRefs = useRef<HTMLElement[]>([]);
 
+  const gridRef = useRef<HTMLElement | null>(null);
+  const menuRef = useRef<HTMLElement | null>(null);
+  const newMainRef = useRef<HTMLElement | null>(null);
+
   const randomFloat = (min:number,max:number) => parseFloat(Math.min(min + (Math.random() * (max - min)), max).toFixed(2));
+
+  const router = useRouter();
 
   // Use useEffect to replicate the constructor's functionality and side effects.
   useEffect(() => {
     // Set up DOM references.
-    mainRef.current = document.querySelector('main');
+    mainRef.current = document.querySelector('.revealer-grid-container');
     layerRefs.current = [...document.querySelectorAll('.layers__item')].map(item => useImageLayer(item));
     gridItemRefs.current = Array.from(document.querySelectorAll('.grid__item') as NodeListOf<HTMLElement>);
     
+    gridRef.current = document.querySelector('.grid');
+    menuRef.current = document.querySelector('.menu');
+    newMainRef.current = document.querySelector('.reveal-page-content');
+
+    //router.prefetch('/');
+    
     // Create the timeline.
-    timeline.current = gsap.timeline({ paused: true });
+    timeline.current = gsap.timeline({
+        paused: true,
+        onComplete: () => {
+            // This function will be called when the timeline completes
+            // Check if a navigation path is set
+            if (timeline.current?.vars.path) {
+              //router.push(timeline.current.vars.path);
+            }
+        }
+    });
     const options = { duration: 1, panelDelay: 0.15 };
 
     // Animate the Image layers.
     layerRefs.current.forEach((layer, i) => {
         if(timeline.current) {
-        timeline.current.to([layer.el, layer.image], {
-            duration: options.duration,
-            ease: 'Power2.easeInOut',
-            y: 0
-        }, options.panelDelay * i);
+            timeline.current.to([layer.el, layer.image], {
+                duration: options.duration,
+                ease: 'Power2.easeInOut',
+                y: 0
+            }, options.panelDelay * i);
         }
     });
 
@@ -60,6 +83,18 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
             mainRef.current.classList.remove('intro');
         }
       }, [], 'halfway')
+      .call(() => {
+        // This will execute right before hiding the last image layer
+        //router.push('/');
+        //router.replace('/', { shallow: true });
+        if (gridRef.current && menuRef.current) {
+            gridRef.current.classList.add('hidden');
+            menuRef.current.classList.add('hidden');
+        }
+        if (newMainRef.current) {
+            newMainRef.current.classList.remove('hidden');
+        }
+      }, [], 'halfway') // This ensures the call is placed at the 'halfway' label
       // Now hide the last Image Layer.
       .to([layerRefs.current[layersTotal - 1].el, layerRefs.current[layersTotal - 1].image], {
         duration: options.duration,
@@ -79,7 +114,11 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
 
     // Method to start the animation.
     useImperativeHandle(ref, () => ({
-        reveal: () => {
+        reveal: (path = '/') => {
+            if (timeline.current) {
+                timeline.current.vars.path = path;
+            }
+
             timeline.current?.restart();
         }
     }));

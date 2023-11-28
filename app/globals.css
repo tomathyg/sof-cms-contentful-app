@@ -204,13 +204,24 @@ footer {
     /*position: absolute;
     bottom: 0;*/
     width: 100%;
+    /*z-index: 20000000;*/
 }
 
 main.main-content {
-    padding-top: 77px;
-    /*height: calc(100vh - 93px);*/
-    margin: 0 auto;
+    height: calc(100vh - 170px);
     /*min-height: 1000px;*/
+    margin: 0 auto;
+    margin-top: 77px;
+    overflow: hidden;
+}
+
+.revealer-grid-container .content {
+    height: calc(100vh - 170px);
+}
+
+.reveal-page-content {
+    height: 100%;
+    width: 100%;
 }
 
 @media screen and (max-width: 640px) {
