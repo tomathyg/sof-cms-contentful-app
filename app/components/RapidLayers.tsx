@@ -126,9 +126,38 @@ export default function RapidLayers() {
                 </div>*/}
 
                 <div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Falyss-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fcxy-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Flucy-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fomo-no-text.jpg&w=1080&q=60)`}}></div>
+				</div>
+				<div className="layers__item">
+					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=60)`}}></div>
+                </div>
+
+                {/*<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/alyss-no-text.jpg"
                         alt=""
@@ -138,8 +167,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/ben-no-text.jpg"
                         alt=""
@@ -149,8 +176,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/chef-no-text.jpg"
                         alt=""
@@ -160,8 +185,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/cxy-no-text.jpg"
                         alt=""
@@ -171,8 +194,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/dutcy-no-text.jpg"
                         alt=""
@@ -182,8 +203,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/fede-no-text.jpg"
                         alt=""
@@ -193,8 +212,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/lucy-no-text.jpg"
                         alt=""
@@ -204,8 +221,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/maz-no-text.jpg"
                         alt=""
@@ -215,8 +230,6 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/omo-no-text.jpg"
                         alt=""
@@ -226,15 +239,13 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
                     <Image
-                        /*width={1080}
-                        height={1080}*/
                         fill={true}
                         src="/scene-images/pete-no-text.jpg"
                         alt=""
                         quality={quality}
                         className='layer-image'
                     />
-				</div>
+                </div>*/}
 			</div>
 		</div>
 	</section>
