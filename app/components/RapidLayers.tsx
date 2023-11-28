@@ -68,6 +68,8 @@ export default function RapidLayers() {
         el.addEventListener('mouseleave', () => cursor.emit('leave'));
     });*/
 
+    const quality = 75;
+
   return (
     <>
     <Revealer ref={revealerRef} />
@@ -124,113 +126,113 @@ export default function RapidLayers() {
                 </div>*/}
 
                 <div className="layers__item">
-					{/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/alyss-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/alyss-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/ben-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/ben-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/chef-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/chef-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/cxy-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/cxy-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/dutcy-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/dutcy-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/fede-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/fede-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/lucy-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/lucy-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/maz-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/maz-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/omo-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/omo-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 				<div className="layers__item">
-                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/pete-no-text.jpg)`}}></div>*/}
                     <Image
                         /*width={1080}
                         height={1080}*/
                         fill={true}
                         src="/scene-images/pete-no-text.jpg"
                         alt=""
-                        quality={75}
+                        quality={quality}
+                        objectFit='cover'
                     />
 				</div>
 			</div>
