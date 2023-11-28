@@ -77,12 +77,12 @@ export default function RapidLayers() {
 		<div className="revealer-grid-container intro">
 			<div className="content">
 				<div className="revealer-grid">
-					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/images/3.jpg)`}}></div>
-					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(/images/2.jpg)`}}></div>
-					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
-					<div className="grid__item grid__item--d" style={{ backgroundImage: `url(/images/5.jpg)`}}></div>
-					<div className="grid__item grid__item--e" style={{ backgroundImage: `url(/images/8.jpg)`}}></div>
-                    <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/images/6.jpg)`}}></div>
+					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=60)`}}></div>
+					<div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=60)`}}></div>
+                    <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=60)`}}></div>
 				</div>
 				<nav className="menu">
 					<a className="menu__item menu__item--current" onClick={handleReveal}>
