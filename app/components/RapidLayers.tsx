@@ -10,10 +10,26 @@ import React, { useEffect, useRef } from 'react';
 
 import Revealer from './Revealer';
 
+import StepsContent from './StepsContent';
+
+import Image from 'next/image';
+
 // Define an interface for the methods you want to call on Revealer.
 interface RevealerMethods {
     reveal: () => void;
 }
+
+/*type ImageLoaderParams = {
+    src: string;
+    width: number | string;
+    quality?: number | string;
+}
+
+const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
+    return `${src}?w=${width || 1080}&q=${quality || 75}`;
+}*/
+
+import cloudinaryLoader from './CloudinaryLoader';
 
 export default function RapidLayers() {
 
@@ -58,7 +74,7 @@ export default function RapidLayers() {
     <section className="loading">
 		<div className="revealer-grid-container intro">
 			<div className="content">
-				<div className="grid">
+				<div className="revealer-grid">
 					<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/images/3.jpg)`}}></div>
 					<div className="grid__item grid__item--b" style={{ backgroundImage: `url(/images/2.jpg)`}}></div>
 					<div className="grid__item grid__item--c" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
@@ -71,12 +87,12 @@ export default function RapidLayers() {
 						<h2 className="menu__item-title">CREATE</h2>
 					</a>
 				</nav>
-                <div className='reveal-page-content hidden flex items-center'>
-                    STEPS CONTENT
+                <div className='reveal-page-content hidden'>
+                    <StepsContent />
                 </div>
 			</div>
 			<div className="layers">
-				<div className="layers__item">
+				{/*<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/images/1.jpg)`}}></div>
 				</div>
 				<div className="layers__item">
@@ -105,6 +121,117 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
+                </div>*/}
+
+                <div className="layers__item">
+					{/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/alyss-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/alyss-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/ben-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/ben-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/chef-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/chef-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/cxy-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/cxy-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/dutcy-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/dutcy-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/fede-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/fede-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/lucy-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/lucy-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/maz-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/maz-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/omo-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/omo-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
+				</div>
+				<div className="layers__item">
+                    {/*<div className="layers__item-img" style={{ backgroundImage: `url(/scene-images/pete-no-text.jpg)`}}></div>*/}
+                    <Image
+                        /*width={1080}
+                        height={1080}*/
+                        fill={true}
+                        src="/scene-images/pete-no-text.jpg"
+                        alt=""
+                        quality={75}
+                    />
 				</div>
 			</div>
 		</div>

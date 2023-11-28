@@ -39,7 +39,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     layerRefs.current = [...document.querySelectorAll('.layers__item')].map(item => useImageLayer(item));
     gridItemRefs.current = Array.from(document.querySelectorAll('.grid__item') as NodeListOf<HTMLElement>);
     
-    gridRef.current = document.querySelector('.grid');
+    gridRef.current = document.querySelector('.revealer-grid');
     menuRef.current = document.querySelector('.menu');
     newMainRef.current = document.querySelector('.reveal-page-content');
 
