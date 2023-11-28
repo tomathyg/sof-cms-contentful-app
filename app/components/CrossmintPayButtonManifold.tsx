@@ -86,17 +86,17 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 //"mintFor": ""
             }}*/
             // 0x95d452fc85869a7834189f41ec6bb0915f943aa3
-            // 0x5133522ea5A0494EcB83F26311A095DDD7a9D4b6
+            // Core Contract Creator 0x5133522ea5A0494EcB83F26311A095DDD7a9D4b6
             //"type": "erc-721"
             //"type": "manifold-erc-721"
             mintConfig={{
-                "contractAddress": "0x583DCB86146bc2Dc41602794355616ddcA405e1E",
-                "creatorContractAddress": "0x95d452fc85869a7834189f41ec6bb0915f943aa3",
+                "contractAddress": "0x1eb73fee2090fb1c20105d5ba887e3c3ba14a17e",
+                "creatorContractAddress": "0x583dcb86146bc2dc41602794355616ddca405e1e",
 		        "instanceId": "60715248",
-                "mintCount": "1",
-                "mintIndices": "",
-                "merkleProofs": "",
-                "totalPrice": "0.0006",
+                "mintCount": 1,
+                "mintIndices": [],
+                "merkleProofs": [],
+                "totalPrice": "0.0015",
             }}
             locale="en-US"
             currency="GBP"
