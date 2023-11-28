@@ -14,11 +14,11 @@ export default function Content() {
 
     return (
         <>
-        <section className="header-section flex justify-center text-center">
-            <h1 className="text-8xl mt-8">THE PROCESS</h1>
+        <section className="header-section flex justify-center text-center px-4">
+            <h1 className="text-4xl sm:text-6xl md:text-8xl mt-8">THE PROCESS</h1>
         </section>
-        <section className="overlap-above content-section relative grid grid-cols-3 gap-x-12 px-4">
-            <div className="w-full flex flex-col">
+        <section className="mt-4 px-8 overlap-above content-section relative grid grid-cols-1 sm:grid-cols-3 gap-x-12 px-4">
+            <div className="w-full flex flex-col mb-8">
                 <div className='column-image-container aspect-video relative overflow-hidden rounded-xl'>
                     <Image
                         //loader={imageLoader}
@@ -31,12 +31,12 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <div className='column-text-container text-center'>
-                    <h2 className='text-xl mt-8'>01 - LISTEN & READ</h2>
+                <div className='column-text-container text-center text-xl'>
+                    <h2 className='mt-8'>01 - LISTEN & READ</h2>
                     <p className='font-serif'>LISTEN TO THE SONG AND READ THE PROMPT</p>
                 </div>
             </div>
-            <div className="w-full flex flex-col">
+            <div className="w-full flex flex-col mb-8">
                 <div className='column-image-container aspect-video relative overflow-hidden rounded-xl'>
                     <Image
                         //loader={imageLoader}
@@ -49,12 +49,12 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <div className='column-text-container text-center'>
-                    <h2 className='text-xl mt-8'>02 - UPLOAD</h2>
+                <div className='column-text-container text-center text-xl'>
+                    <h2 className='mt-8'>02 - UPLOAD</h2>
                     <p className='font-serif'>UPLOAD THE IMAGE OF YOUR MEMORY, AND ENTER YOUR RESPONSE TO THE PROMPT</p>
                 </div>
             </div>
-            <div className="w-full flex flex-col">
+            <div className="w-full flex flex-col mb-8">
                 <div className='column-image-container aspect-video relative overflow-hidden rounded-xl'>
                     <Image
                         //loader={imageLoader}
@@ -67,8 +67,8 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <div className='column-text-container text-center'>
-                    <h2 className='text-xl mt-8'>03 - FINAL SCENE</h2>
+                <div className='column-text-container text-center text-xl'>
+                    <h2 className='mt-8'>03 - FINAL SCENE</h2>
                     <p className='font-serif'>YOUR IMAGE WILL BE PROCESSED, MINTED AND ENTERED INTO THE SELECTION PROCESS</p>
                 </div>
             </div>
