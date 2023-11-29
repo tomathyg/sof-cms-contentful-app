@@ -414,6 +414,13 @@ main.main-content {
     margin-bottom: 12%;
 }
 
+.process-audio-player-section {
+    min-width: 300px;
+    max-width: 400px;
+    width: 95%;
+    margin: 0 auto;
+}
+
 /*.audio-player-track-title {
     background-color: white;
     color: black;

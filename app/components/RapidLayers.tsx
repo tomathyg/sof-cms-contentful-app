@@ -9,11 +9,8 @@ import React, { useEffect, useRef } from 'react';
 //import { preloadImages } from '../../unused/js/utils';
 
 import Revealer from './Revealer';
-
 import StepsContent from './StepsContent';
-
 import Image from 'next/image';
-
 import ScenesLogo from '../components/ScenesLogo'
 
 // Define an interface for the methods you want to call on Revealer.
@@ -99,7 +96,7 @@ export default function RapidLayers() {
                             <span>AN <span className='font-serif'>INTERACTIVE</span> JOURNEY</span><br />
                             <span>THROUGH <span className='font-serif'>PERSONAL</span> MOMENTS</span>
                         </h2>
-                        <button className='font-sans button-primary' onClick={handleReveal}>CREATE</button>
+                        <button className='font-sans button-primary text-black' onClick={handleReveal}>CREATE</button>
                     </section>
                     {/*<nav className="menu">
                         <a className="menu__item menu__item--current" onClick={handleReveal}>

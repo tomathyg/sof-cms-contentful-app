@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import TypeForm from '../components/TypeForm'
+//import { getHomePageData } from '../../lib/api-2'
+import H5Player from '../components/H5AudioPlayer'
 
 type ImageLoaderParams = {
     src: string;
@@ -11,6 +14,9 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 }
 
 export default function Content() {
+
+    //const content = await getHomePageData(false);
+    //console.log("HOME PAGE CONTENT:", content);
 
     return (
         <>
@@ -72,6 +78,17 @@ export default function Content() {
                     <p className='font-serif'>YOUR IMAGE WILL BE PROCESSED, MINTED AND ENTERED INTO THE SELECTION PROCESS</p>
                 </div>
             </div>
+        </section>
+        <section className="process-audio-player-section w-full text-sm">
+            <H5Player
+                src="https://assets.ctfassets.net/57idppycthif/7KTYzLD4REKUkW5wFHkN9r/b94181d9856d7848f571a11a5735097c/Willows_Heartbeat_44_1K.mp3"
+                title="Willow's Heartbeat"
+            />
+        </section>
+        <section className='flex justify-center font-sans text-black my-10'>
+            <TypeForm
+                id='eAdn6pFg'
+            />
         </section>
         </>
     )

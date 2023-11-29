@@ -4,8 +4,10 @@ import React from 'react'
 
 import { getHomePageData } from '../lib/api-2'
 
-import TypeForm from './components/TypeForm'
+//import TypeForm from './components/TypeForm'
 import ScenesLogo from './components/ScenesLogo'
+
+import RapidLayers from './components/RapidLayers'
 
 function Intro(heading:string) {
   return (
@@ -25,7 +27,8 @@ export default async function Page() {
   console.log("HOME PAGE CONTENT:", content);
 
   return (
-    <div className="home-container p-5 m-5 mt-0 border">
+    <RapidLayers />
+    /*<div className="home-container p-5 m-5 mt-0 border">
       <div className="home-inner p-10 m-1 border">
         {Intro(content.heading)}
         <section className={`flex justify-center`}>
@@ -34,6 +37,6 @@ export default async function Page() {
           />
         </section>
       </div>
-    </div>
+    </div>*/
   )
 }
