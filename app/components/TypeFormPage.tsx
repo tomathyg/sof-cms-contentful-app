@@ -2,6 +2,7 @@
 
 import React, { useState, useMemo } from 'react'
 import { Widget } from '@typeform/embed-react'
+import H5Player from '../components/H5AudioPlayer'
 
 /*const blockMapping: Record<string, string> = {
     '01HE8V8C7PES3MZWD3GNC11CGZ': '1',
@@ -55,7 +56,13 @@ const Page: React.FC<PageProps> = ({ formRef }) => {
   return (
     <section className="flex justify-center w-full px-8 h-full-screen" style={{height: 'calc(100vh - 170px)'}}>
         <div className="flex flex-col grow h-full items-center justify-between text-center tracking-wide uppercase">
-            <h1 className="text-4xl xsm:text-5xl sm:text-6xl md:text-8xl my-8">STEP - 0{stepData.step}</h1>
+            <h1 className="text-4xl xsm:text-5xl sm:text-6xl md:text-8xl mt-8 mb-2">STEP - 0{stepData.step}</h1>
+            <section className="process-audio-player-section w-full text-sm mb-6">
+                <H5Player
+                    src="https://assets.ctfassets.net/57idppycthif/7KTYzLD4REKUkW5wFHkN9r/b94181d9856d7848f571a11a5735097c/Willows_Heartbeat_44_1K.mp3"
+                    title="Willow's Heartbeat"
+                />
+            </section>
             <div className='typeform-widget-container w-full aspect-square max-w-screen-lg'>
                 {widget}
             </div>
