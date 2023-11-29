@@ -41,7 +41,7 @@ export default function FloatingGallery() {
   const easing = 0.08;
   const speed = 0.01;
 
-  const manageMouseMove = (e) => {
+  const manageMouseMove = (e:any) => {
     const { movementX, movementY } = e
     xForce += movementX * speed;
     yForce += movementY * speed;
