@@ -8,6 +8,7 @@
 :root {
     --off-white: #e8e0c5;
     --orange: #d6301a;
+    --scene-color-1: #1C96B6;
 }
 /* END OF COLOURS */
 
@@ -61,16 +62,27 @@ a {
     display: inline-block;
 }
 
+/* AUDIO PLAYER COLOURS */
+.rhap_volume-bar, .rhap_progress-bar {
+    background-color: var(--off-white) !important;
+}
+
+
+.process-audio-player-section .rhap_main-controls-button, .process-audio-player-section .rhap_repeat-button, .process-audio-player-section .rhap_volume-button {
+    color: var(--orange) !important;
+}
+
+.process-audio-player-section .rhap_progress-indicator, .process-audio-player-section .rhap_volume-indicator {
+    background: var(--orange) !important;
+}
+
+/* SCENE */
 .rhap_main-controls-button, .rhap_repeat-button, .rhap_volume-button {
     color: #1C96B6 !important;
 }
 
 .rhap_progress-indicator, .rhap_volume-indicator {
     background: #1C96B6 !important;
-}
-
-.rhap_volume-bar, .rhap_progress-bar {
-    background-color: var(--off-white) !important;
 }
 /* END OF H5 AUDIO PLAYER */
 
