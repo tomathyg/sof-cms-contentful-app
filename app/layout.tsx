@@ -6,6 +6,9 @@ import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
+import MobileHeader from './components/header';
+import StickyCursor from './components/stickyCursor';
+
 const druk_wide_heavy = localFont({
   src: './fonts/Druk-Wide-Heavy-Web.woff2',
   display: 'swap',
@@ -103,6 +106,7 @@ async function Header() {
           />
         </div>
       </div>
+      {/*<MobileHeader />*/}
     </header>
   )
 }
@@ -136,6 +140,7 @@ export default function RootLayout({
       <body className={`font-mono bg-black text-off-white`}>
         <section className="">
           <Header />
+          {/*<StickyCursor stickyElement={null}/>*/}
           <main className='main-content'>{children}</main>
           <Footer />
         </section>

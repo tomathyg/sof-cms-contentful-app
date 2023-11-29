@@ -17,6 +17,8 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
   const router = useRouter()
   //const pathname = usePathname()
   //const searchParams = useSearchParams()
+
+  //router.prefetch('/scenes/scene-1');
  
   return (
     <ul className="px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">

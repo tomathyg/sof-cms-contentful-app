@@ -241,6 +241,12 @@ main.main-content {
     margin: 1rem;
 }
 
+.revealer-grid-container.intro .revealer-grid-inner .content {
+    width: calc(100% - 4rem);
+    height: calc(100% - 4rem);
+    margin: 2rem;
+}
+
 @media screen and (min-width: 640px) {
     .revealer-grid-container.intro .revealer-grid-inner .content {
         width: calc(100% - 4rem);

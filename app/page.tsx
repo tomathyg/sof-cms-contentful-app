@@ -8,6 +8,7 @@ import { getHomePageData } from '../lib/api-2'
 import ScenesLogo from './components/ScenesLogo'
 
 import RapidLayers from './components/RapidLayers'
+import FloatingGallery from './components/floatingGallery/FloatingGallery'
 
 function Intro(heading:string) {
   return (
@@ -27,7 +28,11 @@ export default async function Page() {
   console.log("HOME PAGE CONTENT:", content);
 
   return (
+  <div>
+    {/*<FloatingGallery />*/}
     <RapidLayers />
+  </div>
+    /*<RapidLayers />*/
     /*<div className="home-container p-5 m-5 mt-0 border">
       <div className="home-inner p-10 m-1 border">
         {Intro(content.heading)}

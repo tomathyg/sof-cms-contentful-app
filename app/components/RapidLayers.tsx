@@ -77,7 +77,17 @@ export default function RapidLayers() {
             <StepsContent />
         </div>
 		<div className="revealer-grid-container intro p-2">
-            <div className='w-full h-full revealer-grid-inner'>
+            <div className='w-full h-full revealer-grid-inner relative'>
+                <div className='intro-small-text intro-top-small-text absolute top-0 w-full px-8 h-8 leading-8 text-xs flex justify-between'>
+                    <span className='intro-outer-text'>LEFT TEXT</span>
+                    <span>CENTRE TEXT</span>
+                    <span className='intro-outer-text'>RIGHT TEXT</span>
+                </div>
+                <div className='intro-small-text intro-top-small-text absolute bottom-0 w-full px-8 h-8 leading-8 text-xs flex justify-between'>
+                    <span className='intro-outer-text'>LEFT TEXT</span>
+                    <span>CENTRE TEXT</span>
+                    <span className='intro-outer-text'>RIGHT TEXT</span>
+                </div>
                 <div className="content border border-black">
                     <div className="revealer-grid">
                         <div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=${quality})`}}></div>
