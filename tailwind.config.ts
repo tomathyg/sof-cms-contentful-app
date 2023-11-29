@@ -26,7 +26,10 @@ export default {
       },
       aspectRatio: {
         'landscape': '1.5 / 1',
-      }
+      },
+      height: {
+        'h-full-screen': 'calc(100vh - 170px)',
+      },
     },
   },
   future: {

@@ -1,6 +1,6 @@
 'use client'
 
-import { PopupButton } from '@typeform/embed-react'
+import { Widget } from '@typeform/embed-react'
 import React from 'react'
 
 interface TypeFormProps {
@@ -10,20 +10,17 @@ interface TypeFormProps {
 const TypeForm: React.FC<TypeFormProps> = ({ id }) => {
 
   return (
-    <PopupButton
+    <Widget
       id={id}
-      style={{ fontSize: 20 }}
-      size={100}
-      className="typeform-button"
+      style={{ fontSize: 20, width: '100%', height: '100%' }}
+      className="typeform-widget"
       onReady={() => {
         console.log('form ready')
       }}
       onQuestionChanged={({ formId, ref }) => {
         console.log(`Question in form ${formId} changed to ${ref}`)
       }}
-    >
-      CREATE
-    </PopupButton>
+    />
   )
 }
 
