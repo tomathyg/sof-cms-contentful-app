@@ -16,6 +16,9 @@ export default {
       },
       colors: {
         'off-white': '#e8e0c5',
+      },
+      screens: {
+        'xsm': '480px'
       }
     },
   },

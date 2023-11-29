@@ -79,14 +79,14 @@ export default function RapidLayers() {
 		<div className="revealer-grid-container intro p-2">
             <div className='w-full h-full revealer-grid-inner relative'>
                 <div className='intro-small-text intro-top-small-text absolute top-0 w-full px-8 h-8 leading-8 text-xs flex justify-between'>
-                    <span className='intro-outer-text'>LEFT TEXT</span>
-                    <span>CENTRE TEXT</span>
-                    <span className='intro-outer-text'>RIGHT TEXT</span>
+                    <span className='intro-outer-text hidden sm:inline-block w-32'>SCENES</span>
+                    <span className='text-center w-full hidden xsm:inline-block'>AN INTERACTIVE JOURNEY THROUGH PERSONAL MOMENTS</span>
+                    <span className='intro-outer-text hidden sm:inline-block text-right w-32'>2:34.29 16:9</span>
                 </div>
                 <div className='intro-small-text intro-top-small-text absolute bottom-0 w-full px-8 h-8 leading-8 text-xs flex justify-between'>
-                    <span className='intro-outer-text'>LEFT TEXT</span>
-                    <span>CENTRE TEXT</span>
-                    <span className='intro-outer-text'>RIGHT TEXT</span>
+                    <span className='intro-outer-text hidden sm:inline-block w-32'>SCENES</span>
+                    <span className='text-center w-full hidden xsm:inline-block'>AN INTERACTIVE JOURNEY THROUGH PERSONAL MOMENTS</span>
+                    <span className='intro-outer-text hidden sm:inline-block text-right w-32'>2:34.29 16:9</span>
                 </div>
                 <div className="content border border-black">
                     <div className="revealer-grid">
