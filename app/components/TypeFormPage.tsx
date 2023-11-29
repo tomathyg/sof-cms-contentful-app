@@ -54,10 +54,10 @@ const Page: React.FC<PageProps> = ({ formRef }) => {
   }, [formRef]); // Dependency array
 
   return (
-    <section className="flex justify-center w-full px-8 h-full-screen" style={{height: 'calc(100vh - 170px)'}}>
-        <div className="flex flex-col grow h-full items-center justify-between text-center tracking-wide uppercase">
-            <h1 className="text-4xl xsm:text-5xl sm:text-6xl md:text-6xl mt-6 mb-2">STEP - 0{stepData.step}</h1>
-            <section className="process-audio-player-section w-full text-sm mb-6">
+    <section className="flex justify-center w-full px-2 sm:px-8 h-full-screen" style={{height: 'calc(100vh - 170px)'}}>
+        <div className="flex flex-col grow h-full items-center text-center tracking-wide uppercase">
+            <h1 className="text-2xl xsm:text-5xl sm:text-6xl md:text-6xl mt-2 mb-0">STEP - 0{stepData.step}</h1>
+            <section className="process-audio-player-section w-full text-sm mt-2 sm:mb-4">
                 <H5Player
                     src="https://assets.ctfassets.net/57idppycthif/7KTYzLD4REKUkW5wFHkN9r/b94181d9856d7848f571a11a5735097c/Willows_Heartbeat_44_1K.mp3"
                     title="Willow's Heartbeat"
@@ -66,7 +66,7 @@ const Page: React.FC<PageProps> = ({ formRef }) => {
             <div className='typeform-widget-container w-full aspect-portrait-tall sm:aspect-square max-w-screen-lg min-h-max'>
                 {widget}
             </div>
-            <h2 className="text-4xl xsm:text-5xl sm:text-6xl md:text-6xl my-8">{stepData.subheading}</h2>
+            {/*<h2 className="text-2xl xsm:text-5xl sm:text-6xl md:text-6xl mt-8">{stepData.subheading}</h2>*/}
         </div>
     </section>
   )

@@ -119,7 +119,7 @@ async function Footer() {
   return (
     <footer className="bg-accent-1">
       <div className="container mx-auto">
-        <div className="pt-6 pb-6 flex flex-col lg:flex-row items-center justify-center">
+        <div className="py-4 flex flex-col lg:flex-row items-center justify-center">
           {/*&#9426; Sound of Fractures*/}
           <SocialFollow
             items={socialNetworks}
@@ -141,7 +141,7 @@ export default function RootLayout({
         <section className="">
           <Header />
           {/*<StickyCursor stickyElement={null}/>*/}
-          <main className='main-content'>{children}</main>
+          <main className='main-content min-h-full-screen'>{children}</main>
           <Footer />
         </section>
         <Analytics />

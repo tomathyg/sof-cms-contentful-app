@@ -29,8 +29,8 @@ export default {
         'portrait': '1 / 2',
         'portrait-tall': '1 / 3'
       },
-      height: {
-        'h-full-screen': 'calc(100vh - 170px)',
+      minHeight: {
+        'full-screen': 'calc(100vh - 154px)',
       },
     },
   },

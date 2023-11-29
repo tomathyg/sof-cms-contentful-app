@@ -1,7 +1,8 @@
 import Image from 'next/image';
-import TypeForm from '../components/TypeForm'
+//import TypeForm from '../components/TypeForm'
 //import { getHomePageData } from '../../lib/api-2'
-import H5Player from '../components/H5AudioPlayer'
+//import H5Player from '../components/H5AudioPlayer'
+import RouterButton from './RouterButton';
 
 type ImageLoaderParams = {
     src: string;
@@ -9,7 +10,7 @@ type ImageLoaderParams = {
     quality?: number | string;
 }
 
-const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
+const nextImageLoader = ({ src, width, quality }: ImageLoaderParams) => {
     return `${src}?w=${width}&q=${quality || 75}`;
 }
 
@@ -80,15 +81,20 @@ export default function Content() {
                 </div>
             </div>
         </section>
-        <section className="process-audio-player-section w-full text-sm">
+        {/*<section className="process-audio-player-section w-full text-sm">
             <H5Player
                 src="https://assets.ctfassets.net/57idppycthif/7KTYzLD4REKUkW5wFHkN9r/b94181d9856d7848f571a11a5735097c/Willows_Heartbeat_44_1K.mp3"
                 title="Willow's Heartbeat"
             />
-        </section>
+        </section>*/}
         <section className='flex justify-center font-sans text-black my-10'>
-            <TypeForm
+            {/*<TypeForm
                 id='eAdn6pFg'
+            />*/}
+            <RouterButton
+                url='/submit'
+                label='SUBMIT'
+                classes='font-sans button-primary'
             />
         </section>
         </>

@@ -34,9 +34,13 @@ a {
     text-transform: uppercase;
 }
 
+.kkwqpa {
+    display: none !important;
+}
+
 /* H5 AUDIO PLAYER */
 .rhap_container {
-    margin-top: 15px;
+    /*margin-top: 15px;*/
     background-color: transparent !important;
     box-shadow: none !important;
 }
@@ -227,7 +231,7 @@ footer {
 }
 
 main.main-content {
-    min-height: calc(100vh - 170px);
+    /*min-height: calc(100vh - 170px);*/
     /*min-height: 1000px;*/
     margin: 0 auto;
     margin-top: 77px;
