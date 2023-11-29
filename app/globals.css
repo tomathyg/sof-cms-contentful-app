@@ -295,6 +295,10 @@ main.main-content {
     padding-bottom: 93px;
 }
 
+.tf-v1-widget-fullscreen {
+    position: relative !important;
+}
+
 @media screen and (max-width: 640px) {
     /*main.main-content {
         min-height: auto;

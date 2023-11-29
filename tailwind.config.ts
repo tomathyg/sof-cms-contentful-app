@@ -26,6 +26,8 @@ export default {
       },
       aspectRatio: {
         'landscape': '1.5 / 1',
+        'portrait': '1 / 2',
+        'portrait-tall': '1 / 3'
       },
       height: {
         'h-full-screen': 'calc(100vh - 170px)',
