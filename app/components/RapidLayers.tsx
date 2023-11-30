@@ -147,7 +147,7 @@ export default function RapidLayers() {
 					<div className="layers__item-img" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
                 </div>*/}
 
-                {/*<div className="layers__item">
+                <div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Falyss-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
@@ -176,9 +176,9 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=${quality})`}}></div>
-                </div>*/}
+                </div>
 
-                <div className="layers__item">
+                {/*<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-example-images%2Fexample-scene-1.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
@@ -195,7 +195,8 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-example-images%2Fexample-scene-6.jpg&w=1080&q=${quality})`}}></div>
-				</div>
+                </div>*/}
+
 				{/*<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-example-images%2Fexample-scene-1.jpg&w=1080&q=${quality})`}}></div>
 				</div>
