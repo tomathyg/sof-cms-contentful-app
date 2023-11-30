@@ -4,6 +4,11 @@
 
 /* styles/globals.css */
 
+.page_main__Ci4CW {
+    position: fixed;
+    top: 0;
+}
+
 /* COLOURS */
 :root {
     --off-white: #e8e0c5;

@@ -155,27 +155,27 @@ a:focus {
     opacity: 1;
 }
 
-.grid__item--a {
+.grid__item--1 {
     grid-area: 2 / 1 / 5 / 3;
 }
 
-.grid__item--b {
+.grid__item--2 {
     grid-area: 6 / 2 / 9 / 5;
 }
 
-.grid__item--c {
+.grid__item--3 {
     grid-area: 3 / 4 / 7 / 7;
 }
 
-.grid__item--d {
+.grid__item--4 {
     grid-area: 1 / 8 / 4 / 10;
 }
 
-.grid__item--e {
+.grid__item--5 {
     grid-area: 4 / 10 / 7 / 14;
 }
 
-.grid__item--f {
+.grid__item--6 {
     grid-area: 6 / 9 / 9 / 12;
 }
 

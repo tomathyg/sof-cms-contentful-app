@@ -63,7 +63,9 @@ function extractScene(fetchResponse: any): any {
 }
 
 function extractSceneEntries(fetchResponse: any): any[] {
-  return fetchResponse?.data?.sceneCollection?.items
+  const items = fetchResponse?.data?.sceneCollection?.items;
+  if (!items) { return []; }
+  return items.filter((item: any) => item !== null);
 }
 
 function extractHomePageData(fetchResponse: any): any {
@@ -156,7 +158,6 @@ const HOME_PAGE_GRAPHQL_FIELDS = `
     limit
     items {
         title
-        description
         contentType
         fileName
         size

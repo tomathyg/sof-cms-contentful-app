@@ -32,27 +32,36 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 
 interface revealContentProps {
     title: string;
+    step1Heading: string;
+    step1Description: string;
+    step1Guidelines: string;
+    step2Heading: string;
+    step2Description: string;
+    step2Guidelines: string;
+    step3Heading: string;
+    step3Description: string;
+    step3Guidelines: string;
+}
+
+interface FloatingImageItem {
+    url: string;
 }
 
 interface LayerItem {
     url: string;
-    step1Heading: string,
-    step1Description: string,
-    step1Guidelines: string,
-    step2Heading: string,
-    step2Description: string,
-    step2Guidelines: string,
-    step3Heading: string,
-    step3Description: string,
-    step3Guidelines: string
 }
 
 interface RapidLayersProps {
+    floatingImages: FloatingImageItem[];
     layers: LayerItem[];
     revealContent: revealContentProps;
 }
 
-const RapidLayers: React.FC<RapidLayersProps> = ({ layers, revealContent }) => {
+const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revealContent }) => {
+
+    //console.log("FLOATING IMAGES:", floatingImages);
+
+    //console.log("REVEAL CONTENT 1:", revealContent);
 
     //const content = await getHomePageData(false);
     //console.log("HOME PAGE CONTENT:", content);
@@ -101,7 +110,9 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ layers, revealContent }) => {
     <Revealer ref={revealerRef} />
     <section className="revealer-section">
         <div className='reveal-page-content hidden'>
-            <StepsContent />
+            <StepsContent
+                content={revealContent}
+            />
         </div>
 		<div className="revealer-grid-container intro p-2">
             <div className='w-full h-full revealer-grid-inner relative'>
@@ -118,14 +129,14 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ layers, revealContent }) => {
                 <div className="content border border-black">
                     <div className="revealer-grid">
                         {layers.filter(item => item && item.url).map((item, index) => (
-                            <div key={index} className="grid__item grid__item--a" style={{ backgroundImage: `url(${item.url}?w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                            <div key={index} className={`grid__item grid__item--${index}`} style={{ backgroundImage: `url(${item.url}?w=${imagesWidth}&q=${imagesQuality})`}}></div>
                         ))}
-                        <div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                        {/*<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
                         <div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
                         <div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
                         <div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
                         <div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
-                        <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                        <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>*/}
                     </div>
                     <section className="intro-header-section flex-col flex items-center justify-center absolute left-0 w-full h-full px-12">
                         <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight scenes-logo-header`}>

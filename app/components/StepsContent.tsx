@@ -1,3 +1,5 @@
+'use client'
+
 import Image from 'next/image';
 //import TypeForm from '../components/TypeForm'
 //import { getHomePageData } from '../../lib/api-2'
@@ -9,22 +11,40 @@ type ImageLoaderParams = {
     width: number | string;
     quality?: number | string;
 }
+interface ProcessProps {
+    title: string;
+    step1Heading: string;
+    step1Description: string;
+    step1Guidelines: string;
+    step2Heading: string;
+    step2Description: string;
+    step2Guidelines: string;
+    step3Heading: string;
+    step3Description: string;
+    step3Guidelines: string;
+}
+
+interface ProcessContentProps {
+    content: ProcessProps;
+}
 
 const nextImageLoader = ({ src, width, quality }: ImageLoaderParams) => {
     return `${src}?w=${width}&q=${quality || 75}`;
 }
 
-export default function Content() {
+const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
 
     //const content = await getHomePageData(false);
     //console.log("HOME PAGE CONTENT:", content);
 
+    console.log("REVEAL CONTENT 2:", content);
+
     return (
         <>
         <section className="header-section flex justify-center text-center px-4">
-            <h1 className="text-4xl sm:text-6xl md:text-8xl mt-4">THE PROCESS</h1>
+            <h1 className="text-2xl xsm:text-4xl sm:text-6xl md:text-6xl mt-4">THE PROCESS</h1>
         </section>
-        <section className="mt-4 px-8 overlap-above content-section relative grid grid-cols-1 sm:grid-cols-3 gap-x-12 px-4">
+        <section className="mt-4 px-8 overlap-above content-section relative grid grid-cols-1 sm:grid-cols-3 gap-x-5 md:gap-x-12 px-4 max-w-screen-xl mx-auto">
             <div className="w-full flex flex-col mb-8">
                 <div className='column-image-container aspect-landscape relative overflow-hidden rounded-xl bg-orange'>
                     {/*<Image
@@ -36,10 +56,10 @@ export default function Content() {
                         quality={75}
                     />*/}
                 </div>
-                <div className='column-text-container text-center text-xl'>
-                    <h2 className='mt-8'>01 - LISTEN & READ</h2>
-                    <p className='font-serif'>LISTEN TO THE SONG AND READ THE PROMPT</p>
-                    <p className='font-mono text-xs mt-4'>UPLOAD THE IMAGE OF YOUR MEMORY, AND ENTER YOUR RESPONSE TO THE PROMPT</p>
+                <div className='column-text-container text-center'>
+                    <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step1Heading}</h2>
+                    <p className='font-serif text-xl lg:text-2xl'>{content.step1Description}</p>
+                    <p className='mt-4 font-mono text-sm lg:text-base'>{content.step1Guidelines}</p>
                 </div>
             </div>
             <div className="w-full flex flex-col mb-8">
@@ -55,10 +75,10 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <div className='column-text-container text-center text-xl'>
-                    <h2 className='mt-8'>02 - UPLOAD</h2>
-                    <p className='font-serif'>UPLOAD THE IMAGE OF YOUR MEMORY, AND ENTER YOUR RESPONSE TO THE PROMPT</p>
-                    <p className='font-mono text-xs mt-4'>UPLOAD THE IMAGE OF YOUR MEMORY, AND ENTER YOUR RESPONSE TO THE PROMPT</p>
+                <div className='column-text-container text-center'>
+                    <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step2Heading}</h2>
+                    <p className='font-serif text-xl lg:text-2xl'>{content.step2Description}</p>
+                    <p className='mt-4 font-mono text-sm lg:text-base'>{content.step2Guidelines}</p>
                 </div>
             </div>
             <div className="w-full flex flex-col mb-8">
@@ -74,10 +94,10 @@ export default function Content() {
                         quality={75}
                     />
                 </div>
-                <div className='column-text-container text-center text-xl'>
-                    <h2 className='mt-8'>03 - FINAL SCENE</h2>
-                    <p className='font-serif'>YOUR IMAGE WILL BE PROCESSED, MINTED AND ENTERED INTO THE SELECTION PROCESS</p>
-                    <p className='font-mono text-xs mt-4'>UPLOAD THE IMAGE OF YOUR MEMORY, AND ENTER YOUR RESPONSE TO THE PROMPT</p>
+                <div className='column-text-container text-center'>
+                    <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step3Heading}</h2>
+                    <p className='font-serif text-xl lg:text-2xl'>{content.step3Description}</p>
+                    <p className='mt-4 font-mono text-sm lg:text-base'>{content.step3Guidelines}</p>
                 </div>
             </div>
         </section>
@@ -100,3 +120,5 @@ export default function Content() {
         </>
     )
 }
+
+export default ProcessContent;

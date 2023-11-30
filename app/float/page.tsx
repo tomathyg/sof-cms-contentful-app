@@ -10,7 +10,6 @@ export default async function Page() {
     return (
         <section className="flex justify-center w-full px-8">
             <div className="flex flex-col items-center text-center max-w-prose tracking-wide uppercase">
-                <h1>FLOATING GALLERY</h1>
                 <FloatingGallery />
             </div>
         </section>
