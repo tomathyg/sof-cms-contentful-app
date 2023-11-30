@@ -108,7 +108,9 @@ async function Header() {
           />
         </div>
       </div>
-      {/*<MobileHeader />*/}
+      <div className='mobile-nav-container sm:hidden h-full w-full'>
+        <MobileHeader />
+      </div>
     </header>
   )
 }

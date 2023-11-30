@@ -72,10 +72,10 @@ export default async function ScenePage({
                 />
               </div>
               <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center mt-3">
-                <CrossmintPayButtonProduction
+                {/*<CrossmintPayButtonProduction
                   projectId={scene.crossmintProjectIdProduction}
                   collectionId={scene.crossmintCollectionIdProduction}
-                />
+                />*/}
                 <CrossmintPayButtonManifold
                   projectId={scene.crossmintProjectIdProduction}
                   collectionId={scene.crossmintCollectionIdProduction}

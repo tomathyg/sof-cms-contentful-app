@@ -277,12 +277,36 @@ header {
     z-index: 1;
 }
 
+.style_header___HWV8 {
+    background-color: black;
+    color: var(--off-white);
+    height: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+
+.style_container__jdz_g {
+    width: 100%;
+}
+
+.style_body__sPP0M {
+    justify-content: space-around;
+}
+
+.style_header___HWV8 .style_bar__kzmAq .style_el__H2N0m .style_burger__I1E6s::after, .style_header___HWV8 .style_bar__kzmAq .style_el__H2N0m .style_burger__I1E6s::before {
+    background-color: var(--off-white);
+}
+
 footer {
     background-color: black;
     position: fixed;
     bottom: 0;
     width: 100%;
     z-index: 10;
+    opacity: 0.8;
 }
 
 main.main-content {

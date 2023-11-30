@@ -9,29 +9,16 @@ import Image from './Image';
 
 const links = [
   {
-    title: "Home",
-    href: "/",
-    src: "home.png"
+    title: "ABOUT",
+    href: "/"
   },
   {
-    title: "Shop",
-    href: "/shop",
-    src: "shop.png"
+    title: "SCENE 1",
+    href: "/scenes/scene-1"
   },
   {
-    title: "About Us",
-    href: "/about",
-    src: "home.png"
-  },
-  {
-    title: "Lookbook",
-    href: "/lookbook",
-    src: "lookbook.png"
-  },
-  {
-    title: "Contact",
-    href: "/contact",
-    src: "contact.png"
+    title: "CREDITS",
+    href: "/credits"
   }
 ]
 
@@ -44,9 +31,9 @@ export default function Index() {
       <div className={styles.wrapper}>
         <div className={styles.container}>
           <Body links={links} selectedLink={selectedLink} setSelectedLink={setSelectedLink}/>
-          <Footer />
+          {/*<Footer />*/}
         </div>
-        <Image src={links[selectedLink.index].src} isActive={selectedLink.isActive}/>
+        {/*<Image src={links[selectedLink.index].src} isActive={selectedLink.isActive}/>*/}
       </div>
     </motion.div>
   )
