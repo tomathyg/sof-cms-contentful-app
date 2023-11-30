@@ -56,7 +56,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                         quality={75}
                     />*/}
                 </div>
-                <div className='column-text-container text-center'>
+                <div className='column-text-container text-center uppercase'>
                     <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step1Heading}</h2>
                     <p className='font-serif text-xl lg:text-2xl'>{content.step1Description}</p>
                     <p className='mt-4 font-mono text-sm lg:text-base'>{content.step1Guidelines}</p>
@@ -75,7 +75,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                         quality={75}
                     />
                 </div>
-                <div className='column-text-container text-center'>
+                <div className='column-text-container text-center uppercase'>
                     <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step2Heading}</h2>
                     <p className='font-serif text-xl lg:text-2xl'>{content.step2Description}</p>
                     <p className='mt-4 font-mono text-sm lg:text-base'>{content.step2Guidelines}</p>
@@ -94,7 +94,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                         quality={75}
                     />
                 </div>
-                <div className='column-text-container text-center'>
+                <div className='column-text-container text-center uppercase'>
                     <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step3Heading}</h2>
                     <p className='font-serif text-xl lg:text-2xl'>{content.step3Description}</p>
                     <p className='mt-4 font-mono text-sm lg:text-base'>{content.step3Guidelines}</p>
@@ -113,7 +113,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
             />*/}
             <RouterButton
                 url='/submit'
-                label='SUBMIT'
+                label='START'
                 classes='font-sans button-primary'
             />
         </section>
