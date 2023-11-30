@@ -160,7 +160,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ layers }) => {
 					<div className="layers__item-img" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
                 </div>*/}
 
-                {layers.map((item, index) => (
+                {layers.filter(item => item && item.url).map((item, index) => (
                     <div key={index} className="layers__item">
                         <div className="layers__item-img" style={{ backgroundImage: `url(${item.url}?w=${layersWidth}&q=${layersQuality})`}}></div>
                     </div>
