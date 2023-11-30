@@ -148,6 +148,19 @@ const HOME_PAGE_GRAPHQL_FIELDS = `
         url
     }
   }
+  contributors {
+    title
+    introduction
+    contributorsCollection(limit: 100) {
+        total
+        skip
+        limit
+        items {
+            name
+            role
+        }
+    }
+  }
 `
 export async function getHomePageData(isDraftMode: boolean): Promise<any> {
   const data = await fetchGraphQL(
@@ -161,4 +174,31 @@ export async function getHomePageData(isDraftMode: boolean): Promise<any> {
     isDraftMode
   )
   return extractHomePageData(data)
+}
+
+function extractAboutPageData(fetchResponse: any): any {
+  console.log("ABOUT PAGE RESPONSE:", fetchResponse);
+  return fetchResponse?.data?.aboutPage
+}
+
+const ABOUT_PAGE_GRAPHQL_FIELDS = `
+  title
+  paragraph1
+  paragraph2
+  paragraph3
+  artistQuote
+`
+
+export async function getAboutPageData(isDraftMode: boolean): Promise<any> {
+  const data = await fetchGraphQL(
+    `query HomePage {
+      aboutPage(id: "3lYMBTLyRk71EzoZEsIAhW", preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+          ${ABOUT_PAGE_GRAPHQL_FIELDS}
+      }
+    }`,
+    isDraftMode
+  )
+  return extractAboutPageData(data)
 }

@@ -1,6 +1,8 @@
 import './globals.css'
 //import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
 
+import { AppProps } from 'next/app';
+
 import { Analytics } from '@vercel/analytics/react';
 
 import { DM_Mono } from 'next/font/google'
