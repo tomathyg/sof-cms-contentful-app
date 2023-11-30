@@ -28,6 +28,8 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
   const menuRef = useRef<HTMLElement | null>(null);
   const newMainRef = useRef<HTMLElement | null>(null);
 
+  const introHeader = useRef<HTMLElement | null>(null);
+
   const randomFloat = (min:number,max:number) => parseFloat(Math.min(min + (Math.random() * (max - min)), max).toFixed(2));
 
   const router = useRouter();
@@ -43,29 +45,51 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     menuRef.current = document.querySelector('.menu');
     newMainRef.current = document.querySelector('.reveal-page-content');
 
+    introHeader.current = document.querySelector('.intro-header-section');
+
+    //console.log(introHeader);
+
+    
     //router.prefetch('/');
     
     // Create the timeline.
     timeline.current = gsap.timeline({
         paused: true,
-        onComplete: () => {
+        /*onComplete: () => {
             // This function will be called when the timeline completes
             // Check if a navigation path is set
             if (timeline.current?.vars.path) {
               //router.push(timeline.current.vars.path);
             }
-        }
+        }*/
     });
     const options = { duration: 1, panelDelay: 0.15 };
 
     // Animate the Image layers.
     layerRefs.current.forEach((layer, i) => {
         if(timeline.current) {
-            timeline.current.to([layer.el, layer.image], {
-                duration: options.duration,
-                ease: 'Power2.easeInOut',
-                y: 0
-            }, options.panelDelay * i);
+          const stepDuration = options.duration;
+          const stepStart = options.panelDelay * i;
+          const halfwayPoint = stepStart + stepDuration / 2;
+
+          timeline.current.to([layer.el, layer.image], {
+              duration: stepDuration,
+              ease: 'Power2.easeInOut',
+              y: 0
+          }, stepStart)
+          .call(() => {
+            if (introHeader.current) {
+                // First, remove any existing 'step-' class
+                introHeader.current.classList.forEach(className => {
+                    if (introHeader.current && className.startsWith('step-')) {
+                      introHeader.current.classList.remove(className);
+                    }
+                });
+
+                // Add the new 'step-' class
+                introHeader.current.classList.add(`step-${i}`);
+            }
+          }, [], halfwayPoint);
         }
     });
 
@@ -83,6 +107,13 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
             mainRef.current.classList.remove('intro');
         }
       }, [], 'halfway')
+      // Now hide the last Image Layer.
+      .to(introHeader.current, {
+        duration: options.duration,
+        ease: 'Expo.easeOut',
+        opacity: 0,
+        delay: -options.duration / 8
+      }, 'halfway')
       .call(() => {
         // This will execute right before hiding the last image layer
         //router.push('/');
@@ -94,22 +125,21 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
             newMainRef.current.classList.remove('hidden');
         }
       }, [], 'halfway') // This ensures the call is placed at the 'halfway' label
-      // Now hide the last Image Layer.
       .to([layerRefs.current[layersTotal - 1].el, layerRefs.current[layersTotal - 1].image], {
         duration: options.duration,
         ease: 'Expo.easeInOut',
         y: (_, index) => index ? '101%' : '-101%'
       }, 'halfway')
       // Show grid items.
-      .fromTo(gridItemRefs.current, {
+      /*.fromTo(gridItemRefs.current, {
         y: () => randomFloat(100, 500)
       }, {
         duration: options.duration * 2,
         ease: 'Expo.easeOut',
         y: 0,
         opacity: 1
-      }, 'halfway');
-  }, []);
+      }, 'halfway');*/
+    }, []);
 
     // Method to start the animation.
     useImperativeHandle(ref, () => ({

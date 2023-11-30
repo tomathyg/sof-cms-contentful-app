@@ -41,6 +41,9 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
         <li>
             <button type="button" onClick={() => router.push('/credits')}>CREDITS</button>
         </li>
+        <li>
+            <button type="button" onClick={() => router.push('/float')}>FLOAT</button>
+        </li>
     </ul>
   )
   // ...

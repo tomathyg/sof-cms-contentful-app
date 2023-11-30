@@ -12,6 +12,43 @@
 }
 /* END OF COLOURS */
 
+#scenes-logo path, #scenes-logo rect, #scenes-logo polygon {
+    fill: var(--off-white);
+    transition: fill 0.1s ease;
+}
+
+.intro-header-section {
+    opacity: 1;
+}
+
+.intro-header-section.step-1 #scenes-logo path, .intro-header-section.step-1 #scenes-logo rect, .intro-header-section.step-1 #scenes-logo polygon {
+    fill: green;
+}
+
+/*.intro-header-section.step-2 #scenes-logo path, .intro-header-section.step-2 #scenes-logo rect, .intro-header-section.step-2 #scenes-logo polygon {
+    fill: red;
+}*/
+
+.intro-header-section.step-3 #scenes-logo path, .intro-header-section.step-3 #scenes-logo rect, .intro-header-section.step-3 #scenes-logo polygon {
+    fill: blue;
+}
+
+/*.intro-header-section.step-4 #scenes-logo path, .intro-header-section.step-4 #scenes-logo rect, .intro-header-section.step-4 #scenes-logo polygon {
+    fill: green;
+}*/
+
+.intro-header-section.step-5 #scenes-logo path, .intro-header-section.step-5 #scenes-logo rect, .intro-header-section.step-5 #scenes-logo polygon {
+    fill: red;
+}
+
+/*.intro-header-section.step-6 #scenes-logo path, .intro-header-section.step-6 #scenes-logo rect, .intro-header-section.step-6 #scenes-logo polygon {
+    fill: blue;
+}*/
+
+.intro-header-section.step-7 #scenes-logo path, .intro-header-section.step-7 #scenes-logo rect, .intro-header-section.step-7 #scenes-logo polygon {
+    fill: orange;
+}
+
 /* FONTS */
 @font-face {
     font-family: 'Druk Wide Heavy';
@@ -102,9 +139,7 @@ a {
     width: 45px;
 }
 
-#scenes-logo path, #scenes-logo rect, #scenes-logo polygon {
-    fill: var(--off-white);
-}
+
 
 /*.nav-list {
     display: flex;
@@ -285,6 +320,13 @@ main.main-content {
 
 .intro-header-section {
     /*width: calc(100% - 4rem);*/
+    position: fixed;
+    top: 0;
+    z-index: 9999;
+}
+
+.intro-header-section h1 {
+
 }
 
 

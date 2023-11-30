@@ -150,6 +150,21 @@ const HOME_PAGE_GRAPHQL_FIELDS = `
   }
   introTopText
   introBottomText
+  floatingImagesCollection {
+    total
+    skip
+    limit
+    items {
+        title
+        description
+        contentType
+        fileName
+        size
+        url
+        width
+        height
+    }
+  }
   introLayersImagesCollection {
       total
       skip

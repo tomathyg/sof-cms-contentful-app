@@ -27,10 +27,12 @@ const images = [
 
 export default function FloatingGallery() {
 
-  const width = '1080';
-  const height = '1080';
+  const width = '640';
+  const height = '640';
   const quality = '75';
   const imageParams = '&w=' + width + '&q=' + quality;
+
+  const displayHeightWidth = '300';
 
   const plane1 = useRef(null);
   const plane2 = useRef(null);
@@ -78,46 +80,54 @@ export default function FloatingGallery() {
           <Image 
             src={images[0]+imageParams}
             alt='image'
-            width={300}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
            <Image 
             src={images[1]+imageParams}
             alt='image'
-            width={300}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
           <Image 
             src={images[6]+imageParams}
             alt='image'
-            width={225}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
       </div>
       <div ref={plane2} className={styles.plane}>
           <Image 
             src={images[3]+imageParams}
             alt='image'
-            width={250}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
            <Image 
             src={images[5]+imageParams}
             alt='image'
-            width={200}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
           <Image 
             src={images[7]+imageParams}
             alt='image'
-            width={225}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
       </div>
       <div ref={plane3} className={styles.plane}>
           <Image 
             src={images[2]+imageParams}
             alt='image'
-            width={150}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
            <Image 
             src={images[4]+imageParams}
             alt='image'
-            width={200}
+            width={displayHeightWidth}
+            height={displayHeightWidth}
           />
       </div>
       <div className={styles.title}>
