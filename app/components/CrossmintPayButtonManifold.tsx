@@ -40,7 +40,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "mintIndices":"",
         "merkleProofs":""
     }
-    console.log("MINT CONFIG:", mintConfig);
+    //console.log("MINT CONFIG:", mintConfig);
 
     const [mintAmount, setMintAmount] = useState(1);
     const nftCost = 0.001;
@@ -59,12 +59,14 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
 
     return (
         <>
-        {/*<button onClick={handleDecrement}> - </button>
-        <input
-            readOnly
-            type="number"
-            value={mintAmount} />
-        <button onClick={handleIncrement}> + </button>*/}
+        <div className=''>
+            <button onClick={handleDecrement}> - </button>
+            <input
+                readOnly
+                type="number"
+                value={mintAmount} />
+            <button onClick={handleIncrement}> + </button>
+        </div>
         <CrossmintPayButton
             projectId={projectId}
             collectionId='146bc6f6-5315-45e0-b9d8-7a9d299120b5'

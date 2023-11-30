@@ -79,9 +79,9 @@ export default async function ScenePage({
                 <CrossmintPayButtonManifold
                   projectId={scene.crossmintProjectIdProduction}
                   collectionId={scene.crossmintCollectionIdProduction}
-                  creatorContractAddress={scene.manifoldCreatorContractAddressMainnet}
-                  contractAddress={scene.mainnetContractAddress}
-                  instanceId={scene.mainnetContractInstanceId}
+                  creatorContractAddress={scene.nftContractAddress}
+                  contractAddress={scene.manifoldCoreCreatorContractAddress}
+                  instanceId={scene.manifoldClaimInstanceId}
                   environment='production'
                 />
               </div>

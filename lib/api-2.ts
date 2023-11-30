@@ -6,17 +6,11 @@ const SCENE_GRAPHQL_FIELDS = `
       title
       url
     }
-    manifoldContractCreatorAddress
-    crossmintProjectIdStaging
-    crossmintCollectionIdStaging
-    manifoldCreatorContractAddressTestnet
-    testnetContractAddress
-    testnetContractInstanceId
+    nftContractAddress
+    manifoldCoreCreatorContractAddress
+    manifoldClaimInstanceId
     crossmintProjectIdProduction
     crossmintCollectionIdProduction
-    manifoldCreatorContractAddressMainnet
-    mainnetContractAddress
-    mainnetContractInstanceId
     audioMp3 {
       title
       url

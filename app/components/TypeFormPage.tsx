@@ -21,6 +21,7 @@ const stepMapping: Record<string, { step: string, subheading: string }> = {
     'f104f22d-fb24-4c0c-848b-a1c56f8b4f25': { step: '2', subheading: 'Info for 4' },
     'c6963f23-5204-425c-b063-6928b6fb4f0f': { step: '3', subheading: 'Info for 5' },
     '6187d4e8-27a8-4d68-9888-4eaf39589876': { step: '4', subheading: 'Info for 6' },
+    '01HE8V8C8BG9Q511S321KH7KYT': { step: '5', subheading: '' },
 };
 
 interface PageProps {
