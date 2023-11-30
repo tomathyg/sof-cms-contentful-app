@@ -28,22 +28,25 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
         <li>
             <button type="button" onClick={() => router.push('/about')}>ABOUT</button>
         </li>
+        <li>
+            <button type="button" onClick={() => router.push('/scenes/scene-1')}>SCENE 1</button>
+        </li>
         {/*<li>
             <button type="button" onClick={() => router.push('/submit')}>SUBMIT</button>
         </li>*/}
-        {items.map((item, index) => (
+        {/*{items.map((item, index) => (
             <li key={index}>
                 <button className="uppercase" type="button" onClick={() => router.push(`/${base}/${item.slug}`)}>
                 {item.title}
                 </button>
             </li>
-        ))}
+        ))}*/}
         <li>
             <button type="button" onClick={() => router.push('/credits')}>CREDITS</button>
         </li>
-        <li>
+        {/*<li>
             <button type="button" onClick={() => router.push('/float')}>FLOAT</button>
-        </li>
+        </li>*/}
     </ul>
   )
   // ...
