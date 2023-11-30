@@ -7,6 +7,8 @@ const SCENE_GRAPHQL_FIELDS = `
       url
     }
     nftContractAddress
+    nftPrice
+    mintFee
     manifoldCoreCreatorContractAddress
     manifoldClaimInstanceId
     crossmintProjectIdProduction
@@ -281,4 +283,35 @@ export async function getProcessPageData(isDraftMode: boolean): Promise<any> {
     isDraftMode
   )
   return extractProcessPageData(data)
+}
+
+
+function extractSubmitPageData(fetchResponse: any): any {
+  //console.log("ABOUT PAGE RESPONSE:", fetchResponse);
+  return fetchResponse?.data?.submitPage
+}
+
+const SUBMIT_PAGE_GRAPHQL_FIELDS = `
+  title
+  audioMp3 {
+    title
+    contentType
+    fileName
+    size
+    url
+  }
+`
+
+export async function getSubmitPageData(isDraftMode: boolean): Promise<any> {
+  const data = await fetchGraphQL(
+    `query SubmitPage {
+      submitPage(id: "5g2PQvIyNkdFEqwRf2hTfM", preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+          ${SUBMIT_PAGE_GRAPHQL_FIELDS}
+      }
+    }`,
+    isDraftMode
+  )
+  return extractSubmitPageData(data)
 }

@@ -82,6 +82,8 @@ export default async function ScenePage({
                   creatorContractAddress={scene.nftContractAddress}
                   contractAddress={scene.manifoldCoreCreatorContractAddress}
                   instanceId={scene.manifoldClaimInstanceId}
+                  nftPrice={scene.nftPrice}
+                  mintFee={scene.mintFee}
                   environment='production'
                 />
               </div>
