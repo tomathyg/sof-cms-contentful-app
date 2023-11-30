@@ -28,10 +28,11 @@ interface PageProps {
 }
 
 const Page: React.FC<PageProps> = ({ formRef }) => {
-  const [stepData, setStepData] = useState({ step: '1', subheading: 'LISTEN & READ' });
+  const defaultStepData = { step: '1', subheading: 'LISTEN & READ' };
+  const [stepData, setStepData] = useState(defaultStepData);
 
   const handleFormEvent = (formRef:any) => {
-    setStepData(stepMapping[formRef]);
+    setStepData(stepMapping[formRef] || defaultStepData);
     console.log("FORM EVENT DATA:", formRef);
   }
 
