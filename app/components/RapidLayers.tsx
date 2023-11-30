@@ -30,7 +30,15 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 
 import cloudinaryLoader from './CloudinaryLoader';
 
-export default function RapidLayers() {
+interface LayerItem {
+    url: string;
+}
+
+interface RapidLayersProps {
+    layers: LayerItem[];
+}
+
+const RapidLayers: React.FC<RapidLayersProps> = ({ layers }) => {
 
     //const content = await getHomePageData(false);
     //console.log("HOME PAGE CONTENT:", content);
@@ -67,7 +75,10 @@ export default function RapidLayers() {
         el.addEventListener('mouseleave', () => cursor.emit('leave'));
     });*/
 
-    const quality = 75;
+    // 640, 750, 828, 1080, 1200, 1920, 2048, 3840
+    const imagesWidth = 640;
+    const layersWidth = 1920;
+    const quality = 70;
 
   return (
     <>
@@ -90,12 +101,12 @@ export default function RapidLayers() {
                 </div>
                 <div className="content border border-black">
                     <div className="revealer-grid">
-                        <div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=1080&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=1080&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=1080&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=1080&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=1080&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
                     </div>
                     <section className="intro-header-section flex-col flex items-center justify-center absolute left-0 w-full h-full pb-16 px-12">
                         <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight`}>
@@ -147,7 +158,13 @@ export default function RapidLayers() {
 					<div className="layers__item-img" style={{ backgroundImage: `url(/images/10.jpg)`}}></div>
                 </div>*/}
 
-                <div className="layers__item">
+                {layers.map((item, index) => (
+                    <div key={index} className="layers__item">
+                        <div className="layers__item-img" style={{ backgroundImage: `url(${item.url}?w=${layersWidth}&q=${quality})`}}></div>
+                    </div>
+                ))}
+
+                {/*<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Falyss-no-text.jpg&w=1080&q=${quality})`}}></div>
 				</div>
 				<div className="layers__item">
@@ -176,7 +193,7 @@ export default function RapidLayers() {
 				</div>
 				<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=1080&q=${quality})`}}></div>
-                </div>
+                </div>*/}
 
                 {/*<div className="layers__item">
 					<div className="layers__item-img" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-example-images%2Fexample-scene-1.jpg&w=1080&q=${quality})`}}></div>
@@ -307,3 +324,5 @@ export default function RapidLayers() {
     </>
   )
 }
+
+export default RapidLayers

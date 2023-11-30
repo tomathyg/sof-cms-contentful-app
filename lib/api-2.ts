@@ -67,7 +67,7 @@ function extractSceneEntries(fetchResponse: any): any[] {
 }
 
 function extractHomePageData(fetchResponse: any): any {
-  console.log("HOME PAGE RESPONSE:", fetchResponse);
+  //console.log("HOME PAGE RESPONSE:", fetchResponse);
   return fetchResponse?.data?.homePage
 }
 
@@ -139,27 +139,28 @@ export async function getSceneAndMoreScenes(
 const HOME_PAGE_GRAPHQL_FIELDS = `
   heading
   typeFormId
-  socialFollowLinksCollection(limit: 10) {
-    total
-    skip
-    limit
-    items {
-        title
-        url
-    }
+  socialFollowLinksCollection {
+      total
+      skip
+      limit
+      items {
+          title
+          url
+      }
   }
-  contributors {
-    title
-    introduction
-    contributorsCollection(limit: 100) {
-        total
-        skip
-        limit
-        items {
-            name
-            role
-        }
-    }
+  introLayersImagesCollection {
+      total
+      skip
+      limit
+      items {
+          title
+          contentType
+          fileName
+          size
+          url
+          width
+          height
+      }
   }
 `
 export async function getHomePageData(isDraftMode: boolean): Promise<any> {
@@ -177,7 +178,7 @@ export async function getHomePageData(isDraftMode: boolean): Promise<any> {
 }
 
 function extractAboutPageData(fetchResponse: any): any {
-  console.log("ABOUT PAGE RESPONSE:", fetchResponse);
+  //console.log("ABOUT PAGE RESPONSE:", fetchResponse);
   return fetchResponse?.data?.aboutPage
 }
 
@@ -201,4 +202,38 @@ export async function getAboutPageData(isDraftMode: boolean): Promise<any> {
     isDraftMode
   )
   return extractAboutPageData(data)
+}
+
+
+function extractCreditsPageData(fetchResponse: any): any {
+  //console.log("ABOUT PAGE RESPONSE:", fetchResponse);
+  return fetchResponse?.data?.credits
+}
+
+const CREDITS_PAGE_GRAPHQL_FIELDS = `
+  title
+  introduction
+  contributorsCollection(limit: 100) {
+      items {
+          name
+          role
+      }
+      total
+      skip
+      limit
+  }
+`
+
+export async function getCreditsPageData(isDraftMode: boolean): Promise<any> {
+  const data = await fetchGraphQL(
+    `query Credits {
+      credits(id: "20CTUwxdDFkzbTA28Ddw1D", preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+          ${CREDITS_PAGE_GRAPHQL_FIELDS}
+      }
+    }`,
+    isDraftMode
+  )
+  return extractCreditsPageData(data)
 }

@@ -26,11 +26,15 @@ export default async function Page() {
 
   const content = await getHomePageData(false);
   console.log("HOME PAGE CONTENT:", content);
+  const layers = content.introLayersImagesCollection.items;
+  console.log("LAYERS:", content.introLayersImagesCollection.items);
 
   return (
   <div>
     {/*<FloatingGallery />*/}
-    <RapidLayers />
+    <RapidLayers
+      layers={layers}
+    />
   </div>
     /*<RapidLayers />*/
     /*<div className="home-container p-5 m-5 mt-0 border">
