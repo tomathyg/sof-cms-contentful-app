@@ -46,15 +46,17 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
         </section>
         <section className="mt-4 px-8 overlap-above content-section relative grid grid-cols-1 sm:grid-cols-3 gap-x-5 md:gap-x-12 px-4 max-w-screen-xl mx-auto">
             <div className="w-full flex flex-col mb-8">
-                <div className='column-image-container aspect-landscape relative overflow-hidden rounded-xl bg-orange'>
-                    {/*<Image
+                <div className='column-image-container aspect-landscape relative overflow-hidden rounded-xl bg-orange text-center flex items-center justify-center py-4'>
+                    <Image
                         //loader={imageLoader}
-                        fill={true}
-                        src='/images/1.jpg'
+                        height={217.8}
+                        width={145.8}
+                        src='/images/scenes-play-logo.png'
                         alt=''
                         //placeholder='blur'
                         quality={75}
-                    />*/}
+                        className=''
+                    />
                 </div>
                 <div className='column-text-container text-center uppercase'>
                     <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step1Heading}</h2>
