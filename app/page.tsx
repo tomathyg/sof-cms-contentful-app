@@ -2,7 +2,7 @@
 import { draftMode } from 'next/headers'
 import React from 'react'
 
-import { getHomePageData } from '../lib/api-2'
+import { getHomePageData, getProcessPageData } from '../lib/api-2'
 
 //import TypeForm from './components/TypeForm'
 import ScenesLogo from './components/ScenesLogo'
@@ -27,13 +27,17 @@ export default async function Page() {
   const content = await getHomePageData(false);
   console.log("HOME PAGE CONTENT:", content);
   const layers = content.introLayersImagesCollection.items;
-  console.log("LAYERS:", content.introLayersImagesCollection.items);
+  //console.log("LAYERS:", content.introLayersImagesCollection.items);
+
+  const processPageContent = await getProcessPageData(false);
+  console.log("PROCESS PAGE CONTENT", processPageContent);
 
   return (
   <div>
     {/*<FloatingGallery />*/}
     <RapidLayers
       layers={layers}
+      revealContent={processPageContent}
     />
   </div>
     /*<RapidLayers />*/

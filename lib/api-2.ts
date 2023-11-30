@@ -148,6 +148,8 @@ const HOME_PAGE_GRAPHQL_FIELDS = `
           url
       }
   }
+  introTopText
+  introBottomText
   introLayersImagesCollection {
       total
       skip
@@ -236,4 +238,37 @@ export async function getCreditsPageData(isDraftMode: boolean): Promise<any> {
     isDraftMode
   )
   return extractCreditsPageData(data)
+}
+
+
+function extractProcessPageData(fetchResponse: any): any {
+  //console.log("ABOUT PAGE RESPONSE:", fetchResponse);
+  return fetchResponse?.data?.processPage
+}
+
+const PROCESS_PAGE_GRAPHQL_FIELDS = `
+  title
+  step1Heading
+  step1Description
+  step1Guidelines
+  step2Heading
+  step2Description
+  step2Guidelines
+  step3Heading
+  step3Description
+  step3Guidelines
+`
+
+export async function getProcessPageData(isDraftMode: boolean): Promise<any> {
+  const data = await fetchGraphQL(
+    `query ProcessPage {
+      processPage(id: "2CyOCl8UF0NhzM4Kr6EA1X", preview: ${
+        isDraftMode ? 'true' : 'false'
+      }) {
+          ${PROCESS_PAGE_GRAPHQL_FIELDS}
+      }
+    }`,
+    isDraftMode
+  )
+  return extractProcessPageData(data)
 }

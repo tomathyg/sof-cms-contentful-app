@@ -30,15 +30,29 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 
 import cloudinaryLoader from './CloudinaryLoader';
 
+interface revealContentProps {
+    title: string;
+}
+
 interface LayerItem {
     url: string;
+    step1Heading: string,
+    step1Description: string,
+    step1Guidelines: string,
+    step2Heading: string,
+    step2Description: string,
+    step2Guidelines: string,
+    step3Heading: string,
+    step3Description: string,
+    step3Guidelines: string
 }
 
 interface RapidLayersProps {
     layers: LayerItem[];
+    revealContent: revealContentProps;
 }
 
-const RapidLayers: React.FC<RapidLayersProps> = ({ layers }) => {
+const RapidLayers: React.FC<RapidLayersProps> = ({ layers, revealContent }) => {
 
     //const content = await getHomePageData(false);
     //console.log("HOME PAGE CONTENT:", content);
