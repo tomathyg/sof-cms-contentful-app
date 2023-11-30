@@ -4,6 +4,21 @@
 
 /* styles/globals.css */
 
+.noise-overlay {
+    transition: opacity .6s;
+    background-image: url(/images/noise.gif);
+    background-size: 90px;
+    transform: translateZ(0);
+    opacity: .1;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    top: 0;
+    position: fixed;
+    pointer-events: none;
+    z-index: 999999999999
+}
+
 .page_main__Ci4CW {
     position: fixed;
     top: 0;

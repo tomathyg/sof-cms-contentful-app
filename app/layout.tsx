@@ -140,6 +140,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
       <body className={`font-mono bg-black text-off-white`}>
+        <div className='noise-overlay'></div>
         <section className="">
           <Header />
           {/*<StickyCursor stickyElement={null}/>*/}
