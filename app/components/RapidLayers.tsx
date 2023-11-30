@@ -77,8 +77,10 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ layers }) => {
 
     // 640, 750, 828, 1080, 1200, 1920, 2048, 3840
     const imagesWidth = 640;
+    const imagesQuality = 60;
+
     const layersWidth = 1920;
-    const quality = 70;
+    const layersQuality = 60;
 
   return (
     <>
@@ -101,12 +103,12 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ layers }) => {
                 </div>
                 <div className="content border border-black">
                     <div className="revealer-grid">
-                        <div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
-                        <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=${imagesWidth}&q=${quality})`}}></div>
+                        <div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                        <div className="grid__item grid__item--b" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fben-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                        <div className="grid__item grid__item--c" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fpete-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                        <div className="grid__item grid__item--d" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fdutcy-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                        <div className="grid__item grid__item--e" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fmaz-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
+                        <div className="grid__item grid__item--f" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Ffede-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
                     </div>
                     <section className="intro-header-section flex-col flex items-center justify-center absolute left-0 w-full h-full pb-16 px-12">
                         <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight`}>
@@ -160,7 +162,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ layers }) => {
 
                 {layers.map((item, index) => (
                     <div key={index} className="layers__item">
-                        <div className="layers__item-img" style={{ backgroundImage: `url(${item.url}?w=${layersWidth}&q=${quality})`}}></div>
+                        <div className="layers__item-img" style={{ backgroundImage: `url(${item.url}?w=${layersWidth}&q=${layersQuality})`}}></div>
                     </div>
                 ))}
 
