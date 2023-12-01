@@ -103,8 +103,8 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
     const imagesWidth = 640;
     const imagesQuality = 60;
 
-    const layersWidth = 1920;
-    const layersQuality = 60;
+    const layersWidth = 1080;
+    const layersQuality = 50;
 
   return (
     <>
