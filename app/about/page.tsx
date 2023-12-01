@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 import { getAboutPageData } from '../../lib/api-2'
 
 export default async function Page() {
@@ -13,9 +15,14 @@ export default async function Page() {
                 <p className="font-serif text-2xl mb-4">{content.paragraph2}</p>
                 <p className="font-mono text-xsm mb-4">{content.paragraph3}</p>
                 <p className="font-serif">{content.artistQuote}</p>
-                {/*<Image
-
-                />*/}
+                <div className='signature-container relative w-[400px] mt-10 mb-24'>
+                    <Image
+                        src='/images/about-signature.png'
+                        alt='Jamie (Sound of Fractures) - Signature'
+                        width={570}
+                        height={271}
+                    />
+                </div>
             </div>
         </section>
     )
