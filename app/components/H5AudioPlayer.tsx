@@ -15,7 +15,7 @@ interface H5PlayerProps {
 const H5Player: React.FC<H5PlayerProps> = ({ src, title }) => {
   //console.log("TRACK TITLE:", title);
   const PlayerHeader = () => (
-    <h3 className='text-sm leading-normal tracking-wide uppercase text-center'>SCENE 1: <span className='song-title'>{title}</span></h3>
+    <h3 className='text-sm leading-normal tracking-wide uppercase text-center'>{title}</h3>
   );
   return (
     <AudioPlayer

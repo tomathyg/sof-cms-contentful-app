@@ -24,11 +24,19 @@ const stepMapping: Record<string, { step: string, subheading: string }> = {
     '01HE8V8C8BG9Q511S321KH7KYT': { step: '5', subheading: '' },
 };
 
-interface PageProps {
-    formRef?: string;
+interface AudioProps {
+  url: string;
+  title: string;
 }
 
-const Page: React.FC<PageProps> = ({ formRef }) => {
+interface PageProps {
+    formRef?: string;
+    //audio?: AudioProps;
+    audioUrl: string;
+    audioTitle: string;
+}
+
+const Page: React.FC<PageProps> = ({ formRef, audioUrl, audioTitle }) => {
   const defaultStepData = { step: '1', subheading: 'LISTEN & READ' };
   const [stepData, setStepData] = useState(defaultStepData);
 
@@ -61,8 +69,8 @@ const Page: React.FC<PageProps> = ({ formRef }) => {
             <h1 className="text-2xl xsm:text-5xl sm:text-6xl md:text-6xl mt-2 mb-0">STEP - 0{stepData.step}</h1>
             <section className="process-audio-player-section w-full text-sm mt-2 sm:mb-4">
                 <H5Player
-                    src="https://assets.ctfassets.net/57idppycthif/7KTYzLD4REKUkW5wFHkN9r/b94181d9856d7848f571a11a5735097c/Willows_Heartbeat_44_1K.mp3"
-                    title="Willow's Heartbeat"
+                    src={audioUrl}
+                    title={`SCENE 2: ${audioTitle}`}
                 />
             </section>
             <div className='typeform-widget-container w-full aspect-portrait-tall sm:aspect-square max-w-screen-lg min-h-max'>
