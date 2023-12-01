@@ -63,7 +63,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
             }
         }*/
     });
-    const options = { duration: 1, panelDelay: 0.15 };
+    const options = { duration: 1, panelDelay: 0.16 };
 
     // Animate the Image layers.
     layerRefs.current.forEach((layer, i) => {
