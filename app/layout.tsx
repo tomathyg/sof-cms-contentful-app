@@ -158,6 +158,8 @@ export default function RootLayout({
   //const [clientSideState, setClientSideState] = useState();
   return (
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
+      {/*<script src="https://connect.manifoldxyz.dev/latest/connect.umd.js" async></script>
+      <link rel="stylesheet" href="https://connect.manifoldxyz.dev/latest/connect.css"></link>*/}
       <body className={`font-mono bg-black text-off-white`}>
       <Web3ModalProvider>
         <div className='noise-overlay'></div>

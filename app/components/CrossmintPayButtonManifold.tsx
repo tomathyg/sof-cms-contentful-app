@@ -37,18 +37,27 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
     console.log(`${environment} CONTRACT INSTANCE ID:`, instanceId);
     //console.log("ACCOUNT", account);
 
-    const [connectedWallet, setConnectedWallet] = useState('');
+    //const [connectedWallet, setConnectedWallet] = useState('');
     const { address, chainId, isConnected } = useWeb3ModalAccount();
 
+    const [shouldDisplayButton, setShouldDisplayButton] = useState(false);
+
     useEffect(() => {
+        // Once the component mounts, we check if the wallet is connected
+        // and then set shouldDisplayButton accordingly
+        setShouldDisplayButton(isConnected);
+    }, [isConnected]);
+
+
+    /*useEffect(() => {
         // Retrieve the connected wallet address from localStorage
         //const walletAddress = localStorage.getItem('walletAddress');
 
-        if (address) {
+        //if (address) {
             console.log("WC ADDRESS:", address);
             setConnectedWallet(address);
-        }
-    }, [address]);
+        //}
+    }, [address]);*/
     //console.log(window.ethereum);
 
     /*useEffect(() => {
@@ -83,6 +92,16 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
 
     console.log("MINT CONFIG:", mintConfig);
 
+
+    /*if (!isConnected) {
+        return null; // Or render some alternative content
+    }*/
+
+    // Only render the CrossmintPayButton if shouldDisplayButton is true
+    if (!shouldDisplayButton) {
+        return null; // Or render some alternative content
+    }
+
     return (
         <>
         <div className='flex flex-col justify-center items-center'>
@@ -99,12 +118,12 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 projectId={projectId}
                 collectionId={collectionId}
                 environment={environment}
-                /*checkoutProps={{
+                checkoutProps={{
                     display: "same-tab",  // "same-tab" | "new-tab" | "popup"
-                    paymentMethods: ["ETH", "fiat"],
-                    delivery: "non-custodial" //"custodial" | "non-custodial" | "all"
-                }}*/
-                mintTo={connectedWallet}
+                    paymentMethods: ["fiat"],
+                    delivery: "all" //"custodial" | "non-custodial" | "all"
+                }}
+                mintTo={address}
                 //emailTo="hello@soundoffractures.com"
                 //recipient="_WALLET_ADDRESS_"
                 /*mintConfig={{

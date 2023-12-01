@@ -26,6 +26,10 @@ const CrossMint: React.FC<CrossmintProps> = ({ projectId, collectionId, environm
         }
     }, [address]);
 
+    if (!isConnected) {
+        return null; // Or render some alternative content
+    }
+
     return (
         <CrossmintPayButton
             projectId={projectId}
@@ -43,6 +47,11 @@ const CrossMint: React.FC<CrossmintProps> = ({ projectId, collectionId, environm
                 paymentMethods: ["ETH", "fiat"],
                 delivery: "all"
             }}*/
+            checkoutProps={{
+                display: "same-tab",  // "same-tab" | "new-tab" | "popup"
+                paymentMethods: ["fiat"],
+                delivery: "all" //"custodial" | "non-custodial" | "all"
+            }}
             locale="en-US"
             currency="GBP"
             className="xmint-btn"

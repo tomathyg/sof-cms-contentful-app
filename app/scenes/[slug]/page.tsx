@@ -74,10 +74,14 @@ export default async function ScenePage({
                 />
               </div>
               <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center mt-3">
-                <CrossmintPayButtonProduction
+              {/*<div
+                data-widget="m-claim-buy-only"
+                data-id="59406576"
+        ></div>*/}
+                {/*<CrossmintPayButtonProduction
                   projectId={scene.crossmintProjectIdProduction}
                   collectionId='3709b2d1-dd26-49a5-b5e6-8acd55f59bd7'
-                />
+      />*/}
 
                 {/*<WalletConnect></WalletConnect>*/}
                   <CrossmintPayButtonManifold
