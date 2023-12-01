@@ -70,14 +70,14 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
         if(timeline.current) {
           const stepDuration = options.duration;
           const stepStart = options.panelDelay * i;
-          const halfwayPoint = stepStart + stepDuration / 2;
+          //const halfwayPoint = stepStart + stepDuration / 2;
 
           timeline.current.to([layer.el, layer.image], {
               duration: stepDuration,
               ease: 'Power2.easeInOut',
               y: 0
           }, stepStart)
-          .call(() => {
+          /*.call(() => {
             if (introHeader.current) {
                 // First, remove any existing 'step-' class
                 introHeader.current.classList.forEach(className => {
@@ -89,7 +89,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
                 // Add the new 'step-' class
                 introHeader.current.classList.add(`step-${i}`);
             }
-          }, [], halfwayPoint);
+          }, [], halfwayPoint);*/
         }
     });
 
