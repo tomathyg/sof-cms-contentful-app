@@ -16,11 +16,11 @@ body {
     --color-bg: #0F0E0E;
     --color-link: #fff;
     --color-link-hover: #3d3637;
-    color: var(--color-text);
+    /*color: var(--color-text);
     background-color: var(--color-bg);
     font-family: soleil, sans-serif;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+	-moz-osx-font-smoothing: grayscale;*/
 	/* Cursor styles */
 	--cursor-stroke: #644B47;
 	--cursor-fill: none;
@@ -28,7 +28,7 @@ body {
 }
 
 /* Page Loader */
-.js .loading::before,
+/*.js .loading::before,
 .js .loading::after {
     content: '';
     position: fixed;
@@ -54,7 +54,7 @@ body {
     background: var(--color-link);
     animation: loaderAnim 0.7s linear infinite alternate forwards;
 
-}
+}*/
 
 @keyframes loaderAnim {
     to {
@@ -63,7 +63,7 @@ body {
     }
 }
 
-a {
+/*a {
     text-decoration: none;
     color: var(--color-link);
     outline: none;
@@ -73,7 +73,7 @@ a:hover,
 a:focus {
     color: var(--color-link-hover);
     outline: none;
-}
+}*/
 
 .message {
     background: var(--color-text);

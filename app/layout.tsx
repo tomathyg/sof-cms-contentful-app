@@ -59,7 +59,7 @@ export const metadata: Metadata = {
   robots: {
     //index: false,
     //follow: false,
-    noarchive: true,
+    //noarchive: true,
   },
   icons: {
     shortcut: { url: '/site-icons/favicon.ico?v=5', sizes: 'any', type: 'image/x-icon' },
