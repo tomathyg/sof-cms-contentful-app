@@ -35,7 +35,7 @@ type ImageLoaderParams = {
 }
 
 const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
+    return `${src}?w=${width}&q=${quality || 60}`;
 }
 
 const imageHeight = '400px';
@@ -116,6 +116,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
                 if (item.submissionImage && item.submissionImage.url && item.name && item.text) {
                     //console.log(item);
                     //console.log(index);
+                    //console.log("URL:", item.submissionImage.url);
                     return (
                         <SwiperSlide key={index}>
                             <Image 

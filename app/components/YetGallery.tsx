@@ -3,15 +3,15 @@
 import * as React from "react";
 
 import Lightbox from "yet-another-react-lightbox";
-import { useLightboxProps } from "yet-another-react-lightbox";
+//import { useLightboxProps } from "yet-another-react-lightbox";
 
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Inline from "yet-another-react-lightbox/plugins/inline";
 import Slideshow from "yet-another-react-lightbox/plugins/slideshow";
-import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
-import Zoom from "yet-another-react-lightbox/plugins/zoom";
+//import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
+//import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Captions from "yet-another-react-lightbox/plugins/captions";
-import Counter from "yet-another-react-lightbox/plugins/counter";
+//import Counter from "yet-another-react-lightbox/plugins/counter";
 import Share from "yet-another-react-lightbox/plugins/share";
 
 import "yet-another-react-lightbox/styles.css";

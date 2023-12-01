@@ -15,7 +15,7 @@ type ImageLoaderParams = {
 }
 
 const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
+    return `${src}?w=${width}&q=${quality || 60}`;
 }
 
 const ClientImage: React.FC<ClientImageProps> = ({ src, name, className }) => {
@@ -27,8 +27,8 @@ const ClientImage: React.FC<ClientImageProps> = ({ src, name, className }) => {
             loading="lazy"
             src={src} 
             alt={name || 'Scene image'} 
-            width={450}
-            height={450}
+            width={430}
+            height={430}
             className={className}
             //onClick={() => console.log("image clicked")}
             //onLoad={() => handleImageLoad(item.submissionImage.url)}

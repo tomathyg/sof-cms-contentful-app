@@ -63,7 +63,7 @@ export default async function ScenePage({
               <ClientImage
                 src={scene.image.url}
                 name={scene.image.title}
-                className='scene-image'
+                className='scene-image mb-2'
               />
               <div className="audio-player-wrapper section-wrapper w-full text-sm">
                 <H5Player
