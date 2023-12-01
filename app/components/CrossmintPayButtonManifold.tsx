@@ -1,7 +1,8 @@
 'use client'
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
+import { useWeb3ModalAccount } from '@web3modal/ethers5/react'
 
 //import { ethers } from 'ethers';
 
@@ -25,6 +26,7 @@ interface CrossmintProps {
     nftPrice: string;
     mintFee: string;
     environment?: string;
+    //account?: string;
 }
   
 const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, collectionId, creatorContractAddress, contractAddress, instanceId, nftPrice, mintFee, environment }) => {
@@ -33,6 +35,25 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
     console.log(`${environment} CREATOR CONTRACT ADDRESS:`, creatorContractAddress);
     console.log(`${environment} CONTRACT ADDRESS:`, contractAddress);
     console.log(`${environment} CONTRACT INSTANCE ID:`, instanceId);
+    //console.log("ACCOUNT", account);
+
+    const [connectedWallet, setConnectedWallet] = useState('');
+    const { address, chainId, isConnected } = useWeb3ModalAccount();
+
+    useEffect(() => {
+        // Retrieve the connected wallet address from localStorage
+        //const walletAddress = localStorage.getItem('walletAddress');
+
+        if (address) {
+            console.log("WC ADDRESS:", address);
+            setConnectedWallet(address);
+        }
+    }, [address]);
+    //console.log(window.ethereum);
+
+    /*useEffect(() => {
+        // Optionally, you can use the account prop for some logic here
+    }, [account]);*/
 
     const [mintAmount, setMintAmount] = useState(1);
 
@@ -78,8 +99,13 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 projectId={projectId}
                 collectionId={collectionId}
                 environment={environment}
-                //mintTo="_TO_"
-                //emailTo="_EMAIL_"
+                /*checkoutProps={{
+                    display: "same-tab",  // "same-tab" | "new-tab" | "popup"
+                    paymentMethods: ["ETH", "fiat"],
+                    delivery: "non-custodial" //"custodial" | "non-custodial" | "all"
+                }}*/
+                mintTo={connectedWallet}
+                //emailTo="hello@soundoffractures.com"
                 //recipient="_WALLET_ADDRESS_"
                 /*mintConfig={{
                     "contractAddress": `${contractAddress}`,

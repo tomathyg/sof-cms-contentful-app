@@ -1,6 +1,9 @@
 import './globals.css'
 //import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
 
+import { Web3ModalProvider } from "../context/Web3Modal";
+import ConnectButton from './components/ConnectButton';
+
 import { AppProps } from 'next/app';
 
 import { Analytics } from '@vercel/analytics/react';
@@ -10,6 +13,15 @@ import localFont from 'next/font/local'
 
 import MobileHeader from './components/header';
 import StickyCursor from './components/stickyCursor';
+
+//import WalletConnectButton from './components/WalletConnectButton'
+
+//import dynamic from 'next/dynamic';
+
+/*const ClientSideComponent = dynamic(
+  () => import('../components/ClientSideComponent'),
+  { ssr: false }
+);*/
 
 const druk_wide_heavy = localFont({
   src: './fonts/Druk-Wide-Heavy-Web.woff2',
@@ -40,7 +52,7 @@ import Navigation from './components/Navigation'
 
 // Metadata
 import type { Metadata } from 'next'
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
@@ -92,10 +104,12 @@ export const metadata: Metadata = {
   },
 }
 
+
 async function Header() {
   const allScenes = await getAllScenes(false);
   //console.log("ALL SCENES:", allScenes);
   //console.log("ALL SCENES TYPE:", typeof(allScenes));
+  
 
   return (
     <header className="">
@@ -106,6 +120,8 @@ async function Header() {
             items={allScenes}
             base='scenes'
           />
+          {/*<WalletConnectButton />*/}
+          <ConnectButton />
         </div>
       </div>
       <div className='mobile-nav-container sm:hidden h-full w-full'>
@@ -139,9 +155,11 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  //const [clientSideState, setClientSideState] = useState();
   return (
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
       <body className={`font-mono bg-black text-off-white`}>
+      <Web3ModalProvider>
         <div className='noise-overlay'></div>
         <section className="">
           <Header />
@@ -150,6 +168,7 @@ export default function RootLayout({
           <Footer />
         </section>
         <Analytics />
+      </Web3ModalProvider>
       </body>
     </html>
   )

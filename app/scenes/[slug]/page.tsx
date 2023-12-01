@@ -1,13 +1,15 @@
 import Link from 'next/link'
 import { draftMode } from 'next/headers'
 
+//import WalletConnect from '../../components/WalletConnectButton'
+
 //import { type } from 'os'
 import React, { useState, useContext, createContext } from 'react';
 
 //import { Markdown } from '../../../lib/markdown'
 import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
-import NFTPaperCheckout from '../../components/PaperCheckout'
+//import NFTPaperCheckout from '../../components/PaperCheckout'
 import CrossmintPayButtonManifold from '../../components/CrossmintPayButtonManifold'
 import CrossmintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
 
@@ -72,20 +74,34 @@ export default async function ScenePage({
                 />
               </div>
               <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center mt-3">
-                {/*<CrossmintPayButtonProduction
+                <CrossmintPayButtonProduction
                   projectId={scene.crossmintProjectIdProduction}
-                  collectionId={scene.crossmintCollectionIdProduction}
-                />*/}
-                <CrossmintPayButtonManifold
+                  collectionId='3709b2d1-dd26-49a5-b5e6-8acd55f59bd7'
+                />
+
+                {/*<WalletConnect></WalletConnect>*/}
+                  <CrossmintPayButtonManifold
+                    projectId={scene.crossmintProjectIdProduction}
+                    collectionId={scene.crossmintCollectionIdProduction}
+                    creatorContractAddress={scene.nftContractAddress}
+                    contractAddress={scene.manifoldCoreCreatorContractAddress}
+                    instanceId={scene.manifoldClaimInstanceId}
+                    nftPrice={scene.nftPrice}
+                    mintFee={scene.mintFee}
+                    environment='production'
+                  />
+                
+                
+                {/*<CrossmintPayButtonManifold
                   projectId={scene.crossmintProjectIdProduction}
-                  collectionId={scene.crossmintCollectionIdProduction}
-                  creatorContractAddress={scene.nftContractAddress}
+                  collectionId='146bc6f6-5315-45e0-b9d8-7a9d299120b5'
+                  creatorContractAddress='0x583DCB86146bc2Dc41602794355616ddcA405e1E'
                   contractAddress={scene.manifoldCoreCreatorContractAddress}
-                  instanceId={scene.manifoldClaimInstanceId}
-                  nftPrice={scene.nftPrice}
+                  instanceId='60715248'
+                  nftPrice='0.001'
                   mintFee={scene.mintFee}
                   environment='production'
-                />
+              />*/}
               </div>
             </div>
           </section>
