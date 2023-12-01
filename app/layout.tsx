@@ -4,15 +4,14 @@ import './globals.css'
 import { Web3ModalProvider } from "../context/Web3Modal";
 import ConnectButton from './components/ConnectButton';
 
-import { AppProps } from 'next/app';
+//import { AppProps } from 'next/app';
 
 import { Analytics } from '@vercel/analytics/react';
 
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
-import MobileHeader from './components/header';
-import StickyCursor from './components/stickyCursor';
+//import StickyCursor from './components/stickyCursor';
 
 //import WalletConnectButton from './components/WalletConnectButton'
 
@@ -115,17 +114,16 @@ async function Header() {
     <header className="">
       <div className="w-full mx-auto px-5">
         <div className={`${dm_mono.className} w-full py-4 flex items-center justify-between`}>
+          {/*<div className='nav-group flex items-center w-full'></div>*/}
           <HeaderLogo />
           <Navigation
             items={allScenes}
             base='scenes'
           />
+          
           {/*<WalletConnectButton />*/}
           <ConnectButton />
         </div>
-      </div>
-      <div className='mobile-nav-container sm:hidden h-full w-full'>
-        <MobileHeader />
       </div>
     </header>
   )

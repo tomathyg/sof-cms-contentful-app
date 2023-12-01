@@ -1,7 +1,7 @@
 'use client'
  
 import { useRouter } from 'next/navigation'
-
+import MobileHeader from '../components/header';
 interface Item {
     id: string;
     slug: string;
@@ -21,7 +21,8 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
   //router.prefetch('/scenes/scene-1');
  
   return (
-    <ul className="px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
+    <>
+    <ul className="desktop-menu px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
         {/*<li>
             <button type="button" onClick={() => router.push('/scenes')}>ALL SCENES</button>
         </li>*/}
@@ -48,6 +49,10 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
             <button type="button" onClick={() => router.push('/float')}>FLOAT</button>
         </li>*/}
     </ul>
+    {/*<div className='mobile-nav-container sm:hidden h-full w-full'>
+        <MobileHeader />
+    </div>*/}
+    </>
   )
   // ...
 }

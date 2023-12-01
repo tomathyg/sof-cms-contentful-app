@@ -44,14 +44,14 @@ export default function ConnectButton() {
   return (
     <>
       <button 
-        className={`font-sans uppercase border border-off-white rounded-lg py-2 px-4 ${isConnected ? 'hidden' : ''}`} 
+        className={`font-sans text-xsm xsm:text-base uppercase border border-off-white rounded-lg py-2 px-4 ${isConnected ? 'hidden' : ''}`} 
         onClick={handleButtonClick}
       >
         Connect
       </button>
 
       <button 
-        className={`font-sans uppercase border border-off-white rounded-lg py-2 px-4 bg-orange ${!isConnected ? 'hidden' : ''}`} 
+        className={`font-sans text-xsm xsm:text-base uppercase border border-off-white rounded-lg py-2 px-4 bg-orange ${!isConnected ? 'hidden' : ''}`} 
         onClick={handleButtonClick}
       >
         Disconnect
