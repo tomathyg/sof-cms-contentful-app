@@ -384,7 +384,7 @@ main.main-content {
 
 /*.revealer-grid-container.intro .revealer-grid-inner .content {
     width: calc(100% - 4rem);
-    height: calc(100% - 4rem);
+    height: calc(100% - 4rem);bac
     margin: 2rem;
 }*/
 
@@ -475,7 +475,8 @@ main.main-content {
     width: 100%;
     z-index: -1;
     overflow: hidden;
-    background-image: url('https://images.ctfassets.net/57idppycthif/4INV6AGCzs4529xwzORd96/593296fb9609c2e9b416fcde36b29971/Acutek___Flick_records.jpg?w=1080&q=60');
+    /*background-image: url('https://images.ctfassets.net/57idppycthif/4INV6AGCzs4529xwzORd96/593296fb9609c2e9b416fcde36b29971/Acutek___Flick_records.jpg?w=1080&q=60');*/
+    background-image: url('https://images.ctfassets.net/57idppycthif/62KFsPcSGpGeG3ZLm5rx2r/66a0ab7cd1320d108a34e57b732ebbb3/Fede.jpg?w=1080&q=60');
     background-size: cover;
     background-position: center;
     background-color: black;
