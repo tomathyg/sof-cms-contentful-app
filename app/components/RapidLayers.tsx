@@ -12,6 +12,7 @@ import Revealer from './Revealer';
 import StepsContent from './StepsContent';
 import Image from 'next/image';
 import ScenesLogo from '../components/ScenesLogo'
+import ScenesLogo2 from '../components/ScenesLogo2'
 
 // Define an interface for the methods you want to call on Revealer.
 interface RevealerMethods {
@@ -141,7 +142,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                     <section className="intro-header-section flex-col flex items-center justify-center absolute left-0 w-full h-full px-12">
                         <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight scenes-logo-header`}>
                             {/*{heading}*/}
-                            <ScenesLogo />
+                            <ScenesLogo2 />
                         </h1>
                         <h2 className={`intro-subheading mb-8 text-center text-base text-xl sm:text-2xl md:text-3xl font-sans`}>
                             <span>AN <span className='font-serif'>INTERACTIVE</span> JOURNEY</span><br />

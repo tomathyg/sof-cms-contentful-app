@@ -6,6 +6,7 @@ import { getHomePageData, getProcessPageData } from '../lib/api-2'
 
 //import TypeForm from './components/TypeForm'
 import ScenesLogo from './components/ScenesLogo'
+import ScenesLogo2 from './components/ScenesLogo2'
 
 import RapidLayers from './components/RapidLayers'
 import FloatingGallery from './components/floatingGallery/FloatingGallery'
@@ -15,7 +16,7 @@ function Intro(heading:string) {
     <section className="flex-col flex items-center md:justify-between">
       <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight`}>
         {/*{heading}*/}
-        <ScenesLogo />
+        <ScenesLogo2 />
       </h1>
       <h2 className={`mb-8 text-center text-base sm:text-lg md:text-2xl`}><span>AN INTERACTIVE JOURNEY</span><br /><span>THROUGH PERSONAL MOMENTS</span></h2>
     </section>
