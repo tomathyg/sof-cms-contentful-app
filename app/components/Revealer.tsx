@@ -63,7 +63,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
             }
         }*/
     });
-    const options = { duration: 1, panelDelay: 0.17 };
+    const options = { duration: 1, panelDelay: 0.15 };
 
     // Animate the Image layers.
     layerRefs.current.forEach((layer, i) => {
@@ -75,7 +75,8 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
           timeline.current.to([layer.el, layer.image], {
               duration: stepDuration,
               ease: 'Power2.easeInOut',
-              y: 0
+              y: 0,
+              willChange: "transform, opacity",
           }, stepStart)
           /*.call(() => {
             if (introHeader.current) {
