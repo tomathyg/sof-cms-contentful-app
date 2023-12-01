@@ -176,6 +176,10 @@ a {
     height: 45px !important;
     width: 45px !important;
 }
+
+.social-svg-icon:hover {
+    fill: var(--orange);
+}
 /* END OF SOCIAL FOLLOW ICONS */
 
 #scenes-home-link {
@@ -184,7 +188,19 @@ a {
 }
 
 
+.vertical-line {
 
+}
+
+.vertical-line::after {
+    content: '';
+    position: absolute;
+    left: 50%; /* Centers the line */
+    top: 0;
+    bottom: 0;
+    width: 1px; /* Width of the line */
+    background-color: var(--off-white); /* Color of the line */
+  }
 /*.nav-list {
     display: flex;
     gap: 20px;

@@ -15,7 +15,8 @@ export default async function Page() {
                 <p className="font-serif text-2xl mb-4">{content.paragraph2}</p>
                 <p className="font-mono text-xsm mb-4">{content.paragraph3}</p>
                 <p className="font-serif">{content.artistQuote}</p>
-                <div className='signature-container relative max-w-[400px] mt-10 mb-24'>
+                <div className='vertical-line relative h-[100px] mt-4'></div>
+                <div className='signature-container relative max-w-[400px] mt-5 mb-24'>
                     <Image
                         src='/images/about-signature.png'
                         alt='Jamie (Sound of Fractures) - Signature'
