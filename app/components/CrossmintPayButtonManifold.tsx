@@ -99,7 +99,11 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
 
     // Only render the CrossmintPayButton if shouldDisplayButton is true
     if (!shouldDisplayButton) {
-        return null; // Or render some alternative content
+        return (
+            <div className='uppercase text-lg text-center'>
+                <p>Connect your wallet<br />to buy with card or ETH</p>
+            </div>
+        )
     }
 
     return (
