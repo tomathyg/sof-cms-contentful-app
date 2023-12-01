@@ -109,7 +109,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                 title="Willow's Heartbeat"
             />
         </section>*/}
-        <section className='flex justify-center font-sans text-black my-10'>
+        <section className='flex justify-center font-sans text-black mt-4 mb-10'>
             {/*<TypeForm
                 id='eAdn6pFg'
             />*/}
