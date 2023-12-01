@@ -184,12 +184,12 @@ a:focus {
 }
 
 .grid__item--8 {
-    grid-area: 2 / 11 / 2 / 14;
+    grid-area: 2 / 11 / 3 / 14;
 }
 
-.grid__item--9 {
+/*.grid__item--9 {
     grid-area: 8 / 4 / 10 / 6;
-}
+}*/
 
 .menu {
     grid-area: 1 / 1 / 2 / 2;

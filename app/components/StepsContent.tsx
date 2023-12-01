@@ -59,7 +59,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                     />
                 </div>
                 <div className='column-text-container text-center uppercase'>
-                    <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step1Heading}</h2>
+                    <h2 className='mt-6 mb-2 text-xl lg:text-2xl'>{content.step1Heading}</h2>
                     <p className='font-serif text-xl lg:text-xl'>{content.step1Description}</p>
                     <p className='mt-4 font-mono text-sm'>{content.step1Guidelines}</p>
                 </div>
@@ -78,7 +78,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                     />
                 </div>
                 <div className='column-text-container text-center uppercase'>
-                    <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step2Heading}</h2>
+                    <h2 className='mt-6 mb-2 text-xl lg:text-2xl'>{content.step2Heading}</h2>
                     <p className='font-serif text-xl lg:text-xl'>{content.step2Description}</p>
                     <p className='mt-4 font-mono text-sm'>{content.step2Guidelines}</p>
                 </div>
@@ -97,7 +97,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                     />
                 </div>
                 <div className='column-text-container text-center uppercase'>
-                    <h2 className='mt-6 mb-1 text-xl lg:text-2xl'>{content.step3Heading}</h2>
+                    <h2 className='mt-6 mb-2 text-xl lg:text-2xl'>{content.step3Heading}</h2>
                     <p className='font-serif text-xl lg:text-xl'>{content.step3Description}</p>
                     <p className='mt-4 font-mono text-sm'>{content.step3Guidelines}</p>
                 </div>
