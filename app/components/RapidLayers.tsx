@@ -128,7 +128,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                 </div>
                 <div className="content border border-black">
                     <div className="revealer-grid">
-                        {layers.filter(item => item && item.url).slice(0, 8).map((item, index) => (
+                        {floatingImages.filter(item => item && item.url).slice(0, 8).map((item, index) => (
                             <div key={index} className={`grid__item grid__item--${index + 1}`} style={{ backgroundImage: `url(${item.url}?w=${imagesWidth}&q=${imagesQuality})`}}></div>
                         ))}
                         {/*<div className="grid__item grid__item--a" style={{ backgroundImage: `url(/_next/image?url=%2Fscene-images%2Fchef-no-text.jpg&w=${imagesWidth}&q=${imagesQuality})`}}></div>
