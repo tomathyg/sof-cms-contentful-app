@@ -11,7 +11,8 @@ import { getAllScenes, getSceneAndMoreScenes } from '../../../lib/api-2'
 
 //import NFTPaperCheckout from '../../components/PaperCheckout'
 import CrossmintPayButtonManifold from '../../components/CrossmintPayButtonManifold'
-import CrossmintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
+//import CrossmintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
+//import CrossmintPayButtonManifoldTest from '../../components/CrossmintPayButtonManifoldTest'
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
@@ -21,10 +22,10 @@ import ClientImage from '../../components/ClientImage'
 
 //import SubmissionsGallery from '../../components/SubmissionsGallery'
 //import SwiperGallery from '../../components/SwiperGalleryWebComponent';
-import YetCarousel from '../../components/YetGallery'
+//import YetCarousel from '../../components/YetGallery'
 //import LightGallery from '../../components/LightGallery'
 import SwiperReactGallery from '../../components/SwiperReactGallery';
-import YetGallery from '../../components/YetGallery';
+//import YetGallery from '../../components/YetGallery';
 
 import BackgroundImageStyle from '../../components/BackgroundImageStyle';
 
@@ -73,15 +74,17 @@ export default async function ScenePage({
                     title={scene.audioMp3.title}
                 />
               </div>
-              <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center mt-3">
+              <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center">
               {/*<div
                 data-widget="m-claim-buy-only"
                 data-id="59406576"
-        ></div>*/}
+                ></div>*/}
                 {/*<CrossmintPayButtonProduction
                   projectId={scene.crossmintProjectIdProduction}
                   collectionId='3709b2d1-dd26-49a5-b5e6-8acd55f59bd7'
-      />*/}
+                />*/}
+
+                {/*<CrossmintPayButtonManifoldTest />*/}
 
                 {/*<WalletConnect></WalletConnect>*/}
                   <CrossmintPayButtonManifold

@@ -124,7 +124,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 environment={environment}
                 checkoutProps={{
                     display: "same-tab",  // "same-tab" | "new-tab" | "popup"
-                    paymentMethods: ["fiat"],
+                    paymentMethods: ["ETH", "fiat"],
                     delivery: "all" //"custodial" | "non-custodial" | "all"
                 }}
                 mintTo={address}
@@ -149,9 +149,9 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 //"type": "manifold-erc-721"
                 mintConfig={mintConfig}
                 locale="en-US"
-                currency="GBP"
+                /*currency="GBP"
                 className="xmint-btn"
-                getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `BUY TO COLLECT`}
+                getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `BUY TO COLLECT`}*/
             />
             </div>
         </>
