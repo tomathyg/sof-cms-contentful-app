@@ -93,10 +93,10 @@ export const metadata: Metadata = {
     //siteName: 'Scenes - Where music meets memory',
     images: [
       {
-        url: '/social-images/scenes-logo-og-fb-white-on-black.jpg',
+        url: '/social-images/scenes-fb-share.jpg',
         width: 1200,
         height: 630,
-        alt: 'Scenes',
+        alt: 'Scenes by Sound of Fractures',
       },
     ],
     locale: 'en_GB',

@@ -160,7 +160,7 @@ a:focus {
 }
 
 .grid__item--2 {
-    grid-area: 6 / 2 / 9 / 5;
+    grid-area: 5 / 2 / 8 / 6;
 }
 
 .grid__item--3 {
