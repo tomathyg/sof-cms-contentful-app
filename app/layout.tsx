@@ -1,6 +1,8 @@
 import './globals.css'
 //import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
 
+//import 'https://marketplace.manifoldxyz.dev/3.3.7/marketplace.css'
+
 import { Web3ModalProvider } from "../context/Web3Modal";
 import ConnectButton from './components/ConnectButton';
 
@@ -51,7 +53,7 @@ import Navigation from './components/Navigation'
 
 // Metadata
 import type { Metadata } from 'next'
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 
 export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,

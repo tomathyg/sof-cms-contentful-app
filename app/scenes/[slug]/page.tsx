@@ -1,5 +1,6 @@
 //import Link from 'next/link'
 import { draftMode } from 'next/headers'
+import { getScene } from '../../../lib/api-2'
 
 //import WalletConnect from '../../components/WalletConnectButton'
 
@@ -7,12 +8,15 @@ import { draftMode } from 'next/headers'
 import React, { useState, useContext, createContext } from 'react';
 
 //import { Markdown } from '../../../lib/markdown'
-import { getSceneAndMoreScenes } from '../../../lib/api-2'
+
 
 //import NFTPaperCheckout from '../../components/PaperCheckout'
 import CrossmintPayButtonManifold from '../../components/CrossmintPayButtonManifold'
 //import CrossmintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
 //import CrossmintPayButtonManifoldTest from '../../components/CrossmintPayButtonManifoldTest'
+
+import NFTData from '../../components/NFTData'
+import ManifoldWidget from '@/app/components/ManifoldWidget';
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
@@ -36,17 +40,39 @@ import SwiperReactGallery from '../../components/SwiperReactGallery';
   }))
 }*/
 
+/*function ManifoldListing(id:any) {
+  return (
+    <div className="ManifoldListing">
+      <div
+        data-widget="m-listing-attributes"
+        data-id={id}
+        data-network="NETWORK"
+      ></div>
+    </div>
+  );
+}*/
+
+/*export async function generateStaticParams() {
+  const allScenes = await getAllScenes(false)
+
+  return allScenes.map((scene) => ({
+    slug: scene.slug,
+  }))
+}*/
+
+
 export default async function ScenePage({
   params,
 }: {
   params: { slug: string }
 }) {
-  const { isEnabled } = draftMode()
+  const { isEnabled } = draftMode();
   //console.log("SLUG:", params.slug);
-  const { scene, moreScenes } = await getSceneAndMoreScenes(params.slug, isEnabled);
-  console.log("SCENE:", scene);
-  const allSubmissions = scene.submissionsCollection.items;
-  //console.log("SCENE SUBMISSIONS:", allSubmissions);
+  //console.log("GET SCENE:", getScene);
+  const scene = await getScene(params.slug, isEnabled);
+  //console.log("SCENE:", scene);
+  const submissions = scene.submissionsCollection.items;
+  //console.log("SCENE SUBMISSIONS:", submissions);
   return (
     <>
     <div className="background-image-container">
@@ -114,6 +140,16 @@ export default async function ScenePage({
           </section>
         )}
 
+        <section>
+          <NFTData
+            contractAddress={scene.nftContractAddress}
+            contractABI={scene.nftAbi}
+          />
+          <ManifoldWidget
+            id='142'
+          />
+        </section>
+
         {/*<section className="page-subheading-container">
           <h2 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none text-center">
             GALLERY
@@ -165,26 +201,26 @@ export default async function ScenePage({
           </section>
         )}*/}
 
-        {allSubmissions && (
+        {submissions && (
           <section className="scene-gallery-section">
             <SwiperReactGallery
-              submissions={allSubmissions}
+              submissions={submissions}
               slidesPerViewCount={1}
             />
             {/*<YetGallery
-              submissions={allSubmissions}
+              submissions={submissions}
             />*/}
           </section>
         )}
 
         {/*<SwiperGallery
-          submissions={allSubmissions}
+          submissions={submissions}
         />*/}
         {/*<LightGallery
-          submissions={allSubmissions}
+          submissions={submissions}
         />*/}
         {/*<SubmissionsGallery
-          submissions={allSubmissions}
+          submissions={submissions}
       />*/}
       </article>
     </div>

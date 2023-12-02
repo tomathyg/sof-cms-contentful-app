@@ -1,33 +1,3 @@
-const SCENE_GRAPHQL_FIELDS = `
-    title
-    slug
-    colour
-    image {
-      title
-      url
-    }
-    nftContractAddress
-    nftPrice
-    mintFee
-    manifoldCoreCreatorContractAddress
-    manifoldClaimInstanceId
-    crossmintProjectIdProduction
-    crossmintCollectionIdProduction
-    audioMp3 {
-      title
-      url
-    }
-    submissionsCollection(limit: 50) {
-        items {
-            name
-            text
-            submissionImage {
-                url
-            }
-        }
-    }
-`
-
 async function fetchGraphQL(query: string, preview = false): Promise<any> {
   return fetch(
     `https://graphql.contentful.com/content/v1/spaces/${process.env.CONTENTFUL_SPACE_ID}`,
@@ -53,13 +23,68 @@ async function fetchGraphQL(query: string, preview = false): Promise<any> {
   });
 }
 
+const SCENE_GRAPHQL_FIELDS = `
+    title
+    slug
+    colour
+    image {
+      title
+      url
+    }
+    nftContractAddress
+    nftAbi
+    nftPrice
+    mintFee
+    manifoldCoreCreatorContractAddress
+    manifoldClaimInstanceId
+    crossmintProjectIdProduction
+    crossmintCollectionIdProduction
+    audioMp3 {
+      title
+      url
+    }
+    submissionsCollection(limit: 50) {
+        items {
+            name
+            text
+            submissionImage {
+                url
+            }
+        }
+    }
+`
+
 function extractScene(fetchResponse: any): any {
-    //console.log("SCENE RESPONSE:", fetchResponse);
+  console.log("SCENE RESPONSE:", fetchResponse);
+  console.log("SCENE EXTRACT:", fetchResponse?.data?.sceneCollection?.items?.[0]);
   return fetchResponse?.data?.sceneCollection?.items?.[0]
 }
 
+export async function getScene(
+  slug: string,
+  preview: boolean
+): Promise<any> {
+  const entry = await fetchGraphQL(
+    `query {
+      sceneCollection(where: { slug: "${slug}" }, preview: ${
+      preview ? 'true' : 'false'
+    }, limit: 1) {
+        items {
+          ${SCENE_GRAPHQL_FIELDS}
+        }
+      }
+    }`,
+    preview
+  )
+  console.log("SCENE ENTRY:", entry);
+  return extractScene(entry)
+}
+
+
 function extractSceneEntries(fetchResponse: any): any[] {
+  console.log("SCENE ENTRIES RESPONSE:", fetchResponse);
   const items = fetchResponse?.data?.sceneCollection?.items;
+  console.log("SCENE ITEMS", items);
   if (!items) { return []; }
   return items.filter((item: any) => item !== null);
 }
