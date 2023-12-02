@@ -14,6 +14,8 @@ import Image from 'next/image';
 import ScenesLogo from '../components/ScenesLogo'
 import ScenesLogo2 from '../components/ScenesLogo2'
 
+import contentfulLoader from '../imageLoaders/contentfulLoader'
+
 // Define an interface for the methods you want to call on Revealer.
 interface RevealerMethods {
     reveal: () => void;

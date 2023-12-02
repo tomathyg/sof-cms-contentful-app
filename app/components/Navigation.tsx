@@ -1,7 +1,7 @@
 'use client'
  
 import { useRouter } from 'next/navigation'
-import MobileHeader from '../components/header';
+//import MobileHeader from '../components/header';
 interface Item {
     id: string;
     slug: string;

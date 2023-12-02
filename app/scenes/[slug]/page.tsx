@@ -1,6 +1,9 @@
+'use server'
+
 //import Link from 'next/link'
 import { draftMode } from 'next/headers'
-import { getScene } from '../../../lib/api-2'
+import { getScene, getAllScenes } from '../../../lib/api-2'
+import Image from 'next/image'
 
 //import WalletConnect from '../../components/WalletConnectButton'
 
@@ -31,6 +34,8 @@ import ClientImage from '../../components/ClientImage'
 import SwiperReactGallery from '../../components/SwiperReactGallery';
 //import YetGallery from '../../components/YetGallery';
 
+import contentfulLoader from '../../imageLoaders/contentfulLoader'
+
 //import BackgroundImageStyle from '../../components/BackgroundImageStyle';
 
 /*export async function generateStaticParams() {
@@ -52,14 +57,13 @@ import SwiperReactGallery from '../../components/SwiperReactGallery';
   );
 }*/
 
-/*export async function generateStaticParams() {
+export async function generateStaticParams() {
   const allScenes = await getAllScenes(false)
 
   return allScenes.map((scene) => ({
     slug: scene.slug,
   }))
-}*/
-
+}
 
 export default async function ScenePage({
   params,
@@ -76,7 +80,15 @@ export default async function ScenePage({
   return (
     <>
     <div className="background-image-container">
-      {/*<img src="https://images.ctfassets.net/57idppycthif/4INV6AGCzs4529xwzORd96/593296fb9609c2e9b416fcde36b29971/Acutek___Flick_records.jpg?w=1080&q=75" alt="" />*/}
+      <Image
+        //loader={contentfulLoader}
+        unoptimized={true}
+        src={scene.image.url + '?w=1080&q=50'}
+        alt={scene.image.title}
+        fill={true}
+        quality={50}
+        className='scene-image mb-2'
+      />
     </div>
     <div className="scene-article-container mx-auto h-full">
       <article className="scene-article">

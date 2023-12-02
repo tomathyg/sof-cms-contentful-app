@@ -50,6 +50,7 @@ import HeaderLogo from './components/HeaderLogo'
 
 //import NavList from './components/NavList'
 import Navigation from './components/Navigation'
+import MobileNav from './components/MobileNav';
 
 // Metadata
 import type { Metadata } from 'next'
@@ -118,11 +119,15 @@ async function Header() {
         <div className={`${dm_mono.className} w-full py-4 flex items-center justify-between`}>
           {/*<div className='nav-group flex items-center w-full'></div>*/}
           <HeaderLogo />
-          <Navigation
-            items={allScenes}
-            base='scenes'
-          />
-          
+          <div className='desktop-nav-container hidden sm:block'>
+            <Navigation
+              items={allScenes}
+              base='scenes'
+            />
+          </div>
+          <div className='mobile-nav-container sm:hidden'>
+            <MobileNav />
+          </div>
           {/*<WalletConnectButton />*/}
           <ConnectButton />
         </div>
