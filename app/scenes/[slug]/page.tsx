@@ -34,7 +34,7 @@ import ClientImage from '../../components/ClientImage'
 import SwiperReactGallery from '../../components/SwiperReactGallery';
 //import YetGallery from '../../components/YetGallery';
 
-import contentfulLoader from '../../imageLoaders/contentfulLoader'
+//import contentfulLoader from '../../imageLoaders/contentfulLoader'
 
 //import BackgroundImageStyle from '../../components/BackgroundImageStyle';
 
