@@ -60,9 +60,9 @@ export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
   description: `Scenes: Where music meets memory – An interactive album by Sound of Fractures. Join to participate.`,
   robots: {
-    //index: false,
-    //follow: false,
-    //noarchive: true,
+    index: false,
+    follow: false,
+    noarchive: true,
   },
   icons: {
     shortcut: { url: '/site-icons/favicon.ico?v=5', sizes: 'any', type: 'image/x-icon' },
