@@ -73,7 +73,7 @@ const Page: React.FC<PageProps> = ({ formRef, audioUrl, audioTitle }) => {
                     title={`SCENE 2: ${audioTitle}`}
                 />
             </section>
-            <div className='typeform-widget-container w-full aspect-portrait-tall sm:aspect-square max-w-screen-lg min-h-max'>
+            <div className='typeform-widget-container w-full aspect-square max-w-screen-lg min-h-max'>
                 {widget}
             </div>
             {/*<h2 className="text-2xl xsm:text-5xl sm:text-6xl md:text-6xl mt-8">{stepData.subheading}</h2>*/}
