@@ -13,8 +13,6 @@ import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
-//import StickyCursor from './components/stickyCursor';
-
 //import WalletConnectButton from './components/WalletConnectButton'
 
 //import dynamic from 'next/dynamic';
@@ -111,7 +109,6 @@ async function Header() {
   const allScenes = await getAllScenes(false);
   //console.log("ALL SCENES:", allScenes);
   //console.log("ALL SCENES TYPE:", typeof(allScenes));
-  
 
   return (
     <header className="">
@@ -160,6 +157,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   //const [clientSideState, setClientSideState] = useState();
   return (
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>

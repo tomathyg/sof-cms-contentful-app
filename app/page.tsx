@@ -9,7 +9,7 @@ import ScenesLogo from './components/ScenesLogo'
 import ScenesLogo2 from './components/ScenesLogo2'
 
 import RapidLayers from './components/RapidLayers'
-import FloatingGallery from './components/floatingGallery/FloatingGallery'
+//import FloatingGallery from './components/floatingGallery/FloatingGallery'
 
 function Intro(heading:string) {
   return (

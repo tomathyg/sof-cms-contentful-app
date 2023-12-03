@@ -22,12 +22,12 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
  
   return (
     <>
-    <ul className="desktop-menu px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
+    <ul className="cursor-pointer desktop-menu px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
         {/*<li>
             <button type="button" onClick={() => router.push('/scenes')}>ALL SCENES</button>
         </li>*/}
-        <li>
-            <button type="button" onClick={() => router.push('/about')}>ABOUT</button>
+        <li className="cursor-pointer">
+            <button style={{ cursor: 'pointer' }} type="button" onClick={() => router.push('/about')}><span className="cursor-pointer">ABOUT</span></button>
         </li>
         <li>
             <button type="button" onClick={() => router.push('/scenes/scene-1')}>SCENE 1</button>
