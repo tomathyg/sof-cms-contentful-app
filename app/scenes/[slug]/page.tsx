@@ -1,5 +1,3 @@
-'use server'
-
 //import Link from 'next/link'
 import { draftMode } from 'next/headers'
 import { getScene, getAllScenes } from '../../../lib/api-2'
@@ -74,9 +72,9 @@ export default async function ScenePage({
   //console.log("SLUG:", params.slug);
   //console.log("GET SCENE:", getScene);
   const scene = await getScene(params.slug, isEnabled);
-  //console.log("SCENE:", scene);
+  console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
-  //console.log("SCENE SUBMISSIONS:", submissions);
+  console.log("SCENE SUBMISSIONS:", submissions);
   return (
     <>
     <div className="background-image-container">
@@ -158,7 +156,7 @@ export default async function ScenePage({
             contractABI={scene.nftAbi}
           />
           <ManifoldWidget
-            id='142'
+            id='59406576'
           />
         </section>
 

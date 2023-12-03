@@ -22,7 +22,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
  
   return (
     <>
-    <ul className="cursor-pointer desktop-menu px-4 w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
+    <ul className="cursor-pointer desktop-menu max-w-[450px] w-full flex flex-wrap gap-x-5 justify-between uppercase text-base font-sans">
         {/*<li>
             <button type="button" onClick={() => router.push('/scenes')}>ALL SCENES</button>
         </li>*/}
