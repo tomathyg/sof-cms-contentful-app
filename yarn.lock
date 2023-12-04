@@ -1263,7 +1263,7 @@
   dependencies:
     "@ethersproject/bignumber" "^5.7.0"
 
-"@ethersproject/contracts@5.7.0", "@ethersproject/contracts@^5.7.0":
+"@ethersproject/contracts@5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@ethersproject/contracts/-/contracts-5.7.0.tgz#c305e775abd07e48aa590e1a877ed5c316f8bd1e"
   integrity sha512-5GJbzEU3X+d33CdfPhcyS+z8MzsTrBGk/sc+G+59+tPa9yFkl6HQ9D6L0QMgNTA9q8dT0XKxxkyp883XsQvbbg==
@@ -1366,7 +1366,7 @@
   dependencies:
     "@ethersproject/logger" "^5.7.0"
 
-"@ethersproject/providers@5.7.2", "@ethersproject/providers@^5.7.2":
+"@ethersproject/providers@5.7.2":
   version "5.7.2"
   resolved "https://registry.yarnpkg.com/@ethersproject/providers/-/providers-5.7.2.tgz#f8b1a4f275d7ce58cf0a2eec222269a08beb18cb"
   integrity sha512-g34EWZ1WWAVgr4aptGlVBF8mhl3VWjv+8hoAnzStu8Ah22VHBsuGzP17eb6xDVRzw895G4W7vvx60lFFur/1Rg==
@@ -1615,19 +1615,6 @@
   integrity sha512-SVOwLAWUQg3Ji1egtOt1UiFe4zdDpnWHyc5qctSceJ5XIu0Uc76YmGpIjZgx9YJ0XtdW0Jm507sDvjOu+HnB8w==
   dependencies:
     "@lit-labs/ssr-dom-shim" "^1.1.2"
-
-"@manifoldxyz/frontend-provider-types@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@manifoldxyz/frontend-provider-types/-/frontend-provider-types-1.0.0.tgz#2fd8e991a843b66331ef928150dce6a6f4594019"
-  integrity sha512-/xxjFgURsGNXmIhYbmFKWIlg3ZqhMazQ0KI0hf2p1BetTFCqBMd7Vaeos4ap9vL7BslkV3ZxP6B7TCSMRz/pbw==
-  dependencies:
-    "@ethersproject/contracts" "^5.7.0"
-    "@ethersproject/providers" "^5.7.2"
-
-"@manifoldxyz/frontend-provider-utils@^1.0.1":
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/@manifoldxyz/frontend-provider-utils/-/frontend-provider-utils-1.0.1.tgz#447cdc58fe192c9f84c49ace9705f8e206bb8792"
-  integrity sha512-jemcihiEPFp3Bj0phA8g9FRlBacsTYOiVvEKEQTBRgCqUnWYOJIWHJQTQDtYfII52x9YTEOUhMYQ5xJZGHIf3Q==
 
 "@metamask/safe-event-emitter@2.0.0", "@metamask/safe-event-emitter@^2.0.0":
   version "2.0.0"
