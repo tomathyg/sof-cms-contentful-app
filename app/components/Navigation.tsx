@@ -1,7 +1,9 @@
 'use client'
- 
-import { useRouter } from 'next/navigation'
+
+import { useEffect } from 'react';
+import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 //import MobileHeader from '../components/header';
+import GTM from '../components/GTMContainer';
 interface Item {
     id: string;
     slug: string;
@@ -15,10 +17,28 @@ interface NavigationProps {
  
 const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
   const router = useRouter()
-  //const pathname = usePathname()
-  //const searchParams = useSearchParams()
+  const pathname = usePathname()
+  const searchParams = useSearchParams()
 
   //router.prefetch('/scenes/scene-1');
+
+  /*useEffect(() => {
+    const handleRouteChange = (pathname) => {
+        GTM.dataLayer({
+        dataLayer: {
+          event: 'pageview',
+          page: pathname,
+        },
+      });
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    // Cleanup on unmount
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [pathname, searchParams]);*/
  
   return (
     <>

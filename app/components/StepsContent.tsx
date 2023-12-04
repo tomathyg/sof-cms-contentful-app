@@ -37,7 +37,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
     //const content = await getHomePageData(false);
     //console.log("HOME PAGE CONTENT:", content);
 
-    console.log("REVEAL CONTENT 2:", content);
+    //console.log("REVEAL CONTENT 2:", content);
 
     return (
         <>

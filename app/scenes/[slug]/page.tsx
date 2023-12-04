@@ -60,10 +60,24 @@ import SwiperReactGallery from '../../components/SwiperReactGallery';
 export async function generateStaticParams() {
   const allScenes = await getAllScenes(false)
 
-  return allScenes.map((scene) => ({
+  const sceneParams = allScenes.map((scene) => ({
+    slug: scene.slug,
+    //images: scene.submissionsCollection.items
+  }));
+
+  //console.log("SCENE PARAMS:", sceneParams);
+
+  return sceneParams;
+}
+
+
+/*export async function generateStaticParams() {
+  const scene = await getScene(false)
+
+  return scene.map((scene) => ({
     slug: scene.slug,
   }))
-}
+}*/
 
 export default async function ScenePage({
   params,
@@ -74,9 +88,9 @@ export default async function ScenePage({
   //console.log("SLUG:", params.slug);
   //console.log("GET SCENE:", getScene);
   const scene = await getScene(params.slug, isEnabled);
-  console.log("SCENE:", scene);
+  //console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
-  console.log("SCENE SUBMISSIONS:", submissions);
+  //console.log("SCENE SUBMISSIONS:", submissions);
   return (
     <>
     <div className="background-image-container">

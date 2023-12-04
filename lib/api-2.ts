@@ -55,8 +55,8 @@ const SCENE_GRAPHQL_FIELDS = `
 `
 
 function extractScene(fetchResponse: any): any {
-  console.log("SCENE RESPONSE:", fetchResponse);
-  console.log("SCENE EXTRACT:", fetchResponse?.data?.sceneCollection?.items?.[0]);
+  //console.log("SCENE RESPONSE:", fetchResponse);
+  //console.log("SCENE EXTRACT:", fetchResponse?.data?.sceneCollection?.items?.[0]);
   return fetchResponse?.data?.sceneCollection?.items?.[0]
 }
 
@@ -82,9 +82,9 @@ export async function getScene(
 
 
 function extractSceneEntries(fetchResponse: any): any[] {
-  console.log("SCENE ENTRIES RESPONSE:", fetchResponse);
+  //console.log("SCENE ENTRIES RESPONSE:", fetchResponse);
   const items = fetchResponse?.data?.sceneCollection?.items;
-  console.log("SCENE ITEMS", items);
+  //console.log("SCENE ITEMS", items);
   if (!items) { return []; }
   return items.filter((item: any) => item !== null);
 }
