@@ -90,7 +90,7 @@ export default async function ScenePage({
   const scene = await getScene(params.slug, isEnabled);
   //console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
-  console.log("SCENE SUBMISSIONS:", submissions);
+  //console.log("SCENE SUBMISSIONS:", submissions);
   return (
     <>
     <div className="background-image-container">

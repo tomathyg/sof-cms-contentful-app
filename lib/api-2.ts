@@ -76,7 +76,7 @@ export async function getScene(
     }`,
     preview
   )
-  console.log("SCENE ENTRY:", entry);
+  //console.log("SCENE ENTRY:", entry);
   return extractScene(entry)
 }
 

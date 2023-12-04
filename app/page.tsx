@@ -25,8 +25,8 @@ function Intro(heading:string) {
 
 export default async function Page() {
 
-  const rewrites = require('../lib/generateSceneImageRewrites.js');
-  console.log("REWRITES", rewrites());
+  //const rewrites = require('../lib/generateSceneImageRewrites.js');
+  //console.log("REWRITES", rewrites());
 
   const content = await getHomePageData(false);
   //console.log("HOME PAGE CONTENT:", content);
