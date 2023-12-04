@@ -170,8 +170,9 @@ export default function RootLayout({
       {/*<script src="https://connect.manifoldxyz.dev/latest/connect.umd.js" async></script>
       <link rel="stylesheet" href="https://connect.manifoldxyz.dev/latest/connect.css"></link>*/}
       
-      <Web3ModalProvider>
+      
         <body className={`font-mono bg-black text-off-white`}>
+        <Web3ModalProvider>
         <div className='noise-overlay'></div>
         <section className="">
           <Header />
@@ -179,12 +180,13 @@ export default function RootLayout({
           <main className='main-content min-h-full-screen'>{children}</main>
           <Footer />
         </section>
+        </Web3ModalProvider>
         <Analytics />
         <Suspense>
           <GTM />
         </Suspense>
         </body>
-      </Web3ModalProvider>
+      
       
       {/*<Script
           src="https://marketplace.manifoldxyz.dev/3.5.10/marketplace.umd.min.js"
