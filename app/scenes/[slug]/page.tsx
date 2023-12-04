@@ -19,7 +19,7 @@ import CrossmintPayButtonManifold from '../../components/CrossmintPayButtonManif
 //import NFTData from '../../components/NFTData'
 //import ManifoldWidget from '@/app/components/ManifoldWidget';
 
-import ManifoldProvider from '../../components/ManifoldProvider'
+//import ManifoldProvider from '../../components/ManifoldProvider'
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
