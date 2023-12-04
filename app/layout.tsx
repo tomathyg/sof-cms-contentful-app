@@ -181,9 +181,9 @@ export default function RootLayout({
           <Footer />
         </section>
         <Analytics />
-        <Suspense>
+        {/*<Suspense>
           <GTM />
-        </Suspense>
+    </Suspense>*/}
         </Web3ModalProvider>
         
         </body>
