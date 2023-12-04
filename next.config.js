@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
-//const generateSceneImageRewrites = require('./lib/generateSceneImageRewrites');
+const generateSceneImageRewrites = require('./lib/generateSceneImageRewrites');
 const nextConfig = {
   images: {
     // If you need a custom loader, you can uncomment the following line
@@ -54,10 +54,10 @@ const nextConfig = {
     });
     return config;
   },
-  /*async rewrites() {
+  async rewrites() {
     const sceneImageRewrites = await generateSceneImageRewrites();
     return sceneImageRewrites;
-  },*/
+  },
 };
 
 module.exports = nextConfig;
