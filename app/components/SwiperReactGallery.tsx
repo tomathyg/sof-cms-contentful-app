@@ -123,7 +123,8 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
 
                     //const imageSrc = item.submissionImage.url;
                     const imageSlug = item.id.split('-')[1];
-                    const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug;
+                    //const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug;
+                    const imageSrc = item.submissionImage.url;
 
                     return (
                         <SwiperSlide key={index}>
@@ -132,7 +133,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
                                 unoptimized={false}
                                 loading="lazy"
                                 src={imageSrc}
-                                alt={`Scene image ${index+1}`} 
+                                alt={`Scene image ${item.id}`} 
                                 width={300}
                                 height={300}
                                 onClick={() => openLightbox(index)}
