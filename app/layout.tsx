@@ -4,8 +4,8 @@ import './globals.css'
 //import 'https://marketplace.manifoldxyz.dev/3.3.7/marketplace.css'
 
 //import { GoogleTagManager } from '@next/third-parties/google'
-//import GTM from './components/GTMContainer';
-//import { Suspense } from 'react'
+import GTM from './components/GTMContainer';
+import { Suspense } from 'react'
 
 import { Web3ModalProvider } from "../context/Web3Modal";
 import ConnectButton from './components/ConnectButton';
@@ -177,9 +177,9 @@ export default function RootLayout({
           <Footer />
         </section>
         <Analytics />
-        {/*<Suspense>
+        <Suspense>
           <GTM />
-        </Suspense>*/}
+        </Suspense>
         
         </Web3ModalProvider>
         </body>
