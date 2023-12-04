@@ -7,11 +7,11 @@ const projectId = '529b370309f8399d924ad659a8cb60b6'
 
 // 2. Set chains
 const mainnet = {
-  chainId: 1,
-  name: 'Ethereum',
+  chainId: 10,
+  name: 'Optimism',
   currency: 'ETH',
-  explorerUrl: 'https://etherscan.io',
-  rpcUrl: 'https://cloudflare-eth.com'
+  explorerUrl: 'https://optimistic.etherscan.io',
+  rpcUrl: 'https://mainnet.optimism.io'
 }
 
 // 3. Create modal
