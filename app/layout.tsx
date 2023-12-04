@@ -122,7 +122,7 @@ async function Header() {
         <div className={`${dm_mono.className} w-full py-4 flex items-center justify-between`}>
           {/*<div className='nav-group flex items-center w-full'></div>*/}
           <HeaderLogo />
-          <div className='desktop-nav-container px-[100px] lg:justify-center absolute w-full hidden sm:flex'>
+          <div className='desktop-nav-container justify-center w-full hidden sm:flex'>
             <Navigation
               items={allScenes}
               base='scenes'

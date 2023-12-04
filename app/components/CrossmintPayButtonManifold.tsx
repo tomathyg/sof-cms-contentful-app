@@ -30,11 +30,11 @@ interface CrossmintProps {
 }
   
 const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, collectionId, creatorContractAddress, contractAddress, instanceId, nftPrice, mintFee, environment }) => {
-    console.log(`${environment} PROJECT ID:`, projectId);
+    /*console.log(`${environment} PROJECT ID:`, projectId);
     console.log(`${environment} COLLECTION ID:`, collectionId);
     console.log(`${environment} CREATOR CONTRACT ADDRESS:`, creatorContractAddress);
     console.log(`${environment} CONTRACT ADDRESS:`, contractAddress);
-    console.log(`${environment} CONTRACT INSTANCE ID:`, instanceId);
+    console.log(`${environment} CONTRACT INSTANCE ID:`, instanceId);*/
     //console.log("ACCOUNT", account);
 
     //const [connectedWallet, setConnectedWallet] = useState('');
@@ -75,10 +75,10 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         if (mintAmount >= 2) return;
         setMintAmount(mintAmount + 1);
     }
-    console.log("MINT AMOUNT:", mintAmount);
+    //console.log("MINT AMOUNT:", mintAmount);
 
     let totalPrice = Number(nftPrice) * mintAmount + Number(mintFee) * mintAmount;
-    console.log("TOTAL PRICE:", totalPrice);
+    //console.log("TOTAL PRICE:", totalPrice);
 
     const mintConfig={
         "contractAddress": `${contractAddress}`,
@@ -90,7 +90,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "merkleProofs": [],
     }
 
-    console.log("MINT CONFIG:", mintConfig);
+    //console.log("MINT CONFIG:", mintConfig);
 
 
     /*if (!isConnected) {

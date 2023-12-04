@@ -18,12 +18,13 @@ interface SubmissionImage {
 }
 
 interface Submission {
-    name: string;
+    id: string;
     text: string;
     submissionImage: SubmissionImage;
 }
 
 interface SwiperGalleryProps {
+    slug: string;
     submissions: Submission[];
     slidesPerViewCount: number;
 }
@@ -41,7 +42,7 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 const imageHeight = '400px';
 const imageMargin = '20px 0';
 
-const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerViewCount }) => {
+const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slidesPerViewCount }) => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loadedImages, setLoadedImages] = useState<string[]>([]);
@@ -58,10 +59,12 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
     //console.log("SUBMISSIONS:", submissions);
 
     //const lightboxSrcs = submissions.map(item => ({ src: item.submissionImage.url }));
+    
+    const imageBase = '/scenes/' + slug + '/gallery/';
 
     const lightboxSrcs = submissions
-        .filter(item => item.submissionImage && item.submissionImage.url && item.name && item.text)
-        .map(item => ({ src: item.submissionImage.url + '?w=1080&q=75' }));
+        .filter(item => item.submissionImage && item.submissionImage.url && item.id)
+        .map((item, index) => ({ src: imageBase + (item.id.split('-')[1]) + '?w=1080&q=75' }));
 
     //console.log("SRCS:", lightboxSrcs);
 
@@ -113,18 +116,23 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ submissions, slidesPerVie
                 }}
             >
             {submissions.map((item, index) => {
-                if (item.submissionImage && item.submissionImage.url && item.name && item.text) {
+                if (item.submissionImage && item.submissionImage.url && item.text && item.id) {
                     //console.log(item);
                     //console.log(index);
                     //console.log("URL:", item.submissionImage.url);
+
+                    //const imageSrc = item.submissionImage.url;
+                    const imageSlug = item.id.split('-')[1];
+                    const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug;
+
                     return (
                         <SwiperSlide key={index}>
                             <Image 
                                 loader={imageLoader} 
                                 unoptimized={false}
                                 loading="lazy"
-                                src={item.submissionImage.url} 
-                                alt={item.name} 
+                                src={imageSrc}
+                                alt={`Scene image ${index+1}`} 
                                 width={300}
                                 height={300}
                                 onClick={() => openLightbox(index)}

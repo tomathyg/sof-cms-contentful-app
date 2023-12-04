@@ -238,12 +238,13 @@ a {
 #scenes-home-link {
     height: 45px;
     width: 45px;
+    z-index: 10;
 }
 
 
-.vertical-line {
+/*.vertical-line {
 
-}
+}*/
 
 .vertical-line::after {
     content: '';

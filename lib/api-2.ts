@@ -45,7 +45,7 @@ const SCENE_GRAPHQL_FIELDS = `
     }
     submissionsCollection(limit: 50) {
         items {
-            name
+            id
             text
             submissionImage {
                 url

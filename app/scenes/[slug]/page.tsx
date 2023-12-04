@@ -90,7 +90,7 @@ export default async function ScenePage({
   const scene = await getScene(params.slug, isEnabled);
   //console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
-  //console.log("SCENE SUBMISSIONS:", submissions);
+  console.log("SCENE SUBMISSIONS:", submissions);
   return (
     <>
     <div className="background-image-container">
@@ -117,7 +117,7 @@ export default async function ScenePage({
             <div className='scene-image-container flex flex-col items-center'>
               <ClientImage
                 src={scene.image.url}
-                name={scene.image.title}
+                name='Scene image'
                 className='scene-image mb-2'
               />
               <div className="audio-player-wrapper section-wrapper w-full text-sm">
@@ -233,6 +233,7 @@ export default async function ScenePage({
         {submissions && (
           <section className="scene-gallery-section">
             <SwiperReactGallery
+              slug={params.slug}
               submissions={submissions}
               slidesPerViewCount={1}
             />
