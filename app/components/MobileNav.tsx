@@ -6,7 +6,7 @@ import { gsap } from 'gsap';
 
 import { useRouter } from 'next/navigation'
 
-import { BurgerSquare } from '../svgs/icons.js'
+//import { BurgerSquare } from '../svgs/icons.js'
 
 const MobileNav = () => {
   const [isOpen, setIsOpen] = useState(false);

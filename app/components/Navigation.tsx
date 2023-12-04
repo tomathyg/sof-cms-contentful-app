@@ -1,9 +1,9 @@
 'use client'
 
-import { useEffect } from 'react';
+//import { useEffect } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 //import MobileHeader from '../components/header';
-import GTM from '../components/GTMContainer';
+//import GTM from '../components/GTMContainer';
 interface Item {
     id: string;
     slug: string;
