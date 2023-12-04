@@ -180,11 +180,12 @@ export default function RootLayout({
           <main className='main-content min-h-full-screen'>{children}</main>
           <Footer />
         </section>
-        </Web3ModalProvider>
         <Analytics />
         <Suspense>
           <GTM />
         </Suspense>
+        </Web3ModalProvider>
+        
         </body>
       
       
