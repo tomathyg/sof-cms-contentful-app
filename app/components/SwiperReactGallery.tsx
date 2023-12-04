@@ -124,14 +124,14 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
 
                     //const imageSrc = item.submissionImage.url;
                     const imageSlug = item.id.split('-')[1];
-                    const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug;
-                    //const imageSrc = item.submissionImage.url;
+                    //const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug;
+                    const imageSrc = item.submissionImage.url;
 
                     return (
                         <SwiperSlide key={index}>
                             <Image 
-                                //loader={imageLoader} 
-                                unoptimized={true}
+                                loader={imageLoader} 
+                                unoptimized={false}
                                 loading="lazy"
                                 src={imageSrc}
                                 alt={`Scene image ${item.id}`} 
