@@ -3,6 +3,10 @@ import './globals.css'
 
 //import 'https://marketplace.manifoldxyz.dev/3.3.7/marketplace.css'
 
+//import { GoogleTagManager } from '@next/third-parties/google'
+import GTM from './components/GTMContainer';
+import { Suspense } from 'react'
+
 import { Web3ModalProvider } from "../context/Web3Modal";
 import ConnectButton from './components/ConnectButton';
 
@@ -12,6 +16,8 @@ import { Analytics } from '@vercel/analytics/react';
 
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
+
+import Script from 'next/script'
 
 //import WalletConnectButton from './components/WalletConnectButton'
 
@@ -163,8 +169,9 @@ export default function RootLayout({
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
       {/*<script src="https://connect.manifoldxyz.dev/latest/connect.umd.js" async></script>
       <link rel="stylesheet" href="https://connect.manifoldxyz.dev/latest/connect.css"></link>*/}
-      <body className={`font-mono bg-black text-off-white`}>
+      
       <Web3ModalProvider>
+        <body className={`font-mono bg-black text-off-white`}>
         <div className='noise-overlay'></div>
         <section className="">
           <Header />
@@ -173,8 +180,15 @@ export default function RootLayout({
           <Footer />
         </section>
         <Analytics />
+        <Suspense>
+          <GTM />
+        </Suspense>
+        </body>
       </Web3ModalProvider>
-      </body>
+      
+      {/*<Script
+          src="https://marketplace.manifoldxyz.dev/3.5.10/marketplace.umd.min.js"
+      />*/}
     </html>
   )
 }

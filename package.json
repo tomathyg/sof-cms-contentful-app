@@ -11,6 +11,8 @@
     "@contentful/rich-text-react-renderer": "^15.17.1",
     "@contentful/rich-text-types": "^16.2.1",
     "@crossmint/client-sdk-react-ui": "^1.1.2-alpha.0",
+    "@manifoldxyz/frontend-provider-types": "^1.0.0",
+    "@manifoldxyz/frontend-provider-utils": "^1.0.1",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/typography": "0.5.9",
     "@typeform/embed-react": "^3.8.0",

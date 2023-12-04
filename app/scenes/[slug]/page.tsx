@@ -16,8 +16,10 @@ import CrossmintPayButtonManifold from '../../components/CrossmintPayButtonManif
 //import CrossmintPayButtonProduction from '../../components/CrossMintPayButtonProduction'
 //import CrossmintPayButtonManifoldTest from '../../components/CrossmintPayButtonManifoldTest'
 
-import NFTData from '../../components/NFTData'
-import ManifoldWidget from '@/app/components/ManifoldWidget';
+//import NFTData from '../../components/NFTData'
+//import ManifoldWidget from '@/app/components/ManifoldWidget';
+
+import ManifoldProvider from '../../components/ManifoldProvider'
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
@@ -151,13 +153,16 @@ export default async function ScenePage({
         )}
 
         <section>
-          <NFTData
+          {/*<NFTData
             contractAddress={scene.nftContractAddress}
             contractABI={scene.nftAbi}
-          />
-          <ManifoldWidget
+            />*/}
+          {/*<ManifoldWidget
             id='59406576'
-          />
+            />*/}
+            {/*<ManifoldProvider
+              id=''
+            />*/}
         </section>
 
         {/*<section className="page-subheading-container">
