@@ -113,7 +113,7 @@ export default async function ScenePage({
     <div className="scene-article-container mx-auto h-full">
       <article className="scene-article">
         
-        {scene.image && scene.image.url && scene.image.title && (
+        {artworkSubmission && artworkSubmission.id && (
           <section className="scene-header mb-28 flex flex-col items-center relative">
             <div className="w-full">
               <h1 className="scene-title uppercase font-semibold leading-none text-center">

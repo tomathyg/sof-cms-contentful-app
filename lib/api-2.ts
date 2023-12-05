@@ -27,10 +27,6 @@ const SCENE_GRAPHQL_FIELDS = `
     title
     slug
     colour
-    image {
-      title
-      url
-    }
     nftContractAddress
     nftAbi
     nftPrice
