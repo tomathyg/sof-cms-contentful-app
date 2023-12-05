@@ -50,7 +50,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
             <button style={{ cursor: 'pointer' }} type="button" onClick={() => router.push('/about')}><span className="cursor-pointer">ABOUT</span></button>
         </li>
         <li>
-            <button type="button" onClick={() => router.push('/scenes/scene-1')}>SCENE 1</button>
+            <button type="button" onClick={() => router.push('/scenes/scene-1')}>SCENE 1 GALLERY</button>
         </li>
         {/*<li>
             <button type="button" onClick={() => router.push('/submit')}>SUBMIT</button>
