@@ -124,7 +124,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
 
                     //const imageSrc = item.submissionImage.url;
                     const imageSlug = item.id.split('-')[1];
-                    const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug;// + '/'
+                    const imageSrc = imageBase + imageSlug;// + '/'
                     //const imageSrc = item.submissionImage.url;
 
                     return (
