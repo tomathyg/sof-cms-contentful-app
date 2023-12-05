@@ -95,7 +95,7 @@ export default async function ScenePage({
   const artworkSubmission = scene.artworkSubmission;
   const imageBase = '/scenes/' + params.slug + '/gallery/';
   const imageSlug = artworkSubmission.id.split('-')[1];
-  const imageSrc = imageBase + imageSlug;
+  const imageSrc = imageBase + imageSlug + '.jpg';
 
   return (
     <>
