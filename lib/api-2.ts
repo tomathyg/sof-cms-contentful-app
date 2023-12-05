@@ -43,6 +43,18 @@ const SCENE_GRAPHQL_FIELDS = `
       title
       url
     }
+    artworkSubmission {
+      id
+      text
+      submissionImage {
+          contentType
+          fileName
+          size
+          url
+          width
+          height
+      }
+    }
     submissionsCollection(limit: 50) {
         items {
             id

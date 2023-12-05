@@ -91,14 +91,20 @@ export default async function ScenePage({
   //console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
   //console.log("SCENE SUBMISSIONS:", submissions);
+  //const imageSlug = submission.id.split('-')[1];
+  const artworkSubmission = scene.artworkSubmission;
+  const imageBase = '/scenes/' + params.slug + '/gallery/';
+  const imageSlug = artworkSubmission.id.split('-')[1];
+  const imageSrc = imageBase + imageSlug;
+
   return (
     <>
     <div className="background-image-container">
       <Image
         //loader={contentfulLoader}
         unoptimized={true}
-        src={scene.image.url + '?w=1080&q=50'}
-        alt={scene.image.title}
+        src={imageSrc + '?w=1080&q=50'}
+        alt={`Scene image ${artworkSubmission.id}`} 
         fill={true}
         quality={50}
         className='scene-image mb-2'
@@ -116,7 +122,7 @@ export default async function ScenePage({
             </div>
             <div className='scene-image-container flex flex-col items-center'>
               <ClientImage
-                src={scene.image.url}
+                src={imageSrc}
                 name='Scene image'
                 className='scene-image mb-2'
               />
