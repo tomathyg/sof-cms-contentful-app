@@ -64,7 +64,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
 
     const lightboxSrcs = submissions
         .filter(item => item.submissionImage && item.submissionImage.url && item.id)
-        .map((item, index) => ({ src: imageBase + (item.id.split('-')[1]) + '/?w=1080&q=75' }));
+        .map((item, index) => ({ src: imageBase + (item.id.split('-')[1]) + '?w=1080&q=75' }));
         //.map((item, index) => ({ src: item.submissionImage.url + '?w=1080&q=75' }));
 
     //console.log("SRCS:", lightboxSrcs);
@@ -124,7 +124,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
 
                     //const imageSrc = item.submissionImage.url;
                     const imageSlug = item.id.split('-')[1];
-                    const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug; + '/'
+                    const imageSrc = '/scenes/' + slug + '/gallery/' + imageSlug;// + '/'
                     //const imageSrc = item.submissionImage.url;
 
                     return (
