@@ -68,9 +68,9 @@ export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
   description: `Scenes: Where music meets memory – An interactive album by Sound of Fractures. Join to participate.`,
   robots: {
-    index: false,
-    follow: false,
-    noarchive: true,
+    index: true,
+    follow: true,
+    noarchive: false,
   },
   icons: {
     shortcut: { url: '/site-icons/favicon.ico?v=5', sizes: 'any', type: 'image/x-icon' },
@@ -103,7 +103,7 @@ export const metadata: Metadata = {
     //siteName: 'Scenes - Where music meets memory',
     images: [
       {
-        url: 'https://scenes.soundoffractures.com/social-images/opengraph-image.jpg?v=2',
+        url: 'https://scenes.soundoffractures.com/social-images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Scenes by Sound of Fractures',
@@ -121,7 +121,7 @@ export const metadata: Metadata = {
     creator: '@sofractures',
     //creatorId: '3060397666',
     images: {
-      url: 'https://scenes.soundoffractures.com/social-images/twitter-image.jpg?v=2',
+      url: 'https://scenes.soundoffractures.com/social-images/twitter-image.jpg',
       alt: 'Scenes by Sound of Fractures',
     },
   },
