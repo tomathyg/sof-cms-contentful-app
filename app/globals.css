@@ -418,7 +418,7 @@ main.main-content {
     /*min-height: calc(100vh - 170px);*/
     /*min-height: 1000px;*/
     margin: 0 auto;
-    margin-top: 100px;
+    margin-top: 77px;
     /*overflow: hidden;*/
 }
 
@@ -432,9 +432,9 @@ button, button * {
 }
 
 @media screen and (max-width: 410px) {
-    main.main-content {
+    /*main.main-content {
         margin-top: 120px;
-    }
+    }*/
 }
 
 /* REVEALER */
