@@ -97,14 +97,14 @@ export const metadata: Metadata = {
     description: 'An interactive album by Sound of Fractures',
     url: 'https://scenes.soundoffractures.com/',
     //siteName: 'Scenes - Where music meets memory',
-    images: [
+    /*images: [
       {
         url: '/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Scenes by Sound of Fractures',
       },
-    ],
+    ],*/
     locale: 'en_GB',
     type: 'website',
   },
@@ -116,10 +116,10 @@ export const metadata: Metadata = {
     //siteId: '3060397666',
     creator: '@sofractures',
     //creatorId: '3060397666',
-    images: {
+    /*images: {
       url: '/twitter-image.jpg',
       alt: 'Scenes by Sound of Fractures',
-    },
+    },*/
   },
 }
 
