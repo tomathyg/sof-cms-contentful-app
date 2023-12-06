@@ -60,6 +60,10 @@ import MobileNav from './components/MobileNav';
 import type { Metadata } from 'next'
 import React from 'react';
 
+/*let openGraphImageUrl: URL;
+openGraphImageUrl = new URL(process.env.NEXT_PUBLIC_OPENGRAPH_IMAGE_URL || 'defaultURL');
+console.log(openGraphImageUrl);*/
+
 export const metadata: Metadata = {
   title: `Scenes - Sound of Fractures`,
   description: `Scenes: Where music meets memory – An interactive album by Sound of Fractures. Join to participate.`,
@@ -97,14 +101,14 @@ export const metadata: Metadata = {
     description: 'An interactive album by Sound of Fractures',
     url: 'https://scenes.soundoffractures.com/',
     //siteName: 'Scenes - Where music meets memory',
-    /*images: [
+    images: [
       {
-        url: '/opengraph-image.jpg',
+        url: 'https://scenes.soundoffractures.com/social-images/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Scenes by Sound of Fractures',
       },
-    ],*/
+    ],
     locale: 'en_GB',
     type: 'website',
   },
@@ -116,10 +120,10 @@ export const metadata: Metadata = {
     //siteId: '3060397666',
     creator: '@sofractures',
     //creatorId: '3060397666',
-    /*images: {
-      url: '/twitter-image.jpg',
+    images: {
+      url: 'https://scenes.soundoffractures.com/social-images/twitter-image.jpg',
       alt: 'Scenes by Sound of Fractures',
-    },*/
+    },
   },
 }
 
