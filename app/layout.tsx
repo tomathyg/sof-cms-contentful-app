@@ -99,7 +99,7 @@ export const metadata: Metadata = {
     //siteName: 'Scenes - Where music meets memory',
     images: [
       {
-        url: '/social-images/opengraph-image.jpg',
+        url: '/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Scenes by Sound of Fractures',
@@ -117,7 +117,7 @@ export const metadata: Metadata = {
     creator: '@sofractures',
     //creatorId: '3060397666',
     images: {
-      url: '/social-images/twitter-image.jpg',
+      url: '/twitter-image.jpg',
       alt: 'Scenes by Sound of Fractures',
     },
   },
