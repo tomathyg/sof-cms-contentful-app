@@ -209,6 +209,15 @@ const HOME_PAGE_GRAPHQL_FIELDS = `
           height
       }
   }
+  step1Heading
+  step1Description
+  step1Guidelines
+  step2Heading
+  step2Description
+  step2Guidelines
+  step3Heading
+  step3Description
+  step3Guidelines
 `
 export async function getHomePageData(isDraftMode: boolean): Promise<any> {
   const data = await fetchGraphQL(
