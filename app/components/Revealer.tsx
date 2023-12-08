@@ -60,6 +60,15 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     introHeader.current = document.querySelector('.intro-header-section');
     //console.log(introHeader);
     //router.prefetch('/');
+
+    const documentHeight = () => {
+      const doc = document.documentElement
+      doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
+    }
+
+    window.addEventListener('resize', documentHeight);
+    documentHeight();
+
     
     timeline.current = gsap.timeline({
         paused: true,
