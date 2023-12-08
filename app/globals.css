@@ -479,6 +479,11 @@ button, button * {
 
 }*/
 
+.revealer-grid-inner {
+    min-height: 100vh;
+    /*min-height: fill-available;*/
+    min-height: -webkit-fill-available;
+}
 
 
 .revealer-grid-container .content {
