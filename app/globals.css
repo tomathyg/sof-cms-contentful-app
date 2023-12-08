@@ -438,19 +438,6 @@ button, button * {
 }
 
 /* REVEALER */
-.revealer-grid-container.intro {
-    position: fixed;
-    height: 100vh;
-    width: 100%;
-    top: 0;
-    background: black;
-    z-index: 11;
-}
-
-.revealer-grid-container.intro .revealer-grid-inner {
-    border: solid 1px var(--off-white);
-}
-
 .revealer-grid-container.intro .revealer-grid-inner .content {
     width: calc(100% - 2rem);
     height: calc(100% - 2rem);

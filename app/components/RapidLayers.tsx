@@ -62,7 +62,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
             />
         </div>
 		<div className="revealer-grid-container intro">
-            <div className='w-full h-full revealer-grid-inner relative'>
+            <div className='w-full h-full revealer-grid-inner bg-black fixed top-0 w-full z-[11] h-screen safe border border-off-white'>
                 <div className='intro-small-text intro-top-small-text absolute top-0 w-full px-8 h-8 leading-8 text-xs flex justify-between'>
                     <span className='intro-outer-text hidden sm:inline-block w-32'>SCENES</span>
                     <span className='text-center w-full hidden xsm:inline-block'>BY SOUND OF FRACTURES</span>
