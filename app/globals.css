@@ -4,6 +4,10 @@
 
 /* styles/globals.css */
 
+:root {
+    --doc-height: 100%;
+}
+
 .cursor-follower {
     position: fixed;
     top: 0;
@@ -480,7 +484,8 @@ button, button * {
 }*/
 
 .revealer-grid-inner {
-    min-height: 100vh;
+    /*min-height: 100vh;*/
+    min-height: var(--doc-height);
     /*min-height: fill-available;*/
     /*min-height: -webkit-fill-available;*/
 }
