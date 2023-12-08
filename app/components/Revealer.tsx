@@ -1,5 +1,7 @@
 'use client'
 
+//import { logPageView } from '@vercel/analytics';
+import { track } from "@vercel/analytics"
 //import { useRouter } from 'next/navigation'
 
 import React, { useEffect, useRef, forwardRef } from 'react';
@@ -16,6 +18,15 @@ function useImageLayer(el: Element) {
 interface RevealerMethods {
     reveal: () => void;
 }
+
+function trackCustomEvent(event: any) {
+  track(event);
+  /*track({
+    href: url, // Custom URL or identifier for the page view
+    // You can add additional data here if needed
+  });*/
+}
+
 
 const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
   // Use useRef to store the GSAP timeline and other DOM elements.
@@ -132,6 +143,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
         if (newMainRef.current) {
             newMainRef.current.classList.remove('hidden');
         }
+        trackCustomEvent('Process');
       }, [], 'halfway') // This ensures the call is placed at the 'halfway' label
       .to([layerRefs.current[layersTotal - 1].el, layerRefs.current[layersTotal - 1].image], {
         duration: options.duration,
