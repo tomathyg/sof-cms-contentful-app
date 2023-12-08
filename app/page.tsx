@@ -1,7 +1,7 @@
 import { draftMode } from 'next/headers'
 import React from 'react'
 
-import { getHomePageData, getProcessPageData } from '../lib/api-2'
+import { getHomePageData } from '../lib/api-2'
 
 //import ScenesLogo from './components/ScenesLogo'
 import ScenesLogo2 from './components/ScenesLogo2'

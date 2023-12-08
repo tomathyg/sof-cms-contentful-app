@@ -4,12 +4,9 @@ import '../styles.css'
 
 import React, { useState, useEffect, useRef } from 'react';
 
-//import Cursor from '../../unused/js/cursor';
-//import Revealer from '../js/revealer';
-//import { preloadImages } from '../../unused/js/utils';
-
-import Revealer from './Revealer';
 import StepsContent from './StepsContent';
+import Revealer from './Revealer';
+
 //import Image from 'next/image';
 //import ScenesLogo from '../components/ScenesLogo'
 import ScenesLogo2 from '../components/ScenesLogo2'
@@ -46,25 +43,8 @@ interface RapidLayersProps {
 }
 
 const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revealContent }) => {
-
     //console.log("FLOATING IMAGES:", floatingImages);
-    //console.log("REVEAL CONTENT 1:", revealContent);
-
-    //const revealer = new Revealer();
-
-    //const [isDataLoaded, setIsDataLoaded] = useState(false);
-
-
-    /*const revealerRef = useRef<RevealerMethods | null>(null);
-
-    const handleReveal = () => {
-        console.log("HANDLE REVEAL", revealerRef);
-        // Perform a runtime check to ensure that current is not undefined.
-        if (revealerRef.current) {
-          revealerRef.current.reveal();
-        }
-    };*/
-
+    //console.log("REVEAL CONTENT:", revealContent);
 
     // 640, 750, 828, 1080, 1200, 1920, 2048, 3840
     const imagesWidth = 640;
@@ -75,7 +55,6 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
 
   return (
     <>
-    {/*<Revealer ref={revealerRef} />*/}
     <section className="revealer-section">
         <div className='reveal-page-content'>
             <StepsContent
@@ -109,7 +88,6 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                             <span>AN <span className='font-serif'>INTERACTIVE</span> JOURNEY</span><br />
                             <span>THROUGH <span className='font-serif'>PERSONAL</span> MOMENTS</span>
                         </h2>
-                        {/*<button className='font-sans button-primary text-black' onClick={handleReveal}>CREATE</button>*/}
                         <Revealer />
                     </section>
                 </div>

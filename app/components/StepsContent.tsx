@@ -1,9 +1,4 @@
-//'use client'
-
 import Image from 'next/image';
-//import TypeForm from '../components/TypeForm'
-//import { getHomePageData } from '../../lib/api-2'
-//import H5Player from '../components/H5AudioPlayer'
 import RouterButton from './RouterButton';
 
 type ImageLoaderParams = {
@@ -33,11 +28,7 @@ const nextImageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 }
 
 const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
-
-    //const content = await getHomePageData(false);
-    //console.log("HOME PAGE CONTENT:", content);
-
-    //console.log("REVEAL CONTENT 2:", content);
+    //console.log("REVEAL CONTENT:", content);
 
     return (
         <>
@@ -103,16 +94,7 @@ const ProcessContent: React.FC<ProcessContentProps> = ({ content }) => {
                 </div>
             </div>
         </section>
-        {/*<section className="process-audio-player-section w-full text-sm">
-            <H5Player
-                src="https://assets.ctfassets.net/57idppycthif/7KTYzLD4REKUkW5wFHkN9r/b94181d9856d7848f571a11a5735097c/Willows_Heartbeat_44_1K.mp3"
-                title="Willow's Heartbeat"
-            />
-        </section>*/}
         <section className='flex justify-center font-sans text-black mt-4 mb-10'>
-            {/*<TypeForm
-                id='eAdn6pFg'
-            />*/}
             <RouterButton
                 url='/submit'
                 label='START'

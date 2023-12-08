@@ -12,7 +12,6 @@ const RouterButton: React.FC<RouterButtonProps> = ({ url, label, classes }) => {
   const router = useRouter()
   //const pathname = usePathname()
   //const searchParams = useSearchParams()
-
   //router.prefetch(url);
  
   return (
