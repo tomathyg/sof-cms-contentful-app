@@ -131,11 +131,8 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
       .call(() => {
         //router.push('/');
         //router.replace('/', { shallow: true });
-        /*if (gridInnerRef.current) {
+        if (gridInnerRef.current) {
             gridInnerRef.current.classList.add('hidden');
-        }*/
-        if (mainRef.current) {
-          mainRef.current.classList.add('hidden');
         }
         if (newMainRef.current) {
             newMainRef.current.classList.remove('hidden');
@@ -147,6 +144,11 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
         ease: 'Expo.easeInOut',
         y: (_, index) => index ? '101%' : '-101%'
       }, 'halfway')
+      .call(() => {
+        if (mainRef.current) {
+          mainRef.current.classList.add('hidden');
+        }
+      }, [], 'end')
       /*.fromTo(gridItemRefs.current, {
         y: () => randomFloat(100, 500)
       }, {

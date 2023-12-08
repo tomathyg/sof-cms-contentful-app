@@ -92,15 +92,14 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                     </section>
                 </div>
             </div>
-			
-		</div>
-        <div className="layers">
+			<div className="layers">
                 {layers.filter(item => item && item.url).map((item, index) => (
                     <div key={index} className="layers__item">
                         <div className="layers__item-img" style={{ backgroundImage: `url(${item.url}?w=${layersWidth}&q=${layersQuality})`}}></div>
                     </div>
                 ))}
 			</div>
+		</div>
 	</section>
     </>
   )
