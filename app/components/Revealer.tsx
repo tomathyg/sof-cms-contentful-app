@@ -61,13 +61,13 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     //console.log(introHeader);
     //router.prefetch('/');
 
-    const documentHeight = () => {
+    /*const documentHeight = () => {
       const doc = document.documentElement
       doc.style.setProperty('--doc-height', `${window.innerHeight}px`)
     }
 
     window.addEventListener('resize', documentHeight);
-    documentHeight();
+    documentHeight();*/
 
     
     timeline.current = gsap.timeline({
