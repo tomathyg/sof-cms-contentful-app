@@ -1,4 +1,4 @@
-'use client'
+//'use client'
 
 import '../styles.css'
 
@@ -52,9 +52,10 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
 
     //const revealer = new Revealer();
 
-    const [isDataLoaded, setIsDataLoaded] = useState(false);
+    //const [isDataLoaded, setIsDataLoaded] = useState(false);
 
-    const revealerRef = useRef<RevealerMethods | null>(null);
+
+    /*const revealerRef = useRef<RevealerMethods | null>(null);
 
     const handleReveal = () => {
         console.log("HANDLE REVEAL", revealerRef);
@@ -62,7 +63,8 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
         if (revealerRef.current) {
           revealerRef.current.reveal();
         }
-    };
+    };*/
+
 
     // 640, 750, 828, 1080, 1200, 1920, 2048, 3840
     const imagesWidth = 640;
@@ -73,9 +75,9 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
 
   return (
     <>
-    <Revealer ref={revealerRef} />
+    {/*<Revealer ref={revealerRef} />*/}
     <section className="revealer-section">
-        <div className='reveal-page-content hidden'>
+        <div className='reveal-page-content'>
             <StepsContent
                 content={revealContent}
             />
@@ -107,13 +109,9 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                             <span>AN <span className='font-serif'>INTERACTIVE</span> JOURNEY</span><br />
                             <span>THROUGH <span className='font-serif'>PERSONAL</span> MOMENTS</span>
                         </h2>
-                        <button className='font-sans button-primary text-black' onClick={handleReveal}>CREATE</button>
+                        {/*<button className='font-sans button-primary text-black' onClick={handleReveal}>CREATE</button>*/}
+                        <Revealer />
                     </section>
-                    {/*<nav className="menu">
-                        <a className="menu__item menu__item--current" onClick={handleReveal}>
-                            <h2 className="menu__item-title">CREATE</h2>
-                        </a>
-                    </nav>*/}
                 </div>
             </div>
 			<div className="layers">

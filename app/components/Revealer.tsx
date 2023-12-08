@@ -1,8 +1,8 @@
 'use client'
 
-import { useRouter } from 'next/navigation'
+//import { useRouter } from 'next/navigation'
 
-import React, { useEffect, useRef, useImperativeHandle, forwardRef } from 'react';
+import React, { useEffect, useRef, forwardRef } from 'react';
 import { gsap } from 'gsap';
 //import { randomFloat } from '../js/utils';
 
@@ -30,9 +30,15 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
 
   const introHeader = useRef<HTMLElement | null>(null);
 
-  const randomFloat = (min:number,max:number) => parseFloat(Math.min(min + (Math.random() * (max - min)), max).toFixed(2));
+  const handleReveal = () => {
+    //console.log("HANDLE REVEAL", revealerRef);
+    // Perform a runtime check to ensure that current is not undefined.
+    timeline.current?.restart();
+  };
 
-  const router = useRouter();
+  //const randomFloat = (min:number,max:number) => parseFloat(Math.min(min + (Math.random() * (max - min)), max).toFixed(2));
+
+  //const router = useRouter();
 
   // Use useEffect to replicate the constructor's functionality and side effects.
   useEffect(() => {
@@ -48,10 +54,11 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     introHeader.current = document.querySelector('.intro-header-section');
 
     //console.log(introHeader);
-
     
     //router.prefetch('/');
     
+    
+
     // Create the timeline.
     timeline.current = gsap.timeline({
         paused: true,
@@ -143,7 +150,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     }, []);
 
     // Method to start the animation.
-    useImperativeHandle(ref, () => ({
+    /*useImperativeHandle(ref, () => ({
         reveal: (path = '/') => {
             if (timeline.current) {
                 timeline.current.vars.path = path;
@@ -151,10 +158,13 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
 
             timeline.current?.restart();
         }
-    }));
+    }));*/
 
   // Render nothing or a placeholder since this component is mainly for controlling animations.
-  return null;
+  // return null;
+  return (
+    <button className='font-sans button-primary text-black' onClick={handleReveal}>CREATE</button>
+  )
 })
 
 export default Revealer
