@@ -131,8 +131,11 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
       .call(() => {
         //router.push('/');
         //router.replace('/', { shallow: true });
-        if (gridInnerRef.current) {
+        /*if (gridInnerRef.current) {
             gridInnerRef.current.classList.add('hidden');
+        }*/
+        if (mainRef.current) {
+          mainRef.current.classList.add('hidden');
         }
         if (newMainRef.current) {
             newMainRef.current.classList.remove('hidden');
