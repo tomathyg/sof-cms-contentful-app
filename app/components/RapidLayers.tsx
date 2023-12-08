@@ -79,7 +79,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                             <div key={index} className={`grid__item grid__item--${index + 1}`} style={{ backgroundImage: `url(${item.url}?w=${imagesWidth}&q=${imagesQuality})`}}></div>
                         ))}
                     </div>
-                    <section className="intro-header-section flex-col flex items-center justify-center absolute left-0 w-full h-full px-12">
+                    <section className="intro-header-section flex-col flex items-center justify-center absolute left-0 top-0 w-full h-full px-12">
                         <h1 className={`my-6 md:text-8xl font-bold tracking-tighter leading-tight scenes-logo-header`}>
                             {/*{heading}*/}
                             <ScenesLogo2 />
