@@ -28,6 +28,8 @@ function trackCustomEvent(event: any) {
 
 const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
 
+  const body = useRef<HTMLElement | null>(null);
+
   const mainRef = useRef<HTMLElement | null>(null);
   const timeline = useRef<GSAPTimeline | null>(null);
   const layerRefs = useRef<Array<ReturnType<typeof useImageLayer>>>([]);
@@ -49,6 +51,8 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
   //const router = useRouter();
 
   useEffect(() => {
+    body.current = document.querySelector('body');
+
     mainRef.current = document.querySelector('.revealer-grid-container');
     layerRefs.current = [...document.querySelectorAll('.layers__item')].map(item => useImageLayer(item));
     gridItemRefs.current = Array.from(document.querySelectorAll('.grid__item') as NodeListOf<HTMLElement>);
@@ -145,6 +149,9 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
         y: (_, index) => index ? '101%' : '-101%'
       }, 'halfway')
       .call(() => {
+        if (body.current) {
+          body.current.classList.remove('overflow-hidden');
+        }
         if (mainRef.current) {
           mainRef.current.classList.add('hidden');
         }
