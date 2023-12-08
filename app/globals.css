@@ -448,6 +448,10 @@ button, button * {
     margin: 1rem;
 }
 
+.revealer-grid-container.intro {
+    background-color: black;
+}
+
 /*.revealer-grid-container.intro .revealer-grid-inner .content {
     width: calc(100% - 4rem);
     height: calc(100% - 4rem);bac
