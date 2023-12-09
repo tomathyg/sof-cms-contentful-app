@@ -573,9 +573,14 @@ button, button * {
 }
 
 .scene-title {
-    font-size: inherit !important;
     text-wrap: nowrap;
     display: block;
+}
+
+@media screen and (max-width: 480px) {
+    .scene-title {
+        font-size: 3rem;
+    }
 }
 
 /*.scene-image {
@@ -596,9 +601,15 @@ button, button * {
 .scene-image-container {
     width: 450px;
     /*margin-top: calc(-1em * 0.6 / 2);*/
-    margin-top: -0.22em;
     font-size: inherit;
 }
+
+@media screen and (min-width: 481px) {
+    .scene-image-container {
+        margin-top: -0.22em;
+    }
+}
+
 
 .pay-button-wrapper .xmint-btn {
     background: #1C96B6;
