@@ -577,11 +577,7 @@ button, button * {
     display: block;
 }
 
-@media screen and (max-width: 480px) {
-    .scene-title {
-        font-size: 3rem;
-    }
-}
+
 
 /*.scene-image {
     position: absolute;
@@ -719,3 +715,28 @@ button, button * {
     max-width: 1400px;
 }
 
+
+
+@media screen and (max-width: 480px) {
+    .scene-title {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .gallery-title {
+        font-size: 5rem !important;
+    }
+}
+
+@media screen and (max-width: 639px) {
+    .gallery-title {
+        font-size: 4rem !important;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .gallery-title {
+        font-size: 2.5rem !important;
+    }
+}
