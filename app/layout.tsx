@@ -184,7 +184,7 @@ export default function RootLayout({
   //const [clientSideState, setClientSideState] = useState();
   return (
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
-        <body className={`font-mono bg-black text-off-white overflow-hidden`}>
+        <body className={`font-mono bg-black text-off-white`}>
         <Web3ModalProvider>
         <div className='noise-overlay'></div>
         <section className="">

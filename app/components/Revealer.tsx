@@ -73,6 +73,10 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     window.addEventListener('resize', documentHeight);
     documentHeight();*/
 
+    if (body.current) {
+      body.current.classList.add('overflow-hidden');
+    }
+
     
     timeline.current = gsap.timeline({
         paused: true,
