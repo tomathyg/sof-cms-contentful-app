@@ -40,13 +40,13 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
     //const [connectedWallet, setConnectedWallet] = useState('');
     const { address, chainId, isConnected } = useWeb3ModalAccount();
 
-    const [shouldDisplayButton, setShouldDisplayButton] = useState(false);
+    //const [shouldDisplayButton, setShouldDisplayButton] = useState(false);
 
-    useEffect(() => {
+    /*useEffect(() => {
         // Once the component mounts, we check if the wallet is connected
         // and then set shouldDisplayButton accordingly
         setShouldDisplayButton(isConnected);
-    }, [isConnected]);
+    }, [isConnected]);*/
 
 
     /*useEffect(() => {
@@ -98,13 +98,13 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
     }*/
 
     // Only render the CrossmintPayButton if shouldDisplayButton is true
-    if (!shouldDisplayButton) {
+    /*if (!shouldDisplayButton) {
         return (
             <div className='uppercase text-lg text-center'>
                 <p>Connect your wallet<br />to buy with card or ETH</p>
             </div>
         )
-    }
+    }*/
 
     return (
         <>
