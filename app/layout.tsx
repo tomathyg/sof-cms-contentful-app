@@ -146,7 +146,7 @@ async function Header() {
               base='scenes'
             />
           </div>
-          <div className='mobile-nav-container md:hidden'>
+          <div className='mobile-nav-container md:hidden w-full'>
             <MobileNav />
           </div>
           {/*<WalletConnectButton />*/}
