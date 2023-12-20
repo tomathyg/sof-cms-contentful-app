@@ -8,6 +8,7 @@ export default function SceneThumb(scene:any) {
     return (
         <div key={scene.key} className={`rounded-md overflow-hidden cursor-pointer relative aspect-square h-300 w-300`} onClick={() => router.push(`/scenes/${scene.slug}`)}>
             <Image
+                unoptimized={true}
                 src={scene.url}
                 alt={`${scene.title} Artwork`}
                 fill={true}

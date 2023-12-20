@@ -25,7 +25,7 @@ export default async function Page() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-1 w-10/12 sm:w-10/12 md:w-10/12 max-w-2xl mx-auto">
                     {content.sort((a, b) => a.slug.localeCompare(b.slug)).map((scene, index) => {
                         //console.log(scene);
-                        const artwork = scene.artworkSubmission.submissionImage.url + '?w=300&q=75';
+                        const artwork = scene.artworkSubmission.submissionImage.url + '?w=600&q=75';
                         return (
                             <SceneThumb
                                 key={index}
