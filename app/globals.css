@@ -220,19 +220,19 @@ a {
 }
 
 /* SCENE */
-.scene-1-article .rhap_main-controls-button, .rhap_repeat-button, .rhap_volume-button {
+.scene-1-article .rhap_main-controls-button, .scene-1-article .rhap_repeat-button, .scene-1-article .rhap_volume-button {
     color: var(--scene-color-1) !important;
 }
 
-.scene-1-article .rhap_progress-indicator, .rhap_volume-indicator {
+.scene-1-article .rhap_progress-indicator, .scene-1-article .rhap_volume-indicator {
     background: var(--scene-color-1) !important;
 }
 
-.scene-2-article .rhap_main-controls-button, .rhap_repeat-button, .rhap_volume-button {
+.scene-2-article .rhap_main-controls-button, .scene-2-article .rhap_repeat-button, .scene-2-article .rhap_volume-button {
     color: var(--scene-color-2) !important;
 }
 
-.scene-2-article .rhap_progress-indicator, .rhap_volume-indicator {
+.scene-2-article .rhap_progress-indicator, .scene-2-article .rhap_volume-indicator {
     background: var(--scene-color-2) !important;
 }
 /* END OF H5 AUDIO PLAYER */
