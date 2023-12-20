@@ -101,7 +101,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
               duration: stepDuration,
               ease: 'Power2.easeInOut',
               y: 0,
-              //willChange: "transform, opacity",
+              willChange: "transform, opacity",
           }, stepStart)
           /*.call(() => {
             if (introHeader.current) {
