@@ -105,6 +105,7 @@ font-size: 12px;
     --off-white: #e8e0c5;
     --orange: #d6301a;
     --scene-color-1: #1C96B6;
+    --scene-color-2: #61c6ae;
 }
 /* END OF COLOURS */
 
@@ -219,12 +220,20 @@ a {
 }
 
 /* SCENE */
-.rhap_main-controls-button, .rhap_repeat-button, .rhap_volume-button {
-    color: #1C96B6 !important;
+.scene-1-article .rhap_main-controls-button, .rhap_repeat-button, .rhap_volume-button {
+    color: var(--scene-color-1) !important;
 }
 
-.rhap_progress-indicator, .rhap_volume-indicator {
-    background: #1C96B6 !important;
+.scene-1-article .rhap_progress-indicator, .rhap_volume-indicator {
+    background: var(--scene-color-1) !important;
+}
+
+.scene-2-article .rhap_main-controls-button, .rhap_repeat-button, .rhap_volume-button {
+    color: var(--scene-color-2) !important;
+}
+
+.scene-2-article .rhap_progress-indicator, .rhap_volume-indicator {
+    background: var(--scene-color-2) !important;
 }
 /* END OF H5 AUDIO PLAYER */
 
@@ -608,8 +617,16 @@ button, button * {
 
 
 .pay-button-wrapper .xmint-btn {
-    background: #1C96B6;
+    background: black;
     width: 200px;
+}
+
+.scene-1-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-1);
+}
+
+.scene-2-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-2);
 }
 
 .pay-button-wrapper .xmint-btn span {
