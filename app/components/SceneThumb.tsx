@@ -13,7 +13,7 @@ export default function SceneThumb(scene:any) {
                 fill={true}
                 className='absolute top-0 left-0 z-[-1]'
             />
-            <div className="text-white text-center pt-1">
+            <div className="text-off-white text-center pt-1">
                 <h2 className="text-4xl uppercase">{scene.title}</h2>
             </div>
         </div>
