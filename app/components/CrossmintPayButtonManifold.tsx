@@ -151,7 +151,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 locale="en-US"
                 currency="GBP"
                 className="xmint-btn"
-                getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `BUY TO COLLECT`}
+                getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `BUY WITH CARD`}
             />
             </div>
         </>
