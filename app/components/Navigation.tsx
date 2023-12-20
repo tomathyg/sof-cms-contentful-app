@@ -45,7 +45,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
                         onClick={() => router.push('/scenes')}
                         className={showDropdown ? 'active' : ''}
                     >
-                        <span className="cursor-pointer">SCENE GALLERIES</span>
+                        <span className="cursor-pointer">GALLERIES</span>
                     </button>
                     {showDropdown && (
                         <ul
