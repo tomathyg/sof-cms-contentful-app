@@ -42,7 +42,7 @@ const MobileNav = () => {
         <ul>
           <li><button type="button" onClick={() => handleNavigation('/')}>HOME</button></li>
           <li><button type="button" onClick={() => handleNavigation('/about')}>ABOUT</button></li>
-          <li><button type="button" onClick={() => handleNavigation('/scenes/scene-1')}>SCENE 1 GALLERY</button></li>
+          <li><button type="button" onClick={() => handleNavigation('/scenes')}>SCENE GALLERIES</button></li>
           <li><button type="button" onClick={() => handleNavigation('/credits')}>CREDITS</button></li>
         </ul>
       </div>
