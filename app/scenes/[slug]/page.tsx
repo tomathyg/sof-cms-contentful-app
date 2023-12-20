@@ -20,6 +20,7 @@ import CrossmintPayButtonManifold from '../../components/CrossmintPayButtonManif
 //import ManifoldWidget from '@/app/components/ManifoldWidget';
 
 //import ManifoldProvider from '../../components/ManifoldProvider'
+//import ManifoldBuyButton from '../../components/ManifoldBuyButton'
 
 //import Player from '../../components/AudioPlayer'
 //import DecentAudioPlayer from '../../components/DecentAudioPLayer'
@@ -88,7 +89,7 @@ export default async function ScenePage({
   //console.log("SLUG:", params.slug);
   //console.log("GET SCENE:", getScene);
   const scene = await getScene(params.slug, isEnabled);
-  //console.log("SCENE:", scene);
+  console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
   //console.log("SCENE SUBMISSIONS:", submissions);
   //const imageSlug = submission.id.split('-')[1];
@@ -129,7 +130,7 @@ export default async function ScenePage({
               <div className="audio-player-wrapper section-wrapper w-full text-sm">
                 <H5Player
                     src={scene.audioMp3.url}
-                    title={`SCENE 1: ${scene.audioMp3.title}`}
+                    title={`${scene.title}: ${scene.audioMp3.title}`}
                 />
               </div>
               <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center">
@@ -143,6 +144,8 @@ export default async function ScenePage({
                 />*/}
 
                 {/*<CrossmintPayButtonManifoldTest />*/}
+
+                {/*<ManifoldBuyButton />*/}
 
                 {/*<WalletConnect></WalletConnect>*/}
                   <CrossmintPayButtonManifold
@@ -178,11 +181,11 @@ export default async function ScenePage({
             contractABI={scene.nftAbi}
             />*/}
           {/*<ManifoldWidget
-            id='59406576'
-            />*/}
+            id={scene.manifoldClaimInstanceId}
+          />*/}
             {/*<ManifoldProvider
-              id=''
-            />*/}
+              id={scene.manifoldClaimInstanceId}
+        />*/}
         </section>
 
         {/*<section className="page-subheading-container">

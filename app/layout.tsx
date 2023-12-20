@@ -1,4 +1,5 @@
 import './globals.css'
+//import './css/manifold-claim-complete.css'
 //import { EXAMPLE_PATH, CMS_NAME } from '../lib/constants'
 
 //import 'https://marketplace.manifoldxyz.dev/3.3.7/marketplace.css'
@@ -17,7 +18,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
-//import Script from 'next/script'
+import Script from 'next/script'
 
 //import WalletConnectButton from './components/WalletConnectButton'
 
@@ -199,6 +200,7 @@ export default function RootLayout({
         </Suspense>
         
         </Web3ModalProvider>
+        
         </body>
       {/*<Script
           src="https://marketplace.manifoldxyz.dev/3.5.10/marketplace.umd.min.js"
