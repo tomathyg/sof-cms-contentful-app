@@ -17,10 +17,10 @@ import H5Player from '../components/H5AudioPlayer'
 const stepMapping: Record<string, { step: string, subheading: string }> = {
     //'01HE8V8C7PES3MZWD3GNC11CGZ': { step: '1', subheading: 'LISTEN & READ' },
     //'31ee3aba-b8c2-421e-9bc2-cd7d31f3b5df': { step: '2', subheading: 'Info for 2' },
-    '377c9572-86ab-4b4f-ab03-8422b4860b9c': { step: '1', subheading: 'Info for 3' },
-    'f104f22d-fb24-4c0c-848b-a1c56f8b4f25': { step: '2', subheading: 'Info for 4' },
-    'c6963f23-5204-425c-b063-6928b6fb4f0f': { step: '3', subheading: 'Info for 5' },
-    '6187d4e8-27a8-4d68-9888-4eaf39589876': { step: '4', subheading: 'Info for 6' },
+    '377c9572-86ab-4b4f-ab03-8422b4860b9c': { step: '1', subheading: 'Info for 1' },
+    'f104f22d-fb24-4c0c-848b-a1c56f8b4f25': { step: '2', subheading: 'Info for 2' },
+    'c6963f23-5204-425c-b063-6928b6fb4f0f': { step: '3', subheading: 'Info for 3' },
+    'ba6c29ea-a250-47d1-8c7e-b7deb1389b41': { step: '4', subheading: 'Info for 4' },
     '01HE8V8C8BG9Q511S321KH7KYT': { step: '5', subheading: '' },
 };
 
@@ -54,7 +54,7 @@ const Page: React.FC<PageProps> = ({ formRef, audioUrl, audioTitle }) => {
   const widget = useMemo(() => {
     return (
       <Widget
-        id='eAdn6pFg'
+        id='yibG9oPN'
         style={{ fontSize: 20, width: '100%', height: '100%' }}
         className="typeform-widget"
         onReady={() => console.log('form ready')}
