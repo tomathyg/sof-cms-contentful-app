@@ -20,6 +20,7 @@ export default {
       colors: {
         'off-white': '#e8e0c5',
         'orange': '#d6301a',
+        'grey': '#333333',
       },
       screens: {
         'xsm': '480px',
