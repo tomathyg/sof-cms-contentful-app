@@ -609,6 +609,7 @@ button, button * {
 
 .pay-button-wrapper .xmint-btn {
     background: #1C96B6;
+    width: 200px;
 }
 
 .pay-button-wrapper .xmint-btn span {

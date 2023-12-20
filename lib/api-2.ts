@@ -31,6 +31,7 @@ const SCENE_GRAPHQL_FIELDS = `
     nftAbi
     nftPrice
     mintFee
+    manifoldClaimPage
     manifoldCoreCreatorContractAddress
     manifoldClaimInstanceId
     crossmintProjectIdProduction

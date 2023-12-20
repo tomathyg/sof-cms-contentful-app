@@ -133,7 +133,7 @@ export default async function ScenePage({
                     title={`${scene.title}: ${scene.audioMp3.title}`}
                 />
               </div>
-              <div className="pay-button-wrapper section-wrapper w-full text-sm flex justify-center">
+              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex gap-4 flex-col xsm:flex-row xsm:justify-around xsm:items-end text-center">
               {/*<div
                 data-widget="m-claim-buy-only"
                 data-id="59406576"
@@ -146,6 +146,11 @@ export default async function ScenePage({
                 {/*<CrossmintPayButtonManifoldTest />*/}
 
                 {/*<ManifoldBuyButton />*/}
+                {scene && scene.manifoldClaimPage && (
+                  <div className='manifold-button-container flex justify-center'>
+                    <a target="_blank" rel="external" href={scene.manifoldClaimPage} className='xmint-btn crossmintButton-0-2-1 h-[50px]'>BUY WITH OPT</a>
+                  </div>
+                )}
 
                 {/*<WalletConnect></WalletConnect>*/}
                   <CrossmintPayButtonManifold
