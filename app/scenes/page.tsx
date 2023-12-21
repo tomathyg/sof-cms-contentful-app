@@ -1,20 +1,35 @@
 import { getAllScenes } from '../../lib/api-2'
-import Image from 'next/image';
+//import Image from 'next/image';
 import SceneThumb from '../components/SceneThumb';
+import RouterButton from '../components/RouterButton';
 
 export default async function Page() {
     const content = await getAllScenes(false);
     //console.log("ALL SCENES CONTENT:", content);
 
     const numDivsToAdd = 6 - content.length;
-    const additionalDivs = Array.from({ length: numDivsToAdd }).map((_, index) => (
-        <div key={index + content.length} className="rounded-md overflow-hidden bg-grey aspect-square h-400 w-300">
-            <div className="flex flex-col justify-between h-full text-off-white text-center pt-1">
-                <h2 className="text-4xl">SCENE {index + content.length + 1}</h2>
-                <p className="text-xl pb-2 font-sans">COMING SOON</p>
+    const additionalDivs = Array.from({ length: numDivsToAdd }).map((_, index) => {
+        const latestScene = content.length + index + 1;
+        return (
+            <div key={index + content.length} className={`upcoming-scene-${latestScene} rounded-md overflow-hidden bg-grey aspect-square h-400 w-300`}>
+                <div className="flex flex-col justify-between h-full text-off-white text-center pt-1">
+                    <h2 className="text-4xl">SCENE {index + content.length + 1}</h2>
+                    {latestScene === content.length + 1 ? (
+                        <>
+                        <p className="text-xl pb-2 px-4 font-sans">CURRENTLY ACCEPTING SUBMISSIONS</p>
+                        <RouterButton
+                            classes="text-xl pb-3 font-sans button-primary w-[200px] mx-auto mb-3"
+                            url="/submit"
+                            label="SUBMIT"
+                        />
+                        </>
+                    ) : (
+                        <p className="text-xl pb-2 font-sans">COMING SOON</p>
+                    )}
+                </div>
             </div>
-        </div>
-    ));
+        );
+    });
 
     return (
         <>

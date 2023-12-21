@@ -10,7 +10,7 @@ import Revealer from './Revealer';
 //import Image from 'next/image';
 //import ScenesLogo from '../components/ScenesLogo'
 import ScenesLogo2 from '../components/ScenesLogo2'
-
+import RouterButton from './RouterButton';
 interface RevealerMethods {
     reveal: () => void;
 }
@@ -88,7 +88,14 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                             <span>AN <span className='font-serif'>INTERACTIVE</span> JOURNEY</span><br />
                             <span>THROUGH <span className='font-serif'>PERSONAL</span> MOMENTS</span>
                         </h2>
-                        <Revealer />
+                        <div className='intro-buttons-container flex gap-6 justify-center flex-wrap'>
+                            <Revealer />
+                            <RouterButton
+                                url='/scenes'
+                                label='EXPLORE'
+                                classes='button-primary text-black font-sans'
+                            />
+                        </div>
                     </section>
                 </div>
             </div>
