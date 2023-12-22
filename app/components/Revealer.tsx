@@ -181,7 +181,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     }));*/
 
   return (
-    <button className='font-sans button-primary text-black' onClick={handleReveal}>ENTER</button>
+    <button className='font-sans button-primary text-black' onClick={handleReveal}>CREATE</button>
   )
 })
 
