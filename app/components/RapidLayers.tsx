@@ -94,6 +94,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                                 url='/scenes'
                                 label='EXPLORE'
                                 classes='button-primary text-black font-sans'
+                                overflow={true}
                             />
                         </div>
                     </section>
