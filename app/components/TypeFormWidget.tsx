@@ -15,7 +15,7 @@ const TypeForm: React.FC<TypeFormProps> = ({ id }) => {
       style={{ fontSize: 20, width: '100%', height: '100%' }}
       className="typeform-widget"
       onReady={() => {
-        console.log('form ready')
+        console.log('form widget ready')
       }}
       onQuestionChanged={({ formId, ref }) => {
         console.log(`Question in form ${formId} changed to ${ref}`)

@@ -3,6 +3,7 @@
 import React, { useState, useMemo } from 'react'
 import { Widget } from '@typeform/embed-react'
 import H5Player from '../components/H5AudioPlayer'
+import { sendGTMEvent } from '@next/third-parties/google'
 
 /*const blockMapping: Record<string, string> = {
     '01HE8V8C7PES3MZWD3GNC11CGZ': '1',
@@ -45,6 +46,8 @@ const Page: React.FC<PageProps> = ({ formRef, audioUrl, audioTitle }) => {
     console.log("FORM EVENT DATA:", formRef);
   }
 
+  const formId = 'yibG9oPN'
+
   /*useEffect(() => {
     if (formRef in blockMapping) {
         setStepNumber(`Title ${blockMapping[formRef]}`);
@@ -54,11 +57,18 @@ const Page: React.FC<PageProps> = ({ formRef, audioUrl, audioTitle }) => {
   const widget = useMemo(() => {
     return (
       <Widget
-        id='yibG9oPN'
+        id={formId}
         style={{ fontSize: 20, width: '100%', height: '100%' }}
         className="typeform-widget"
-        onReady={() => console.log('form ready')}
+        onReady={() => {
+          console.log('form widget ready');
+          sendGTMEvent({ event: 'typeFormReady', value: true });
+        }}
         onQuestionChanged={({ formId, ref }) => handleFormEvent(ref)}
+        onSubmit={() => {
+          console.log('form submitted');
+          sendGTMEvent({ event: 'typeFormSubmission', value: formId });
+        }}
       />
     );
   }, [formRef]); // Dependency array

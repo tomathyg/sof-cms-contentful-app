@@ -10,6 +10,8 @@ interface TypeFormProps {
 
 const TypeForm: React.FC<TypeFormProps> = ({ id }) => {
 
+  console.log("TypeForm ID:", id);
+
   return (
     <PopupButton
       id={id}
