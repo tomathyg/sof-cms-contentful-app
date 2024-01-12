@@ -27,6 +27,7 @@ const SCENE_GRAPHQL_FIELDS = `
     title
     slug
     colour
+    zoraUrl
     nftContractAddress
     nftAbi
     nftPrice

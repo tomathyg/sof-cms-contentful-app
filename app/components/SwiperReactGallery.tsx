@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import React, { useState } from 'react'
+import Link from 'next/link';
 
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -11,7 +12,10 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 
 import Lightbox from 'yet-another-react-lightbox';
+import Share from "yet-another-react-lightbox/plugins/share";
 import 'yet-another-react-lightbox/styles.css';
+import "yet-another-react-lightbox/plugins/captions.css";
+import { Url } from 'next/dist/shared/lib/router/router';
 
 interface SubmissionImage {
     url: string;
@@ -27,6 +31,7 @@ interface SwiperGalleryProps {
     slug: string;
     submissions: Submission[];
     slidesPerViewCount: number;
+    zoraUrl?: Url;
 }
 
 type ImageLoaderParams = {
@@ -42,7 +47,7 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 const imageHeight = '400px';
 const imageMargin = '20px 0';
 
-const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slidesPerViewCount }) => {
+const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slidesPerViewCount, zoraUrl }) => {
     const [lightboxOpen, setLightboxOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [loadedImages, setLoadedImages] = useState<string[]>([]);
@@ -50,6 +55,8 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
     const handleImageLoad = (url:string) => {
         setLoadedImages(prev => [...prev, url]);
     };
+
+    //const captionsRef = React.useRef(null);
 
     const openLightbox = (index:any) => {
         setCurrentIndex(index);
@@ -64,10 +71,13 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
 
     const lightboxSrcs = submissions
         .filter(item => item.submissionImage && item.submissionImage.url && item.id)
-        .map((item, index) => ({ src: imageBase + (item.id.split('-')[1]) + '.jpg?w=1080&q=75' }));
+        .map((item, index) => ({ 
+            src: imageBase + (item.id.split('-')[1]) + '.jpg?w=1080&q=75'
+        }));
         //.map((item, index) => ({ src: item.submissionImage.url + '?w=1080&q=75' }));
 
     //console.log("SRCS:", lightboxSrcs);
+
 
   return (
     <>
@@ -144,6 +154,9 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
                                 //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                                 className='swiper-image'
                             />
+                            {zoraUrl && (
+                                <Link target="_blank" rel="external" href={zoraUrl} className="scene-zora-link container-start w-full inline-block bg-orange leading-8 border font-semibold font-sans">BUY SCENE</Link>
+                            )}
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </SwiperSlide>
                     )
@@ -158,6 +171,8 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
                 close={() => setLightboxOpen(false)}
                 index={currentIndex}
                 slides={lightboxSrcs}
+                //plugins={[Share]}
+                //captions={{ ref: captionsRef }}
             />
         )}
     </>
