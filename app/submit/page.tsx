@@ -9,6 +9,7 @@ export default async function Page() {
 
     return (
         <TypeFormPage
+            sceneNumber={content.sceneNumber}
             formId={content.formId}
             audioUrl={content.audioMp3.url}
             audioTitle={content.audioMp3.title}

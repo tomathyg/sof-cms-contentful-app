@@ -337,6 +337,7 @@ function extractSubmitPageData(fetchResponse: any): any {
 
 const SUBMIT_PAGE_GRAPHQL_FIELDS = `
   title
+  sceneNumber
   formId
   audioMp3 {
     title

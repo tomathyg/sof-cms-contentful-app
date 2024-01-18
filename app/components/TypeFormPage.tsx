@@ -31,6 +31,7 @@ interface AudioProps {
 }
 
 interface PageProps {
+    sceneNumber?: number;
     formId: string;
     formRef?: string;
     //audio?: AudioProps;
@@ -38,7 +39,7 @@ interface PageProps {
     audioTitle?: string;
 }
 
-const Page: React.FC<PageProps> = ({ formId, formRef, audioUrl, audioTitle }) => {
+const Page: React.FC<PageProps> = ({ sceneNumber, formId, formRef, audioUrl, audioTitle }) => {
   const defaultStepData = { step: '1', subheading: 'LISTEN & READ' };
   const [stepData, setStepData] = useState(defaultStepData);
 
@@ -79,11 +80,11 @@ const Page: React.FC<PageProps> = ({ formId, formRef, audioUrl, audioTitle }) =>
     <section className="flex justify-center w-full px-2 sm:px-8 h-full-screen" style={{height: 'calc(100vh - 170px)'}}>
         <div className="flex flex-col grow h-full items-center text-center tracking-wide uppercase">
             <h1 className="text-2xl xsm:text-5xl sm:text-6xl md:text-6xl mt-2 mb-0">STEP - 0{stepData.step}</h1>
-            {audioUrl && audioTitle && (
+            {sceneNumber && audioUrl && audioTitle && (
               <section className="process-audio-player-section w-full text-sm mt-2 sm:mb-4">
                   <H5Player
                       src={audioUrl}
-                      title={`SCENE 4: ${audioTitle}`}
+                      title={`SCENE ${sceneNumber}: ${audioTitle}`}
                   />
               </section>
             )}
