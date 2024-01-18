@@ -638,6 +638,11 @@ button, button * {
 .pay-button-wrapper .xmint-btn {
     background: black;
     width: 200px;
+    cursor: pointer;
+}
+
+.pay-button-wrapper .xmint-btn:hover {
+    opacity: 0.6;
 }
 
 .scene-1-article .pay-button-wrapper .xmint-btn {
