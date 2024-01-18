@@ -201,6 +201,10 @@ a {
     font-family: 'Druk Wide Heavy', sans-serif;
 }
 
+.process-audio-player-section .rhap_header {
+    margin-bottom: 0;
+}
+
 .song-title {
     display: inline-block;
 }
