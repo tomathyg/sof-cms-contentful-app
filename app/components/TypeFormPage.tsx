@@ -79,7 +79,7 @@ const Page: React.FC<PageProps> = ({ sceneNumber, formId, formRef, audioUrl, aud
   return (
     <section className="flex justify-center w-full px-2 sm:px-8 h-full-screen" style={{height: 'calc(100vh - 170px)'}}>
         <div className="flex flex-col grow h-full items-center text-center tracking-wide uppercase">
-            <h1 className="text-2xl xsm:text-5xl sm:text-6xl md:text-6xl mt-2 mb-0">STEP - 0{stepData.step}</h1>
+            <h1 className="text-2xl xsm:text-5xl sm:text-6xl md:text-6xl mb-0">STEP - 0{stepData.step}</h1>
             {sceneNumber && audioUrl && audioTitle && (
               <section className="process-audio-player-section w-full text-sm sm:mb-4">
                   <H5Player
