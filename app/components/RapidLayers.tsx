@@ -64,14 +64,14 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
 		<div className="revealer-grid-container intro fixed top-0 w-full z-[11] h-screen safe">
             <div className='w-full h-full revealer-grid-inner border border-off-white overflow-hidden'>
                 <div className='intro-small-text intro-top-small-text absolute top-0 w-full px-8 h-8 leading-8 text-xs flex justify-between'>
-                    <span className='intro-outer-text hidden sm:inline-block w-32'>SCENES</span>
-                    <span className='text-center w-full hidden xsm:inline-block'>BY SOUND OF FRACTURES</span>
-                    <span className='intro-outer-text hidden sm:inline-block text-right w-32'>2:34.29 16:9</span>
+                    <span className='intro-outer-text hidden xsm:inline-block w-40'>SCENES</span>
+                    <span className='text-center w-full xsm:inline-block'>BY SOUND OF FRACTURES</span>
+                    <span className='intro-outer-text hidden xsm:inline-block text-right w-40'>2:34.29 16:9</span>
                 </div>
                 <div className='intro-small-text intro-top-small-text absolute bottom-0 w-full px-8 h-8 leading-8 text-xs flex justify-between'>
-                    <span className='intro-outer-text hidden sm:inline-block w-32'>SCENES</span>
-                    <span className='text-center w-full hidden xsm:inline-block'>BY SOUND OF FRACTURES</span>
-                    <span className='intro-outer-text hidden sm:inline-block text-right w-32'>2:34.29 16:9</span>
+                    <span className='intro-outer-text hidden xsm:inline-block w-40'>SCENES</span>
+                    <span className='text-center w-full xsm:inline-block'>BY SOUND OF FRACTURES</span>
+                    <span className='intro-outer-text hidden xsm:inline-block text-right w-40'>2:34.29 16:9</span>
                 </div>
                 <div className="content border border-black">
                     <div className="revealer-grid">

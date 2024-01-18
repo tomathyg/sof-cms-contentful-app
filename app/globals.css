@@ -458,25 +458,19 @@ button, button * {
 /* REVEALER */
 .revealer-grid-container.intro .revealer-grid-inner .content {
     width: calc(100% - 2rem);
-    height: calc(100% - 2rem);
-    margin: 1rem;
+    height: calc(100% - 4rem);
+    margin: 2rem 1rem;
 }
 
 .revealer-grid-container.intro {
     background-color: black;
 }
 
-/*.revealer-grid-container.intro .revealer-grid-inner .content {
-    width: calc(100% - 4rem);
-    height: calc(100% - 4rem);bac
-    margin: 2rem;
-}*/
-
 @media screen and (min-width: 480px) {
     .revealer-grid-container.intro .revealer-grid-inner .content {
         width: calc(100% - 4rem);
         height: calc(100% - 4rem);
-        margin: 2rem;
+        margin: 2rem 2rem;
     }
 }
 
