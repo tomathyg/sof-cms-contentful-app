@@ -44,7 +44,7 @@ export default function ConnectButton() {
   return (
     <>
       <button 
-        className={`font-sans text-xsm xsm:text-base uppercase border border-off-white rounded-lg py-2 px-4 ${isConnected ? 'hidden' : ''}`} 
+        className={`connect-button font-sans text-xsm xsm:text-base uppercase border border-off-white rounded-lg py-2 px-4 ${isConnected ? 'hidden' : ''}`} 
         onClick={handleButtonClick}
       >
         Connect

@@ -286,10 +286,10 @@ a {
     transition: color 0.3s ease;
 }
 
-.nav-list li button:hover {
+.nav-list li button:hover, .connect-button:hover {
     color: var(--orange);
     cursor: pointer;
-    transition: color 0.3s ease;
+    transition: color, 0.3s ease;
 }
 
 .submission-image {
