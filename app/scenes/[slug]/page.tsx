@@ -244,7 +244,7 @@ export default async function ScenePage({
           </section>
         )}*/}
 
-        {submissions && (
+        {submissions && submissions.length > 0 && (
           <section className="scene-gallery-section">
             <SwiperReactGallery
               slug={params.slug}
