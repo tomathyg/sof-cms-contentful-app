@@ -282,7 +282,15 @@ a {
     gap: 20px;
 }*/
 
+.nav-list li button {
+    transition: color 0.3s ease;
+}
 
+.nav-list li button:hover {
+    color: var(--orange);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
 
 .submission-image {
     object-fit: contain;

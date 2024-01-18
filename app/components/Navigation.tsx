@@ -28,7 +28,7 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
 
     return (
         <>
-            <ul className="cursor-pointer desktop-menu w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
+            <ul className="nav-list cursor-pointer desktop-menu w-full flex flex-wrap gap-x-5 justify-around uppercase text-base font-sans">
                 {/* ... */}
                 <li>
                     <button type="button" onClick={() => router.push('/about')}>ABOUT</button>
@@ -49,10 +49,10 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
                     </button>
                     {showDropdown && (
                         <ul
-                            className="absolute top-full left-0 bg-black leading-9 shadow-md py-2 px-4 w-full opacity-80"
+                            className="absolute top-full left-0 bg-black leading-9 shadow-md py-2 px-4 w-full opacity-90"
                         >
                             {items.sort((a, b) => a.slug.localeCompare(b.slug)).map((item, index) => (
-                                <li key={index}>
+                                <li key={index} className='cursor-pointer'>
                                     <button
                                         className="uppercase"
                                         type="button"

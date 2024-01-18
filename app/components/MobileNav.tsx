@@ -39,7 +39,7 @@ const MobileNav = () => {
         {/*<svg id="burger-square" viewBox="0 -20 118 158"><rect y="74.12" width="118" height="43.88" fill="#e8e0c5"/><rect y="31.39" width="118" height="32.54" fill="#e8e0c5"/><rect width="118" height="21.21" fill="#e8e0c5"/></svg>*/}EXPLORE
       </button>
       <div ref={menuRef} className='fixed left-0 top-0 w-full h-full pt-[77px] pl-6 bg-black font-sans text-xl leading-9 opacity-0'>
-        <ul>
+        <ul className='nav-list'>
           <li><button type="button" onClick={() => handleNavigation('/')}>HOME</button></li>
           <li><button type="button" onClick={() => handleNavigation('/submit')}>SUBMIT (SCENE 4)</button></li>
           <li><button type="button" onClick={() => handleNavigation('/scenes')}>ALL SCENES</button></li>
