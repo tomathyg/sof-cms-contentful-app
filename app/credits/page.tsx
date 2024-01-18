@@ -13,9 +13,9 @@ interface CreditsProps {
 export default async function Page() {
 
     const content = await getCreditsPageData(false);
-    console.log("CREDITS PAGE CONTENT:", content);
+    //console.log("CREDITS PAGE CONTENT:", content);
     const contributors = content.contributorsCollection.items;
-    console.log("CONTRIBUTORS:", contributors);
+    //console.log("CONTRIBUTORS:", contributors);
 
     return (
         <>

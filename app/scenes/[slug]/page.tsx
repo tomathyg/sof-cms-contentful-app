@@ -250,7 +250,7 @@ export default async function ScenePage({
               slug={params.slug}
               submissions={submissions}
               slidesPerViewCount={1}
-              zoraUrl={scene.zoraUrl}
+              zoraUrl={scene.zoraUrl && null}
             />
             {/*<YetGallery
               submissions={submissions}
