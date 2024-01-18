@@ -16,7 +16,7 @@ import 'react-h5-audio-player/lib/styles.css';
 interface H5PlayerProps {
     src: string;
     title: string;
-    colour: string;
+    colour?: string;
 }
 
 const H5Player: React.FC<H5PlayerProps> = ({ src, title, colour }) => {
