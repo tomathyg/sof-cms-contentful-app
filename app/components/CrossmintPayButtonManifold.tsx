@@ -93,9 +93,9 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
     //console.log("MINT CONFIG:", mintConfig);
 
 
-    if (!isConnected) {
+    /*if (!isConnected) {
         return null; // Or render some alternative content
-    }
+    }*/
 
     // Only render the CrossmintPayButton if shouldDisplayButton is true
     /*if (!shouldDisplayButton) {

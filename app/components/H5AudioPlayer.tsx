@@ -25,6 +25,7 @@ const H5Player: React.FC<H5PlayerProps> = ({ src, title, colour }) => {
     <h3 className='text-sm leading-normal tracking-wide uppercase text-center'>{title}</h3>
   );
   {/*<style>{styles}</style>*/}
+
   return (
     <AudioPlayer
       src={src}
