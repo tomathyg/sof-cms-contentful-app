@@ -8,6 +8,16 @@
     --doc-height: 100%;
 }*/
 
+/* COLOURS */
+:root {
+    --off-white: #e8e0c5;
+    --orange: #d6301a;
+    --scene-color-1: #1C96B6;
+    --scene-color-2: #61c6ae;
+    --scene-color-3: #800080;
+}
+/* END OF COLOURS */
+
 .cursor-follower {
     position: fixed;
     top: 0;
@@ -98,16 +108,6 @@ font-size: 12px;
     transform: translateY(-12px);
   }
   
-  
-
-/* COLOURS */
-:root {
-    --off-white: #e8e0c5;
-    --orange: #d6301a;
-    --scene-color-1: #1C96B6;
-    --scene-color-2: #61c6ae;
-}
-/* END OF COLOURS */
 
 #scenes-logo path, #scenes-logo rect, #scenes-logo polygon {
     fill: var(--off-white);
@@ -234,6 +234,14 @@ a {
 
 .scene-2-article .rhap_progress-indicator, .scene-2-article .rhap_volume-indicator {
     background: var(--scene-color-2) !important;
+}
+
+.scene-3-article .rhap_main-controls-button, .scene-3-article .rhap_repeat-button, .scene-3-article .rhap_volume-button {
+    color: var(--scene-color-3) !important;
+}
+
+.scene-3-article .rhap_progress-indicator, .scene-3-article .rhap_volume-indicator {
+    background: var(--scene-color-3) !important;
 }
 /* END OF H5 AUDIO PLAYER */
 
@@ -626,6 +634,10 @@ button, button * {
 
 .scene-2-article .pay-button-wrapper .xmint-btn {
     background: var(--scene-color-2);
+}
+
+.scene-3-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-3);
 }
 
 .pay-button-wrapper .xmint-btn span {

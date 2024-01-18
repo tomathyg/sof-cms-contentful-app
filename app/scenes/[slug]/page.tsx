@@ -131,6 +131,7 @@ export default async function ScenePage({
                 <H5Player
                     src={scene.audioMp3.url}
                     title={`${scene.title}: ${scene.audioMp3.title}`}
+                    colour={scene.colour.value}
                 />
               </div>
               <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex gap-4 flex-col xsm:flex-row xsm:justify-around xsm:items-end text-center">
