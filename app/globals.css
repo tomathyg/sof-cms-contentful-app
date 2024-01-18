@@ -78,6 +78,12 @@ font-size: 12px;
 
 .mobile-nav-button {
     cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.mobile-nav-button:hover, .mobile-nav-button.active {
+    color: var(--orange);
+    transition: color 0.3s ease;
 }
 
 .mobile-nav-button rect {
