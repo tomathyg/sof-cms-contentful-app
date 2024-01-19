@@ -25,7 +25,11 @@ const H5Player: React.FC<H5PlayerProps> = ({ src, title, colour }) => {
     <h3 className='text-sm leading-normal tracking-wide uppercase text-center'>{title}</h3>
   );
   {/*<style>{styles}</style>*/}
-
+  {/*<style jsx>{`
+    .crossmintButton-d2-0-2-6 {
+      background: ${colour} !important;
+    }
+  `}</style>*/}
   return (
     <AudioPlayer
       src={src}
