@@ -155,7 +155,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
                                 className='swiper-image'
                             />
                             {zoraUrl && (
-                                <Link target="_blank" rel="external" href={zoraUrl} className="scene-zora-link container-start w-full inline-block bg-orange leading-8 border font-semibold font-sans">BUY SCENE</Link>
+                                <Link target="_blank" rel="external" href={zoraUrl} className="scene-zora-link container-start w-full inline-block bg-orange leading-10 border font-semibold font-sans text-[13px]">COLLECT SCENE</Link>
                             )}
                             <div className="swiper-lazy-preloader swiper-lazy-preloader-white"></div>
                         </SwiperSlide>
