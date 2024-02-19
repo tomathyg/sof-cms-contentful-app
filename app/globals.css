@@ -15,6 +15,7 @@
     --scene-color-1: #1C96B6;
     --scene-color-2: #61c6ae;
     --scene-color-3: #800080;
+    --scene-color-4: #bfb16f;
 }
 /* END OF COLOURS */
 
@@ -254,6 +255,14 @@ a {
     background: var(--scene-color-3) !important;
 }
 
+.scene-4-article .rhap_main-controls-button, .scene-3-article .rhap_repeat-button, .scene-3-article .rhap_volume-button {
+    color: var(--scene-color-4) !important;
+}
+
+.scene-4-article .rhap_progress-indicator, .scene-3-article .rhap_volume-indicator {
+    background: var(--scene-color-4) !important;
+}
+
 .scene-1-article .scene-zora-link {
     background-color: var(--scene-color-1);
 }
@@ -266,6 +275,25 @@ a {
     background-color: var(--scene-color-3);
 }
 
+.scene-4-article .scene-zora-link {
+    background-color: var(--scene-color-4);
+}
+
+.scene-1-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-1);
+}
+
+.scene-2-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-2);
+}
+
+.scene-3-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-3);
+}
+
+.scene-4-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-4);
+}
 /* END OF SCENE PLAYER COLOURS */
 
 /* END OF H5 AUDIO PLAYER */
@@ -666,17 +694,7 @@ button, button * {
     opacity: 0.6;
 }
 
-.scene-1-article .pay-button-wrapper .xmint-btn {
-    background: var(--scene-color-1);
-}
 
-.scene-2-article .pay-button-wrapper .xmint-btn {
-    background: var(--scene-color-2);
-}
-
-.scene-3-article .pay-button-wrapper .xmint-btn {
-    background: var(--scene-color-3);
-}
 
 .pay-button-wrapper .xmint-btn span {
     color: var(--off-white);
