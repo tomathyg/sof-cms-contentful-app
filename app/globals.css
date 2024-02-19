@@ -255,11 +255,11 @@ a {
     background: var(--scene-color-3) !important;
 }
 
-.scene-4-article .rhap_main-controls-button, .scene-3-article .rhap_repeat-button, .scene-3-article .rhap_volume-button {
+.scene-4-article .rhap_main-controls-button, .scene-4-article .rhap_repeat-button, .scene-4-article .rhap_volume-button {
     color: var(--scene-color-4) !important;
 }
 
-.scene-4-article .rhap_progress-indicator, .scene-3-article .rhap_volume-indicator {
+.scene-4-article .rhap_progress-indicator, .scene-4-article .rhap_volume-indicator {
     background: var(--scene-color-4) !important;
 }
 
