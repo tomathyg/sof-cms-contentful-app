@@ -31,7 +31,7 @@ function Modal() {
                     <div className="h-full sm:h-auto bg-black border-off-white rounded-lg flex flex-col items-center relative py-6">
                         <Link href={pathname} className="text-left absolute right-4 top-4">
                             <button type="button" className="bg-black text-white rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" aria-hidden="true" focusable="false" className="yarl__icon"><g fill="#e8e0c5"><path d="M0 0h24v24H0z" fill="none"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g></svg>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="24" height="24" aria-hidden="true" focusable="false" className="yarl__icon"><g fill="#e8e0c5"><path d="M0 0h24v24H0z" fill="none"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g></svg>
                             </button>
                         </Link>
                         <div className="h-full flex flex-col items-center justify-center w-full signup-form-container">
