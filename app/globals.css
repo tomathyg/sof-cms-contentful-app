@@ -370,9 +370,11 @@ a {
 }
 
 .submission-image {
-    object-fit: contain;
+    object-fit: cover;
     object-position: left;
 }
+
+.submission-image {}
 
 /*.swiper {
     height: 300px;

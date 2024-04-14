@@ -28,7 +28,7 @@ import H5Player from '../../components/H5AudioPlayer'
 
 import ClientImage from '../../components/ClientImage'
 
-//import SubmissionsGallery from '../../components/SubmissionsGallery'
+import SubmissionsGallery from '../../components/SubmissionsGallery'
 //import SwiperGallery from '../../components/SwiperGalleryWebComponent';
 //import YetCarousel from '../../components/YetGallery'
 //import LightGallery from '../../components/LightGallery'
@@ -247,7 +247,7 @@ export default async function ScenePage({
           </section>
         )}*/}
 
-        {submissions && submissions.length > 0 && (
+        {/*{submissions && submissions.length > 0 && (
           <section className="scene-gallery-section">
             <SwiperReactGallery
               slug={params.slug}
@@ -255,11 +255,13 @@ export default async function ScenePage({
               slidesPerViewCount={1}
               zoraUrl={scene.zoraUrl}
             />
-            {/*<YetGallery
+
+          </section>
+        )}*/}
+
+                    {/*<YetGallery
               submissions={submissions}
             />*/}
-          </section>
-        )}
 
         {/*<SwiperGallery
           submissions={submissions}
@@ -267,9 +269,9 @@ export default async function ScenePage({
         {/*<LightGallery
           submissions={submissions}
         />*/}
-        {/*<SubmissionsGallery
+        <SubmissionsGallery
           submissions={submissions}
-      />*/}
+        />
       </article>
     </div>
     {/*<BackgroundImageStyle

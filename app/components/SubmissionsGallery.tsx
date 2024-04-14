@@ -27,22 +27,23 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
   return `${src}?w=${width}&q=${quality || 75}`;
 }
 
-const imageHeight = '400px';
-const imageMargin = '20px 0';
+const imageHeight = '300px';
+const imageMargin = '0';
 
 const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions }) => {
   console.log("SUBMISSIONS:", submissions);
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
+    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'center', flexWrap: 'wrap', gap: '15px', padding: '0 15px' }}>
       {submissions.map((item, index) => {
-        if (item.submissionImage && item.submissionImage.url && item.name) {
+        if (item.submissionImage && item.submissionImage.url) {
           return (
             <Fragment key={index}>
               <div 
                 className="gallery-image" 
                 style={{ 
                   position: 'relative', 
-                  width: '100%', 
+                  width: '300px',
+                  aspectRatio: '1 / 1',
                   margin: imageMargin, 
                   height: imageHeight 
                 }}
@@ -50,12 +51,11 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions }) => {
                 <Image 
                   loader={imageLoader} 
                   src={item.submissionImage.url} 
-                  alt={item.name} 
+                  alt='' 
                   fill={true}
                   className='submission-image'
                 />
               </div>
-              <p>{item.text}</p>
             </Fragment>
           );
         }
