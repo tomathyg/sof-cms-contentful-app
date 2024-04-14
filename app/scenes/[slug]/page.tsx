@@ -149,7 +149,7 @@ export default async function ScenePage({
                 {/*<ManifoldBuyButton />*/}
                 {scene && scene.manifoldClaimPage && (
                   <div className='manifold-button-container flex justify-center'>
-                    <a target="_blank" rel="external" href={scene.manifoldClaimPage} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>BUY WITH OPT</a>
+                    <a target="_blank" rel="external" href={scene.manifoldClaimPage} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>{scene.manifoldBuyButtonText || 'BUY WITH OPT'}</a>
                   </div>
                 )}
 
