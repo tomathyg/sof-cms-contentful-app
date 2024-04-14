@@ -16,6 +16,7 @@
     --scene-color-2: #61c6ae;
     --scene-color-3: #800080;
     --scene-color-4: #bfb16f;
+    --scene-color-5: #f76623;
 }
 /* END OF COLOURS */
 
@@ -263,6 +264,14 @@ a {
     background: var(--scene-color-4) !important;
 }
 
+.scene-5-article .rhap_main-controls-button, .scene-5-article .rhap_repeat-button, .scene-5-article .rhap_volume-button {
+    color: var(--scene-color-5) !important;
+}
+
+.scene-5-article .rhap_progress-indicator, .scene-5-article .rhap_volume-indicator {
+    background: var(--scene-color-5) !important;
+}
+
 .scene-1-article .scene-zora-link {
     background-color: var(--scene-color-1);
 }
@@ -279,6 +288,10 @@ a {
     background-color: var(--scene-color-4);
 }
 
+.scene-5-article .scene-zora-link {
+    background-color: var(--scene-color-5);
+}
+
 .scene-1-article .pay-button-wrapper .xmint-btn {
     background: var(--scene-color-1);
 }
@@ -293,6 +306,10 @@ a {
 
 .scene-4-article .pay-button-wrapper .xmint-btn {
     background: var(--scene-color-4);
+}
+
+.scene-5-article .pay-button-wrapper .xmint-btn {
+    background: var(--scene-color-5);
 }
 /* END OF SCENE PLAYER COLOURS */
 
@@ -389,6 +406,10 @@ a {
     padding: 0.5em 1em;
     border-radius: 25px;
 }
+
+/*.hDJkyE {
+    height: 200px !important;
+}*/
 /* END OF TYPEFORM */
 
 h2 span {
@@ -498,7 +519,7 @@ footer {
     bottom: 0;
     width: 100%;
     z-index: 10;
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
 main.main-content {
@@ -586,11 +607,22 @@ button, button * {
     position: relative !important;
 }
 
+/* SIGNUP FORM */
+.signup-form-container iframe {
+
+}
+
 @media screen and (max-width: 640px) {
     /*main.main-content {
         min-height: auto;
     }*/
+
+    .signup-form-container iframe {
+        height: 640px;
+    }
+
 }
+/* END OF SIGNUP FORM */
 
 .scene-article-container {
     overflow-x: hidden;

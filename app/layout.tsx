@@ -21,6 +21,9 @@ import localFont from 'next/font/local'
 
 import Script from 'next/script'
 
+import Modal from "./components/Modal";
+import ModalTrigger from "./components/ModalTrigger";
+
 //import WalletConnectButton from './components/WalletConnectButton'
 
 //import dynamic from 'next/dynamic';
@@ -165,12 +168,13 @@ async function Footer() {
 
   return (
     <footer className="bg-accent-1">
-      <div className="container mx-auto">
-        <div className="py-2 flex flex-col lg:flex-row items-center justify-center">
+      <div className="container mx-auto max-w-full">
+        <div className="py-2 px-5 flex flex-row lg:flex-row items-center justify-center">
           {/*&#9426; Sound of Fractures*/}
           <SocialFollow
             items={socialNetworks}
           />
+          
         </div>
       </div>
     </footer>
@@ -193,6 +197,8 @@ export default function RootLayout({
           <Header />
           {/*<StickyCursor stickyElement={null}/>*/}
           <main className='main-content min-h-full-screen'>{children}</main>
+          <Modal/>
+          <ModalTrigger />
           <Footer />
         </section>
         <Analytics />

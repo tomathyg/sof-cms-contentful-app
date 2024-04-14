@@ -90,6 +90,20 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "merkleProofs": [],
     }
 
+    /*const mintConfig={
+        //"contractAddress": `${contractAddress}`,
+        "contractAddress": '0xe91F682033461E3e100d765dDd2eD6bDd0bdAD94',
+        //"creatorContractAddress": `${creatorContractAddress}`,
+        "creatorContractAddress": '0x357d71c3dfcc5e4c0da594bef99610df4b311742',
+        //"instanceId": `${instanceId}`,
+        "instanceId": '21098736',
+        "mintCount": mintAmount.toString(),
+        //"totalPrice": totalPrice.toString(),
+        "totalPrice": '1',
+        "mintIndices": [],
+        "merkleProofs": [],
+    }*/
+
     //console.log("MINT CONFIG:", mintConfig);
 
 

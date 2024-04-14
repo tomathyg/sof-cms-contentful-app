@@ -3,15 +3,16 @@
 import { useState } from 'react'
 
 export default function BrevoSignupForm () {
+    const formURL = "https://83dff8dc.sibforms.com/serve/MUIFACMowNMEWBP6BWiMyH3cVlbuxEaHDhCweA4fW-Ex6MM7XGMbWCoOoKijoLAh3xkGZTOA2eqeWB-NaUGBTrfjsTcNdwl1U7wQ2nLUQqFOnx3NFthzh7zCOOc_6THfrfg2SwGOLjzBuF-_nSj10spVUXM5kPrTYa-66Et3S0kLvlKkxpuJyrhvJawWyLOtKGuRSemsxZ9nIa8C";
     return (
         <iframe
         width="540"
-        height="305"
-        src="https://83dff8dc.sibforms.com/serve/MUIFAF4SDnQz8BDnsEiJsnSTa1r1LFpJA4YwwA476AqCOJd9FFFRJg0i6_gm4HYCersWSfYl7s8HRUBeqoBelWazt7oBo3nFME93thVJ4iuPekCZi7dkCDlVSCWoj76TCef1B78V6LtZ1QCb3swfga1Gm9X92O06CKL6FIrZvnU-T0LhGjLnrL9LA2mYoPI7yxitbPGMdYlcar8i"
+        height="540"
+        src={formURL}
         frameBorder="0"
         scrolling="auto"
         allowFullScreen
-        style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%'}}
+        style={{display: 'block', marginLeft: 'auto', marginRight: 'auto', maxWidth: '100%' }}
         ></iframe>
 
     )
