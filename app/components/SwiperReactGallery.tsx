@@ -69,7 +69,15 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
     
     const imageBase = '/scenes/' + slug + '/gallery/';
 
-    const lightboxSrcs = submissions
+    /*const sortedSubmissions = submissions.slice().sort((a, b) => {
+        if (a.id < b.id) return -1;
+        if (a.id > b.id) return 1;
+        return 0;
+    });*/
+
+    const sortedSubmissions = submissions;
+
+    const lightboxSrcs = sortedSubmissions
         .filter(item => item && item.submissionImage && item.submissionImage.url && item.id)
         .map((item, index) => ({ 
             src: imageBase + (item.id.split('-')[1]) + '.jpg?w=1080&q=75'
@@ -126,7 +134,7 @@ const SwiperGallery: React.FC<SwiperGalleryProps> = ({ slug, submissions, slides
                     },
                 }}
             >
-            {submissions.map((item, index) => {
+            {sortedSubmissions.map((item, index) => {
                 if (item && item.submissionImage && item.submissionImage.url && item.text && item.id) {
                     //console.log(item);
                     //console.log(index);
