@@ -271,6 +271,7 @@ export default async function ScenePage({
         />*/}
         <SubmissionsGallery
           submissions={submissions}
+          slug={scene.slug}
         />
       </article>
     </div>
