@@ -626,6 +626,7 @@ button, button * {
 
     .signup-form-container iframe {
         height: 434px;
+        height: 100%;
     }
 
 }
