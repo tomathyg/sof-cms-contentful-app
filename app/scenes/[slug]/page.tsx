@@ -154,6 +154,7 @@ export default async function ScenePage({
                 )}
 
                 {/*<WalletConnect></WalletConnect>*/}
+                {scene && scene.crossmintProjectIdProduction && scene.crossmintCollectionIdProduction && scene.nftContractAddress && scene.manifoldCoreCreatorContractAddress && scene.manifoldClaimInstanceId && scene.nftPrice && scene.mintFee && (
                   <CrossmintPayButtonManifold
                     projectId={scene.crossmintProjectIdProduction}
                     collectionId={scene.crossmintCollectionIdProduction}
@@ -164,6 +165,7 @@ export default async function ScenePage({
                     mintFee={scene.mintFee}
                     environment='production'
                   />
+                )}
                 
                 
                 {/*<CrossmintPayButtonManifold
