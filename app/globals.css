@@ -615,6 +615,10 @@ button, button * {
 }
 
 /* SIGNUP FORM */
+.modal-open {
+    overflow: hidden;
+}
+
 .signup-form-container iframe {
 
 }
