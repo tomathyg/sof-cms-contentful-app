@@ -7,7 +7,7 @@ export default function BrevoSignupForm () {
     return (
         <iframe
         width="540"
-        height="464"
+        height="504"
         src={formURL}
         frameBorder="0"
         scrolling="auto"
