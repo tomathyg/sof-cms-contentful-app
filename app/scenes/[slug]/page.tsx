@@ -247,7 +247,7 @@ export default async function ScenePage({
           </section>
         )}*/}
 
-        {/*{submissions && submissions.length > 0 && (
+        {submissions && submissions.length > 0 && (
           <section className="scene-gallery-section">
             <SwiperReactGallery
               slug={params.slug}
@@ -257,7 +257,7 @@ export default async function ScenePage({
             />
 
           </section>
-        )}*/}
+        )}
 
                     {/*<YetGallery
               submissions={submissions}
@@ -269,10 +269,10 @@ export default async function ScenePage({
         {/*<LightGallery
           submissions={submissions}
         />*/}
-        <SubmissionsGallery
+        {/*<SubmissionsGallery
           submissions={submissions}
           slug={scene.slug}
-        />
+      />*/}
       </article>
     </div>
     {/*<BackgroundImageStyle

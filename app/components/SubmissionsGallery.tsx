@@ -52,7 +52,7 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) 
                   width: '300px',
                   aspectRatio: '1 / 1',
                   margin: imageMargin, 
-                  height: imageHeight 
+                  height: imageHeight
                 }}
               >
                 <Image 
