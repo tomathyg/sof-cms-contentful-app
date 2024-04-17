@@ -193,6 +193,7 @@ export default function RootLayout({
         <body className={`font-mono bg-black text-off-white`}>
         
         <Web3ModalProvider>
+        <GoogleTagManager gtmId="GTM-N6SGGP3P" />
         <div className='noise-overlay'></div>
         <section className="">
           <Header />
@@ -205,11 +206,9 @@ export default function RootLayout({
         {/*<Suspense>
           <GTM />
         </Suspense>*/}
-        {/*<GoogleTagManager gtmId="GTM-N6SGGP3P" />
         <Analytics />
-        
-        <Modal/>
-      <ModalTrigger />*/}
+        {/*<Modal/>
+        <ModalTrigger />*/}
         </Web3ModalProvider>
         
         </body>

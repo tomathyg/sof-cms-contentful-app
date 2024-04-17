@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react';
-import { useRouter, usePathname, useSearchParams } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 interface Item {
     id: string;
