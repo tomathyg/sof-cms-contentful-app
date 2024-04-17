@@ -30,6 +30,7 @@ const ClientImage: React.FC<ClientImageProps> = ({ src, name, className }) => {
             width={430}
             height={430}
             className={className}
+            priority={false}
             //onClick={() => console.log("image clicked")}
             //onLoad={() => handleImageLoad(item.submissionImage.url)}
             //onLoad={(e) => console.log("image loaded")}
