@@ -197,8 +197,7 @@ export default function RootLayout({
           <Header />
           {/*<StickyCursor stickyElement={null}/>*/}
           <main className='main-content min-h-full-screen'>{children}</main>
-          <Modal/>
-          <ModalTrigger />
+          
           <Footer />
         </section>
         <Analytics />
@@ -208,7 +207,8 @@ export default function RootLayout({
         <GoogleTagManager gtmId="GTM-N6SGGP3P" />
         
         </Web3ModalProvider>
-        
+        <Modal/>
+        <ModalTrigger />
         </body>
       {/*<Script
           src="https://marketplace.manifoldxyz.dev/3.5.10/marketplace.umd.min.js"
