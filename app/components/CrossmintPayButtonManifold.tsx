@@ -122,8 +122,8 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
 
     return (
         <>
-        <div className='flex flex-col justify-center items-center'>
-            <div className='mb-4 text-xl'>
+        <div className='mt-1 flex flex-col justify-center items-center'>
+            <div className='mb-3 text-xl'>
                 <button className='' onClick={handleDecrement}> - </button>
                 <input
                     className='bg-transparent text-center border-none select-none focus:outline-none w-[100px] p-0'
@@ -165,7 +165,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 locale="en-US"
                 currency="GBP"
                 className="xmint-btn"
-                getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `BUY WITH CARD`}
+                getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `COLLECT SONG WITH CARD`}
             />
             </div>
         </>

@@ -1,40 +1,40 @@
 "use client";
-import {useSearchParams, usePathname} from "next/navigation";
-import Link from "next/link";
+import React, { useEffect, useState } from 'react';
 import BrevoSignupForm from "./BrevoSignupForm";
-import React, { useEffect } from 'react';
 
 function Modal() {
-    const searchParams = useSearchParams();
-    const modal = searchParams.get("modal");
-    const pathname = usePathname();
+    const [isOpen, setIsOpen] = useState(false);
 
     useEffect(() => {
-        // This function runs when the component mounts and anytime the `modal` variable changes.
-        if (modal) {
+        if (isOpen) {
             document.body.classList.add('modal-open');
         } else {
             document.body.classList.remove('modal-open');
         }
 
-        // Optional: Cleanup function to remove the class when the component unmounts
         return () => {
             document.body.classList.remove('modal-open');
         };
-    }, [modal]); // Only re-run the effect if `modal` changes
+    }, [isOpen]);
+
+    const closeModal = () => setIsOpen(false);
 
     return (
         <>
-            {modal &&
+            <button onClick={() => setIsOpen(true)} className="fixed z-10 right-6 sm:right-6 bottom-[4.5rem] bg-black text-xsm xsm:text-base text-off-white p-2 font-sans uppercase border border-off-white rounded-lg py-2 px-4">
+                SIGN UP
+            </button>
+            {isOpen &&
                 <dialog
-                    className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-100 z-50 overflow-auto flex justify-center items-center">
+                    className="fixed left-0 top-0 w-full h-full bg-black bg-opacity-75 z-50 overflow-auto flex justify-center items-center">
                     <div className="h-full sm:h-auto bg-black border-off-white rounded-lg flex flex-col items-center relative py-8">
-                        <Link href={pathname} className="text-left absolute right-5 top-5">
-                            <button type="button" className="bg-black text-white rounded-lg">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22 22" width="24" height="24" aria-hidden="true" focusable="false" className="yarl__icon"><g fill="#e8e0c5"><path d="M0 0h24v24H0z" fill="none"></path><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></g></svg>
-                            </button>
-                        </Link>
-                        <div className="h-full flex flex-col items-center justify-center w-full signup-form-container">
+                        <button onClick={closeModal} className="absolute right-5 top-5 text-off-white">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+                                <path d="M0 0h24v24H0z" fill="none" />
+                                <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="#e8e0c5" />
+                            </svg>
+                        </button>
+                        <div className="flex flex-col items-center justify-center w-full signup-form-container">
                             <BrevoSignupForm />
                         </div>
                     </div>
@@ -45,3 +45,4 @@ function Modal() {
 }
 
 export default Modal;
+

@@ -22,7 +22,7 @@ import localFont from 'next/font/local'
 //import Script from 'next/script'
 
 import Modal from "./components/Modal";
-import ModalTrigger from "./components/ModalTrigger";
+//import ModalTrigger from "./components/ModalTrigger";
 
 //import WalletConnectButton from './components/WalletConnectButton'
 
@@ -207,8 +207,8 @@ export default function RootLayout({
           <GTM />
         </Suspense>*/}
         <Analytics />
-        {/*<Modal/>
-        <ModalTrigger />*/}
+        <Modal/>
+        {/*<ModalTrigger />*/}
         </Web3ModalProvider>
         
         </body>
