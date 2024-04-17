@@ -206,12 +206,12 @@ export default function RootLayout({
           <GTM />
         </Suspense>*/}
         {/*<GoogleTagManager gtmId="GTM-N6SGGP3P" />*/}
-        
-        </Web3ModalProvider>
         <Analytics />
         
         <Modal/>
         <ModalTrigger />
+        </Web3ModalProvider>
+        
         </body>
       {/*<Script
           src="https://marketplace.manifoldxyz.dev/3.5.10/marketplace.umd.min.js"

@@ -1,4 +1,4 @@
-import Link from 'next/link'
+//import Link from 'next/link'
 import { draftMode } from 'next/headers'
 import { getScene, getAllScenes } from '../../../lib/api-2'
 import Image from 'next/image'
@@ -6,7 +6,7 @@ import Image from 'next/image'
 //import WalletConnect from '../../components/WalletConnectButton'
 
 //import { type } from 'os'
-import React, { useState, useContext, createContext } from 'react';
+import React from 'react';
 
 //import { Markdown } from '../../../lib/markdown'
 
@@ -89,7 +89,7 @@ export default async function ScenePage({
   //console.log("SLUG:", params.slug);
   //console.log("GET SCENE:", getScene);
   const scene = await getScene(params.slug, isEnabled);
-  console.log("SCENE:", scene);
+  //console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
   //console.log("SCENE SUBMISSIONS:", submissions);
   //const imageSlug = submission.id.split('-')[1];
