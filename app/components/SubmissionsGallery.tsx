@@ -2,6 +2,7 @@
 
 import React, { FC, Fragment, useState, useEffect } from 'react';
 import Image from 'next/image';
+import Link from 'next/link';
 import Lightbox from 'yet-another-react-lightbox';
 import 'yet-another-react-lightbox/styles.css';
 import "yet-another-react-lightbox/plugins/captions.css";
@@ -20,6 +21,7 @@ interface Submission {
 interface SubmissionsGalleryProps {
   submissions: Submission[];
   slug: string;
+  zoraUrl?: string;
 }
 
 type ImageLoaderParams = {
@@ -35,7 +37,8 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
 const imageHeight = '400px';
 const imageMargin = '0';
 
-const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) => {
+const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug, zoraUrl }) => {
+  console.log("zoraUrl:", zoraUrl);
   //console.log("SUBMISSIONS:", submissions);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -83,7 +86,6 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) 
                 style={{ 
                   position: 'relative', 
                   width: '400px',
-                  aspectRatio: '1 / 1',
                   margin: imageMargin, 
                   height: imageHeight
                 }}
@@ -98,6 +100,9 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) 
                   className='submission-image'
                   onClick={() => openLightbox(index)}
                 />
+                {zoraUrl && (
+                  <Link target="_blank" rel="external" href={zoraUrl} className="scene-zora-link text-center container-start w-full inline-block bg-orange leading-10 border font-semibold font-sans text-[13px]">COLLECT SCENE</Link>
+                )}
               </div>
             </Fragment>
           );

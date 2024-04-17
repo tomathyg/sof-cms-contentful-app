@@ -406,7 +406,7 @@ a {
     box-sizing: border-box;
     overflow: hidden;
     width: 300px !important;
-    height: 300px !important;
+    height: 342px !important;
     cursor: pointer;
 }
 
@@ -414,12 +414,20 @@ a {
     .submissions-grid-gallery .gallery-image {
         width: 100% !important;
         height: auto !important;
+        padding-bottom: 42px !important;
         cursor: auto;
     }
 
     .submissions-grid-gallery .gallery-image img {
         width: 100% !important;
         height: auto !important;
+        /*padding-bottom: 42px !important;*/
+    }
+
+    .scene-zora-link {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
     }
 }
 

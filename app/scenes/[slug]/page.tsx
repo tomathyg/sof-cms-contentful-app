@@ -265,6 +265,7 @@ export default async function ScenePage({
           <SubmissionsGallery
             submissions={submissions}
             slug={scene.slug}
+            zoraUrl={scene.zoraUrl}
           />
         )}
         
