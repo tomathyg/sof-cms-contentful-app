@@ -93,12 +93,13 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug, zo
                 <Image 
                   loader={imageLoader} 
                   src={imageSrc} 
-                  alt='' 
+                  alt={`Scene image ${imageSlug}`} 
                   fill={false}
                   height={400}
                   width={400}
                   className='submission-image'
                   onClick={() => openLightbox(index)}
+                  loading="lazy"
                 />
                 {zoraUrl && (
                   <Link target="_blank" rel="external" href={zoraUrl} className="scene-zora-link text-center container-start w-full inline-block bg-orange leading-10 border font-semibold font-sans text-[13px]">COLLECT SCENE</Link>

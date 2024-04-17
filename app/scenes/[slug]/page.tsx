@@ -32,7 +32,7 @@ import SubmissionsGallery from '../../components/SubmissionsGallery'
 //import SwiperGallery from '../../components/SwiperGalleryWebComponent';
 //import YetCarousel from '../../components/YetGallery'
 //import LightGallery from '../../components/LightGallery'
-import SwiperReactGallery from '../../components/SwiperReactGallery';
+//import SwiperReactGallery from '../../components/SwiperReactGallery';
 //import YetGallery from '../../components/YetGallery';
 
 //import contentfulLoader from '../../imageLoaders/contentfulLoader'
@@ -190,7 +190,7 @@ export default async function ScenePage({
           </section>
         )}
 
-        <section>
+        
           {/*<NFTData
             contractAddress={scene.nftContractAddress}
             contractABI={scene.nftAbi}
@@ -201,7 +201,7 @@ export default async function ScenePage({
             {/*<ManifoldProvider
               id={scene.manifoldClaimInstanceId}
         />*/}
-        </section>
+        
 
         {/*<section className="page-subheading-container">
           <h2 className="uppercase font-semibold text-4xl sm:text-7xl md:text-8xl lg:text-8xl leading-tight md:leading-none text-center">
@@ -254,7 +254,7 @@ export default async function ScenePage({
           </section>
         )}*/}
 
-        {submissions && submissions.length > 0 && !gridGallery && (
+        {/*{submissions && submissions.length > 0 && !gridGallery && (
           <section className="scene-gallery-section">
             <SwiperReactGallery
               slug={params.slug}
@@ -264,7 +264,7 @@ export default async function ScenePage({
             />
 
           </section>
-        )}
+        )}*/}
 
         {submissions && submissions.length > 0 && gridGallery && (
           <SubmissionsGallery

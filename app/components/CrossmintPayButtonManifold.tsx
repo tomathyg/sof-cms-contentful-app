@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { CrossmintPayButton } from "@crossmint/client-sdk-react-ui";
 import { useWeb3ModalAccount } from '@web3modal/ethers5/react'
 
@@ -165,7 +165,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 locale="en-US"
                 currency="GBP"
                 className="xmint-btn"
-                getButtonText={(connecting, paymentMethod) => connecting ? "Connecting" : `COLLECT SONG WITH CARD`}
+                getButtonText={(connecting, paymentMethod) => connecting ? "CONNECTING" : `COLLECT SONG WITH CARD`}
             />
             </div>
         </>
