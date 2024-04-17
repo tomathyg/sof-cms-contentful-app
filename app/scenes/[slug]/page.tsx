@@ -1,4 +1,4 @@
-//import Link from 'next/link'
+import Link from 'next/link'
 import { draftMode } from 'next/headers'
 import { getScene, getAllScenes } from '../../../lib/api-2'
 import Image from 'next/image'
@@ -136,7 +136,7 @@ export default async function ScenePage({
                     colour={scene.colour.value}
                 />
               </div>
-              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex gap-4 flex-col xsm:flex-row xsm:justify-around xsm:items-end text-center">
+              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex flex-wrap gap-4 flex-col xsm:flex-row xsm:justify-around xsm:items-end text-center">
               {/*<div
                 data-widget="m-claim-buy-only"
                 data-id="59406576"
@@ -152,6 +152,7 @@ export default async function ScenePage({
                 {scene && scene.manifoldClaimPage && (
                   <div className='manifold-button-container flex justify-center'>
                     <a target="_blank" rel="external" href={scene.manifoldClaimPage} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>{scene.manifoldBuyButtonText || 'BUY WITH OPT'}</a>
+                    
                   </div>
                 )}
 
@@ -169,6 +170,11 @@ export default async function ScenePage({
                   />
                 )}
                 
+                {/*{scene.zoraUrl && (
+                <div className='manifold-button-container flex justify-center w-full mt-4'>
+                      <Link target="_blank" rel="external" href={scene.zoraUrl} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>COLLECT SCENE</Link>
+                </div>
+                )}*/}
                 
                 {/*<CrossmintPayButtonManifold
                   projectId={scene.crossmintProjectIdProduction}
