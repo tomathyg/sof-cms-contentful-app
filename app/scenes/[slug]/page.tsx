@@ -98,6 +98,8 @@ export default async function ScenePage({
   const imageSlug = artworkSubmission.id.split('-')[1];
   const imageSrc = imageBase + imageSlug + '.jpg';
 
+  const gridGallery = true;
+
   return (
     <>
     <div className="background-image-container">
@@ -247,7 +249,7 @@ export default async function ScenePage({
           </section>
         )}*/}
 
-        {submissions && submissions.length > 0 && (
+        {submissions && submissions.length > 0 && !gridGallery && (
           <section className="scene-gallery-section">
             <SwiperReactGallery
               slug={params.slug}
@@ -259,9 +261,16 @@ export default async function ScenePage({
           </section>
         )}
 
-                    {/*<YetGallery
-              submissions={submissions}
-            />*/}
+        {submissions && submissions.length > 0 && gridGallery && (
+          <SubmissionsGallery
+            submissions={submissions}
+            slug={scene.slug}
+          />
+        )}
+        
+        {/*<YetGallery
+          submissions={submissions}
+        />*/}
 
         {/*<SwiperGallery
           submissions={submissions}
@@ -269,10 +278,6 @@ export default async function ScenePage({
         {/*<LightGallery
           submissions={submissions}
         />*/}
-        {/*<SubmissionsGallery
-          submissions={submissions}
-          slug={scene.slug}
-      />*/}
       </article>
     </div>
     {/*<BackgroundImageStyle

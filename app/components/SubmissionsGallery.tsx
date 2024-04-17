@@ -1,7 +1,10 @@
 'use client'
 
-import React, { FC, Fragment } from 'react';
+import React, { FC, Fragment, useState, useEffect } from 'react';
 import Image from 'next/image';
+import Lightbox from 'yet-another-react-lightbox';
+import 'yet-another-react-lightbox/styles.css';
+import "yet-another-react-lightbox/plugins/captions.css";
 
 interface SubmissionImage {
   url: string;
@@ -29,16 +32,46 @@ const imageLoader = ({ src, width, quality }: ImageLoaderParams) => {
   return `${src}?w=${width}&q=${quality || 60}`;
 }
 
-const imageHeight = '300px';
+const imageHeight = '400px';
 const imageMargin = '0';
 
 const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) => {
-  console.log("SUBMISSIONS:", submissions);
+  //console.log("SUBMISSIONS:", submissions);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  //const [loadedImages, setLoadedImages] = useState<string[]>([]);
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    //const media = window.matchMedia(`(max-width: 641px)`);
+    const handleResize = () => {
+        setIsMobile(window.innerWidth < 641);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const openLightbox = (index:any) => {
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
 
   const imageBase = '/scenes/' + slug + '/gallery/';
 
+  const lightboxSrcs = submissions
+    .filter(item => item && item.submissionImage && item.submissionImage.url && item.id)
+    .map((item, index) => ({ 
+        src: imageBase + (item.id.split('-')[1]) + '.jpg?w=1080&q=75'
+    }));
+
   return (
-    <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'flex-start', justifyContent: 'center', flexWrap: 'wrap', gap: '15px', padding: '0 15px' }}>
+    <>
+    <h2 className="gallery-title uppercase font-semibold leading-none text-center">
+      GALLERY
+    </h2>
+    <div className="submissions-grid-gallery-wrapper">
+    <div className="submissions-grid-gallery">
       {submissions.map((item, index) => {
         if (item.submissionImage && item.submissionImage.url && item.id) {
           const imageSlug = item.id.split('-')[1];
@@ -49,7 +82,7 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) 
                 className="gallery-image" 
                 style={{ 
                   position: 'relative', 
-                  width: '300px',
+                  width: '400px',
                   aspectRatio: '1 / 1',
                   margin: imageMargin, 
                   height: imageHeight
@@ -60,9 +93,10 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) 
                   src={imageSrc} 
                   alt='' 
                   fill={false}
-                  height={300}
-                  width={300}
+                  height={400}
+                  width={400}
                   className='submission-image'
+                  onClick={() => openLightbox(index)}
                 />
               </div>
             </Fragment>
@@ -70,6 +104,18 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug }) 
         }
       })}
     </div>
+    </div>
+    {lightboxOpen && !isMobile && (
+        <Lightbox
+            open={lightboxOpen}
+            close={() => setLightboxOpen(false)}
+            index={currentIndex}
+            slides={lightboxSrcs}
+            //plugins={[Share]}
+            //captions={{ ref: captionsRef }}
+        />
+    )}
+    </>
   );
 }
 
