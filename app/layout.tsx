@@ -204,7 +204,7 @@ export default function RootLayout({
         {/*<Suspense>
           <GTM />
         </Suspense>*/}
-        <GoogleTagManager gtmId="GTM-N6SGGP3P" />
+        {/*<GoogleTagManager gtmId="GTM-N6SGGP3P" />*/}
         
         </Web3ModalProvider>
         <Modal/>
