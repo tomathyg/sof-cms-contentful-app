@@ -136,7 +136,7 @@ export default async function ScenePage({
                     colour={scene.colour.value}
                 />
               </div>
-              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex flex-wrap gap-4 flex-col xsm:flex-row xsm:justify-around xsm:items-end text-center">
+              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex flex-wrap gap-4 flex-col text-center">
               {/*<div
                 data-widget="m-claim-buy-only"
                 data-id="59406576"
