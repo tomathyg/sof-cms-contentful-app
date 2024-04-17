@@ -38,7 +38,7 @@ const imageHeight = '400px';
 const imageMargin = '0';
 
 const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug, zoraUrl }) => {
-  console.log("zoraUrl:", zoraUrl);
+  //console.log("zoraUrl:", zoraUrl);
   //console.log("SUBMISSIONS:", submissions);
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);

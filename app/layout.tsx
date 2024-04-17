@@ -7,7 +7,7 @@ import './globals.css'
 //import { GoogleTagManager } from '@next/third-parties/google'
 import { GoogleTagManager } from '@next/third-parties/google'
 //import GTM from './components/GTMContainer';
-import { Suspense } from 'react'
+//import { Suspense } from 'react'
 
 import { Web3ModalProvider } from "../context/Web3Modal";
 import ConnectButton from './components/ConnectButton';
@@ -19,7 +19,7 @@ import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
-import Script from 'next/script'
+//import Script from 'next/script'
 
 import Modal from "./components/Modal";
 import ModalTrigger from "./components/ModalTrigger";
