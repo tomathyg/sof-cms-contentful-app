@@ -19,6 +19,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { DM_Mono } from 'next/font/google'
 import localFont from 'next/font/local'
 
+import Head from 'next/head';
+
 //import Script from 'next/script'
 
 import Modal from "./components/Modal";
@@ -190,6 +192,15 @@ export default function RootLayout({
   //const [clientSideState, setClientSideState] = useState();
   return (
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
+        <Head>
+          <link 
+              rel="preload" 
+              href="./fonts/Druk-Wide-Heavy-Web.woff2" 
+              as="font" 
+              type="font/woff2" 
+              crossOrigin="anonymous" 
+          />
+        </Head>
         <body className={`font-mono bg-black text-off-white`}>
         
         <Web3ModalProvider>
