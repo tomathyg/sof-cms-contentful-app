@@ -191,7 +191,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${druk_wide_heavy.variable} ${dm_mono.variable} ${gambarino.variable} border-off-white`}>
         <body className={`font-mono bg-black text-off-white`}>
-        <GoogleTagManager gtmId="GTM-N6SGGP3P" />
+        
         <Web3ModalProvider>
         <div className='noise-overlay'></div>
         <section className="">
@@ -205,7 +205,7 @@ export default function RootLayout({
         {/*<Suspense>
           <GTM />
         </Suspense>*/}
-        {/*<GoogleTagManager gtmId="GTM-N6SGGP3P" />*/}
+        <GoogleTagManager gtmId="GTM-N6SGGP3P" />
         <Analytics />
         
         <Modal/>
