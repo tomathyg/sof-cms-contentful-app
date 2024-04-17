@@ -37,7 +37,7 @@ import Modal from "./components/Modal";
 
 const druk_wide_heavy = localFont({
   src: './fonts/Druk-Wide-Heavy-Web.woff2',
-  display: 'swap',
+  display: 'block',
   variable: '--font-druk-wide-heavy',
 })
 
