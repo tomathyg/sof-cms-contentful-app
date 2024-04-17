@@ -205,11 +205,11 @@ export default function RootLayout({
         {/*<Suspense>
           <GTM />
         </Suspense>*/}
-        <GoogleTagManager gtmId="GTM-N6SGGP3P" />
+        {/*<GoogleTagManager gtmId="GTM-N6SGGP3P" />
         <Analytics />
         
         <Modal/>
-        <ModalTrigger />
+      <ModalTrigger />*/}
         </Web3ModalProvider>
         
         </body>
