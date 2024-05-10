@@ -136,7 +136,7 @@ export default async function ScenePage({
                     colour={scene.colour.value}
                 />
               </div>
-              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex flex-wrap gap-4 flex-col text-center">
+              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex gap-4 text-center items-center justify-between flex-col sm:flex-row">
               {/*<div
                 data-widget="m-claim-buy-only"
                 data-id="59406576"
@@ -170,7 +170,7 @@ export default async function ScenePage({
                 )}*/}
                 
                 {scene.zoraUrl && (
-                <div className='manifold-button-container flex justify-center w-full mt-4'>
+                <div className='manifold-button-container flex justify-center w-full'>
                       <Link target="_blank" rel="external" href={scene.zoraUrl} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>COLLECT SCENE</Link>
                 </div>
                 )}

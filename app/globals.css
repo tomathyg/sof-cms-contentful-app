@@ -798,10 +798,14 @@ button, button * {
     justify-content: center;
 }
 
+.manifold-button-container {
+    width: 200px;
+}
+
 
 .pay-button-wrapper .xmint-btn {
     background: black;
-    width: 264px;
+    width: 100%;
     cursor: pointer;
 }
 
