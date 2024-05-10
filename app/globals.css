@@ -772,7 +772,7 @@ button, button * {
 }
 
 .scene-image-container {
-    width: 450px;
+    width: 430px;
     /*margin-top: calc(-1em * 0.6 / 2);*/
     font-size: inherit;
 }
