@@ -149,14 +149,14 @@ export default async function ScenePage({
                 {/*<CrossmintPayButtonManifoldTest />*/}
 
                 {/*<ManifoldBuyButton />*/}
-                {/*{scene && scene.manifoldClaimPage && (
+                {scene && scene.manifoldClaimPage && (
                   <div className='manifold-button-container flex justify-center'>
                     <a target="_blank" rel="external" href={scene.manifoldClaimPage} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>{scene.manifoldBuyButtonText || 'COLLECT SONG'}</a>
                   </div>
-                )}*/}
+                )}
 
                 {/*<WalletConnect></WalletConnect>*/}
-                {scene && scene.crossmintProjectIdProduction && scene.crossmintCollectionIdProduction && scene.nftContractAddress && scene.manifoldCoreCreatorContractAddress && scene.manifoldClaimInstanceId && scene.nftPrice && scene.mintFee && (
+                {/*{scene && scene.crossmintProjectIdProduction && scene.crossmintCollectionIdProduction && scene.nftContractAddress && scene.manifoldCoreCreatorContractAddress && scene.manifoldClaimInstanceId && scene.nftPrice && scene.mintFee && (
                   <CrossmintPayButtonManifold
                     projectId={scene.crossmintProjectIdProduction}
                     collectionId={scene.crossmintCollectionIdProduction}
@@ -167,7 +167,7 @@ export default async function ScenePage({
                     mintFee={scene.mintFee}
                     environment='production'
                   />
-                )}
+                )}*/}
                 
                 {scene.zoraUrl && (
                 <div className='manifold-button-container flex justify-center w-full mt-4'>
