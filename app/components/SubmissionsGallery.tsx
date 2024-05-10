@@ -103,9 +103,10 @@ const SubmissionsGallery: FC<SubmissionsGalleryProps> = ({ submissions, slug, zo
                   loading="lazy"
                   priority={false}
                 />
-                {zoraUrl && (
+
+                {/*{zoraUrl && (
                   <Link target="_blank" rel="external" href={zoraUrl} className="scene-zora-link text-center container-start w-full inline-block bg-orange leading-10 border font-semibold font-sans text-[13px]">COLLECT SCENE</Link>
-                )}
+                )}*/}
               </div>
             </Fragment>
           );
