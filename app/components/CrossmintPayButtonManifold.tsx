@@ -50,7 +50,6 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
 
 
     /*useEffect(() => {
-        // Retrieve the connected wallet address from localStorage
         //const walletAddress = localStorage.getItem('walletAddress');
 
         //if (address) {
@@ -89,20 +88,6 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "mintIndices": [],
         "merkleProofs": [],
     }
-
-    /*const mintConfig={
-        //"contractAddress": `${contractAddress}`,
-        "contractAddress": '0xe91F682033461E3e100d765dDd2eD6bDd0bdAD94',
-        //"creatorContractAddress": `${creatorContractAddress}`,
-        "creatorContractAddress": '0x357d71c3dfcc5e4c0da594bef99610df4b311742',
-        //"instanceId": `${instanceId}`,
-        "instanceId": '21098736',
-        "mintCount": mintAmount.toString(),
-        //"totalPrice": totalPrice.toString(),
-        "totalPrice": '1',
-        "mintIndices": [],
-        "merkleProofs": [],
-    }*/
 
     //console.log("MINT CONFIG:", mintConfig);
 
@@ -157,8 +142,6 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                     //_quantity: mintAmount
                     //"mintFor": ""
                 }}*/
-                // 0x95d452fc85869a7834189f41ec6bb0915f943aa3
-                // Core Contract Creator 0x5133522ea5A0494EcB83F26311A095DDD7a9D4b6
                 //"type": "erc-721"
                 //"type": "manifold-erc-721"
                 mintConfig={mintConfig}

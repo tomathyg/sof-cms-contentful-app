@@ -136,27 +136,23 @@ export default async function ScenePage({
                     colour={scene.colour.value}
                 />
               </div>
-              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex gap-4 text-center items-center justify-between flex-col sm:flex-row">
+              <div className="pay-button-wrapper section-wrapper mt-2 w-full text-sm flex gap-4 text-center items-center xsm:items-end justify-center sm:justify-between flex-col xsm:flex-row">
               {/*<div
                 data-widget="m-claim-buy-only"
                 data-id="59406576"
                 ></div>*/}
-                {/*<CrossmintPayButtonProduction
-                  projectId={scene.crossmintProjectIdProduction}
-                  collectionId='3709b2d1-dd26-49a5-b5e6-8acd55f59bd7'
-                />*/}
 
                 {/*<CrossmintPayButtonManifoldTest />*/}
 
                 {/*<ManifoldBuyButton />*/}
-                {scene && scene.manifoldClaimPage && (
+                {/*{scene && scene.manifoldClaimPage && (
                   <div className='manifold-button-container flex justify-center'>
                     <a target="_blank" rel="external" href={scene.manifoldClaimPage} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>{scene.manifoldBuyButtonText || 'COLLECT SONG'}</a>
                   </div>
-                )}
+                )}*/}
 
                 {/*<WalletConnect></WalletConnect>*/}
-                {/*{scene && scene.crossmintProjectIdProduction && scene.crossmintCollectionIdProduction && scene.nftContractAddress && scene.manifoldCoreCreatorContractAddress && scene.manifoldClaimInstanceId && scene.nftPrice && scene.mintFee && (
+                {scene && scene.crossmintProjectIdProduction && scene.crossmintCollectionIdProduction && scene.nftContractAddress && scene.manifoldCoreCreatorContractAddress && scene.manifoldClaimInstanceId && scene.nftPrice && scene.mintFee && (
                   <CrossmintPayButtonManifold
                     projectId={scene.crossmintProjectIdProduction}
                     collectionId={scene.crossmintCollectionIdProduction}
@@ -167,24 +163,14 @@ export default async function ScenePage({
                     mintFee={scene.mintFee}
                     environment='production'
                   />
-                )}*/}
+                )}
                 
                 {scene.zoraUrl && (
                 <div className='manifold-button-container flex justify-center w-full'>
                       <Link target="_blank" rel="external" href={scene.zoraUrl} className={`xmint-btn crossmintButton-0-2-1 h-[50px] bg-[${scene.colour.value}]`}>COLLECT SCENE</Link>
                 </div>
                 )}
-                
-                {/*<CrossmintPayButtonManifold
-                  projectId={scene.crossmintProjectIdProduction}
-                  collectionId='146bc6f6-5315-45e0-b9d8-7a9d299120b5'
-                  creatorContractAddress='0x583DCB86146bc2Dc41602794355616ddcA405e1E'
-                  contractAddress={scene.manifoldCoreCreatorContractAddress}
-                  instanceId='60715248'
-                  nftPrice='0.001'
-                  mintFee={scene.mintFee}
-                  environment='production'
-              />*/}
+              
               </div>
             </div>
           </section>
@@ -223,11 +209,6 @@ export default async function ScenePage({
           {/*<section className="mb-8 flex justify-center checkout-section">
             <NFTPaperCheckout
               checkoutId={scene.nftContractId}
-            />
-            <CrossmintPayButtonProduction
-              projectId={scene.crossmintProjectIdProduction}
-              collectionId='3709b2d1-dd26-49a5-b5e6-8acd55f59bd7'
-              environment='production'
             />
             <CrossmintPayButtonManifold
               projectId={scene.crossmintProjectIdStaging}

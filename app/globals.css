@@ -798,7 +798,7 @@ button, button * {
     justify-content: center;
 }
 
-.manifold-button-container {
+.manifold-button-container, .pay-button-wrapper > div {
     width: 200px;
 }
 
