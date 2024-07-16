@@ -27,7 +27,6 @@ interface CrossmintProps {
     nftPrice: string;
     mintFee: string;
     environment?: string;
-    //account?: string;
 }
   
 const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, collectionId, creatorContractAddress, contractAddress, contractType, instanceId, nftPrice, mintFee, environment }) => {
