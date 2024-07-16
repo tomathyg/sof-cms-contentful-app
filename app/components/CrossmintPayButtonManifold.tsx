@@ -86,8 +86,8 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "mintCount": mintAmount.toString(),
         "totalPrice": totalPrice.toString(),
         "mintIndices": [],
-        "merkleProofs": [],
-        "type": "manifold-erc-1155"
+        "merkleProofs": []/*,
+        "type": "erc-1155"*/
     }
 
     //console.log("MINT CONFIG:", mintConfig);
@@ -122,11 +122,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                 projectId={projectId}
                 collectionId={collectionId}
                 environment={environment}
-                checkoutProps={{
-                    display: "same-tab",  // "same-tab" | "new-tab" | "popup"
-                    paymentMethods: ["ETH", "fiat"],
-                    delivery: "all" //"custodial" | "non-custodial" | "all"
-                }}
+                
                 mintTo={address}
                 //emailTo="hello@soundoffractures.com"
                 //recipient="_WALLET_ADDRESS_"
@@ -144,6 +140,11 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                     //"mintFor": ""
                 }}*/
                 //"type": "manifold-erc-721"
+                /*checkoutProps={{
+                    display: "same-tab",  // "same-tab" | "new-tab" | "popup"
+                    paymentMethods: ["ETH", "fiat"],
+                    delivery: "all" //"custodial" | "non-custodial" | "all"
+                }}*/
                 mintConfig={mintConfig}
                 locale="en-US"
                 currency="GBP"
