@@ -158,6 +158,7 @@ export default async function ScenePage({
                     collectionId={scene.crossmintCollectionIdProduction}
                     creatorContractAddress={scene.nftContractAddress}
                     contractAddress={scene.manifoldCoreCreatorContractAddress}
+                    contractType={scene.contractType}
                     instanceId={scene.manifoldClaimInstanceId}
                     nftPrice={scene.nftPrice}
                     mintFee={scene.mintFee}

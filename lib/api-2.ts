@@ -29,6 +29,7 @@ const SCENE_GRAPHQL_FIELDS = `
     colour
     zoraUrl
     nftContractAddress
+    contractType
     nftAbi
     nftPrice
     mintFee

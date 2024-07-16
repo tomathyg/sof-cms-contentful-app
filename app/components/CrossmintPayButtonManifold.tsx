@@ -22,6 +22,7 @@ interface CrossmintProps {
     projectId: string;
     creatorContractAddress: string;
     contractAddress: string;
+    contractType: string;
     instanceId: string;
     nftPrice: string;
     mintFee: string;
@@ -29,7 +30,7 @@ interface CrossmintProps {
     //account?: string;
 }
   
-const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, collectionId, creatorContractAddress, contractAddress, instanceId, nftPrice, mintFee, environment }) => {
+const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, collectionId, creatorContractAddress, contractAddress, contractType, instanceId, nftPrice, mintFee, environment }) => {
     /*console.log(`${environment} PROJECT ID:`, projectId);
     console.log(`${environment} COLLECTION ID:`, collectionId);
     console.log(`${environment} CREATOR CONTRACT ADDRESS:`, creatorContractAddress);
@@ -86,11 +87,18 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "mintCount": mintAmount.toString(),
         "totalPrice": totalPrice.toString(),
         "mintIndices": [],
-        "merkleProofs": []/*,
-        "type": "erc-1155"*/
+        "merkleProofs": [],
+        "type": `${contractType}`,
+        //"tokenId": '1',
+        //"id": 0,
+        //"templateId": '',
+        //"amount": 1,
+        //"_quantity": mintAmount.toString(),
+        //"mintType": 2,
+        //"chain": 'base',
     }
 
-    //console.log("MINT CONFIG:", mintConfig);
+    console.log("MINT CONFIG:", mintConfig);
 
 
     /*if (!isConnected) {
@@ -130,21 +138,23 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                     "contractAddress": `${contractAddress}`,
                     "creatorContractAddress": `${creatorContractAddress}`,
                     "instanceId": `${instanceId}`,
-                    "mintCount": "mintAmount.toString()",
+                    "mintCount": "1",
                     "mintIndices": [],
                     "merkleProofs": [],
-                    "totalPrice": "0.001"
-                    //type: "erc-721",
+                    "totalPrice": "0.0015",
+                    "type": "erc-1155",
+                    "tokenId": "0",
+                    "_amount": "1",
                     //totalPrice: (nftCost * mintAmount).toString(),
                     //_quantity: mintAmount
                     //"mintFor": ""
                 }}*/
                 //"type": "manifold-erc-721"
-                /*checkoutProps={{
+                checkoutProps={{
                     display: "same-tab",  // "same-tab" | "new-tab" | "popup"
                     paymentMethods: ["ETH", "fiat"],
                     delivery: "all" //"custodial" | "non-custodial" | "all"
-                }}*/
+                }}
                 mintConfig={mintConfig}
                 locale="en-US"
                 currency="GBP"
