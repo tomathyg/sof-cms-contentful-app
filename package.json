@@ -21,7 +21,6 @@
     "@vercel/analytics": "^1.1.1",
     "@web3modal/ethers5": "^3.4.0",
     "autoprefixer": "10.4.15",
-    "contentful-import": "^9.4.56",
     "date-fns": "2.30.0",
     "eslint-config-next": "^14.0.4",
     "ethers": "^5.7.2",
