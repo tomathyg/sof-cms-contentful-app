@@ -87,7 +87,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "totalPrice": totalPrice.toString(),
         "mintIndices": [],
         "merkleProofs": [],
-        "type": "erc-1155"
+        "type": "manifold-erc-1155"
     }
 
     //console.log("MINT CONFIG:", mintConfig);
