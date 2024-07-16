@@ -33,7 +33,7 @@
     "react-dom": "^18.2.0",
     "react-h5-audio-player": "^3.9.0",
     "react-social-icons": "^6.6.0",
-    "rimraf": "^4.4.1",
+    "rimraf": "^5.0.9",
     "rpc-websockets": "^7.11.2",
     "sass": "^1.69.5",
     "swiper": "^11.0.4",
