@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const generateSceneImageRewrites = require('./lib/generateSceneImageRewrites');
+const path = require('path');
 const nextConfig = {
   images: {
     // If you need a custom loader, you can uncomment the following line
@@ -43,6 +44,7 @@ const nextConfig = {
     config.externals.push('pino-pretty', 'lokijs', 'encoding');
     config.module.rules.push({
       test: /\.svg$/,
+      exclude: [path.resolve(__dirname, 'unused')],
       use: [
         {
           loader: '@svgr/webpack',
