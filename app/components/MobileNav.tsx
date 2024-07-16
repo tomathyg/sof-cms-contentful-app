@@ -41,13 +41,14 @@ const MobileNav = () => {
       <div ref={menuRef} className='fixed left-0 top-0 w-full h-full pt-[77px] pl-6 bg-black font-sans text-xl leading-9 opacity-0'>
         <ul className='nav-list'>
           <li><button type="button" onClick={() => handleNavigation('/')}>HOME</button></li>
-          <li><button type="button" onClick={() => handleNavigation('/submit')}>SUBMIT (SCENE 6)</button></li>
+          <li><button type="button" onClick={() => handleNavigation('/submit')}>SUBMIT</button></li>
           <li><button type="button" onClick={() => handleNavigation('/scenes')}>ALL SCENES</button></li>
           <li><button type="button" onClick={() => handleNavigation('/scenes/scene-1')}>BUY SCENE 1</button></li>
           <li><button type="button" onClick={() => handleNavigation('/scenes/scene-2')}>BUY SCENE 2</button></li>
           <li><button type="button" onClick={() => handleNavigation('/scenes/scene-3')}>BUY SCENE 3</button></li>
           <li><button type="button" onClick={() => handleNavigation('/scenes/scene-4')}>BUY SCENE 4</button></li>
           <li><button type="button" onClick={() => handleNavigation('/scenes/scene-5')}>BUY SCENE 5</button></li>
+          <li><button type="button" onClick={() => handleNavigation('/scenes/scene-6')}>BUY SCENE 6</button></li>
           <li><button type="button" onClick={() => handleNavigation('/about')}>ABOUT</button></li>
           <li><button type="button" onClick={() => handleNavigation('/credits')}>CREDITS</button></li>
         </ul>
