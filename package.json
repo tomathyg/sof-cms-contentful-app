@@ -32,6 +32,7 @@
     "react-dom": "^18.2.0",
     "react-h5-audio-player": "^3.9.0",
     "react-social-icons": "^6.6.0",
+    "rpc-websockets": "^7.9.0",
     "sass": "^1.69.5",
     "swiper": "^11.0.4",
     "tailwindcss": "^3.3.3",
