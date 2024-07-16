@@ -89,7 +89,7 @@ export default async function ScenePage({
   //console.log("SLUG:", params.slug);
   //console.log("GET SCENE:", getScene);
   const scene = await getScene(params.slug, isEnabled);
-  console.log("SCENE:", scene);
+  //console.log("SCENE:", scene);
   const submissions = scene.submissionsCollection.items;
   //console.log("SCENE SUBMISSIONS:", submissions);
   //const imageSlug = submission.id.split('-')[1];
