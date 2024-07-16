@@ -87,6 +87,7 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
         "totalPrice": totalPrice.toString(),
         "mintIndices": [],
         "merkleProofs": [],
+        "type": "erc-1155"
     }
 
     //console.log("MINT CONFIG:", mintConfig);
@@ -142,7 +143,6 @@ const CrossmintPayButtonManifold: React.FC<CrossmintProps> = ({ projectId, colle
                     //_quantity: mintAmount
                     //"mintFor": ""
                 }}*/
-                //"type": "erc-721"
                 //"type": "manifold-erc-721"
                 mintConfig={mintConfig}
                 locale="en-US"
