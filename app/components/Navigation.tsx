@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation'
-
+import BuyBookLink from '../components/BuyBookLink';
 interface Item {
     id: string;
     slug: string;
@@ -49,8 +49,11 @@ const Navigation: React.FC<NavigationProps> = ({ items, base }) => {
                     </button>
                     {showDropdown && (
                         <ul
-                            className="absolute top-full left-0 bg-black leading-9 shadow-md py-2 px-4 w-full opacity-90"
+                            className="absolute top-full left-0 bg-black leading-9 shadow-md py-2 px-4 w-full opacity-90 nav-list-dropdown"
                         >
+                            <li key='0' className='cursor-pointer'>
+                                <a href="https://sofractures.myshopify.com/products/scenes-prompts-to-reflect-the-postcard-book" className="font-sans" target="_blank" rel="noopener noreferrer">BUY THE BOOK</a>
+                            </li>
                             {items.sort((a, b) => a.slug.localeCompare(b.slug)).map((item, index) => (
                                 <li key={index} className='cursor-pointer'>
                                     <button

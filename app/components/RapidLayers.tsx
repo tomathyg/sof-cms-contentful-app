@@ -11,6 +11,7 @@ import Revealer from './Revealer';
 //import ScenesLogo from '../components/ScenesLogo'
 import ScenesLogo2 from '../components/ScenesLogo2'
 import RouterButton from './RouterButton';
+import BuyBookLink from '../components/BuyBookLink';
 interface RevealerMethods {
     reveal: () => void;
 }
@@ -90,6 +91,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                         </h2>
                         <div className='intro-buttons-container flex gap-6 justify-center flex-wrap'>
                             {/*<Revealer />*/}
+                            <BuyBookLink />
                             <RouterButton
                                 url='/scenes'
                                 label='EXPLORE'
