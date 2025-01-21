@@ -89,7 +89,7 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                             <span>THROUGH <span className='font-serif'>PERSONAL</span> MOMENTS</span>
                         </h2>
                         <div className='intro-buttons-container flex gap-6 justify-center flex-wrap'>
-                            <Revealer />
+                            {/*<Revealer />*/}
                             <RouterButton
                                 url='/scenes'
                                 label='EXPLORE'
