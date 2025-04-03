@@ -2,7 +2,7 @@
 
 //import { logPageView } from '@vercel/analytics';
 import { track } from "@vercel/analytics"
-//import { useRouter } from 'next/navigation'
+import { useRouter } from 'next/navigation'
 
 import React, { useEffect, useRef, forwardRef } from 'react';
 import { gsap } from 'gsap';
@@ -41,10 +41,20 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
 
   const introHeader = useRef<HTMLElement | null>(null);
 
-  const handleReveal = () => {
+  const router = useRouter();
+
+  /*const handleReveal = () => {
     //console.log("HANDLE REVEAL", revealerRef);
     timeline.current?.restart();
+  };*/
+
+  const handleReveal = (url: string) => {
+    if (timeline.current) {
+      timeline.current.vars.path = url;
+      timeline.current.restart();
+    }
   };
+  
 
   //const randomFloat = (min:number,max:number) => parseFloat(Math.min(min + (Math.random() * (max - min)), max).toFixed(2));
 
@@ -80,13 +90,13 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     
     timeline.current = gsap.timeline({
         paused: true,
-        /*onComplete: () => {
+        onComplete: () => {
             // This function will be called when the timeline completes
             // Check if a navigation path is set
             if (timeline.current?.vars.path) {
-              //router.push(timeline.current.vars.path);
+              router.push(timeline.current.vars.path);
             }
-        }*/
+        }
     });
 
     const options = { duration: 1, panelDelay: 0.16 };
@@ -181,7 +191,7 @@ const Revealer = forwardRef<RevealerMethods, {}>((props, ref) => {
     }));*/
 
   return (
-    <button className='font-sans button-primary text-black' onClick={handleReveal}>CREATE</button>
+    <button className='font-sans button-primary text-black' onClick={() => handleReveal('/scenes')}>EXPLORE</button>
   )
 })
 

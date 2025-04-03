@@ -58,9 +58,9 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
     <>
     <section className="revealer-section">
         <div className='reveal-page-content'>
-            <StepsContent
+            {/*<StepsContent
                 content={revealContent}
-            />
+            />*/}
         </div>
 		<div className="revealer-grid-container intro fixed top-0 w-full z-[11] h-screen safe">
             <div className='w-full h-full revealer-grid-inner border border-off-white overflow-hidden'>
@@ -90,14 +90,14 @@ const RapidLayers: React.FC<RapidLayersProps> = ({ floatingImages, layers, revea
                             <span>THROUGH <span className='font-serif'>PERSONAL</span> MOMENTS</span>
                         </h2>
                         <div className='intro-buttons-container flex gap-6 justify-center flex-wrap'>
-                            {/*<Revealer />*/}
                             <BuyBookLink />
-                            <RouterButton
+                            {/*<RouterButton
                                 url='/scenes'
                                 label='EXPLORE'
                                 classes='button-primary text-black font-sans'
                                 overflow={true}
-                            />
+                            />*/}
+                            <Revealer />
                         </div>
                     </section>
                 </div>

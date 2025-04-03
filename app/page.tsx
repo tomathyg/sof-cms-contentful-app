@@ -25,8 +25,8 @@ export default async function Page() {
   //const rewrites = require('../lib/generateSceneImageRewrites.js');
   //console.log("REWRITES", rewrites());
 
-  const content = await getHomePageData(false);
-  //console.log("HOME PAGE CONTENT:", content);
+  const content = await getHomePageData(false); // REVEAL CONTENT
+  console.log("HOME PAGE CONTENT:", content);
   const floatingImages = content.floatingImagesCollection.items;
   //console.log("FLOATING IMAGES:", content.floatingImagesCollection.items);
   const layers = content.introLayersImagesCollection.items;
